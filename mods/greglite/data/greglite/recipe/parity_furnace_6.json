@@ -1,0 +1,12 @@
+{
+  "type": "greglite:electric_furnace",
+  "ingredient": {
+    "item": "minecraft:netherrack"
+  },
+  "result": {
+    "id": "minecraft:nether_brick",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

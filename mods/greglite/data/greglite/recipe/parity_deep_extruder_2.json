@@ -1,0 +1,17 @@
+{
+  "type": "greglite:extruder",
+  "result": {
+    "id": "greglite:tin_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "greglite:tin_ingot"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ]
+}

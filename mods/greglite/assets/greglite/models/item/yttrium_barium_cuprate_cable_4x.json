@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greglite:item/yttrium_barium_cuprate_cable_4x"
+  }
+}

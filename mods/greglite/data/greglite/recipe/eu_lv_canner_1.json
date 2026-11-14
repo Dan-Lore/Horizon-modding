@@ -1,0 +1,12 @@
+{
+  "type": "greglite:canner",
+  "result": {
+    "id": "greglite:tin_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": {
+    "item": "greglite:tin_ingot"
+  }
+}

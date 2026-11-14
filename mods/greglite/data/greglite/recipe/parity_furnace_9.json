@@ -1,0 +1,12 @@
+{
+  "type": "greglite:electric_furnace",
+  "ingredient": {
+    "item": "greglite:tin_dust"
+  },
+  "result": {
+    "id": "greglite:tin_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

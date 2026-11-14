@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "greglite:copper_plate"
+    }
+  ],
+  "result": {
+    "id": "greglite:copper_wire",
+    "count": 2
+  }
+}

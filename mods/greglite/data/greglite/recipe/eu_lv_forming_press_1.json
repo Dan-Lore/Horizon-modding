@@ -1,0 +1,12 @@
+{
+  "type": "greglite:forming_press",
+  "result": {
+    "id": "greglite:bronze_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": {
+    "item": "greglite:bronze_ingot"
+  }
+}

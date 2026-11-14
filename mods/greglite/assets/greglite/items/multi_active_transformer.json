@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "greglite:item/multi_active_transformer"
+  }
+}

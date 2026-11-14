@@ -1,0 +1,17 @@
+{
+  "type": "greglite:packer",
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "greglite:lathe",
+  "ingredient": {
+    "item": "greglite:lead_ingot"
+  },
+  "result": {
+    "id": "greglite:lead_rod",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

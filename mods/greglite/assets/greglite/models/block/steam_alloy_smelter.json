@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "greglite:block/steam_alloy_smelter_top",
+    "front": "greglite:block/steam_alloy_smelter_front",
+    "side": "greglite:block/steam_alloy_smelter_side",
+    "bottom": "greglite:block/steam_alloy_smelter_bottom",
+    "particle": "greglite:block/steam_alloy_smelter_side"
+  }
+}

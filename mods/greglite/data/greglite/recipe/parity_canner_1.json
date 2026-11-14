@@ -1,0 +1,17 @@
+{
+  "type": "greglite:canner",
+  "result": {
+    "id": "minecraft:sand",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ]
+}

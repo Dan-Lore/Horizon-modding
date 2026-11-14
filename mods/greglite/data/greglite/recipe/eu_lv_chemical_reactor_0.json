@@ -1,0 +1,12 @@
+{
+  "type": "greglite:chemical_reactor",
+  "result": {
+    "id": "greglite:iron_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  }
+}

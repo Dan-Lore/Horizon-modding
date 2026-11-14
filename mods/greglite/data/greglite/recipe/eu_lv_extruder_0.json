@@ -1,0 +1,12 @@
+{
+  "type": "greglite:extruder",
+  "result": {
+    "id": "greglite:tin_rod",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": {
+    "item": "greglite:tin_ingot"
+  }
+}

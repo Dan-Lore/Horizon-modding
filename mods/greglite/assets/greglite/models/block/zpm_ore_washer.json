@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "greglite:block/zpm_casing_top",
+    "bottom": "greglite:block/zpm_casing_bottom",
+    "side": "greglite:block/zpm_casing_side",
+    "front": "greglite:block/zpm_ore_washer_front",
+    "particle": "greglite:block/zpm_casing_side"
+  }
+}

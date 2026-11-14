@@ -1,0 +1,12 @@
+{
+  "type": "greglite:macerator",
+  "ingredient": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "id": "greglite:iron_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "steam": 16
+}

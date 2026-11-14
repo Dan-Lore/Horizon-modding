@@ -1,0 +1,12 @@
+{
+  "type": "greglite:electric_furnace",
+  "ingredient": {
+    "item": "greglite:copper_dust"
+  },
+  "result": {
+    "id": "minecraft:copper_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

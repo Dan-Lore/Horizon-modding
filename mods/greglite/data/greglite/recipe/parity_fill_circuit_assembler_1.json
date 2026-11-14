@@ -1,0 +1,17 @@
+{
+  "type": "greglite:circuit_assembler",
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "greglite:copper_dust"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "id": "greglite:copper_ingot",
+    "count": 1
+  }
+}

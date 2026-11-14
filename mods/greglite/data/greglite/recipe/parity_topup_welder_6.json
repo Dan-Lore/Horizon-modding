@@ -1,0 +1,17 @@
+{
+  "type": "greglite:welder",
+  "result": {
+    "id": "greglite:coal_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ]
+}

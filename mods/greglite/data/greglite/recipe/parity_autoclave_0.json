@@ -1,0 +1,12 @@
+{
+  "type": "greglite:autoclave",
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  }
+}

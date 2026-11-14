@@ -1,0 +1,12 @@
+{
+  "type": "greglite:wiremill",
+  "ingredient": {
+    "item": "greglite:sulfur_ingot"
+  },
+  "result": {
+    "id": "greglite:sulfur_wire",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

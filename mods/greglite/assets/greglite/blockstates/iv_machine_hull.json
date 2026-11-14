@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "greglite:block/iv_machine_hull"
+    },
+    "facing=north,lit=true": {
+      "model": "greglite:block/iv_machine_hull_on"
+    },
+    "facing=south,lit=false": {
+      "model": "greglite:block/iv_machine_hull",
+      "y": 180
+    },
+    "facing=south,lit=true": {
+      "model": "greglite:block/iv_machine_hull_on",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "greglite:block/iv_machine_hull",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "greglite:block/iv_machine_hull_on",
+      "y": 270
+    },
+    "facing=east,lit=false": {
+      "model": "greglite:block/iv_machine_hull",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "greglite:block/iv_machine_hull_on",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "greglite:iron_wire"
+    },
+    {
+      "item": "greglite:rubber"
+    }
+  ],
+  "result": {
+    "id": "greglite:iron_cable_1x",
+    "count": 1
+  }
+}

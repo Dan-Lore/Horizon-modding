@@ -1,0 +1,18 @@
+{
+  "type": "greglite:alloy_smelter",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "result": {
+    "id": "greglite:steel_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2,
+  "steam": 1
+}

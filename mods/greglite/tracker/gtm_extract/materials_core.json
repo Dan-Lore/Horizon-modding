@@ -1,0 +1,907 @@
+{
+  "schema": 1,
+  "source": "materials/*.java",
+  "count_target": 120,
+  "materials": [
+    {
+      "id": "iron",
+      "chemical_formula": "Fe",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "fluid"
+      ]
+    },
+    {
+      "id": "copper",
+      "chemical_formula": "Cu",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "tin",
+      "chemical_formula": "Sn",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "gold",
+      "chemical_formula": "Au",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "silver",
+      "chemical_formula": "Ag",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "lead",
+      "chemical_formula": "Pb",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "nickel",
+      "chemical_formula": "Ni",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "fluid"
+      ]
+    },
+    {
+      "id": "zinc",
+      "chemical_formula": "Zn",
+      "flags_hint": [
+        "ingot",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "bronze",
+      "chemical_formula": "SnCu3",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "brass",
+      "chemical_formula": "ZnCu3",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "steel",
+      "chemical_formula": "Fe",
+      "flags_hint": [
+        "ingot",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "wrought_iron",
+      "chemical_formula": "Fe",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "invar",
+      "chemical_formula": "Fe2Ni",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "stainless_steel",
+      "chemical_formula": "Fe6CrMnNi",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "aluminium",
+      "chemical_formula": "Al",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "titanium",
+      "chemical_formula": "Ti",
+      "flags_hint": [
+        "ingot"
+      ]
+    },
+    {
+      "id": "chromium",
+      "chemical_formula": "Cr",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "manganese",
+      "chemical_formula": "Mn",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "cobalt",
+      "chemical_formula": "Co",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "antimony",
+      "chemical_formula": "Sb",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "bismuth",
+      "chemical_formula": "Bi",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "electrum",
+      "chemical_formula": "AgAu",
+      "flags_hint": [
+        "ingot",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "cupronickel",
+      "chemical_formula": "CuNi",
+      "flags_hint": [
+        "ingot",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "battery_alloy",
+      "chemical_formula": "Pb4Sb",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "soldering_alloy",
+      "chemical_formula": "Sn6Pb3Sb",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "rubber",
+      "chemical_formula": "C5H8",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "polyethylene",
+      "chemical_formula": "C2H4",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "polyvinyl_chloride",
+      "chemical_formula": "C2H3Cl",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "epoxy",
+      "chemical_formula": "C21H25ClO5",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "silicone_rubber",
+      "chemical_formula": "C2H6OSi",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "glass",
+      "chemical_formula": "Si",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "wood",
+      "chemical_formula": null,
+      "flags_hint": [
+        "plate"
+      ]
+    },
+    {
+      "id": "charcoal",
+      "chemical_formula": "C",
+      "flags_hint": []
+    },
+    {
+      "id": "coal",
+      "chemical_formula": "C",
+      "flags_hint": []
+    },
+    {
+      "id": "diamond",
+      "chemical_formula": "C",
+      "flags_hint": [
+        "ore"
+      ]
+    },
+    {
+      "id": "emerald",
+      "chemical_formula": "Be3Al2Si6O18",
+      "flags_hint": []
+    },
+    {
+      "id": "redstone",
+      "chemical_formula": "SiPy5RuMe3",
+      "flags_hint": [
+        "dust",
+        "plate",
+        "fluid"
+      ]
+    },
+    {
+      "id": "lapis",
+      "chemical_formula": "La12So2PyCa",
+      "flags_hint": [
+        "plate"
+      ]
+    },
+    {
+      "id": "sulfur",
+      "chemical_formula": "S",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "salt",
+      "chemical_formula": "NaCl",
+      "flags_hint": []
+    },
+    {
+      "id": "saltpeter",
+      "chemical_formula": "KNO3",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "phosphate",
+      "chemical_formula": "PO4",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "water",
+      "chemical_formula": "H2O",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "oxygen",
+      "chemical_formula": "O",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "hydrogen",
+      "chemical_formula": "H",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "chemical_formula": "N",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "carbon",
+      "chemical_formula": "C",
+      "flags_hint": [
+        "dust",
+        "fluid"
+      ]
+    },
+    {
+      "id": "silicon",
+      "chemical_formula": "Si",
+      "flags_hint": [
+        "ingot"
+      ]
+    },
+    {
+      "id": "calcium",
+      "chemical_formula": "Ca",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "sodium",
+      "chemical_formula": "Na",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "magnesium",
+      "chemical_formula": "Mg",
+      "flags_hint": [
+        "dust",
+        "fluid"
+      ]
+    },
+    {
+      "id": "phosphorus",
+      "chemical_formula": "P",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "chlorine",
+      "chemical_formula": "Cl",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "sulfuric_acid",
+      "chemical_formula": "H2SO4",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "hydrochloric_acid",
+      "chemical_formula": "HCl",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "nitric_acid",
+      "chemical_formula": "HNO3",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "distilled_water",
+      "chemical_formula": "H2O",
+      "flags_hint": []
+    },
+    {
+      "id": "steam",
+      "chemical_formula": "H2O",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "oil",
+      "chemical_formula": null,
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "oil_medium",
+      "chemical_formula": null,
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "light_fuel",
+      "chemical_formula": null,
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "diesel",
+      "chemical_formula": null,
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "gasoline",
+      "chemical_formula": null,
+      "flags_hint": []
+    },
+    {
+      "id": "lubricant",
+      "chemical_formula": null,
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "glue",
+      "chemical_formula": null,
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "polydimethylsiloxane",
+      "chemical_formula": "C2H6OSi",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "galena",
+      "chemical_formula": "PbS",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "chalcopyrite",
+      "chemical_formula": "CuFeS2",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "hematite",
+      "chemical_formula": "Fe2O3",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "magnetite",
+      "chemical_formula": "Fe3O4",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "cassiterite",
+      "chemical_formula": "SnO2",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "bauxite",
+      "chemical_formula": "Al2O3",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "spodumene",
+      "chemical_formula": "LiAlSi2O6",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "pyrite",
+      "chemical_formula": "FeS2",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    },
+    {
+      "id": "cinnabar",
+      "chemical_formula": "MeS",
+      "flags_hint": [
+        "ore"
+      ]
+    },
+    {
+      "id": "scheelite",
+      "chemical_formula": "CaWO4",
+      "flags_hint": [
+        "dust",
+        "ore",
+        "plate"
+      ]
+    },
+    {
+      "id": "obsidian",
+      "chemical_formula": "MgFeSi2O4",
+      "flags_hint": [
+        "dust",
+        "plate"
+      ]
+    },
+    {
+      "id": "andesite",
+      "chemical_formula": "As4Sa",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "marble",
+      "chemical_formula": "MgCa7",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "concrete",
+      "chemical_formula": "St",
+      "flags_hint": [
+        "dust",
+        "fluid"
+      ]
+    },
+    {
+      "id": "annealed_copper",
+      "chemical_formula": "Cu",
+      "flags_hint": [
+        "ingot",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "magnalium",
+      "chemical_formula": "MgAl2",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "kanthal",
+      "chemical_formula": "FeAlCr",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "nichrome",
+      "chemical_formula": "Ni4Cr",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "tungsten",
+      "chemical_formula": "W",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "tungsten_steel",
+      "chemical_formula": "StW",
+      "flags_hint": [
+        "ingot",
+        "wire"
+      ]
+    },
+    {
+      "id": "vanadium",
+      "chemical_formula": "V",
+      "flags_hint": [
+        "ingot"
+      ]
+    },
+    {
+      "id": "molybdenum",
+      "chemical_formula": "Mo",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "fluid"
+      ]
+    },
+    {
+      "id": "platinum",
+      "chemical_formula": "Pt",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "palladium",
+      "chemical_formula": "Pd",
+      "flags_hint": [
+        "ingot",
+        "ore",
+        "wire"
+      ]
+    },
+    {
+      "id": "iridium",
+      "chemical_formula": "Ir",
+      "flags_hint": [
+        "ingot",
+        "wire",
+        "fluid"
+      ]
+    },
+    {
+      "id": "osmium",
+      "chemical_formula": "Os",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "neodymium",
+      "chemical_formula": "Nd",
+      "flags_hint": [
+        "ingot",
+        "ore"
+      ]
+    },
+    {
+      "id": "yttrium",
+      "chemical_formula": "Y",
+      "flags_hint": [
+        "ingot"
+      ]
+    },
+    {
+      "id": "lithium",
+      "chemical_formula": "Li",
+      "flags_hint": [
+        "dust",
+        "ore",
+        "fluid"
+      ]
+    },
+    {
+      "id": "potassium",
+      "chemical_formula": "K",
+      "flags_hint": [
+        "dust",
+        "fluid"
+      ]
+    },
+    {
+      "id": "tin_alloy",
+      "chemical_formula": "SnFe",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "indium",
+      "chemical_formula": "In",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "gallium",
+      "chemical_formula": "Ga",
+      "flags_hint": [
+        "ingot",
+        "fluid"
+      ]
+    },
+    {
+      "id": "arsenic",
+      "chemical_formula": "As",
+      "flags_hint": [
+        "dust",
+        "fluid"
+      ]
+    },
+    {
+      "id": "boron",
+      "chemical_formula": "B",
+      "flags_hint": [
+        "dust"
+      ]
+    },
+    {
+      "id": "fluorine",
+      "chemical_formula": "F",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "argon",
+      "chemical_formula": "Ar",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "helium",
+      "chemical_formula": "He",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "methane",
+      "chemical_formula": "CH4",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "ethylene",
+      "chemical_formula": "C2H4",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "propene",
+      "chemical_formula": "C3H6",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "benzene",
+      "chemical_formula": "C6H6",
+      "flags_hint": []
+    },
+    {
+      "id": "phenol",
+      "chemical_formula": "C6H6O",
+      "flags_hint": []
+    },
+    {
+      "id": "acetic_acid",
+      "chemical_formula": "C2H4O2",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "ethanol",
+      "chemical_formula": "C2H6O",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "methanol",
+      "chemical_formula": "CH4O",
+      "flags_hint": []
+    },
+    {
+      "id": "acetone",
+      "chemical_formula": "C3H6O",
+      "flags_hint": []
+    },
+    {
+      "id": "ammonia",
+      "chemical_formula": "NH3",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "hydrogen_peroxide",
+      "chemical_formula": "H2O2",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "sodium_persulfate",
+      "chemical_formula": "Na2S2O8",
+      "flags_hint": [
+        "fluid"
+      ]
+    },
+    {
+      "id": "actinium",
+      "chemical_formula": "Ac",
+      "flags_hint": []
+    },
+    {
+      "id": "allyl_chloride",
+      "chemical_formula": "C2MeHy",
+      "flags_hint": []
+    },
+    {
+      "id": "almandine",
+      "chemical_formula": "Al2Fe3Si3O12",
+      "flags_hint": []
+    },
+    {
+      "id": "aluminium_sulfite",
+      "chemical_formula": "Al2S3O9",
+      "flags_hint": [
+        "dust",
+        "ore"
+      ]
+    }
+  ]
+}

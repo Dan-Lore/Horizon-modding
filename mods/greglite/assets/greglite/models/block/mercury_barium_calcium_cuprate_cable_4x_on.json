@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "greglite:block/tin_cable_1x_top",
+    "front": "greglite:block/tin_cable_1x_front_on",
+    "side": "greglite:block/tin_cable_1x_side",
+    "bottom": "greglite:block/tin_cable_1x_bottom",
+    "particle": "greglite:block/tin_cable_1x_side"
+  }
+}

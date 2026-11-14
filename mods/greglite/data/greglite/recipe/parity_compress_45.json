@@ -1,0 +1,12 @@
+{
+  "type": "greglite:compressor",
+  "ingredient": {
+    "item": "greglite:cupronickel_dust"
+  },
+  "result": {
+    "id": "greglite:cupronickel_plate",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2
+}

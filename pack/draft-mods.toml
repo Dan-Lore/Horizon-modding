@@ -1,0 +1,125 @@
+# Pack instances: exactly two (locked 2026-11-14)
+# Plan: docs/greglite-electric-plan.md
+# Tracker: mods/greglite/tracker/catalog.json
+# Transfer list: docs/mod-transfer-list.md
+
+[pack]
+name = "TFG Horizon Draft"
+notes = """
+Working = create-dev on fdc87ae + Batch A + greglite 0.2 (do not break).
+Test = create-nightly-test on 4e5296d/Nightly 9f42064 + Create 0.9; new greglite EU work builds here.
+"""
+
+[[instances]]
+role = "working"
+id = "create-dev"
+label = "TFG Horizon Draft"
+native_version = "native-fdc87ae-8837f1d46495"
+horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+horizon_base = "nightly-2026-11-08-fdc87ae"
+create = false
+
+[[instances]]
+role = "test"
+id = "create-nightly-test"
+label = "Create Nightly Test"
+native_version = "native-9f42064-fa2935bd15a6"
+horizon_commit = "9f42064c11efe7ef3e5ed2baad7ddc2a3b36eea0"
+horizon_base = "nightly-2026-11-13-9f42064"
+create = false
+notes = "Greglite 0.4 + JEI/Jade (native-build). GTM textures. Create 0.9 stays on native-4e5296d-…"
+
+# --- Batch A (built on working) ---
+
+[[mods]]
+id = "jei"
+name = "JEI for Horizon"
+version = "0.2.1"
+source = "horizon-registry"
+batch = "A"
+status = "built"
+on = ["working", "test"]
+minecraft_role = "JEI"
+
+[[mods]]
+id = "jade"
+name = "Jade"
+version = "26.3.8"
+source = "horizon-registry"
+batch = "A"
+status = "built"
+on = ["working", "test"]
+minecraft_role = "Jade / Waila-like"
+
+[[mods]]
+id = "ae2"
+name = "Applied Energistics 2"
+version = "15.4.17"
+source = "horizon-registry"
+batch = "A"
+status = "built"
+on = ["working"]
+minecraft_role = "AE2"
+
+[[mods]]
+id = "appleskin"
+name = "AppleSkin"
+version = "0.1.3"
+source = "horizon-registry"
+batch = "A"
+status = "built"
+on = ["working"]
+minecraft_role = "AppleSkin"
+
+[[mods]]
+id = "connected_textures"
+name = "ContinuityHorizon"
+version = "0.1.7"
+source = "horizon-registry"
+batch = "A"
+status = "built"
+on = ["working"]
+minecraft_role = "Continuity / CTM"
+
+[[mods]]
+id = "greglite"
+name = "Greglite"
+version = "0.3.0"
+source = "mods/greglite → greglite.hmod"
+batch = "A+electric"
+status = "built"
+on = ["working", "test"]
+minecraft_role = "GregTech-inspired Steam + LV Electric"
+why = "Working: Steam 0.2 on fdc87ae. Test: Electric Age 0.3 on native-9f42064-e72cd9c26fa6 (smoke boiler→turbine→cable→macerator)."
+
+# --- Create ---
+
+[[mods]]
+id = "create"
+name = "Create for Horizon"
+version = "0.9.0"
+source = "github:Delete228/create-horizon"
+batch = "B"
+status = "built_isolated"
+on = ["native-4e5296d-649518ee8b9d"]
+minecraft_role = "Create"
+why = "Builds on Create pin 4e5296d; left_out when batched with greglite on Nightly tip 9f42064"
+
+# --- Post-MVP ---
+
+[[mods]]
+id = "tfc-inspired"
+name = "(own) TFC-inspired slice"
+source = "mods/<id>/ later"
+batch = "post"
+status = "post_mvp"
+minecraft_role = "TerraFirmaCraft"
+
+[[mods]]
+id = "gt-inspired"
+name = "Greglite Electric Age"
+source = "mods/greglite"
+batch = "post"
+status = "planned"
+minecraft_role = "GregTech Modern"
+why = "EU + all singleblock electrics; tracker catalog.json; waves W0–W9"

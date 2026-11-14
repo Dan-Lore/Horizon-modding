@@ -1,0 +1,17 @@
+{
+  "type": "greglite:canner",
+  "result": {
+    "id": "greglite:redstone_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ]
+}

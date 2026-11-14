@@ -1,0 +1,12 @@
+{
+  "type": "greglite:electromagnetic_separator",
+  "result": {
+    "id": "greglite:tin_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": {
+    "item": "greglite:tin_plate"
+  }
+}

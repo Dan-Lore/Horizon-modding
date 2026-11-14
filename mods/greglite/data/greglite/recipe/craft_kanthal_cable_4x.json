@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "C": {
+      "item": "greglite:kanthal_cable_1x"
+    }
+  },
+  "result": {
+    "id": "greglite:kanthal_cable_4x",
+    "count": 1
+  }
+}

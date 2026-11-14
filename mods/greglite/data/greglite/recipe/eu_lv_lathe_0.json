@@ -1,0 +1,12 @@
+{
+  "type": "greglite:lathe",
+  "result": {
+    "id": "greglite:tin_rod",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": {
+    "item": "greglite:tin_ingot"
+  }
+}

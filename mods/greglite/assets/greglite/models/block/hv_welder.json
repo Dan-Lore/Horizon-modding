@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "greglite:block/hv_casing_top",
+    "bottom": "greglite:block/hv_casing_bottom",
+    "side": "greglite:block/hv_casing_side",
+    "front": "greglite:block/hv_welder_front",
+    "particle": "greglite:block/hv_casing_side"
+  }
+}

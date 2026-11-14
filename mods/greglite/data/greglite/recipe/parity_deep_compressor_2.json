@@ -1,0 +1,12 @@
+{
+  "type": "greglite:compressor",
+  "result": {
+    "id": "greglite:tin_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredient": {
+    "item": "greglite:tin_ingot"
+  }
+}

@@ -1,0 +1,33 @@
+# Portable launcher binaries (download separately / keep local)
+launcher/**/*.exe
+launcher/**/*.dll
+launcher/**/*.zip
+launcher/windows-x64/
+launcher/
+
+# Upstream is a local shallow clone for reference — do not commit as a nested tree
+upstream/
+
+# Local / OS
+.local/
+*.log
+*.log.err
+Thumbs.db
+Desktop.ini
+.DS_Store
+__pycache__/
+*.pyc
+
+# Generated / scratch (keep scripts; drop pack staging, smoke dumps, DBs)
+tools/_greglite-pack/
+tools/_*.txt
+tools/_*.png
+tools/_*.json
+tools/_native-build-*.log*
+mods/**/tracker/*.db
+mods/**/target/
+**/.horizon-cache/
+
+# Nested clones with their own .git (pull upstream separately; not vendored here)
+mods/create-horizon/
+reference/GregTech-Modern/

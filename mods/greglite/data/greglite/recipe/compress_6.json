@@ -1,0 +1,12 @@
+{
+  "type": "greglite:compressor",
+  "ingredient": {
+    "item": "greglite:iron_dust"
+  },
+  "result": {
+    "id": "greglite:iron_plate",
+    "count": 1
+  },
+  "duration": 100,
+  "steam": 16
+}

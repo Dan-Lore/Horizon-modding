@@ -1,0 +1,12 @@
+{
+  "type": "greglite:lathe",
+  "ingredient": {
+    "item": "greglite:stainless_steel_ingot"
+  },
+  "result": {
+    "id": "greglite:stainless_steel_rod",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

@@ -1,0 +1,13 @@
+{
+  "type": "greglite:macerator",
+  "ingredient": {
+    "item": "greglite:polyethylene_plate"
+  },
+  "result": {
+    "id": "greglite:polyethylene_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "steam": 1
+}

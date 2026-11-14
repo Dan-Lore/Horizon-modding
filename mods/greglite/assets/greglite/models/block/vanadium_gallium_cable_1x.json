@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "greglite:block/vanadium_gallium_cable_1x_side"
+  }
+}

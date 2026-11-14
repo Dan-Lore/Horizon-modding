@@ -1,0 +1,12 @@
+{
+  "type": "greglite:wiremill",
+  "ingredient": {
+    "item": "greglite:polyvinyl_chloride_ingot"
+  },
+  "result": {
+    "id": "greglite:polyvinyl_chloride_wire",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

@@ -1,0 +1,17 @@
+{
+  "type": "greglite:laser_engraver",
+  "result": {
+    "id": "minecraft:glass",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ]
+}

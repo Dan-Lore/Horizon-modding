@@ -1,0 +1,12 @@
+{
+  "type": "greglite:lathe",
+  "ingredient": {
+    "item": "greglite:aluminium_ingot"
+  },
+  "result": {
+    "id": "greglite:aluminium_rod",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

@@ -1,0 +1,12 @@
+{
+  "type": "greglite:macerator",
+  "ingredient": {
+    "item": "greglite:bronze_plate"
+  },
+  "result": {
+    "id": "greglite:bronze_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "steam": 16
+}

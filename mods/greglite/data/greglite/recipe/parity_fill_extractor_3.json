@@ -1,0 +1,12 @@
+{
+  "type": "greglite:extractor",
+  "duration": 80,
+  "eu": 2,
+  "ingredient": {
+    "item": "greglite:gold_dust"
+  },
+  "result": {
+    "id": "greglite:gold_plate",
+    "count": 1
+  }
+}

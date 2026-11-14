@@ -1,0 +1,12 @@
+{
+  "type": "greglite:macerator",
+  "ingredient": {
+    "item": "greglite:tin_ingot"
+  },
+  "result": {
+    "id": "greglite:tin_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "steam": 16
+}

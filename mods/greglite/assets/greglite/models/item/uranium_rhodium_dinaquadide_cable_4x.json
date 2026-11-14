@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "greglite:item/uranium_rhodium_dinaquadide_cable_4x"
+  }
+}

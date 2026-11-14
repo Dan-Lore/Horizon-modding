@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "greglite:tin_ingot"
+    }
+  ],
+  "result": {
+    "id": "greglite:tin_rod",
+    "count": 2
+  }
+}

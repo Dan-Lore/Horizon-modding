@@ -1,0 +1,12 @@
+{
+  "type": "greglite:macerator",
+  "result": {
+    "id": "greglite:copper_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": {
+    "item": "minecraft:raw_copper"
+  }
+}

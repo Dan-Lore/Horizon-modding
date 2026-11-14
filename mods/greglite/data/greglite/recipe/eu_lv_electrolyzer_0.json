@@ -1,0 +1,12 @@
+{
+  "type": "greglite:electrolyzer",
+  "result": {
+    "id": "greglite:tin_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": {
+    "item": "greglite:tin_ingot"
+  }
+}

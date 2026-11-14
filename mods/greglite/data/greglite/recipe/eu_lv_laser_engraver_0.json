@@ -1,0 +1,12 @@
+{
+  "type": "greglite:laser_engraver",
+  "result": {
+    "id": "greglite:bronze_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": {
+    "item": "greglite:bronze_ingot"
+  }
+}

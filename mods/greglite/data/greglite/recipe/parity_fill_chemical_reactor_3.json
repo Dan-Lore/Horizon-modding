@@ -1,0 +1,17 @@
+{
+  "type": "greglite:chemical_reactor",
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "greglite:gold_dust"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "id": "greglite:gold_ingot",
+    "count": 1
+  }
+}

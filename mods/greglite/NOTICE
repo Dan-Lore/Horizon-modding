@@ -1,0 +1,16 @@
+Greglite — Horizon-native workshop mod (GTM-oriented Steam + Electric Age).
+
+Inspired by GregTech CEu: Modern; not affiliated with GregTech / Gregicality /
+GTNH / GTCEu authors. Clean reimplementation for Horizon — not a jar port.
+
+Reference extract (read-only): reference/GregTech-Modern @ 1.20.1
+Coverage score: mods/greglite/tracker/coverage.json (weighted checklist).
+
+Textures / GUI
+--------------
+Selected textures and GUI panels are derived from GregTech CEu: Modern
+(https://github.com/GregTechCEu/GregTech-Modern), LGPL-3.0.
+See tools/fetch_gtm_textures.py and tools/fetch_gtm_gui.py.
+
+Original Rust and JSON in this folder: MIT unless noted otherwise.
+Minecraft / Mojang assets are not redistributed.

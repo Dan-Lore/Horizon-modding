@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "greglite:block/ev_casing_top",
+    "bottom": "greglite:block/ev_casing_bottom",
+    "side": "greglite:block/ev_casing_side",
+    "front": "greglite:block/ev_centrifuge_front_on",
+    "particle": "greglite:block/ev_casing_side"
+  }
+}

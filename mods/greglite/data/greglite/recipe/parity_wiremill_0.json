@@ -1,0 +1,12 @@
+{
+  "type": "greglite:wiremill",
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "greglite:iron_wire",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

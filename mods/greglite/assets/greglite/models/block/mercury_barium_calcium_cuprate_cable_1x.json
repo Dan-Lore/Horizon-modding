@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "greglite:block/mercury_barium_calcium_cuprate_cable_1x_side"
+  }
+}

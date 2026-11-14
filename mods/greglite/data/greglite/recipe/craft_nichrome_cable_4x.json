@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "C": {
+      "item": "greglite:nichrome_cable_1x"
+    }
+  },
+  "result": {
+    "id": "greglite:nichrome_cable_4x",
+    "count": 1
+  }
+}

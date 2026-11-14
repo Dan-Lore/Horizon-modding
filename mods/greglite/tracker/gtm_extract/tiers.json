@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "source": "GTValues.java",
+  "tiers": [
+    {
+      "index": 0,
+      "name": "Ultra Low Voltage",
+      "short": "ULV",
+      "voltage": 8
+    },
+    {
+      "index": 1,
+      "name": "Low Voltage",
+      "short": "LV",
+      "voltage": 32
+    },
+    {
+      "index": 2,
+      "name": "Medium Voltage",
+      "short": "MV",
+      "voltage": 128
+    },
+    {
+      "index": 3,
+      "name": "High Voltage",
+      "short": "HV",
+      "voltage": 512
+    },
+    {
+      "index": 4,
+      "name": "Extreme Voltage",
+      "short": "EV",
+      "voltage": 2048
+    },
+    {
+      "index": 5,
+      "name": "Insane Voltage",
+      "short": "IV",
+      "voltage": 8192
+    },
+    {
+      "index": 6,
+      "name": "Ludicrous Voltage",
+      "short": "LuV",
+      "voltage": 32768
+    },
+    {
+      "index": 7,
+      "name": "ZPM Voltage",
+      "short": "ZPM",
+      "voltage": 131072
+    },
+    {
+      "index": 8,
+      "name": "Ultimate Voltage",
+      "short": "UV",
+      "voltage": 524288
+    },
+    {
+      "index": 9,
+      "name": "Ultra High Voltage",
+      "short": "UHV",
+      "voltage": 2097152
+    },
+    {
+      "index": 10,
+      "name": "Ultra Excessive Voltage",
+      "short": "UEV",
+      "voltage": 8388608
+    },
+    {
+      "index": 11,
+      "name": "Ultra Immense Voltage",
+      "short": "UIV",
+      "voltage": 33554432
+    },
+    {
+      "index": 12,
+      "name": "Ultra Extreme Voltage",
+      "short": "UXV",
+      "voltage": 134217728
+    },
+    {
+      "index": 13,
+      "name": "Overpowered Voltage",
+      "short": "OpV",
+      "voltage": 536870912
+    },
+    {
+      "index": 14,
+      "name": "Maximum Voltage",
+      "short": "MAX",
+      "voltage": 2147483648
+    }
+  ]
+}

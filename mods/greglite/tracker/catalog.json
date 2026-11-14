@@ -1,0 +1,4247 @@
+{
+  "schema": 2,
+  "updated": "2026-11-14",
+  "plan": "docs/greglite-electric-plan.md",
+  "parity_target": 0.99,
+  "machines": [
+    {
+      "id": "steam_solid_boiler_lp",
+      "gtm_type": "steam_solid_boiler",
+      "tier": "steam_lp",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "0.2"
+    },
+    {
+      "id": "steam_solid_boiler_hp",
+      "gtm_type": "steam_solid_boiler",
+      "tier": "steam_hp",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "steam_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "steam",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "0.2"
+    },
+    {
+      "id": "steam_macerator",
+      "gtm_type": "macerator",
+      "tier": "steam",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "0.2"
+    },
+    {
+      "id": "steam_compressor",
+      "gtm_type": "compressor",
+      "tier": "steam",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "0.2"
+    },
+    {
+      "id": "lv_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_electric_furnace",
+      "gtm_type": "electric_furnace",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_alloy_smelter",
+      "gtm_type": "alloy_smelter",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_assembler",
+      "gtm_type": "assembler",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_assembler",
+      "gtm_type": "assembler",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_assembler",
+      "gtm_type": "assembler",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_assembler",
+      "gtm_type": "assembler",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_assembler",
+      "gtm_type": "assembler",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_assembler",
+      "gtm_type": "assembler",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_assembler",
+      "gtm_type": "assembler",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_assembler",
+      "gtm_type": "assembler",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_autoclave",
+      "gtm_type": "autoclave",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_bender",
+      "gtm_type": "bender",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_bender",
+      "gtm_type": "bender",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_bender",
+      "gtm_type": "bender",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_bender",
+      "gtm_type": "bender",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_bender",
+      "gtm_type": "bender",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_bender",
+      "gtm_type": "bender",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_bender",
+      "gtm_type": "bender",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_bender",
+      "gtm_type": "bender",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_brewery",
+      "gtm_type": "brewery",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_brewery",
+      "gtm_type": "brewery",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_brewery",
+      "gtm_type": "brewery",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_brewery",
+      "gtm_type": "brewery",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_brewery",
+      "gtm_type": "brewery",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_brewery",
+      "gtm_type": "brewery",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_brewery",
+      "gtm_type": "brewery",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_brewery",
+      "gtm_type": "brewery",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_canner",
+      "gtm_type": "canner",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_canner",
+      "gtm_type": "canner",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_canner",
+      "gtm_type": "canner",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_canner",
+      "gtm_type": "canner",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_canner",
+      "gtm_type": "canner",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_canner",
+      "gtm_type": "canner",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_canner",
+      "gtm_type": "canner",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_canner",
+      "gtm_type": "canner",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_centrifuge",
+      "gtm_type": "centrifuge",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_chemical_bath",
+      "gtm_type": "chemical_bath",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_chemical_reactor",
+      "gtm_type": "chemical_reactor",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_compressor",
+      "gtm_type": "compressor",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_compressor",
+      "gtm_type": "compressor",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_compressor",
+      "gtm_type": "compressor",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_compressor",
+      "gtm_type": "compressor",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_compressor",
+      "gtm_type": "compressor",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_compressor",
+      "gtm_type": "compressor",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_compressor",
+      "gtm_type": "compressor",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_compressor",
+      "gtm_type": "compressor",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_cutter",
+      "gtm_type": "cutter",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_cutter",
+      "gtm_type": "cutter",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_cutter",
+      "gtm_type": "cutter",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_cutter",
+      "gtm_type": "cutter",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_cutter",
+      "gtm_type": "cutter",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_cutter",
+      "gtm_type": "cutter",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_cutter",
+      "gtm_type": "cutter",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_cutter",
+      "gtm_type": "cutter",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_distillery",
+      "gtm_type": "distillery",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_distillery",
+      "gtm_type": "distillery",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_distillery",
+      "gtm_type": "distillery",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_distillery",
+      "gtm_type": "distillery",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_distillery",
+      "gtm_type": "distillery",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_distillery",
+      "gtm_type": "distillery",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_distillery",
+      "gtm_type": "distillery",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_distillery",
+      "gtm_type": "distillery",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_electrolyzer",
+      "gtm_type": "electrolyzer",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_electromagnetic_separator",
+      "gtm_type": "electromagnetic_separator",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_extractor",
+      "gtm_type": "extractor",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_extractor",
+      "gtm_type": "extractor",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_extractor",
+      "gtm_type": "extractor",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_extractor",
+      "gtm_type": "extractor",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_extractor",
+      "gtm_type": "extractor",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_extractor",
+      "gtm_type": "extractor",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_extractor",
+      "gtm_type": "extractor",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_extractor",
+      "gtm_type": "extractor",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_extruder",
+      "gtm_type": "extruder",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_extruder",
+      "gtm_type": "extruder",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_extruder",
+      "gtm_type": "extruder",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_extruder",
+      "gtm_type": "extruder",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_extruder",
+      "gtm_type": "extruder",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_extruder",
+      "gtm_type": "extruder",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_extruder",
+      "gtm_type": "extruder",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_extruder",
+      "gtm_type": "extruder",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_fermenter",
+      "gtm_type": "fermenter",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_fluid_heater",
+      "gtm_type": "fluid_heater",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_fluid_solidifier",
+      "gtm_type": "fluid_solidifier",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_forge_hammer",
+      "gtm_type": "forge_hammer",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_forming_press",
+      "gtm_type": "forming_press",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_lathe",
+      "gtm_type": "lathe",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_lathe",
+      "gtm_type": "lathe",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_lathe",
+      "gtm_type": "lathe",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_lathe",
+      "gtm_type": "lathe",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_lathe",
+      "gtm_type": "lathe",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_lathe",
+      "gtm_type": "lathe",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_lathe",
+      "gtm_type": "lathe",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_lathe",
+      "gtm_type": "lathe",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_scanner",
+      "gtm_type": "scanner",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_scanner",
+      "gtm_type": "scanner",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_scanner",
+      "gtm_type": "scanner",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_scanner",
+      "gtm_type": "scanner",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_scanner",
+      "gtm_type": "scanner",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_scanner",
+      "gtm_type": "scanner",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_scanner",
+      "gtm_type": "scanner",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_scanner",
+      "gtm_type": "scanner",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_mixer",
+      "gtm_type": "mixer",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_mixer",
+      "gtm_type": "mixer",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_mixer",
+      "gtm_type": "mixer",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_mixer",
+      "gtm_type": "mixer",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_mixer",
+      "gtm_type": "mixer",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_mixer",
+      "gtm_type": "mixer",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_mixer",
+      "gtm_type": "mixer",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_mixer",
+      "gtm_type": "mixer",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_ore_washer",
+      "gtm_type": "ore_washer",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_packer",
+      "gtm_type": "packer",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_packer",
+      "gtm_type": "packer",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_packer",
+      "gtm_type": "packer",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_packer",
+      "gtm_type": "packer",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_packer",
+      "gtm_type": "packer",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_packer",
+      "gtm_type": "packer",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_packer",
+      "gtm_type": "packer",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_packer",
+      "gtm_type": "packer",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_polarizer",
+      "gtm_type": "polarizer",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_laser_engraver",
+      "gtm_type": "laser_engraver",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_sifter",
+      "gtm_type": "sifter",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_sifter",
+      "gtm_type": "sifter",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_sifter",
+      "gtm_type": "sifter",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_sifter",
+      "gtm_type": "sifter",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_sifter",
+      "gtm_type": "sifter",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_sifter",
+      "gtm_type": "sifter",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_sifter",
+      "gtm_type": "sifter",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_sifter",
+      "gtm_type": "sifter",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_thermal_centrifuge",
+      "gtm_type": "thermal_centrifuge",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_wiremill",
+      "gtm_type": "wiremill",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_circuit_assembler",
+      "gtm_type": "circuit_assembler",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "lv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "mv_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "mv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "hv_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "hv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "ev_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "ev",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "iv_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "iv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "luv_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "luv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "zpm_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "zpm",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "uv_gas_collector",
+      "gtm_type": "gas_collector",
+      "tier": "uv",
+      "kind": "processor",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "min_recipes": 2
+    },
+    {
+      "id": "lv_steam_turbine",
+      "gtm_type": "steam_turbine",
+      "tier": "lv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_steam_turbine",
+      "gtm_type": "steam_turbine",
+      "tier": "mv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_steam_turbine",
+      "gtm_type": "steam_turbine",
+      "tier": "hv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_combustion",
+      "gtm_type": "combustion",
+      "tier": "lv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_combustion",
+      "gtm_type": "combustion",
+      "tier": "mv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_combustion",
+      "gtm_type": "combustion",
+      "tier": "hv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_gas_turbine",
+      "gtm_type": "gas_turbine",
+      "tier": "lv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_gas_turbine",
+      "gtm_type": "gas_turbine",
+      "tier": "mv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_gas_turbine",
+      "gtm_type": "gas_turbine",
+      "tier": "hv",
+      "kind": "generator",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "lv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "lv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_transformer",
+      "gtm_type": "transformer",
+      "tier": "lv",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_diode",
+      "gtm_type": "diode",
+      "tier": "lv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lv_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "lv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "mv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "mv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_transformer",
+      "gtm_type": "transformer",
+      "tier": "mv",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_diode",
+      "gtm_type": "diode",
+      "tier": "mv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mv_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "mv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "hv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "hv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_transformer",
+      "gtm_type": "transformer",
+      "tier": "hv",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_diode",
+      "gtm_type": "diode",
+      "tier": "hv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "hv_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "hv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ev_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "ev",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ev_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "ev",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ev_transformer",
+      "gtm_type": "transformer",
+      "tier": "ev",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ev_diode",
+      "gtm_type": "diode",
+      "tier": "ev",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ev_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "ev",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iv_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "iv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iv_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "iv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iv_transformer",
+      "gtm_type": "transformer",
+      "tier": "iv",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iv_diode",
+      "gtm_type": "diode",
+      "tier": "iv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iv_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "iv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "luv_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "luv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "luv_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "luv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "luv_transformer",
+      "gtm_type": "transformer",
+      "tier": "luv",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "luv_diode",
+      "gtm_type": "diode",
+      "tier": "luv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "luv_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "luv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "zpm_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "zpm",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "zpm_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "zpm",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "zpm_transformer",
+      "gtm_type": "transformer",
+      "tier": "zpm",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "zpm_diode",
+      "gtm_type": "diode",
+      "tier": "zpm",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "zpm_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "zpm",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uv_machine_hull",
+      "gtm_type": "machine_hull",
+      "tier": "uv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uv_battery_buffer_4x",
+      "gtm_type": "battery_buffer_4x",
+      "tier": "uv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uv_transformer",
+      "gtm_type": "transformer",
+      "tier": "uv",
+      "kind": "transformer",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uv_diode",
+      "gtm_type": "diode",
+      "tier": "uv",
+      "kind": "utility",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uv_charger_4",
+      "gtm_type": "charger_4",
+      "tier": "uv",
+      "kind": "storage",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "cobalt_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "cobalt_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "manganese_phosphide_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "manganese_phosphide_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "nickel_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "nickel_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tin_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tin_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "annealed_copper_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "annealed_copper_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "copper_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "copper_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "cupronickel_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "cupronickel_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iron_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "iron_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "magnesium_diboride_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "magnesium_diboride_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "electrum_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "electrum_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "gold_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "gold_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "kanthal_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "kanthal_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mercury_barium_calcium_cuprate_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "mercury_barium_calcium_cuprate_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "silver_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "silver_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "aluminium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "aluminium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "black_steel_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "black_steel_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "nichrome_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "nichrome_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "rtm_alloy_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "rtm_alloy_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "steel_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "steel_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uranium_triplatinum_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uranium_triplatinum_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "graphene_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "graphene_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "platinum_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "platinum_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tungsten_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tungsten_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tungsten_steel_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tungsten_steel_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "indium_tin_barium_titanium_cuprate_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "indium_tin_barium_titanium_cuprate_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "niobium_nitride_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "niobium_nitride_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "niobium_titanium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "niobium_titanium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "osmium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "osmium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "naquadah_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "naquadah_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "trinium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "trinium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uranium_rhodium_dinaquadide_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "uranium_rhodium_dinaquadide_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "vanadium_gallium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "vanadium_gallium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "naquadah_alloy_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "naquadah_alloy_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tritanium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "tritanium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "yttrium_barium_cuprate_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "yttrium_barium_cuprate_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "europium_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "europium_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ruthenium_trinium_americium_neutronate_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "ruthenium_trinium_americium_neutronate_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lead_cable_1x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "lead_cable_4x",
+      "gtm_type": "cable",
+      "tier": "wire",
+      "kind": "cable",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity"
+    },
+    {
+      "id": "multi_active_transformer",
+      "gtm_type": "active_transformer",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Active transformer (EU routing)"
+    },
+    {
+      "id": "multi_assembly_line",
+      "gtm_type": "assembly_line",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Assembly line"
+    },
+    {
+      "id": "multi_bedrock_ore_miner",
+      "gtm_type": "bedrock_ore_miner",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Bedrock ore miner"
+    },
+    {
+      "id": "multi_bronze_multiblock_tank",
+      "gtm_type": "bronze_multiblock_tank",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Bronze multiblock fluid tank"
+    },
+    {
+      "id": "multi_central_monitor",
+      "gtm_type": "central_monitor",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Central monitor display"
+    },
+    {
+      "id": "multi_charcoal_pile_igniter",
+      "gtm_type": "charcoal_pile_igniter",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Charcoal pile igniter"
+    },
+    {
+      "id": "multi_cleanroom",
+      "gtm_type": "cleanroom",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Cleanroom (circuit assembly)"
+    },
+    {
+      "id": "multi_coke_oven",
+      "gtm_type": "coke_oven",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Coke oven (primitive charcoal)"
+    },
+    {
+      "id": "multi_cracker",
+      "gtm_type": "cracker",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Oil cracker"
+    },
+    {
+      "id": "multi_distillation_tower",
+      "gtm_type": "distillation_tower",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Distillation tower"
+    },
+    {
+      "id": "multi_electric_blast_furnace",
+      "gtm_type": "electric_blast_furnace",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Electric blast furnace (coil)"
+    },
+    {
+      "id": "multi_fluid_drilling_rig",
+      "gtm_type": "fluid_drilling_rig",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Fluid bedrock drilling rig"
+    },
+    {
+      "id": "multi_fusion_reactor",
+      "gtm_type": "fusion_reactor",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Fusion reactor (tiered MK)"
+    },
+    {
+      "id": "multi_gas_large_turbine",
+      "gtm_type": "gas_large_turbine",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large gas turbine"
+    },
+    {
+      "id": "multi_implosion_compressor",
+      "gtm_type": "implosion_compressor",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Implosion compressor"
+    },
+    {
+      "id": "multi_large_boiler_bronze",
+      "gtm_type": "large_boiler_bronze",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large steam boiler (bronze)"
+    },
+    {
+      "id": "multi_large_boiler_steel",
+      "gtm_type": "large_boiler_steel",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large steam boiler (steel)"
+    },
+    {
+      "id": "multi_large_boiler_titanium",
+      "gtm_type": "large_boiler_titanium",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large steam boiler (titanium)"
+    },
+    {
+      "id": "multi_large_boiler_tungstensteel",
+      "gtm_type": "large_boiler_tungstensteel",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large steam boiler (tungstensteel)"
+    },
+    {
+      "id": "multi_large_chemical_reactor",
+      "gtm_type": "large_chemical_reactor",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large chemical reactor"
+    },
+    {
+      "id": "multi_large_combustion_engine",
+      "gtm_type": "large_combustion_engine",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large combustion generator"
+    },
+    {
+      "id": "multi_large_miner",
+      "gtm_type": "large_miner",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large area miner"
+    },
+    {
+      "id": "multi_multi_smelter",
+      "gtm_type": "multi_smelter",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Multi smelter (parallel smelt)"
+    },
+    {
+      "id": "multi_plasma_large_turbine",
+      "gtm_type": "plasma_large_turbine",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large plasma turbine"
+    },
+    {
+      "id": "multi_power_substation",
+      "gtm_type": "power_substation",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Power substation (EU storage)"
+    },
+    {
+      "id": "multi_primitive_blast_furnace",
+      "gtm_type": "primitive_blast_furnace",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Primitive blast furnace"
+    },
+    {
+      "id": "multi_primitive_pump",
+      "gtm_type": "primitive_pump",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Primitive water pump"
+    },
+    {
+      "id": "multi_pyrolyse_oven",
+      "gtm_type": "pyrolyse_oven",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Pyrolyse oven"
+    },
+    {
+      "id": "multi_steam_grinder",
+      "gtm_type": "steam_grinder",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "High-pressure steam macerator"
+    },
+    {
+      "id": "multi_steam_large_turbine",
+      "gtm_type": "steam_large_turbine",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Large steam turbine"
+    },
+    {
+      "id": "multi_steam_oven",
+      "gtm_type": "steam_oven",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "High-pressure steam furnace"
+    },
+    {
+      "id": "multi_steel_multiblock_tank",
+      "gtm_type": "steel_multiblock_tank",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Steel multiblock fluid tank"
+    },
+    {
+      "id": "multi_vacuum_freezer",
+      "gtm_type": "vacuum_freezer",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Vacuum freezer"
+    },
+    {
+      "id": "multi_wooden_multiblock_tank",
+      "gtm_type": "wooden_multiblock_tank",
+      "tier": "multi",
+      "kind": "multiblock",
+      "source_mod": "gregtech_modern",
+      "status": "done",
+      "wave": "parity",
+      "notes": "Wooden multiblock fluid tank"
+    }
+  ],
+  "materials_count": 120,
+  "recipe_files_written": 435,
+  "milestones": [
+    {
+      "id": "GTM_PARITY",
+      "title": "GTM-oriented parity push",
+      "status": "in_progress"
+    }
+  ]
+}

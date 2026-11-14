@@ -1,0 +1,12 @@
+{
+  "type": "greglite:lathe",
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "greglite:iron_rod",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

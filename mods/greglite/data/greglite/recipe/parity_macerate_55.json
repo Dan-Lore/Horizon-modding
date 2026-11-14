@@ -1,0 +1,13 @@
+{
+  "type": "greglite:macerator",
+  "ingredient": {
+    "item": "greglite:silicone_rubber_ingot"
+  },
+  "result": {
+    "id": "greglite:silicone_rubber_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "steam": 1
+}

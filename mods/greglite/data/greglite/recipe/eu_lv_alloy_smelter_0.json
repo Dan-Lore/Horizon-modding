@@ -1,0 +1,17 @@
+{
+  "type": "greglite:alloy_smelter",
+  "result": {
+    "id": "greglite:bronze_ingot",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredients": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "greglite:tin_ingot"
+    }
+  ]
+}

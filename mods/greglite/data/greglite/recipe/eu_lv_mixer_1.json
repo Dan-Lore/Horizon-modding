@@ -1,0 +1,12 @@
+{
+  "type": "greglite:mixer",
+  "result": {
+    "id": "greglite:copper_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": {
+    "item": "minecraft:raw_copper"
+  }
+}

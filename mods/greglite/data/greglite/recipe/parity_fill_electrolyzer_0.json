@@ -1,0 +1,17 @@
+{
+  "type": "greglite:electrolyzer",
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    {
+      "item": "greglite:iron_dust"
+    },
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "result": {
+    "id": "greglite:iron_ingot",
+    "count": 1
+  }
+}
