@@ -5,7 +5,7 @@
 
 This repo/workspace is for **open-source Minecraft-on-Rust modding**, centered on **Horizon** (Java Edition rewritten in Rust). It is not a Java Forge/Fabric port of TerraFirmaGreg.
 
-Last updated from chat: 2026-11-14.
+Last updated from chat: 2026-11-15.
 
 ## Goal
 
@@ -119,15 +119,16 @@ Full text: `docs/mod-sourcing-policy.md`.
 
 Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry check → public **pack in a separate repo** → player downloads via Releases/registry. Details: `docs/pipeline-and-horizon-mcp.md`.
 
-## Draft pack instances (exactly two)
+## Draft pack instance (one)
 
-| Role | Id | Play version (2026-11-14) | Notes |
+| Role | Id | Play version (2026-11-15) | Notes |
 | --- | --- | --- | --- |
-| **Working** | `create-dev` («TFG Horizon Draft») | `native-fdc87ae-8837f1d46495` | Tested Batch A + greglite 0.2; **do not rebuild / repin** |
-| **Test** | `create-nightly-test` | `native-9f42064-fa2935bd15a6` | Greglite 0.4.2 + JEI/Jade; vanilla machine GUI chrome; Create on `native-4e5296d-…` |
+| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.4.3** on Nightly `fdc87ae` |
 
-- No third pack instance. Promote test → working only after smoke.
-- Keep **prune-old-versions off** while both natives must remain installed.
+- `create-dev` / `create-nightly-test` deleted (tests only).
+- **Create** cannot join this native: registry 0.7 → `9c7f9b2`, local 0.9 → `4e5296d`; AE2 15.4.18 needs `fdc87ae`/hooks 411. Create hnmod parked under `horizon-native-mods/_parked/`.
+- Tip Nightly `9f42064`: AE2 left out (`E_TARGET_NOT_FOUND`); keep installed as base only.
+- Keep **prune-old-versions off** while `fdc87ae` + `9f42064` nightlies must remain.
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
 
@@ -144,15 +145,15 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 
 Full plan: **`docs/mvp-tfg-plan.md`**.  
 **Locked transfer list:** **`docs/mod-transfer-list.md`** (+ `pack/draft-mods.toml`).  
-MVP Batch A = Nightly `fdc87ae` + JEI/Jade/**AE2** (± AppleSkin/Continuity) + **Greglite** 0.2 (Steam Age) on **working** `create-dev`.  
-Create 0.9 proven on **test** (`native-4e5296d-…`). Electric Age: `docs/greglite-electric-plan.md`.
+MVP Batch A on **`tfg-horizon`**: Nightly `fdc87ae` + JustEnoughItems 1.1.2 + Jade + AE2 **15.4.18** + AppleSkin + Continuity + Greglite **0.4.3**.  
+Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/greglite-electric-plan.md`.
 
 ## Suggested next work for agents
 
-1. Greglite **W0**: finish tracker script (`tools/greglite-tracker.ps1` → SQLite) + energy/processor refactor without breaking Steam Age.
-2. Native-build **only** on `create-nightly-test`; never touch working `8837` unless promoting.
-3. Run `tools/check-registry.ps1` ≤1×/day UTC.
-4. After W1–W2 smoke on test: multitask W3+ from `mods/greglite/tracker/catalog.json` gaps.
+1. Smoke `tfg-horizon` (JEI creative panel, AE2, Greglite machines) on `native-fdc87ae-428278da87c5`.
+2. Native-build **only** for that pack instance; do not pile tip+AE2 until registry AE2 supports `9f42064`.
+3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence.
+4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
 
 Combined native+content tips (not rules): `docs/dev-tips-native-content.md` — Hooks≠registries, check `native-content/<id>/` after builds, `/give` smoke.
 
