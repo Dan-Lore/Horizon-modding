@@ -109,3 +109,16 @@ status = "workshop"
 on = []
 minecraft_role = "TerraFirmaCraft-inspired core slice"
 why = "Sources only. Do not native-build onto tfg-horizon until a wave is smoked; pin stays fdc87ae for AE2."
+
+# --- Ad Astra (workshop; not on the pack native) ---
+
+[[mods]]
+id = "adastra"
+name = "Ad Astra Horizon"
+version = "0.1.0"
+source = "mods/adastra → adastra.hmod"
+batch = "post-mvp"
+status = "workshop"
+on = []
+minecraft_role = "Ad Astra-inspired overworld slice (no dimensions)"
+why = "Sources only. Pack agent enables after /give + visible textures; pin stays fdc87ae / hooks 411."

@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "adastra:block/moon_cobblestone"
+    "top": "adastra:block/moon_cobblestone",
+    "front": "adastra:block/moon_cobblestone",
+    "side": "adastra:block/moon_cobblestone",
+    "bottom": "adastra:block/moon_cobblestone",
+    "particle": "adastra:block/moon_cobblestone"
   }
 }

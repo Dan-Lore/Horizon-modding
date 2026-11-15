@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "adastra:block/launch_pad"
+    "top": "adastra:block/launch_pad",
+    "front": "adastra:block/launch_pad",
+    "side": "adastra:block/launch_pad",
+    "bottom": "adastra:block/launch_pad",
+    "particle": "adastra:block/launch_pad"
   }
 }

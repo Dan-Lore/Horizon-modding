@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "adastra:block/nasa_workbench"
+    "top": "adastra:block/nasa_workbench",
+    "front": "adastra:block/nasa_workbench",
+    "side": "adastra:block/nasa_workbench",
+    "bottom": "adastra:block/nasa_workbench",
+    "particle": "adastra:block/nasa_workbench"
   }
 }

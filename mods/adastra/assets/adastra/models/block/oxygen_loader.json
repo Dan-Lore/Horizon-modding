@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "adastra:block/oxygen_loader"
+    "top": "adastra:block/oxygen_loader",
+    "front": "adastra:block/oxygen_loader",
+    "side": "adastra:block/oxygen_loader",
+    "bottom": "adastra:block/oxygen_loader",
+    "particle": "adastra:block/oxygen_loader"
   }
 }

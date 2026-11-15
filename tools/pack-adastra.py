@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Pack mods/adastra into a combined .hmod (POSIX zip paths).
 
-Does not install the archive onto tfg-horizon. The launcher rewrites `hooks`
-and `mixins` when it native-builds.
+Does not install the archive onto tfg-horizon.
+`mixins` must be the horizon-mixins commit (not the game revision) or native-build
+returns GitHub 422 and the mod is left_out before content loads.
 """
 
 from __future__ import annotations
@@ -17,6 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "mods" / "adastra"
 OUT = SRC / "dist" / "adastra.hmod"
 REV = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+MIXINS = "5a64af938ec86b00d53d16a408aabc0038fb3e57"
+HOOKS = 411
 
 
 def main() -> None:
@@ -43,8 +46,8 @@ def main() -> None:
             "version": "0.1.0",
             "game": "26.3",
             "horizon": REV,
-            "mixins": REV,
-            "hooks": 97,
+            "mixins": MIXINS,
+            "hooks": HOOKS,
         }
         (stage / "horizon-native.json").write_text(json.dumps(native), encoding="utf-8")
         OUT.parent.mkdir(parents=True, exist_ok=True)

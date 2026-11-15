@@ -9,13 +9,14 @@ Tracker: [`tracker/catalog.json`](tracker/catalog.json).
 ## Build
 
 ```bash
-python3 mods/adastra/tools/gen_content.py
+python3 mods/adastra/tools/gen_content.py   # needs Pillow (PIL)
 python3 mods/adastra/tools/check.py
 python3 tools/pack-adastra.py
 ```
 
 Writes `mods/adastra/dist/adastra.hmod`. Does **not** install onto `tfg-horizon`.
-Cargo pin: Horizon `fdc87ae` (hooks 411). Pack wiring is another agent's job.
+`horizon-native.json`: game pin `fdc87ae`, **mixins** `5a64af9…`, **hooks** `411`.
+Pack entry exists with `on = []` until `/give` + visible textures.
 
 ## Play slice
 

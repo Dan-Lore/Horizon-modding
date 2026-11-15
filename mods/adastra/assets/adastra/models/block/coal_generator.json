@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "adastra:block/coal_generator"
+    "top": "adastra:block/coal_generator",
+    "front": "adastra:block/coal_generator",
+    "side": "adastra:block/coal_generator",
+    "bottom": "adastra:block/coal_generator",
+    "particle": "adastra:block/coal_generator"
   }
 }

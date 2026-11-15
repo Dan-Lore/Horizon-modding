@@ -3,16 +3,17 @@
 
     python3 mods/adastra/tools/gen_content.py
 
-Placeholder textures are solid 16×16 PNGs. No Mojang assets are copied.
+Placeholder textures are PIL RGBA 16×16 PNGs with a simple shape (no Ad Astra jar assets).
 """
 
 from __future__ import annotations
 
 import json
 import shutil
-import struct
 import zlib
 from pathlib import Path
+
+from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets" / "adastra"
@@ -69,25 +70,31 @@ def write_json(path: Path, body: object) -> None:
     path.write_text(json.dumps(body, indent=2) + "\n", encoding="utf-8")
 
 
-def png(path: Path, rgb: tuple[int, int, int]) -> None:
-    def chunk(tag: bytes, data: bytes) -> bytes:
-        return (
-            struct.pack(">I", len(data))
-            + tag
-            + data
-            + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
-        )
-
-    raw = b"".join(b"\x00" + bytes(rgb) * 16 for _ in range(16))
-    ihdr = struct.pack(">IIBBBBB", 16, 16, 8, 2, 0, 0, 0)
-    data = (
-        b"\x89PNG\r\n\x1a\n"
-        + chunk(b"IHDR", ihdr)
-        + chunk(b"IDAT", zlib.compress(raw, 9))
-        + chunk(b"IEND", b"")
-    )
+def png(path: Path, rgb: tuple[int, int, int], *, kind: str = "item") -> None:
+    """PIL RGBA 16×16 with a simple shape so the atlas accepts the texture."""
+    r, g, b = rgb
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    fill = (r, g, b, 255)
+    edge = (max(0, r - 40), max(0, g - 40), max(0, b - 40), 255)
+    hi = (min(255, r + 40), min(255, g + 40), min(255, b + 40), 255)
+    if kind == "block":
+        draw.rectangle([0, 0, 15, 15], fill=fill, outline=edge)
+        draw.rectangle([2, 2, 13, 5], fill=hi)
+        draw.rectangle([2, 7, 6, 13], fill=edge)
+    elif "plate" in path.stem:
+        draw.rectangle([2, 4, 13, 11], fill=fill, outline=edge)
+    elif "nugget" in path.stem:
+        draw.ellipse([4, 4, 11, 11], fill=fill, outline=edge)
+    elif "tank" in path.stem:
+        draw.rectangle([5, 2, 10, 13], fill=fill, outline=edge)
+        draw.rectangle([6, 3, 9, 6], fill=hi)
+    elif "rocket" in path.stem:
+        draw.polygon([(8, 1), (12, 10), (8, 14), (4, 10)], fill=fill, outline=edge)
+    else:
+        draw.rounded_rectangle([2, 2, 13, 13], radius=3, fill=fill, outline=edge)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(data)
+    img.save(path, format="PNG")
 
 
 def color_for(key: str, bias: tuple[int, int, int] = (80, 80, 80)) -> tuple[int, int, int]:
@@ -99,34 +106,44 @@ def title(name: str) -> str:
     return " ".join(part.capitalize() for part in name.split("_"))
 
 
-def block_files(name: str, rgb: tuple[int, int, int], furnace: bool, hardness: float, sounds: str) -> None:
-    template = "minecraft:furnace" if furnace else "minecraft:iron_block"
+def block_files(name: str, rgb: tuple[int, int, int], hardness: float, sounds: str) -> None:
+    """Furnace template + orientable model + facing×lit (required for visible block items)."""
     write_json(
         DATA / "horizon" / "block" / f"{name}.json",
         {
-            "template": template,
+            "template": "minecraft:furnace",
             "properties": {"hardness": hardness, "sounds": sounds},
             "item": True,
         },
     )
-    model = {"parent": "minecraft:block/cube_all", "textures": {"all": f"adastra:block/{name}"}}
-    write_json(ASSETS / "models" / "block" / f"{name}.json", model)
+    tex = f"adastra:block/{name}"
+    write_json(
+        ASSETS / "models" / "block" / f"{name}.json",
+        {
+            "parent": "minecraft:block/orientable",
+            "textures": {
+                "top": tex,
+                "front": tex,
+                "side": tex,
+                "bottom": tex,
+                "particle": tex,
+            },
+        },
+    )
     write_json(ASSETS / "models" / "item" / f"{name}.json", {"parent": f"adastra:block/{name}"})
-    if furnace:
-        variants = {}
-        for facing, rot in (("north", None), ("south", 180), ("west", 270), ("east", 90)):
-            for lit in ("false", "true"):
-                entry: dict = {"model": f"adastra:block/{name}"}
-                if rot is not None:
-                    entry["y"] = rot
-                variants[f"facing={facing},lit={lit}"] = entry
-        write_json(ASSETS / "blockstates" / f"{name}.json", {"variants": variants})
-    else:
-        write_json(
-            ASSETS / "blockstates" / f"{name}.json",
-            {"variants": {"": {"model": f"adastra:block/{name}"}}},
-        )
-    png(ASSETS / "textures" / "block" / f"{name}.png", rgb)
+    write_json(
+        ASSETS / "items" / f"{name}.json",
+        {"model": {"type": "minecraft:model", "model": f"adastra:item/{name}"}},
+    )
+    variants = {}
+    for facing, rot in (("north", None), ("south", 180), ("west", 270), ("east", 90)):
+        for lit in ("false", "true"):
+            entry: dict = {"model": f"adastra:block/{name}"}
+            if rot is not None:
+                entry["y"] = rot
+            variants[f"facing={facing},lit={lit}"] = entry
+    write_json(ASSETS / "blockstates" / f"{name}.json", {"variants": variants})
+    png(ASSETS / "textures" / "block" / f"{name}.png", rgb, kind="block")
     write_json(
         DATA / "loot_table" / "blocks" / f"{name}.json",
         {
@@ -148,7 +165,11 @@ def item_files(name: str, rgb: tuple[int, int, int], template: str = "minecraft:
         ASSETS / "models" / "item" / f"{name}.json",
         {"parent": "minecraft:item/generated", "textures": {"layer0": f"adastra:item/{name}"}},
     )
-    png(ASSETS / "textures" / "item" / f"{name}.png", rgb)
+    write_json(
+        ASSETS / "items" / f"{name}.json",
+        {"model": {"type": "minecraft:model", "model": f"adastra:item/{name}"}},
+    )
+    png(ASSETS / "textures" / "item" / f"{name}.png", rgb, kind="item")
 
 
 def menu(name: str, slots: int, results: list[int]) -> None:
@@ -294,7 +315,7 @@ def main() -> None:
         )
 
     for name, rgb in PLANET_BLOCKS:
-        block_files(name, rgb, furnace=False, hardness=1.5, sounds="minecraft:stone")
+        block_files(name, rgb, hardness=1.5, sounds="minecraft:stone")
         lang[f"block.adastra.{name}"] = title(name)
 
     shapeless("moon_cobble_from_stone", ["adastra:moon_stone"], "adastra:moon_cobblestone")
@@ -306,17 +327,8 @@ def main() -> None:
 
     for machine in MACHINES:
         mid = machine["id"]
-        furnace = machine["kind"] not in {"vacuum", "marker", "storage", "solar"}
-        # solar and storage still use furnace-ish for lit where useful
-        use_furnace = machine["kind"] in {
-            "generator",
-            "processor",
-            "loader",
-            "distributor",
-            "solar",
-        }
         rgb = color_for(mid, (60, 90, 120))
-        block_files(mid, rgb, furnace=use_furnace, hardness=3.5, sounds="minecraft:metal")
+        block_files(mid, rgb, hardness=3.5, sounds="minecraft:metal")
         lang[f"block.adastra.{mid}"] = title(mid)
         if machine["kind"] == "storage":
             menu(mid, 9, [])
