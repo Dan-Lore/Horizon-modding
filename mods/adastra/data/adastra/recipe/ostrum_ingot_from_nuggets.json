@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    },
+    {
+      "item": "adastra:ostrum_nugget"
+    }
+  ],
+  "result": {
+    "id": "adastra:ostrum_ingot",
+    "count": 1
+  }
+}

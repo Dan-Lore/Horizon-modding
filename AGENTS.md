@@ -133,6 +133,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
 - TFC Horizon 0.1.0 (workshop, not on the pack pin): `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `mods/tfc/`. `on = []` so AE2/Greglite stay the native-build.
 - Horizon Teams + Quests (workshop, not on the pack pin): `docs/quests-plan.md`, `docs/quests-tracker.md`, `mods/teams/`, `mods/quests/`. `on = []` until W6+ intentional smoke.
+- Ad Astra Horizon 0.1.0 (workshop overworld slice, no dimensions): `docs/adastra-plan.md`, `docs/adastra-tracker.md`, `mods/adastra/`. Pack wiring is a separate agent.
 
 
 ## Links
@@ -156,6 +157,7 @@ Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/
 2. Native-build **only** for that pack instance; do not pile tip+AE2 until registry AE2 supports `9f42064`.
 3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence.
 4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
+5. Ad Astra workshop smoke (`mods/adastra/`, `/give`) before any pack agent enables it.
 
 **Native build smoke (mandatory):** `.cursor/rules/horizon-native-build-smoke.mdc` + `docs/dev-tips-native-content.md`.  
 Do **not** report a mod as playable from `native-mods.json` or a chat tip alone — require `horizon-mod-ids.json` includes the id and `/give <id>:…` succeeds. Stale `.horizon-cache/mod-content` with only `["ae2"]` is a known failure mode.

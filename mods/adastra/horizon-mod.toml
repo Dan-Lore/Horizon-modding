@@ -1,0 +1,8 @@
+id = "adastra"
+name = "Ad Astra Horizon"
+version = "0.1.0"
+description = "Ad Astra-inspired overworld slice: materials, FE machines, oxygen, rocket stub (no dimensions)."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

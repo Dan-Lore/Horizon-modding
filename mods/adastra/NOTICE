@@ -1,0 +1,19 @@
+Ad Astra Horizon — Horizon-native workshop mod (Ad Astra-inspired space slice).
+
+Inspired by Ad Astra for Minecraft Java (Terrarium Earth) as used beside
+TerraFirmaGreg-Modern packs. Not affiliated with Terrarium, Ad Astra authors,
+or the TFG authors. This is a clean reimplementation for Horizon, not a jar port.
+Custom dimensions and full planet travel are out of scope for 0.1.0.
+
+Reference (read-only design): Ad Astra 1.20.x mechanics.
+Plan: docs/adastra-plan.md
+Tracker: mods/adastra/tracker/catalog.json
+
+Textures
+--------
+Placeholder textures are solid-color PNGs generated for workshop smoke.
+If Ad Astra assets are later vendored, respect upstream LICENSE (typically
+LGPL-3.0 for code; verify asset terms) and document the fetch script here.
+
+Original Rust and JSON in this folder: MIT unless noted otherwise.
+Minecraft / Mojang assets are not redistributed.

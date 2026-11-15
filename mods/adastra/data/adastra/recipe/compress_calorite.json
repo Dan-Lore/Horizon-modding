@@ -1,0 +1,10 @@
+{
+  "type": "adastra:compressor",
+  "ingredient": "adastra:calorite_ingot",
+  "result": {
+    "id": "adastra:calorite_plate",
+    "count": 1
+  },
+  "duration": 140,
+  "fe": 48
+}

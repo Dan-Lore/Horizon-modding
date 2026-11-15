@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "adastra:block/launch_pad",
+    "front": "adastra:block/launch_pad",
+    "side": "adastra:block/launch_pad",
+    "bottom": "adastra:block/launch_pad",
+    "particle": "adastra:block/launch_pad"
+  }
+}
