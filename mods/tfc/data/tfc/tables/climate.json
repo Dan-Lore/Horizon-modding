@@ -1,0 +1,69 @@
+{
+  "base_temp_c": 14.0,
+  "temp_latitude_scale": 0.04,
+  "temp_altitude_scale": -0.006,
+  "base_rainfall": 120.0,
+  "rain_noise_scale": 40.0,
+  "seasons": [
+    {
+      "id": "Early Spring",
+      "temp_offset": -6,
+      "rain_mult": 1.1
+    },
+    {
+      "id": "Spring",
+      "temp_offset": -2,
+      "rain_mult": 1.2
+    },
+    {
+      "id": "Late Spring",
+      "temp_offset": 2,
+      "rain_mult": 1.1
+    },
+    {
+      "id": "Early Summer",
+      "temp_offset": 6,
+      "rain_mult": 1.0
+    },
+    {
+      "id": "Summer",
+      "temp_offset": 10,
+      "rain_mult": 0.9
+    },
+    {
+      "id": "Late Summer",
+      "temp_offset": 8,
+      "rain_mult": 0.85
+    },
+    {
+      "id": "Early Autumn",
+      "temp_offset": 4,
+      "rain_mult": 1.0
+    },
+    {
+      "id": "Autumn",
+      "temp_offset": 0,
+      "rain_mult": 1.1
+    },
+    {
+      "id": "Late Autumn",
+      "temp_offset": -2,
+      "rain_mult": 1.15
+    },
+    {
+      "id": "Early Winter",
+      "temp_offset": -6,
+      "rain_mult": 1.0
+    },
+    {
+      "id": "Winter",
+      "temp_offset": -10,
+      "rain_mult": 0.9
+    },
+    {
+      "id": "Late Winter",
+      "temp_offset": -8,
+      "rain_mult": 0.95
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "recipes": [
+    {
+      "id": "stone_axe",
+      "ingredient": "tfc:knapping_stone",
+      "result": "tfc:stone_axe"
+    },
+    {
+      "id": "stone_knife",
+      "ingredient": "tfc:knapping_stone",
+      "result": "tfc:stone_knife"
+    },
+    {
+      "id": "stone_shovel",
+      "ingredient": "tfc:knapping_stone",
+      "result": "tfc:stone_shovel"
+    },
+    {
+      "id": "stone_hoe",
+      "ingredient": "tfc:knapping_stone",
+      "result": "tfc:stone_hoe"
+    },
+    {
+      "id": "stone_hammer",
+      "ingredient": "tfc:knapping_stone",
+      "result": "tfc:stone_hammer"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:heating",
+  "ingredient": "tfc:bronze_dust",
+  "result": {
+    "id": "tfc:bronze_ingot",
+    "count": 1
+  },
+  "temperature": 1500
+}

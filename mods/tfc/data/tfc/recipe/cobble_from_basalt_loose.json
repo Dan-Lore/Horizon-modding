@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:loose_basalt"
+    },
+    {
+      "item": "tfc:loose_basalt"
+    },
+    {
+      "item": "tfc:loose_basalt"
+    },
+    {
+      "item": "tfc:loose_basalt"
+    }
+  ],
+  "result": {
+    "id": "tfc:cobble_basalt",
+    "count": 1
+  }
+}

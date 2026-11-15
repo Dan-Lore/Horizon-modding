@@ -1,0 +1,9 @@
+{
+  "type": "tfc:heating",
+  "ingredient": "tfc:zinc_dust",
+  "result": {
+    "id": "tfc:zinc_ingot",
+    "count": 1
+  },
+  "temperature": 1500
+}

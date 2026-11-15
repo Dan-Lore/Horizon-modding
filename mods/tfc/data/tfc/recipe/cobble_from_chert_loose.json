@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:loose_chert"
+    },
+    {
+      "item": "tfc:loose_chert"
+    },
+    {
+      "item": "tfc:loose_chert"
+    },
+    {
+      "item": "tfc:loose_chert"
+    }
+  ],
+  "result": {
+    "id": "tfc:cobble_chert",
+    "count": 1
+  }
+}

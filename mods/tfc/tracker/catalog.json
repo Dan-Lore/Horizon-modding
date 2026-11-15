@@ -1,0 +1,392 @@
+{
+  "schema": 1,
+  "updated": "2026-11-15",
+  "plan": "docs/tfc-plan.md",
+  "mod_version": "0.1.0",
+  "systems": [
+    {
+      "id": "scaffold",
+      "wave": "W0",
+      "status": "done",
+      "kind": "meta",
+      "source_mod": "terrafirmacraft",
+      "smoke": "pack script + manifests"
+    },
+    {
+      "id": "calendar",
+      "wave": "W1",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "season advances with day time"
+    },
+    {
+      "id": "thin_climate",
+      "wave": "W1",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "action bar temp/rain"
+    },
+    {
+      "id": "thirst",
+      "wave": "W1",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "drains; jug/water restores"
+    },
+    {
+      "id": "hud_action_bar",
+      "wave": "W1",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "periodic climate/thirst line"
+    },
+    {
+      "id": "rock_andesite",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:rock_andesite"
+    },
+    {
+      "id": "rock_basalt",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:rock_basalt"
+    },
+    {
+      "id": "rock_chalk",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:rock_chalk"
+    },
+    {
+      "id": "rock_chert",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:rock_chert"
+    },
+    {
+      "id": "rock_claystone",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:rock_claystone"
+    },
+    {
+      "id": "rock_conglomerate",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:rock_conglomerate"
+    },
+    {
+      "id": "ore_native_copper",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:ore_native_copper"
+    },
+    {
+      "id": "ore_native_gold",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:ore_native_gold"
+    },
+    {
+      "id": "ore_hematite",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:ore_hematite"
+    },
+    {
+      "id": "ore_cassiterite",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:ore_cassiterite"
+    },
+    {
+      "id": "ore_sphalerite",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:ore_sphalerite"
+    },
+    {
+      "id": "ore_tetrahedrite",
+      "wave": "W2",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "/give tfc:ore_tetrahedrite"
+    },
+    {
+      "id": "prospectors_pick",
+      "wave": "W2",
+      "status": "done",
+      "kind": "tool",
+      "source_mod": "terrafirmacraft",
+      "smoke": "use near ore \u2192 hint"
+    },
+    {
+      "id": "knapping",
+      "wave": "W3",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "knap stone axe"
+    },
+    {
+      "id": "firepit",
+      "wave": "W3",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "light with firestarter"
+    },
+    {
+      "id": "pottery",
+      "wave": "W4",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "unfired \u2192 pit kiln \u2192 ceramic"
+    },
+    {
+      "id": "pit_kiln",
+      "wave": "W4",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "fire unfired pottery"
+    },
+    {
+      "id": "heating",
+      "wave": "W5",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "heat table"
+    },
+    {
+      "id": "charcoal_forge",
+      "wave": "W5",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "melt copper"
+    },
+    {
+      "id": "casting",
+      "wave": "W5",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "mold + metal \u2192 head/ingot"
+    },
+    {
+      "id": "bloomery",
+      "wave": "W6",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "hematite \u2192 wrought"
+    },
+    {
+      "id": "anvil",
+      "wave": "W6",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "work copper pick head"
+    },
+    {
+      "id": "nutrition",
+      "wave": "W7",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "5 nutrients table"
+    },
+    {
+      "id": "food_decay",
+      "wave": "W7",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "decay rates on foods"
+    },
+    {
+      "id": "crop_barley",
+      "wave": "W8",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "grows in climate window"
+    },
+    {
+      "id": "crop_wheat",
+      "wave": "W8",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "grows in climate window"
+    },
+    {
+      "id": "crop_maize",
+      "wave": "W8",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "grows in climate window"
+    },
+    {
+      "id": "crop_squash",
+      "wave": "W8",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "grows in climate window"
+    },
+    {
+      "id": "quern",
+      "wave": "W9",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "grind chalk \u2192 flux"
+    },
+    {
+      "id": "barrel",
+      "wave": "W9",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "soak recipe"
+    },
+    {
+      "id": "log_pile",
+      "wave": "W10",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "place log pile"
+    },
+    {
+      "id": "support_collapse",
+      "wave": "W10",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "unsupported cobble collapses"
+    },
+    {
+      "id": "panning",
+      "wave": "W11",
+      "status": "done",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "pan gravel \u2192 nugget"
+    },
+    {
+      "id": "sluice",
+      "wave": "W11",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "sluice processes gravel"
+    },
+    {
+      "id": "worldgen_full",
+      "wave": "W12",
+      "status": "blocked",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "needs Horizon worldgen hooks"
+    },
+    {
+      "id": "animals",
+      "wave": "W13",
+      "status": "deferred",
+      "kind": "system",
+      "source_mod": "terrafirmacraft",
+      "smoke": "entity API insufficient"
+    },
+    {
+      "id": "chisel",
+      "wave": "W14",
+      "status": "done",
+      "kind": "tool",
+      "source_mod": "terrafirmacraft",
+      "smoke": "item present; modes lite"
+    },
+    {
+      "id": "powderkeg",
+      "wave": "W14",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "block present"
+    },
+    {
+      "id": "blast_furnace",
+      "wave": "W14",
+      "status": "done",
+      "kind": "machine",
+      "source_mod": "terrafirmacraft",
+      "smoke": "block + recipe stub"
+    },
+    {
+      "id": "glassworking",
+      "wave": "W14",
+      "status": "done",
+      "kind": "content",
+      "source_mod": "terrafirmacraft",
+      "smoke": "glass_batch item"
+    },
+    {
+      "id": "jei_categories",
+      "wave": "W15",
+      "status": "todo",
+      "kind": "integration",
+      "source_mod": "terrafirmacraft",
+      "smoke": "register when JEI API ready"
+    },
+    {
+      "id": "jade_plugins",
+      "wave": "W15",
+      "status": "todo",
+      "kind": "integration",
+      "source_mod": "terrafirmacraft",
+      "smoke": "climate/thirst overlay"
+    },
+    {
+      "id": "greglite_bridge",
+      "wave": "W15",
+      "status": "done",
+      "kind": "integration",
+      "source_mod": "terrafirmacraft",
+      "smoke": "tables/greglite_bridge.json"
+    }
+  ]
+}

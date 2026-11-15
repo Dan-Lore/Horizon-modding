@@ -7,6 +7,7 @@
 name = "TFG Horizon"
 notes = """
 Single instance tfg-horizon on Nightly fdc87ae (AE2 15.4.18 pin).
+TFC Horizon 0.1.0 (mods/tfc) — hybrid climate + survival pillars; W12 worldgen blocked.
 Create parked: cannot co-build with AE2 (Create→4e5296d/9c7f9b2, AE2→fdc87ae).
 Tip 9f42064 kept installed as base only — AE2 left_out there.
 """
@@ -19,7 +20,7 @@ native_version = "native-fdc87ae-428278da87c5"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + Jade/AppleSkin/Continuity"
+notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + TFC Horizon 0.1.0 + Jade/AppleSkin/Continuity"
 
 # --- Batch A ---
 
@@ -83,6 +84,17 @@ batch = "A+electric"
 status = "built"
 on = ["pack"]
 minecraft_role = "GregTech-inspired Steam + LV Electric"
+
+[[mods]]
+id = "tfc"
+name = "TFC Horizon"
+version = "0.1.0"
+source = "mods/tfc → tfc.hmod"
+batch = "tfc"
+status = "built"
+on = ["pack"]
+minecraft_role = "TerraFirmaCraft core (Horizon rewrite)"
+why = "W0–W11 + W14 lite shipped; W12 worldgen blocked; W13 animals deferred. docs/tfc-plan.md"
 
 # --- Create (isolated) ---
 

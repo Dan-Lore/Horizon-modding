@@ -1,0 +1,13 @@
+{
+  "type": "tfc:anvil",
+  "ingredient": "tfc:copper_ingot",
+  "result": {
+    "id": "tfc:copper_pickaxe_head",
+    "count": 1
+  },
+  "tier": 1,
+  "rules": [
+    "hit_last",
+    "draw_any"
+  ]
+}

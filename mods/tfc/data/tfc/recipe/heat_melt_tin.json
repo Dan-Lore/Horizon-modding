@@ -1,0 +1,9 @@
+{
+  "type": "tfc:heating",
+  "ingredient": "tfc:tin_dust",
+  "result": {
+    "id": "tfc:tin_ingot",
+    "count": 1
+  },
+  "temperature": 1500
+}

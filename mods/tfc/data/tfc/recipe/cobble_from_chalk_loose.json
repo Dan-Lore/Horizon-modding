@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:loose_chalk"
+    },
+    {
+      "item": "tfc:loose_chalk"
+    },
+    {
+      "item": "tfc:loose_chalk"
+    },
+    {
+      "item": "tfc:loose_chalk"
+    }
+  ],
+  "result": {
+    "id": "tfc:cobble_chalk",
+    "count": 1
+  }
+}

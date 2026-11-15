@@ -1,0 +1,40 @@
+{
+  "crops": [
+    {
+      "id": "barley",
+      "min_temp": 8,
+      "max_temp": 12,
+      "min_rain": 40,
+      "max_rain": 100,
+      "block": "tfc:crop_barley",
+      "seed": "tfc:seeds_barley"
+    },
+    {
+      "id": "wheat",
+      "min_temp": 5,
+      "max_temp": 25,
+      "min_rain": 50,
+      "max_rain": 150,
+      "block": "tfc:crop_wheat",
+      "seed": "tfc:seeds_wheat"
+    },
+    {
+      "id": "maize",
+      "min_temp": 15,
+      "max_temp": 32,
+      "min_rain": 80,
+      "max_rain": 200,
+      "block": "tfc:crop_maize",
+      "seed": "tfc:seeds_maize"
+    },
+    {
+      "id": "squash",
+      "min_temp": 10,
+      "max_temp": 30,
+      "min_rain": 60,
+      "max_rain": 180,
+      "block": "tfc:crop_squash",
+      "seed": "tfc:seeds_squash"
+    }
+  ]
+}

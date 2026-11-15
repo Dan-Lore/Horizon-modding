@@ -1,0 +1,21 @@
+{
+  "unstable": [
+    "tfc:cobble_andesite",
+    "tfc:cobble_basalt",
+    "tfc:cobble_chalk",
+    "tfc:cobble_chert",
+    "tfc:cobble_claystone",
+    "tfc:cobble_conglomerate",
+    "tfc:rock_andesite",
+    "tfc:rock_basalt",
+    "tfc:rock_chalk",
+    "tfc:rock_chert",
+    "tfc:rock_claystone",
+    "tfc:rock_conglomerate"
+  ],
+  "support": [
+    "tfc:support_beam"
+  ],
+  "support_radius": 4,
+  "check_interval_ticks": 40
+}

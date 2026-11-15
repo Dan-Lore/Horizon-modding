@@ -123,7 +123,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 
 | Role | Id | Play version (2026-11-15) | Notes |
 | --- | --- | --- | --- |
-| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.4.3** on Nightly `fdc87ae` |
+| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.4.3** + **TFC Horizon 0.1.0** on Nightly `fdc87ae` |
 
 - `create-dev` / `create-nightly-test` deleted (tests only).
 - **Create** cannot join this native: registry 0.7 → `9c7f9b2`, local 0.9 → `4e5296d`; AE2 15.4.18 needs `fdc87ae`/hooks 411. Create hnmod parked under `horizon-native-mods/_parked/`.
@@ -131,6 +131,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Keep **prune-old-versions off** while `fdc87ae` + `9f42064` nightlies must remain.
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
+- TFC core rewrite: `mods/tfc/`, plan `docs/tfc-plan.md`, tracker `docs/tfc-tracker.md` (W12 worldgen blocked, W13 animals deferred).
 
 
 ## Links
@@ -150,10 +151,10 @@ Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/
 
 ## Suggested next work for agents
 
-1. Smoke `tfg-horizon` (JEI creative panel, AE2, Greglite machines) on `native-fdc87ae-428278da87c5`.
+1. Smoke `tfg-horizon` (JEI, AE2, Greglite, TFC climate/thirst + rocks) on `native-fdc87ae-428278da87c5`.
 2. Native-build **only** for that pack instance; do not pile tip+AE2 until registry AE2 supports `9f42064`.
-3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence.
-4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
+3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence + any TFC ports.
+4. TFC waves from `mods/tfc/tracker/catalog.json` (W12 when worldgen hooks land); Greglite gaps after smoke.
 
 Combined native+content tips (not rules): `docs/dev-tips-native-content.md` — Hooks≠registries, check `native-content/<id>/` after builds, `/give` smoke.
 

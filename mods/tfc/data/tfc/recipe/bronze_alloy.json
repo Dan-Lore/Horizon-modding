@@ -1,0 +1,17 @@
+{
+  "type": "tfc:alloy",
+  "inputs": [
+    {
+      "id": "tfc:copper_ingot",
+      "count": 9
+    },
+    {
+      "id": "tfc:tin_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "tfc:bronze_ingot",
+    "count": 10
+  }
+}

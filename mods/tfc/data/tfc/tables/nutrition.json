@@ -1,0 +1,43 @@
+{
+  "nutrients": [
+    "fruit",
+    "vegetable",
+    "grain",
+    "protein",
+    "dairy"
+  ],
+  "max_per_nutrient": 100.0,
+  "decay_rate_per_day": 0.5,
+  "foods": {
+    "tfc:food_red_apple": {
+      "nutrient": "fruit",
+      "amount": 1.5,
+      "weight": 500,
+      "decay": 2.0
+    },
+    "tfc:food_carrot": {
+      "nutrient": "vegetable",
+      "amount": 1.5,
+      "weight": 500,
+      "decay": 2.0
+    },
+    "tfc:food_wheat_bread": {
+      "nutrient": "grain",
+      "amount": 1.5,
+      "weight": 500,
+      "decay": 2.0
+    },
+    "tfc:food_cooked_beef": {
+      "nutrient": "protein",
+      "amount": 1.5,
+      "weight": 500,
+      "decay": 2.0
+    },
+    "tfc:food_cheese": {
+      "nutrient": "dairy",
+      "amount": 1.5,
+      "weight": 500,
+      "decay": 2.0
+    }
+  }
+}

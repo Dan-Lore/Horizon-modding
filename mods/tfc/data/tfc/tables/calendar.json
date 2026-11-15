@@ -1,0 +1,18 @@
+{
+  "ticks_per_month": 192000,
+  "months": [
+    "Early Spring",
+    "Spring",
+    "Late Spring",
+    "Early Summer",
+    "Summer",
+    "Late Summer",
+    "Early Autumn",
+    "Autumn",
+    "Late Autumn",
+    "Early Winter",
+    "Winter",
+    "Late Winter"
+  ],
+  "days_in_month": 8
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:heating",
+  "ingredient": "tfc:gold_dust",
+  "result": {
+    "id": "tfc:gold_ingot",
+    "count": 1
+  },
+  "temperature": 1500
+}

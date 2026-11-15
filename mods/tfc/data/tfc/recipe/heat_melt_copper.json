@@ -1,0 +1,9 @@
+{
+  "type": "tfc:heating",
+  "ingredient": "tfc:ore_native_copper",
+  "result": {
+    "id": "tfc:copper_ingot",
+    "count": 1
+  },
+  "temperature": 1080
+}

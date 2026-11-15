@@ -1,0 +1,24 @@
+{
+  "melting": [
+    {
+      "item": "tfc:ore_native_copper",
+      "metal": "copper",
+      "temp": 1080
+    },
+    {
+      "item": "tfc:copper_ingot",
+      "metal": "copper",
+      "temp": 1080
+    },
+    {
+      "item": "tfc:ore_hematite",
+      "metal": "cast_iron",
+      "temp": 1535
+    },
+    {
+      "item": "tfc:gold_ingot",
+      "metal": "gold",
+      "temp": 1060
+    }
+  ]
+}

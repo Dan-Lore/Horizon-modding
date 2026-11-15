@@ -1,0 +1,13 @@
+{
+  "type": "tfc:knapping",
+  "ingredient": "tfc:knapping_stone",
+  "pattern": [
+    "X",
+    "X",
+    "S"
+  ],
+  "result": {
+    "id": "tfc:stone_shovel",
+    "count": 1
+  }
+}

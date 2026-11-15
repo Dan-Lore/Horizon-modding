@@ -1,0 +1,8 @@
+{
+  "max": 100.0,
+  "drain_per_second": 0.05,
+  "sprint_mult": 1.5,
+  "drink_jug": 40.0,
+  "drink_water_block": 25.0,
+  "exhaustion_damage_below": 5.0
+}

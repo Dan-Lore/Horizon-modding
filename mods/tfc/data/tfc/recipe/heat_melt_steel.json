@@ -1,0 +1,9 @@
+{
+  "type": "tfc:heating",
+  "ingredient": "tfc:steel_dust",
+  "result": {
+    "id": "tfc:steel_ingot",
+    "count": 1
+  },
+  "temperature": 1500
+}

@@ -1,0 +1,11 @@
+{
+  "status": "deferred",
+  "wave": "W13",
+  "reason": "Entity/AI Host APIs incomplete for TFC familiarity genetics; revisit when hooks land.",
+  "planned": [
+    "cow",
+    "sheep",
+    "pig",
+    "chicken"
+  ]
+}

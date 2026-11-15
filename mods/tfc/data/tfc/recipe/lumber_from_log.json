@@ -1,0 +1,8 @@
+{
+  "type": "tfc:sawing",
+  "ingredient": "minecraft:oak_log",
+  "result": {
+    "id": "tfc:lumber",
+    "count": 8
+  }
+}

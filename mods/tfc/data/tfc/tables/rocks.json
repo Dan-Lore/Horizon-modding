@@ -1,0 +1,28 @@
+{
+  "rocks": [
+    {
+      "id": "andesite",
+      "category": "igneous_extrusive"
+    },
+    {
+      "id": "basalt",
+      "category": "igneous_extrusive"
+    },
+    {
+      "id": "chalk",
+      "category": "sedimentary"
+    },
+    {
+      "id": "chert",
+      "category": "sedimentary"
+    },
+    {
+      "id": "claystone",
+      "category": "sedimentary"
+    },
+    {
+      "id": "conglomerate",
+      "category": "sedimentary"
+    }
+  ]
+}

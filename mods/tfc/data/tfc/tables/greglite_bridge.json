@@ -1,0 +1,11 @@
+{
+  "wave": "W15",
+  "metal_map": {
+    "tfc:copper_ingot": "minecraft:copper_ingot",
+    "tfc:tin_ingot": "greglite:tin_ingot",
+    "tfc:bronze_ingot": "greglite:bronze_ingot",
+    "tfc:wrought_iron_ingot": "greglite:wrought_iron_ingot",
+    "tfc:steel_ingot": "greglite:steel_ingot",
+    "tfc:zinc_ingot": "greglite:zinc_ingot"
+  }
+}

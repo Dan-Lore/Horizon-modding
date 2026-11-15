@@ -1,0 +1,52 @@
+{
+  "ores": [
+    {
+      "id": "native_copper",
+      "metal": "copper",
+      "prospect_hint": "traces of copper",
+      "blocks": [
+        "tfc:ore_native_copper"
+      ]
+    },
+    {
+      "id": "native_gold",
+      "metal": "gold",
+      "prospect_hint": "traces of gold",
+      "blocks": [
+        "tfc:ore_native_gold"
+      ]
+    },
+    {
+      "id": "hematite",
+      "metal": "iron",
+      "prospect_hint": "traces of iron",
+      "blocks": [
+        "tfc:ore_hematite"
+      ]
+    },
+    {
+      "id": "cassiterite",
+      "metal": "tin",
+      "prospect_hint": "traces of tin",
+      "blocks": [
+        "tfc:ore_cassiterite"
+      ]
+    },
+    {
+      "id": "sphalerite",
+      "metal": "zinc",
+      "prospect_hint": "traces of zinc",
+      "blocks": [
+        "tfc:ore_sphalerite"
+      ]
+    },
+    {
+      "id": "tetrahedrite",
+      "metal": "copper",
+      "prospect_hint": "traces of copper",
+      "blocks": [
+        "tfc:ore_tetrahedrite"
+      ]
+    }
+  ]
+}

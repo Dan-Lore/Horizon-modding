@@ -1,0 +1,9 @@
+{
+  "type": "tfc:pit_kiln",
+  "ingredient": "tfc:unfired_ingot_mold",
+  "result": {
+    "id": "tfc:ceramic_ingot_mold",
+    "count": 1
+  },
+  "duration": 800
+}

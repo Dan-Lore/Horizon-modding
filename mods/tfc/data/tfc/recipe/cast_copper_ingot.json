@@ -1,0 +1,9 @@
+{
+  "type": "tfc:casting",
+  "mold": "tfc:ceramic_ingot_mold",
+  "fluid_metal": "tfc:copper",
+  "result": {
+    "id": "tfc:copper_ingot",
+    "count": 1
+  }
+}

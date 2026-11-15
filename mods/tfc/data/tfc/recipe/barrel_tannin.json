@@ -1,0 +1,10 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "minecraft:oak_leaves",
+  "fluid": "minecraft:water",
+  "result": {
+    "id": "tfc:straw",
+    "count": 1
+  },
+  "duration": 400
+}

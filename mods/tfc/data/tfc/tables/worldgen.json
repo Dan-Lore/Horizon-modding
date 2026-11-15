@@ -1,0 +1,10 @@
+{
+  "status": "blocked",
+  "wave": "W12",
+  "notes": "Full rock layers / climate maps / veins require Horizon worldgen hooks; hybrid overworld bridge until then.",
+  "hybrid": {
+    "use_vanilla_biomes": true,
+    "climate_from_position": true,
+    "manual_ore_blocks": true
+  }
+}

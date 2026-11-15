@@ -1,0 +1,9 @@
+{
+  "type": "tfc:panning",
+  "ingredient": "minecraft:gravel",
+  "result": {
+    "id": "tfc:nugget_copper",
+    "count": 1
+  },
+  "chance": 0.15
+}

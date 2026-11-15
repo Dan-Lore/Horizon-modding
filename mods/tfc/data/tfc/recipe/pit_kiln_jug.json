@@ -1,0 +1,9 @@
+{
+  "type": "tfc:pit_kiln",
+  "ingredient": "tfc:unfired_jug",
+  "result": {
+    "id": "tfc:ceramic_jug",
+    "count": 1
+  },
+  "duration": 800
+}

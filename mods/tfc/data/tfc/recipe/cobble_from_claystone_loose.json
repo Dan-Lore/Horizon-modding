@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:loose_claystone"
+    },
+    {
+      "item": "tfc:loose_claystone"
+    },
+    {
+      "item": "tfc:loose_claystone"
+    },
+    {
+      "item": "tfc:loose_claystone"
+    }
+  ],
+  "result": {
+    "id": "tfc:cobble_claystone",
+    "count": 1
+  }
+}
