@@ -1,0 +1,10 @@
+# Ad Astra Horizon 0.1.0. Pin matches tfg-horizon (AE2). Pack agent owns install.
+[mod]
+id = "adastra"
+version = "0.1.0"
+
+[compatibility]
+horizon_revision = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+
+[api]
+path = "api"

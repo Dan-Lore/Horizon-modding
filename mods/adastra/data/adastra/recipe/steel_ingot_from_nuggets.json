@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    },
+    {
+      "item": "adastra:steel_nugget"
+    }
+  ],
+  "result": {
+    "id": "adastra:steel_ingot",
+    "count": 1
+  }
+}

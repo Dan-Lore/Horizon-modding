@@ -1,47 +1,31 @@
 # Greglite
 
-**GregTech-inspired** Steam + LV Electric Age for Horizon — **not** a GTM/TFG jar port.
-
-## What it does (v0.3)
-
-### Steam Age
-1. **LP Solid Boiler** → steam to adjacent machines  
-2. Steam Alloy / Macerator / Compressor  
-
-### Electric Age (LV)
-1. Boiler → **`lv_steam_turbine`** → **`tin_cable_*`** → **`lv_*` processors**  
-2. Also: combustion / gas turbine gens, battery buffer, charger, diode/transformer/hull, full singleblock processor set (forming, ore, chem, assembly), MV slice clones  
-3. ≥2 EU recipes per processor type (datapack + fallbacks)  
-
-Tracker: [`tracker/catalog.json`](tracker/catalog.json) · Plan: [`docs/greglite-electric-plan.md`](../../docs/greglite-electric-plan.md)
+GregTech-inspired native mod for Horizon. Version **0.5.0**. Clean rewrite; textures from GregTech-Modern (LGPL-3.0), see [NOTICE](NOTICE).
 
 ## Play
 
-- **Working (do not break):** `create-dev` → `native-fdc87ae-8837f1d46495` (Steam 0.2 stack)  
-- **Test (Electric):** `create-nightly-test` → `native-9f42064-e72cd9c26fa6`  
+One instance: **`tfg-horizon`**, native `native-fdc87ae-428278da87c5` (Nightly `fdc87ae`, hooks 411).
 
 ```powershell
-powershell -File tools/pack-greglite.ps1   # defaults to create-nightly-test
-# after native-build: restore native-content if /give unknown
-powershell -File tools/restore-greglite-content.ps1 -Instance create-nightly-test -NativeVersion native-9f42064-e72cd9c26fa6
+powershell -File tools/pack-greglite.ps1
 ```
 
-Smoke: coal in boiler beside turbine → cable → `lv_macerator` with copper → copper dust.
+That writes `greglite.hmod` into the `tfg-horizon` native-mods folder. Then native-build that instance only. `create-dev` and `create-nightly-test` are not pack targets.
 
-## Out of scope still
+Login chat and `tracker/coverage.json` do not prove a wave. The behaviour list is [`docs/greglite-behavior.md`](../../docs/greglite-behavior.md). This environment did not run Horizon, so that list is still unchecked in game.
 
-Multiblocks (EBF, large turbines, …), full material dict / ore gen, Create co-build on Nightly tip (Create pin `4e5296d` separate native).
+## What 0.5.0 adds
 
-## Build
+- Cable voltage and loss come from the material. `1x` is 1 A, `4x` is 4 A. Tin stays 32 V.
+- A machine or battery buffer takes a packet only at its own voltage. A higher packet is refused. There is no explosion.
+- Diodes pass one amp along `facing`. Transformers trade 4 A of the low tier for 1 A of the next tier, both ways.
+- Battery buffers charge and discharge the battery item of their tier. The old extra capacity on `lv_battery` is gone.
+- LV craft chain from copper, iron, coal, slime, and a tin ingot through dust, plate, wire, cable, motor, piston, robot arm, hull, and a second `lv_macerator`.
+- Recipes can list several outputs, a chance, a programmed circuit, `min_voltage`, and a fluid in or out. One tier above the minimum is twice as fast and four times the EU/t.
+- Boilers turn water into `greglite:steam`. Turbines burn that steam. Combustion burns lava or `greglite:diesel`. The gas turbine burns `greglite:biogas`. The distillery and chemical reactor each move one fluid in and one fluid out.
+- `multi_coke_oven` does nothing until its 3×3×3 brick shell is complete, then coal becomes `greglite:coke` and creosote.
+- `multi_electric_blast_furnace` needs casings, one coil, and input, output, and energy hatches. Iron plus coke becomes steel when coil heat reaches the recipe. An incomplete shell does nothing.
 
-```powershell
-pwsh tools/pack-greglite.ps1
-# then one native-build on instance create-dev (Nightly fdc87ae)
-```
+## Build pin
 
-Smoke: `/give` boiler + machines; fuel the boiler; process beside it.  
-Login chat alone ≠ registries loaded — see `docs/dev-tips-native-content.md`.
-
-## Attribution
-
-See [NOTICE](NOTICE). Inspired by GTM Steam Age; textures from GregTech-Modern (LGPL-3.0).
+`tools/pack-greglite.ps1` records Horizon `fdc87ae`, mixins `5a64af93`, and hooks **411** so the next native-build of `tfg-horizon` still includes Greglite beside AE2 15.4.18. The launcher still rewrites the crate revision to the game it compiles.

@@ -1,0 +1,10 @@
+{
+  "type": "adastra:cryo_freezer",
+  "ingredient": "minecraft:ice",
+  "result": {
+    "id": "adastra:ice_shard",
+    "count": 1
+  },
+  "duration": 100,
+  "fe": 16
+}

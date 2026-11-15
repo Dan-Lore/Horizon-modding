@@ -1,5 +1,7 @@
 # Greglite Electric Age — plan (locked 2026-11-14)
 
+Play Greglite on **`tfg-horizon`** / `native-fdc87ae-428278da87c5` only. `create-dev` and `create-nightly-test` are gone. File coverage stays in `tracker/coverage.json`. Behaviour is `docs/greglite-behavior.md` (0.5.0).
+
 **Own mod:** `mods/greglite/` (not a GTM/TFG jar port).  
 **Inspiration / textures:** GregTech Modern (LGPL) — clean Horizon rewrite + `NOTICE`.  
 **Tracker:** `mods/greglite/tracker/catalog.json` → SQLite via `tools/greglite-tracker.ps1` (when present) → summary `docs/greglite-electric-tracker.md`.

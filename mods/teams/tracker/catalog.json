@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "mod": "teams",
+  "version": "0.1.0",
+  "horizon": "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca",
+  "hooks": 411,
+  "waves": [
+    {
+      "id": "W0",
+      "system": "Scaffold, NOTICE, pack script",
+      "status": "done",
+      "smoke": "python3 tools/pack-teams.py writes mods/teams/dist/teams.hmod. Login tip names Horizon Teams."
+    },
+    {
+      "id": "W1",
+      "system": "Teams create/invite/join/leave/kick + persist",
+      "status": "done",
+      "smoke": "/team create <name>, /team invite <player>, /team join <name>, /team leave, /team kick <player>, /team info. Data under world_dir()/horizon-teams/teams.json."
+    }
+  ],
+  "blocked": []
+}

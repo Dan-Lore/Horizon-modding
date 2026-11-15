@@ -2,7 +2,7 @@
 
 **Generated from:** `mods/greglite/tracker/catalog.json` + content scan
 **Plan:** [`docs/greglite-electric-plan.md`](greglite-electric-plan.md)
-**Updated:** 2026-11-15 — GTM parity coverage **100%** with **honest** recipe depth (`tracker/coverage.json`)
+**Updated:** 2026-11-15 — file coverage **100%** (`tracker/coverage.json`). Behaviour checklist: [`greglite-behavior.md`](greglite-behavior.md). Greglite **0.5.0**.
 
 Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
@@ -10,8 +10,8 @@ Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
 | Role | Id | Version | Notes |
 | --- | --- | --- | --- |
-| working | `create-dev` | `native-fdc87ae-8837f1d46495` | Steam Age working native — do not rebuild |
-| test | `create-nightly-test` | `native-9f42064-ced9cfd3616b` | Greglite 0.4.3 + JEI/Jade; honest ≥8 recipes/type; dual_input fix |
+| pack | `tfg-horizon` | `native-fdc87ae-428278da87c5` | The only play instance. Nightly `fdc87ae`, hooks 411, AE2 15.4.18, Greglite 0.5.0. Native-build here. |
+| retired | `create-dev`, `create-nightly-test` | — | Deleted. Do not pack or native-build them. |
 
 ## Coverage (weighted checklist vs GTM extract)
 

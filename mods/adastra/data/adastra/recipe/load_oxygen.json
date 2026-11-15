@@ -1,0 +1,10 @@
+{
+  "type": "adastra:oxygen_loader",
+  "ingredient": "adastra:oxygen_tank_empty",
+  "result": {
+    "id": "adastra:oxygen_tank",
+    "count": 1
+  },
+  "duration": 80,
+  "fe": 16
+}

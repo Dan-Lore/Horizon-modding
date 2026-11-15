@@ -1,0 +1,14 @@
+{
+  "type": "greglite:distillery",
+  "duration": 40,
+  "eu": 4,
+  "min_voltage": 32,
+  "fluid_in": {
+    "id": "minecraft:water",
+    "amount": 250
+  },
+  "fluid_out": {
+    "id": "greglite:distilled_water",
+    "amount": 250
+  }
+}

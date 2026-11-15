@@ -46,8 +46,9 @@ Promote Batch A + Create onto working only after intentional smoke — do not re
 | TerraFirmaCraft | **TFC Horizon 0.2.0** in `mods/tfc/` | Clean-room core slice. Plan `docs/tfc-plan.md`. Not installed on `tfg-horizon` (`on = []`) |
 | GregTech Modern | **Greglite** Steam → **Electric Age** | v0.2 Steam done. EU + all singleblock electrics: `docs/greglite-electric-plan.md` + `mods/greglite/tracker/catalog.json` |
 | Greate / Create×GT | After Create on working + Greglite EU | |
-| Ad Astra | Out of near-term list | |
-| FTB Quests / quest book | Out of MVP | |
+| Ad Astra | **Ad Astra Horizon 0.1.0** in `mods/adastra/` | Overworld slice (no dimensions). Plan `docs/adastra-plan.md`. Pack agent wires install; workshop keeps off pack pin until smoked |
+| FTB Teams | **Horizon Teams** in `mods/teams/` | Clean-room. Plan `docs/quests-plan.md`. `on = []` until smoke |
+| FTB Quests / quest book | **Horizon Quests** in `mods/quests/` (requires Teams) | Clean-room own JSON; no FTB SNBT/ARR assets. `on = []` until W6+ smoked |
 | Full TFG-Modern pack | Never as jar import | Separate public pack repo only when draft is worth sharing |
 
 ---
@@ -66,4 +67,6 @@ Launcher **content port** of TFG jars (assets/data only) is experimental referen
 - [x] Create on **test** instance (Nightly line / pin `4e5296d`)
 - [ ] Promote Create + Batch A onto **working** after smoke
 - [x] TFC Horizon 0.2.0 workshop slice (`mods/tfc/`, not on the AE2 pin)
+- [x] Horizon Teams + Horizon Quests workshop (`mods/teams/`, `mods/quests/`, `on = []`)
 - [ ] Greglite Electric Age (W0–W9) — `docs/greglite-electric-plan.md`
+- [x] Ad Astra Horizon 0.1.0 workshop slice (`mods/adastra/`, pack wiring by pack agent)
