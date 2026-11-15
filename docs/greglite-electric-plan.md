@@ -1,5 +1,7 @@
 # Greglite Electric Age — plan (locked 2026-11-14)
 
+**Next work:** [`greglite-continuation-plan.md`](greglite-continuation-plan.md) (N0–N6) on **`tfg-dev`**. This file is the closed W0–W9 content checklist. Instances below (`create-dev`, `create-nightly-test`) are retired. Do not native-build `tfg-horizon`.
+
 Play Greglite on **`tfg-horizon`** / `native-fdc87ae-428278da87c5` only. `create-dev` and `create-nightly-test` are gone. File coverage stays in `tracker/coverage.json`. Behaviour is `docs/greglite-behavior.md` (0.5.0).
 
 **Own mod:** `mods/greglite/` (not a GTM/TFG jar port).  
