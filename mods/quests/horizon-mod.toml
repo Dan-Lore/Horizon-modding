@@ -1,0 +1,8 @@
+id = "quests"
+name = "Horizon Quests"
+version = "0.1.0"
+description = "FTB Quests–inspired quest book for Horizon packs."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

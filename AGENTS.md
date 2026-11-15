@@ -132,6 +132,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
 - TFC Horizon 0.1.0 (workshop, not on the pack pin): `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `mods/tfc/`. `on = []` so AE2/Greglite stay the native-build.
+- Horizon Teams + Quests (workshop, not on the pack pin): `docs/quests-plan.md`, `docs/quests-tracker.md`, `mods/teams/`, `mods/quests/`. `on = []` until W6+ intentional smoke.
 
 
 ## Links

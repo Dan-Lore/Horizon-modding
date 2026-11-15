@@ -1,0 +1,11 @@
+Horizon Teams — Horizon-native workshop mod (FTB Teams–inspired).
+
+Inspired by FTB Teams for Minecraft Java. Not affiliated with FTB Team.
+Clean reimplementation for Horizon — not a jar port. Do not copy FTB assets/code
+(typically All Rights Reserved).
+
+Plan: docs/quests-plan.md
+Tracker: mods/teams/tracker/catalog.json
+
+Original Rust and JSON in this folder: MIT unless noted otherwise.
+Minecraft / Mojang assets are not redistributed.
