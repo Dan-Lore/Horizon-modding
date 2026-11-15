@@ -1,0 +1,19 @@
+{
+  "type": "greglite:electrolyzer",
+  "ingredient": "minecraft:gravel",
+  "results": [
+    {
+      "id": "minecraft:flint",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 50
+    }
+  ],
+  "duration": 80,
+  "eu": 8,
+  "min_voltage": 32
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "greglite:lv_motor"
+    },
+    {
+      "item": "greglite:lv_piston"
+    },
+    {
+      "item": "greglite:tin_cable_1x"
+    },
+    {
+      "item": "greglite:iron_plate"
+    }
+  ],
+  "result": {
+    "id": "greglite:lv_robot_arm",
+    "count": 1
+  }
+}

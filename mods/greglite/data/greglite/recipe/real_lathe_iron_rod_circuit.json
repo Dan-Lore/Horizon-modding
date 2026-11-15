@@ -1,0 +1,12 @@
+{
+  "type": "greglite:lathe",
+  "ingredient": "minecraft:iron_ingot",
+  "result": {
+    "id": "greglite:iron_rod",
+    "count": 2
+  },
+  "circuit": 1,
+  "duration": 40,
+  "eu": 4,
+  "min_voltage": 32
+}

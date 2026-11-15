@@ -123,7 +123,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 
 | Role | Id | Play version (2026-11-15) | Notes |
 | --- | --- | --- | --- |
-| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.4.3** + World Map **0.7.1** (installed, rebuild pending) on Nightly `fdc87ae` |
+| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.5.0** + World Map **0.7.1** (installed, rebuild pending) on Nightly `fdc87ae` |
 
 - `create-dev` / `create-nightly-test` deleted (tests only).
 - **Create** cannot join this native: registry 0.7 → `9c7f9b2`, local 0.9 → `4e5296d`; AE2 15.4.18 needs `fdc87ae`/hooks 411. Create hnmod parked under `horizon-native-mods/_parked/`.
@@ -146,7 +146,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 
 Full plan: **`docs/mvp-tfg-plan.md`**.  
 **Locked transfer list:** **`docs/mod-transfer-list.md`** (+ `pack/draft-mods.toml`).  
-MVP Batch A on **`tfg-horizon`**: Nightly `fdc87ae` + JustEnoughItems 1.1.2 + Jade + AE2 **15.4.18** + AppleSkin + Continuity + Greglite **0.4.3**.  
+MVP Batch A on **`tfg-horizon`**: Nightly `fdc87ae` + JustEnoughItems 1.1.2 + Jade + AE2 **15.4.18** + AppleSkin + Continuity + Greglite **0.5.0**.  
 Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/greglite-electric-plan.md`.
 
 ## Suggested next work for agents
