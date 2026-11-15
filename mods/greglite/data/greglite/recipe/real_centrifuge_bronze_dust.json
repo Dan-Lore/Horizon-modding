@@ -1,0 +1,19 @@
+{
+  "type": "greglite:centrifuge",
+  "ingredient": "greglite:bronze_dust",
+  "results": [
+    {
+      "id": "greglite:copper_dust",
+      "count": 1,
+      "chance": 100
+    },
+    {
+      "id": "greglite:tin_dust",
+      "count": 1,
+      "chance": 50
+    }
+  ],
+  "duration": 120,
+  "eu": 8,
+  "min_voltage": 32
+}

@@ -4,6 +4,7 @@ use horizon_client::mod_api::{ModBlockEntity, Tag};
 
 const KEY_STEAM: &str = "Steam";
 const KEY_EU: &str = "Eu";
+const KEY_EU_V: &str = "EuV";
 const KEY_BURN: &str = "BurnTime";
 const KEY_BURN_MAX: &str = "BurnMax";
 const KEY_PROGRESS: &str = "Progress";
@@ -41,6 +42,15 @@ pub fn eu(entity: &ModBlockEntity) -> i32 {
 
 pub fn set_eu(entity: &mut ModBlockEntity, value: i32, cap: i32) {
     nbt_set_i32(entity, KEY_EU, value.clamp(0, cap.max(0)));
+}
+
+/// Voltage of the EU sitting in the buffer. 0 means "use the block rating".
+pub fn packet_voltage(entity: &ModBlockEntity) -> i32 {
+    nbt_i32(entity, KEY_EU_V).max(0)
+}
+
+pub fn set_packet_voltage(entity: &mut ModBlockEntity, voltage: i32) {
+    nbt_set_i32(entity, KEY_EU_V, voltage.max(0));
 }
 
 pub fn burn(entity: &ModBlockEntity) -> (i32, i32) {

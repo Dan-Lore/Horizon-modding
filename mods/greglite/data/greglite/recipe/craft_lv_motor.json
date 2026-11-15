@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "greglite:tin_cable_1x"
+    },
+    {
+      "item": "greglite:copper_wire"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "id": "greglite:lv_motor",
+    "count": 1
+  }
+}

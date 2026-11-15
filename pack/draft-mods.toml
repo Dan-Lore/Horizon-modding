@@ -19,7 +19,7 @@ native_version = "native-fdc87ae-428278da87c5"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + Jade/AppleSkin/Continuity + World Map (installed, rebuild pending)"
+notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.5.0 + Jade/AppleSkin/Continuity + World Map (installed, rebuild pending)"
 
 # --- Batch A ---
 
@@ -77,7 +77,7 @@ minecraft_role = "Continuity / CTM"
 [[mods]]
 id = "greglite"
 name = "Greglite"
-version = "0.4.3"
+version = "0.5.0"
 source = "mods/greglite → greglite.hmod"
 batch = "A+electric"
 status = "built"

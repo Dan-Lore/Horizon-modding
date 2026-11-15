@@ -1,16 +1,12 @@
 # Pack mods/greglite into a combined .hmod (POSIX zip paths).
-# Default: test instance (Electric Age). Pass -Working to target create-dev.
+# Default: pack instance tfg-horizon on Nightly fdc87ae.
 param(
     [switch]$Working,
     [string]$Out = ""
 )
 $ErrorActionPreference = "Stop"
 if (-not $Out) {
-    if ($Working) {
-        $Out = "C:\Users\smoln\AppData\Roaming\horizon\instances\create-dev\horizon-native-mods\greglite.hmod"
-    } else {
-        $Out = "C:\Users\smoln\AppData\Roaming\horizon\instances\create-nightly-test\horizon-native-mods\greglite.hmod"
-    }
+    $Out = "C:\Users\smoln\AppData\Roaming\horizon\instances\tfg-horizon\horizon-native-mods\greglite.hmod"
 }
 $src = Join-Path $PSScriptRoot "..\mods\greglite" | Resolve-Path
 $stage = Join-Path $PSScriptRoot "_greglite-pack"
@@ -25,11 +21,11 @@ Copy-Item (Join-Path $src "README.md"), (Join-Path $src "NOTICE") (Join-Path $st
 $native = @{
     schema  = 1
     id      = "greglite"
-    version = "0.4.3"
+    version = "0.5.0"
     game    = "26.3"
-    horizon = "4e5296d1800b3f89f2ae48dfd99d431801df4d46"
+    horizon = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
     mixins  = "5a64af938ec86b00d53d16a408aabc0038fb3e57"
-    hooks   = 36
+    hooks   = 411
 } | ConvertTo-Json -Compress
 $nativePath = Join-Path $stage "horizon-native.json"
 [System.IO.File]::WriteAllText($nativePath, $native)

@@ -4,7 +4,8 @@
     "id": "greglite:copper_dust",
     "count": 1
   },
-  "duration": 100,
-  "eu": 32,
-  "ingredient": "minecraft:copper_ingot"
+  "duration": 80,
+  "eu": 2,
+  "ingredient": "minecraft:copper_ingot",
+  "min_voltage": 32
 }

@@ -5,12 +5,23 @@ use horizon_client::mod_api::{Host, Ingredient, ItemStack};
 use std::collections::HashSet;
 
 #[derive(Clone, Debug)]
+pub struct RecipeOutput {
+    pub stack: ItemStack,
+    pub chance: i32,
+}
+
+#[derive(Clone, Debug)]
 pub struct MachineRecipe {
     pub inputs: Vec<Ingredient>,
-    pub output: ItemStack,
+    pub outputs: Vec<RecipeOutput>,
+    pub circuit: Option<i32>,
     pub duration: i32,
     pub steam: i32,
     pub eu: i32,
+    pub min_voltage: i32,
+    pub heat: i32,
+    pub fluid_in: Option<(String, i32)>,
+    pub fluid_out: Option<(String, i32)>,
 }
 
 pub fn load(host: &dyn Host, kind: &str) -> Vec<MachineRecipe> {
@@ -27,14 +38,50 @@ pub fn load(host: &dyn Host, kind: &str) -> Vec<MachineRecipe> {
     out
 }
 
+fn parse_fluid(json: &Value, key: &str) -> Option<(String, i32)> {
+    let obj = json.get(key)?;
+    let id = obj.get("id")?.as_str()?.to_owned();
+    let amount = obj.get("amount").and_then(|v| v.as_i64()).unwrap_or(0) as i32;
+    (amount > 0).then_some((id, amount))
+}
+
 fn parse(host: &dyn Host, json: &Value) -> Option<MachineRecipe> {
     let duration = json.get("duration").and_then(|v| v.as_i64()).unwrap_or(100) as i32;
     let steam = json.get("steam").and_then(|v| v.as_i64()).unwrap_or(1) as i32;
-    let eu = json
-        .get("eu")
+    let eu = json.get("eu").and_then(|v| v.as_i64()).unwrap_or(2) as i32;
+    let min_voltage = json
+        .get("min_voltage")
         .and_then(|v| v.as_i64())
-        .unwrap_or(2) as i32;
-    let output = host.recipe_result(json.get("result")?)?;
+        .unwrap_or(32) as i32;
+    let heat = json.get("heat").and_then(|v| v.as_i64()).unwrap_or(0) as i32;
+    let circuit = json
+        .get("circuit")
+        .and_then(|v| v.as_i64())
+        .map(|v| v as i32);
+
+    let mut outputs = Vec::new();
+    if let Some(arr) = json.get("results").and_then(|v| v.as_array()) {
+        for entry in arr {
+            let chance = entry
+                .get("chance")
+                .and_then(|v| v.as_i64())
+                .unwrap_or(100) as i32;
+            let mut clean = entry.clone();
+            if let Some(obj) = clean.as_object_mut() {
+                obj.remove("chance");
+            }
+            let stack = host.recipe_result(&clean)?;
+            outputs.push(RecipeOutput { stack, chance });
+        }
+    } else if let Some(one) = json.get("result") {
+        outputs.push(RecipeOutput {
+            stack: host.recipe_result(one)?,
+            chance: 100,
+        });
+    }
+    if outputs.is_empty() && parse_fluid(json, "fluid_out").is_none() {
+        return None;
+    }
 
     let mut inputs = Vec::new();
     if let Some(arr) = json.get("ingredients").and_then(|v| v.as_array()) {
@@ -43,18 +90,18 @@ fn parse(host: &dyn Host, json: &Value) -> Option<MachineRecipe> {
         }
     } else if let Some(one) = json.get("ingredient") {
         inputs.push(host.recipe_ingredient(one)?);
-    } else {
-        return None;
-    }
-    if inputs.is_empty() {
-        return None;
     }
     Some(MachineRecipe {
         inputs,
-        output,
+        outputs,
+        circuit,
         duration: duration.max(1),
         steam: steam.max(0),
         eu: eu.max(0),
+        min_voltage: min_voltage.max(1),
+        heat: heat.max(0),
+        fluid_in: parse_fluid(json, "fluid_in"),
+        fluid_out: parse_fluid(json, "fluid_out"),
     })
 }
 
@@ -76,10 +123,18 @@ fn stack(id: &str, count: u32) -> ItemStack {
 fn one_in(inp: &str, out: &str, duration: i32, steam: i32, eu: i32) -> MachineRecipe {
     MachineRecipe {
         inputs: vec![item_ing(inp)],
-        output: stack(out, 1),
+        outputs: vec![RecipeOutput {
+            stack: stack(out, 1),
+            chance: 100,
+        }],
+        circuit: None,
         duration,
         steam,
         eu,
+        min_voltage: 32,
+        heat: 0,
+        fluid_in: None,
+        fluid_out: None,
     }
 }
 
@@ -88,17 +143,33 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
         "greglite:alloy_smelter" => vec![
             MachineRecipe {
                 inputs: vec![item_ing("minecraft:copper_ingot"), item_ing("greglite:tin_ingot")],
-                output: stack("greglite:bronze_ingot", 2),
+                outputs: vec![RecipeOutput {
+                    stack: stack("greglite:bronze_ingot", 2),
+                    chance: 100,
+                }],
+                circuit: None,
                 duration: 100,
                 steam: 1,
                 eu: 2,
+                min_voltage: 32,
+                heat: 0,
+                fluid_in: None,
+                fluid_out: None,
             },
             MachineRecipe {
                 inputs: vec![item_ing("greglite:copper_dust"), item_ing("greglite:tin_dust")],
-                output: stack("greglite:bronze_ingot", 2),
+                outputs: vec![RecipeOutput {
+                    stack: stack("greglite:bronze_ingot", 2),
+                    chance: 100,
+                }],
+                circuit: None,
                 duration: 100,
                 steam: 1,
                 eu: 2,
+                min_voltage: 32,
+                heat: 0,
+                fluid_in: None,
+                fluid_out: None,
             },
         ],
         "greglite:macerator" => [

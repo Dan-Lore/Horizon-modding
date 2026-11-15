@@ -20,7 +20,14 @@ fn base_screen(slots: Vec<Option<[f32; 2]>>) -> NativeScreen {
 pub fn layout(event: &ScreenEvent<'_>) -> Option<NativeScreen> {
     let spec = registry::find(event.block)?;
     match spec.kind {
-        Kind::Cable | Kind::Hull => None,
+        Kind::Cable | Kind::Hull | Kind::Diode | Kind::Transformer | Kind::EnergyHatch => None,
+        Kind::ItemHatch => {
+            if spec.slots() == 2 {
+                Some(base_screen(vec![Some([53.0, 35.0]), Some([71.0, 35.0])]))
+            } else {
+                Some(base_screen(vec![Some([80.0, 35.0])]))
+            }
+        }
         Kind::Multiblock => Some(base_screen(vec![Some([53.0, 35.0]), Some([116.0, 35.0])])),
         Kind::Boiler | Kind::FuelGen | Kind::SteamTurbine => {
             Some(base_screen(vec![Some([80.0, 53.0])]))
@@ -32,6 +39,13 @@ pub fn layout(event: &ScreenEvent<'_>) -> Option<NativeScreen> {
             Some([107.0, 35.0]),
         ])),
         Kind::SteamProcessor | Kind::EuProcessor => {
+            if spec.outputs > 1 {
+                let mut slots = vec![Some([26.0, 35.0])];
+                for i in 0..spec.outputs {
+                    slots.push(Some([80.0 + i as f32 * 18.0, 35.0]));
+                }
+                return Some(base_screen(slots));
+            }
             if spec.inputs >= 2 {
                 Some(base_screen(vec![
                     Some([53.0, 25.0]),
@@ -49,7 +63,10 @@ pub fn draw(host: &dyn Host, event: &mut ScreenDrawEvent<'_>) {
     let Some(spec) = registry::find(event.block) else {
         return;
     };
-    if matches!(spec.kind, Kind::Cable | Kind::Hull) {
+    if matches!(
+        spec.kind,
+        Kind::Cable | Kind::Hull | Kind::Diode | Kind::Transformer | Kind::EnergyHatch
+    ) {
         return;
     }
     let ox = event.origin[0];

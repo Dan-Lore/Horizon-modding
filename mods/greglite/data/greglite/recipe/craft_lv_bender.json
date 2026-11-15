@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "greglite:lv_machine_hull"
+    },
+    {
+      "item": "greglite:lv_piston"
+    },
+    {
+      "item": "greglite:programmed_circuit_1"
+    },
+    {
+      "item": "greglite:iron_plate"
+    }
+  ],
+  "result": {
+    "id": "greglite:lv_bender",
+    "count": 1
+  }
+}
