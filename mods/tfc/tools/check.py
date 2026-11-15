@@ -54,6 +54,7 @@ def write_tracker(catalog: dict) -> None:
 
 
 def main() -> None:
+    subprocess.check_call([sys.executable, str(MOD / "tools" / "test_logic.py")])
     gen = MOD / "tools" / "gen_content.py"
     subprocess.check_call([sys.executable, str(gen)])
     catalog = json.loads((MOD / "tracker" / "catalog.json").read_text(encoding="utf-8"))

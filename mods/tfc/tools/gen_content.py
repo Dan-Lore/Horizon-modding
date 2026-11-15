@@ -357,7 +357,15 @@ def write_tables() -> None:
         TABLES / "worldgen.json",
         {
             "status": "blocked",
+            "wave": "W12",
             "reason": "Chunk generation is not hooked. Rocks and ores are placed by hand; prospect reports a preview rock.",
+            "needed_hooks": [
+                "climate_map",
+                "rock_layers",
+                "ore_veins",
+                "custom_biome_source",
+            ],
+            "bridge": "vanilla_overworld_plus_placeable_tfc_rocks_ores",
             "content_rocks": ROCKS,
             "planned_layers": PLANNED_LAYERS,
         },

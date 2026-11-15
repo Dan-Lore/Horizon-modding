@@ -1,9 +1,14 @@
 //! Hybrid rock preview. Full layer generation stays off until chunk hooks exist.
+//!
+//! When custom chunk generators / density functions are available for native mods,
+//! replace the hybrid sampler and spawn veins from planned layers in `tables/worldgen.json`.
 
 use horizon_client::mod_api::serde_json::{from_str, Value};
 use std::sync::OnceLock;
 
 pub const STATUS: &str = "blocked";
+pub const REASON: &str =
+    "custom biome/rock-layer/vein worldgen hooks incomplete for TFC parity";
 
 fn rocks() -> &'static Vec<String> {
     static ROCKS: OnceLock<Vec<String>> = OnceLock::new();
