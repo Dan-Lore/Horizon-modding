@@ -1,0 +1,10 @@
+{
+  "type": "greglite:lathe",
+  "result": {
+    "id": "greglite:battery_alloy_rod",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "greglite:battery_alloy_ingot"
+}

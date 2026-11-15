@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "minecraft:copper_ingot"
-  },
+  "ingredient": "minecraft:copper_ingot",
   "result": {
     "id": "greglite:copper_wire",
     "count": 2

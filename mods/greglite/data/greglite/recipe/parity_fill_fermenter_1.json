@@ -2,9 +2,7 @@
   "type": "greglite:fermenter",
   "duration": 80,
   "eu": 2,
-  "ingredient": {
-    "item": "greglite:copper_dust"
-  },
+  "ingredient": "greglite:copper_dust",
   "result": {
     "id": "greglite:copper_plate",
     "count": 1

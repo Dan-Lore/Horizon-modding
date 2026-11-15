@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:cupronickel_plate"
-  },
+  "ingredient": "greglite:cupronickel_plate",
   "result": {
     "id": "greglite:cupronickel_dust",
     "count": 1

@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:epoxy_ingot"
-  },
+  "ingredient": "greglite:epoxy_ingot",
   "result": {
     "id": "greglite:epoxy_rod",
     "count": 2

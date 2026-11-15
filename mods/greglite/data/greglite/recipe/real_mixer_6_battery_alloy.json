@@ -1,0 +1,13 @@
+{
+  "type": "greglite:mixer",
+  "ingredients": [
+    "greglite:lead_ingot",
+    "greglite:tin_ingot"
+  ],
+  "result": {
+    "id": "greglite:battery_alloy_ingot",
+    "count": 1
+  },
+  "duration": 120,
+  "eu": 32
+}

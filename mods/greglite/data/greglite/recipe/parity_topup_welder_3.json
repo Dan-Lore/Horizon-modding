@@ -7,11 +7,7 @@
   "duration": 80,
   "eu": 2,
   "ingredients": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:redstone"
-    }
+    "minecraft:iron_ingot",
+    "minecraft:redstone"
   ]
 }

@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:titanium_ingot"
-  },
+  "ingredient": "greglite:titanium_ingot",
   "result": {
     "id": "greglite:titanium_dust",
     "count": 1

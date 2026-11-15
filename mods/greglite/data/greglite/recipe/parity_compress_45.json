@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:cupronickel_dust"
-  },
+  "ingredient": "greglite:cupronickel_dust",
   "result": {
     "id": "greglite:cupronickel_plate",
     "count": 1

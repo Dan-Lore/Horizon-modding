@@ -1,0 +1,10 @@
+{
+  "type": "greglite:gas_collector",
+  "result": {
+    "id": "greglite:gold_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "greglite:gold_dust"
+}

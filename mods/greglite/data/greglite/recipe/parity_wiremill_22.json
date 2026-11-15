@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:cupronickel_ingot"
-  },
+  "ingredient": "greglite:cupronickel_ingot",
   "result": {
     "id": "greglite:cupronickel_wire",
     "count": 2

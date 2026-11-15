@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:antimony_ingot"
-  },
+  "ingredient": "greglite:antimony_ingot",
   "result": {
     "id": "greglite:antimony_rod",
     "count": 2

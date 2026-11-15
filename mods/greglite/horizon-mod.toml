@@ -1,6 +1,6 @@
 id = "greglite"
 name = "Greglite"
-version = "0.4.2"
+version = "0.4.3"
 description = "Steam Age + LV Electric datapack: EU machines, cables, materials (content slice)."
 authors = ["Horizon-modding workshop"]
 api = "0.2"

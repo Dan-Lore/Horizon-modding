@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:nickel_ingot"
-  },
+  "ingredient": "greglite:nickel_ingot",
   "result": {
     "id": "greglite:nickel_wire",
     "count": 2

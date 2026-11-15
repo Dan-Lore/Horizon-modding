@@ -1,0 +1,10 @@
+{
+  "type": "greglite:arc_furnace",
+  "result": {
+    "id": "greglite:rubber_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "ingredient": "greglite:rubber_dust"
+}

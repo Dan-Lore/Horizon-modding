@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:charcoal_ingot"
-  },
+  "ingredient": "greglite:charcoal_ingot",
   "result": {
     "id": "greglite:charcoal_wire",
     "count": 2

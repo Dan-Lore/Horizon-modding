@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:antimony_plate"
-  },
+  "ingredient": "greglite:antimony_plate",
   "result": {
     "id": "greglite:antimony_dust",
     "count": 1

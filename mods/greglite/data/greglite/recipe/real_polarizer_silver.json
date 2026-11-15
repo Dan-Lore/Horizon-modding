@@ -1,0 +1,10 @@
+{
+  "type": "greglite:polarizer",
+  "result": {
+    "id": "greglite:silver_foil",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "ingredient": "greglite:silver_plate"
+}

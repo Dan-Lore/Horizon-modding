@@ -6,7 +6,5 @@
   },
   "duration": 80,
   "eu": 2,
-  "ingredient": {
-    "item": "minecraft:copper_ingot"
-  }
+  "ingredient": "minecraft:copper_ingot"
 }

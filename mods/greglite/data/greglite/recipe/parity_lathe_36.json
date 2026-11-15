@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:redstone_ingot"
-  },
+  "ingredient": "greglite:redstone_ingot",
   "result": {
     "id": "greglite:redstone_rod",
     "count": 2

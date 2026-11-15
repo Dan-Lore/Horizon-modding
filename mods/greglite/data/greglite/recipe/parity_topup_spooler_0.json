@@ -6,7 +6,5 @@
   },
   "duration": 80,
   "eu": 2,
-  "ingredient": {
-    "item": "minecraft:cobblestone"
-  }
+  "ingredient": "minecraft:cobblestone"
 }

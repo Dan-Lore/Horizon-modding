@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:bismuth_ingot"
-  },
+  "ingredient": "greglite:bismuth_ingot",
   "result": {
     "id": "greglite:bismuth_rod",
     "count": 2

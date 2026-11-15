@@ -1,0 +1,13 @@
+{
+  "type": "greglite:circuit_assembler",
+  "result": {
+    "id": "greglite:nickel_cable_1x",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "ingredients": [
+    "greglite:nickel_wire",
+    "greglite:rubber"
+  ]
+}

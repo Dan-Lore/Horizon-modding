@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:silicone_rubber_ingot"
-  },
+  "ingredient": "greglite:silicone_rubber_ingot",
   "result": {
     "id": "greglite:silicone_rubber_rod",
     "count": 2

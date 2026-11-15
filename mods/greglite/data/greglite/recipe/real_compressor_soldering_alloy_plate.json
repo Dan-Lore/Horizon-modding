@@ -1,0 +1,10 @@
+{
+  "type": "greglite:compressor",
+  "result": {
+    "id": "greglite:soldering_alloy_plate",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "greglite:soldering_alloy_ingot"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "greglite:lathe",
+  "result": {
+    "id": "greglite:wrought_iron_rod",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "greglite:wrought_iron_ingot"
+}

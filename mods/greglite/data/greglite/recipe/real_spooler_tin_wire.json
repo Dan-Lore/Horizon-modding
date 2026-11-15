@@ -1,0 +1,10 @@
+{
+  "type": "greglite:spooler",
+  "result": {
+    "id": "greglite:tin_wire",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "greglite:tin_ingot"
+}

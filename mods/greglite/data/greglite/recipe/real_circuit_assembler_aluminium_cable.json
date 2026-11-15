@@ -1,0 +1,13 @@
+{
+  "type": "greglite:circuit_assembler",
+  "result": {
+    "id": "greglite:aluminium_cable_1x",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "ingredients": [
+    "greglite:aluminium_wire",
+    "greglite:rubber"
+  ]
+}

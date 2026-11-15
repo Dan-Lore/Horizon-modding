@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:epoxy_plate"
-  },
+  "ingredient": "greglite:epoxy_plate",
   "result": {
     "id": "greglite:epoxy_dust",
     "count": 1

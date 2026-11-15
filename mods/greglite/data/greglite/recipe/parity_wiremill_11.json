@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:wrought_iron_ingot"
-  },
+  "ingredient": "greglite:wrought_iron_ingot",
   "result": {
     "id": "greglite:wrought_iron_wire",
     "count": 2

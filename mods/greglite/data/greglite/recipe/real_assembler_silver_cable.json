@@ -1,0 +1,13 @@
+{
+  "type": "greglite:assembler",
+  "result": {
+    "id": "greglite:silver_cable_1x",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "ingredients": [
+    "greglite:silver_wire",
+    "greglite:rubber"
+  ]
+}

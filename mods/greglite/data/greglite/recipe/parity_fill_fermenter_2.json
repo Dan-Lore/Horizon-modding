@@ -2,9 +2,7 @@
   "type": "greglite:fermenter",
   "duration": 80,
   "eu": 2,
-  "ingredient": {
-    "item": "greglite:tin_dust"
-  },
+  "ingredient": "greglite:tin_dust",
   "result": {
     "id": "greglite:tin_plate",
     "count": 1

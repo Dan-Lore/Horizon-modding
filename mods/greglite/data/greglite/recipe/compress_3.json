@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:tin_ingot"
-  },
+  "ingredient": "greglite:tin_ingot",
   "result": {
     "id": "greglite:tin_plate",
     "count": 1

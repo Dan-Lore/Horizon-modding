@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:nickel_plate"
-  },
+  "ingredient": "greglite:nickel_plate",
   "result": {
     "id": "greglite:nickel_dust",
     "count": 1

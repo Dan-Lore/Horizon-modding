@@ -1,0 +1,10 @@
+{
+  "type": "greglite:forming_press",
+  "result": {
+    "id": "greglite:copper_gear",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "greglite:copper_plate"
+}

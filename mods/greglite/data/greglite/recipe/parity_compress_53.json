@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:polyethylene_dust"
-  },
+  "ingredient": "greglite:polyethylene_dust",
   "result": {
     "id": "greglite:polyethylene_plate",
     "count": 1

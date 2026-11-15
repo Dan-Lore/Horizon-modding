@@ -1,0 +1,10 @@
+{
+  "type": "greglite:gas_collector",
+  "result": {
+    "id": "greglite:bronze_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "greglite:bronze_dust"
+}

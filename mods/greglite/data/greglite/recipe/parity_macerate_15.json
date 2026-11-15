@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:brass_ingot"
-  },
+  "ingredient": "greglite:brass_ingot",
   "result": {
     "id": "greglite:brass_dust",
     "count": 1

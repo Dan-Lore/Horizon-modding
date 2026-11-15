@@ -15,7 +15,11 @@
   "counts": {
     "blocks": 487,
     "items": 959,
-    "recipes": 683,
+    "recipes": 1212,
+    "valid_machine_recipes": 1135,
+    "placeholder_recipes": 0,
+    "honest_ge8": 40,
+    "machine_types": 40,
     "types_hit": 40,
     "tier_cells_hit": 320,
     "multiblocks_hit": 34,

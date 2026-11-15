@@ -1,12 +1,8 @@
 {
   "type": "greglite:alloy_smelter",
   "ingredients": [
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "greglite:tin_ingot"
-    }
+    "minecraft:copper_ingot",
+    "greglite:tin_ingot"
   ],
   "result": {
     "id": "greglite:bronze_ingot",

@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:cobalt_plate"
-  },
+  "ingredient": "greglite:cobalt_plate",
   "result": {
     "id": "greglite:cobalt_dust",
     "count": 1

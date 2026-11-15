@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:steel_ingot"
-  },
+  "ingredient": "greglite:steel_ingot",
   "result": {
     "id": "greglite:steel_plate",
     "count": 1

@@ -1,0 +1,10 @@
+{
+  "type": "greglite:cutter",
+  "result": {
+    "id": "greglite:soldering_alloy_screw",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "greglite:soldering_alloy_plate"
+}

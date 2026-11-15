@@ -7,11 +7,7 @@
   "duration": 80,
   "eu": 2,
   "ingredients": [
-    {
-      "item": "minecraft:gravel"
-    },
-    {
-      "item": "minecraft:redstone"
-    }
+    "minecraft:gravel",
+    "minecraft:redstone"
   ]
 }

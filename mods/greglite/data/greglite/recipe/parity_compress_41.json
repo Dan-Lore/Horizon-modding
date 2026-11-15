@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:bismuth_dust"
-  },
+  "ingredient": "greglite:bismuth_dust",
   "result": {
     "id": "greglite:bismuth_plate",
     "count": 1

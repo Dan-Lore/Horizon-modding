@@ -6,7 +6,5 @@
   },
   "duration": 100,
   "eu": 28,
-  "ingredient": {
-    "item": "greglite:bronze_ingot"
-  }
+  "ingredient": "greglite:bronze_ingot"
 }

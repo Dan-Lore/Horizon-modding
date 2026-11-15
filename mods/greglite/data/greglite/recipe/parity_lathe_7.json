@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:zinc_ingot"
-  },
+  "ingredient": "greglite:zinc_ingot",
   "result": {
     "id": "greglite:zinc_rod",
     "count": 2

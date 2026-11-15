@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:tin_plate"
-  },
+  "ingredient": "greglite:tin_plate",
   "result": {
     "id": "greglite:tin_dust",
     "count": 1

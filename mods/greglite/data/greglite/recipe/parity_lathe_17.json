@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:manganese_ingot"
-  },
+  "ingredient": "greglite:manganese_ingot",
   "result": {
     "id": "greglite:manganese_rod",
     "count": 2

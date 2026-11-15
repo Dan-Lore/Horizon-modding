@@ -1,0 +1,13 @@
+{
+  "type": "greglite:assembler",
+  "result": {
+    "id": "greglite:lv_battery",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 48,
+  "ingredients": [
+    "greglite:copper_plate",
+    "greglite:tin_wire"
+  ]
+}

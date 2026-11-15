@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:copper_plate"
-  },
+  "ingredient": "greglite:copper_plate",
   "result": {
     "id": "greglite:copper_dust",
     "count": 1

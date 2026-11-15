@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:zinc_dust"
-  },
+  "ingredient": "greglite:zinc_dust",
   "result": {
     "id": "greglite:zinc_plate",
     "count": 1

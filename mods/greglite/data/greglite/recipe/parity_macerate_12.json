@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:zinc_plate"
-  },
+  "ingredient": "greglite:zinc_plate",
   "result": {
     "id": "greglite:zinc_dust",
     "count": 1

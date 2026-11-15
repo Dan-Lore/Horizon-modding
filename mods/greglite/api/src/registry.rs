@@ -129,6 +129,7 @@ fn voltage_of(tier: &str) -> i32 {
 }
 
 fn dual_input(mtype: &str) -> bool {
+    // Only machines whose recipes use `ingredients: [a, b]` (not single `ingredient`).
     matches!(
         mtype,
         "alloy_smelter"
@@ -137,12 +138,9 @@ fn dual_input(mtype: &str) -> bool {
             | "chemical_reactor"
             | "circuit_assembler"
             | "canner"
-            | "bender"
-            | "centrifuge"
+            | "packer"
+            | "welder"
             | "chemical_bath"
-            | "distillery"
-            | "brewery"
-            | "fermenter"
             | "autoclave"
     )
 }

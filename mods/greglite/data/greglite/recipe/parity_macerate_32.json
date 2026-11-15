@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:manganese_plate"
-  },
+  "ingredient": "greglite:manganese_plate",
   "result": {
     "id": "greglite:manganese_dust",
     "count": 1

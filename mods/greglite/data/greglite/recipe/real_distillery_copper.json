@@ -1,0 +1,10 @@
+{
+  "type": "greglite:distillery",
+  "result": {
+    "id": "greglite:copper_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "ingredient": "greglite:copper_dust"
+}

@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:brass_dust"
-  },
+  "ingredient": "greglite:brass_dust",
   "result": {
     "id": "greglite:brass_plate",
     "count": 1

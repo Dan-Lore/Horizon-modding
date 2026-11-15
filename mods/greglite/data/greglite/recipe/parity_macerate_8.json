@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:lead_plate"
-  },
+  "ingredient": "greglite:lead_plate",
   "result": {
     "id": "greglite:lead_dust",
     "count": 1

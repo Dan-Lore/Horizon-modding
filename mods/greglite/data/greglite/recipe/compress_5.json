@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:bronze_ingot"
-  },
+  "ingredient": "greglite:bronze_ingot",
   "result": {
     "id": "greglite:bronze_plate",
     "count": 1

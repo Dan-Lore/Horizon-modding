@@ -1,0 +1,10 @@
+{
+  "type": "greglite:ore_washer",
+  "result": {
+    "id": "greglite:wrought_iron_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "greglite:wrought_iron_dust"
+}

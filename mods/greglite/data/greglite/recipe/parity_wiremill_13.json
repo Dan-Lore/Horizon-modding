@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:stainless_steel_ingot"
-  },
+  "ingredient": "greglite:stainless_steel_ingot",
   "result": {
     "id": "greglite:stainless_steel_wire",
     "count": 2

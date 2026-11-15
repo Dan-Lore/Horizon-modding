@@ -1,0 +1,10 @@
+{
+  "type": "greglite:extractor",
+  "result": {
+    "id": "greglite:iron_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "ingredient": "greglite:iron_dust"
+}

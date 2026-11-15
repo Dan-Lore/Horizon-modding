@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:lead_ingot"
-  },
+  "ingredient": "greglite:lead_ingot",
   "result": {
     "id": "greglite:lead_plate",
     "count": 1

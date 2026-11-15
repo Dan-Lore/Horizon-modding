@@ -6,7 +6,5 @@
   },
   "duration": 120,
   "eu": 32,
-  "ingredient": {
-    "item": "minecraft:iron_ingot"
-  }
+  "ingredient": "minecraft:iron_ingot"
 }

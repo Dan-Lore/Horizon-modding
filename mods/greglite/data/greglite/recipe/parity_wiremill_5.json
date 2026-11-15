@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:lead_ingot"
-  },
+  "ingredient": "greglite:lead_ingot",
   "result": {
     "id": "greglite:lead_wire",
     "count": 2

@@ -6,7 +6,5 @@
   },
   "duration": 100,
   "eu": 32,
-  "ingredient": {
-    "item": "minecraft:copper_ore"
-  }
+  "ingredient": "minecraft:copper_ore"
 }

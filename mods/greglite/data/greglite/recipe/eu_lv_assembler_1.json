@@ -7,11 +7,7 @@
   "duration": 120,
   "eu": 32,
   "ingredients": [
-    {
-      "item": "greglite:tin_wire"
-    },
-    {
-      "item": "greglite:rubber"
-    }
+    "greglite:tin_wire",
+    "greglite:rubber"
   ]
 }

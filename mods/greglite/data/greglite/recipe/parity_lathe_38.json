@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:sulfur_ingot"
-  },
+  "ingredient": "greglite:sulfur_ingot",
   "result": {
     "id": "greglite:sulfur_rod",
     "count": 2

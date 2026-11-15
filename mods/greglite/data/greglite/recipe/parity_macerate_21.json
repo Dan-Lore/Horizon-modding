@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:invar_ingot"
-  },
+  "ingredient": "greglite:invar_ingot",
   "result": {
     "id": "greglite:invar_dust",
     "count": 1

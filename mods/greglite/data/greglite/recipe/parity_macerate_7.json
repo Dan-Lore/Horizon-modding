@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:lead_ingot"
-  },
+  "ingredient": "greglite:lead_ingot",
   "result": {
     "id": "greglite:lead_dust",
     "count": 1

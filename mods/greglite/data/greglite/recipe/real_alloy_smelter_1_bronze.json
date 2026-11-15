@@ -1,0 +1,13 @@
+{
+  "type": "greglite:alloy_smelter",
+  "ingredients": [
+    "greglite:copper_dust",
+    "greglite:tin_dust"
+  ],
+  "result": {
+    "id": "greglite:bronze_ingot",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 32
+}

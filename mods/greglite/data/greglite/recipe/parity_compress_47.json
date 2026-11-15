@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:battery_alloy_dust"
-  },
+  "ingredient": "greglite:battery_alloy_dust",
   "result": {
     "id": "greglite:battery_alloy_plate",
     "count": 1

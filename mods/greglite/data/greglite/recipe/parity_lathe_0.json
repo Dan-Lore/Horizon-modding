@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "minecraft:iron_ingot"
-  },
+  "ingredient": "minecraft:iron_ingot",
   "result": {
     "id": "greglite:iron_rod",
     "count": 2

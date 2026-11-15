@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:aluminium_dust"
-  },
+  "ingredient": "greglite:aluminium_dust",
   "result": {
     "id": "greglite:aluminium_plate",
     "count": 1

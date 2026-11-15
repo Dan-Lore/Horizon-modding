@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:epoxy_dust"
-  },
+  "ingredient": "greglite:epoxy_dust",
   "result": {
     "id": "greglite:epoxy_plate",
     "count": 1

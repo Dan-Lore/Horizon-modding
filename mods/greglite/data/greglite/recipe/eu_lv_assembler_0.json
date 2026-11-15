@@ -7,11 +7,7 @@
   "duration": 160,
   "eu": 48,
   "ingredients": [
-    {
-      "item": "greglite:tin_wire"
-    },
-    {
-      "item": "minecraft:redstone"
-    }
+    "greglite:tin_wire",
+    "minecraft:redstone"
   ]
 }

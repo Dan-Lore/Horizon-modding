@@ -6,7 +6,5 @@
   },
   "duration": 100,
   "eu": 28,
-  "ingredient": {
-    "item": "minecraft:raw_iron"
-  }
+  "ingredient": "minecraft:raw_iron"
 }

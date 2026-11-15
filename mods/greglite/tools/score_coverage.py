@@ -75,22 +75,76 @@ def main() -> None:
     )
     mat_score = mat_hit / max(1, mat_cells)
 
-    # recipes depth: target >= 8 recipes per type average
-    by_type = {}
+    # recipes depth: ≥8 *valid* (non-placeholder) recipes per machine type
+    dust_ok = {
+        "macerator",
+        "forge_hammer",
+        "rock_crusher",
+        "thermal_centrifuge",
+        "ore_washer",
+        "sifter",
+        "electromagnetic_separator",
+        "centrifuge",
+        "electrolyzer",
+        "extractor",
+    }
+    no_dust = {
+        "circuit_assembler",
+        "assembler",
+        "laser_engraver",
+        "scanner",
+        "polarizer",
+        "welder",
+        "bender",
+        "wiremill",
+        "lathe",
+        "extruder",
+        "cutter",
+        "forming_press",
+        "packer",
+        "canner",
+        "compressor",
+    }
+
+    def is_placeholder(mtype: str, obj: dict) -> bool:
+        res = (obj.get("result") or {}).get("id", "")
+        ing = obj.get("ingredient") or {}
+        ings = obj.get("ingredients") or ([ing] if ing else [])
+        in_ids = [(i.get("item") or "") for i in ings if isinstance(i, dict)]
+        if mtype not in dust_ok and res.endswith("_dust") and any(
+            x.endswith(("_plate", "_ingot", "_rod", "_gear", "_foil", "_wire", "_screw"))
+            for x in in_ids
+        ):
+            return True
+        if mtype == "compressor" and res.endswith("_dust"):
+            return True
+        if mtype in no_dust and res.endswith("_dust"):
+            return True
+        return False
+
+    by_type: dict[str, int] = {}
+    valid_recipes = 0
+    placeholder_recipes = 0
     for r in recipes:
         try:
             obj = json.loads(r.read_text(encoding="utf-8"))
         except Exception:
             continue
         ty = obj.get("type", "")
-        if ty.startswith("greglite:"):
-            by_type.setdefault(ty.split(":", 1)[1], 0)
-            by_type[ty.split(":", 1)[1]] += 1
+        if not ty.startswith("greglite:"):
+            continue
+        mtype = ty.split(":", 1)[1]
+        if is_placeholder(mtype, obj):
+            placeholder_recipes += 1
+            continue
+        by_type[mtype] = by_type.get(mtype, 0) + 1
+        valid_recipes += 1
     depth_scores = []
     for t in types:
         n = by_type.get(t, 0)
         depth_scores.append(min(1.0, n / 8.0))
     recipes_score = sum(depth_scores) / max(1, len(depth_scores))
+    honest_ge8 = sum(1 for t in types if by_type.get(t, 0) >= 8)
 
     # multiblocks
     mb_hit = sum(1 for m in multis if f"multi_{m['id']}" in blocks)
@@ -148,6 +202,10 @@ def main() -> None:
             "blocks": len(blocks),
             "items": len(items),
             "recipes": len(recipes),
+            "valid_machine_recipes": valid_recipes,
+            "placeholder_recipes": placeholder_recipes,
+            "honest_ge8": honest_ge8,
+            "machine_types": len(types),
             "types_hit": types_hit,
             "tier_cells_hit": cells_hit,
             "multiblocks_hit": mb_hit,

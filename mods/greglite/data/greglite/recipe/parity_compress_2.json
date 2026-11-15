@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "minecraft:copper_ingot"
-  },
+  "ingredient": "minecraft:copper_ingot",
   "result": {
     "id": "greglite:copper_plate",
     "count": 1

@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:nickel_dust"
-  },
+  "ingredient": "greglite:nickel_dust",
   "result": {
     "id": "greglite:nickel_plate",
     "count": 1

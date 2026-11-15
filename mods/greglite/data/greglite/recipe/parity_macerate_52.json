@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:polyvinyl_chloride_plate"
-  },
+  "ingredient": "greglite:polyvinyl_chloride_plate",
   "result": {
     "id": "greglite:polyvinyl_chloride_dust",
     "count": 1

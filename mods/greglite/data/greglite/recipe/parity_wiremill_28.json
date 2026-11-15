@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:epoxy_ingot"
-  },
+  "ingredient": "greglite:epoxy_ingot",
   "result": {
     "id": "greglite:epoxy_wire",
     "count": 2

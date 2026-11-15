@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:electrum_ingot"
-  },
+  "ingredient": "greglite:electrum_ingot",
   "result": {
     "id": "greglite:electrum_wire",
     "count": 2

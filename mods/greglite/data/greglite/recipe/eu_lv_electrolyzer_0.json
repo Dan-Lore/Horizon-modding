@@ -6,7 +6,5 @@
   },
   "duration": 100,
   "eu": 24,
-  "ingredient": {
-    "item": "greglite:tin_ingot"
-  }
+  "ingredient": "greglite:tin_ingot"
 }

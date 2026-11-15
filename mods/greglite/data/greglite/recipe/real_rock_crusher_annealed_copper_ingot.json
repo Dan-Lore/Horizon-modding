@@ -1,0 +1,10 @@
+{
+  "type": "greglite:rock_crusher",
+  "result": {
+    "id": "greglite:annealed_copper_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "greglite:annealed_copper_ingot"
+}

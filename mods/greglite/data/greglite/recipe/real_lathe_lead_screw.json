@@ -1,0 +1,10 @@
+{
+  "type": "greglite:lathe",
+  "result": {
+    "id": "greglite:lead_screw",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "greglite:lead_rod"
+}

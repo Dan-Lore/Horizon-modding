@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:silicone_rubber_ingot"
-  },
+  "ingredient": "greglite:silicone_rubber_ingot",
   "result": {
     "id": "greglite:silicone_rubber_wire",
     "count": 2

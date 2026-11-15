@@ -2,7 +2,7 @@
 
 **Generated from:** `mods/greglite/tracker/catalog.json` + content scan
 **Plan:** [`docs/greglite-electric-plan.md`](greglite-electric-plan.md)
-**Updated:** 2026-11-14 — GTM parity coverage **100.00%** (`tracker/coverage.json`)
+**Updated:** 2026-11-15 — GTM parity coverage **100%** with **honest** recipe depth (`tracker/coverage.json`)
 
 Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
@@ -11,16 +11,18 @@ Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 | Role | Id | Version | Notes |
 | --- | --- | --- | --- |
 | working | `create-dev` | `native-fdc87ae-8837f1d46495` | Steam Age working native — do not rebuild |
-| test | `create-nightly-test` | `native-9f42064-39096c24e354` | Greglite 0.4 + JEI/Jade; GTM textures baked; cables=iron_block (no false “not available yet”) |
+| test | `create-nightly-test` | `native-9f42064-ced9cfd3616b` | Greglite 0.4.3 + JEI/Jade; honest ≥8 recipes/type; dual_input fix |
 
 ## Coverage (weighted checklist vs GTM extract)
 
 | Category | Score |
 | --- | --- |
 | TOTAL | **100.00%** |
-| singleblock types/tiers | 100% (40 types × LV–UV, +macerator/arc_furnace/rock_crusher/welder/spooler/air_scrubber) |
-| recipes depth (≥8/type) | 100% |
+| singleblock types/tiers | 100% (40 types × LV–UV) |
+| recipes depth (≥8 **valid**/type) | 100% — placeholders purged; `tools/gen_real_recipes.py` |
 | generators / cables / materials / multis / EU / steam / GUI | 100% |
+
+Recipe scoring ignores plate/ingot→dust stubs on wrong machines. Target remains ≥8 type-correct solid recipes per electric machine type (not a full GTM dump).
 
 ## Summary
 

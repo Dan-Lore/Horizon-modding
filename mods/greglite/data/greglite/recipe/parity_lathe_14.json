@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:aluminium_ingot"
-  },
+  "ingredient": "greglite:aluminium_ingot",
   "result": {
     "id": "greglite:aluminium_rod",
     "count": 2

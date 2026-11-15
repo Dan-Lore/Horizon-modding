@@ -1,0 +1,10 @@
+{
+  "type": "greglite:scanner",
+  "result": {
+    "id": "greglite:lead_rod",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "ingredient": "greglite:lead_plate"
+}

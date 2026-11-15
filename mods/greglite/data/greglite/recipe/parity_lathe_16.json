@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:chromium_ingot"
-  },
+  "ingredient": "greglite:chromium_ingot",
   "result": {
     "id": "greglite:chromium_rod",
     "count": 2

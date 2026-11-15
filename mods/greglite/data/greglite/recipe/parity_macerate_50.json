@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:polyethylene_plate"
-  },
+  "ingredient": "greglite:polyethylene_plate",
   "result": {
     "id": "greglite:polyethylene_dust",
     "count": 1

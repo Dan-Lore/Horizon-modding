@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:aluminium_ingot"
-  },
+  "ingredient": "greglite:aluminium_ingot",
   "result": {
     "id": "greglite:aluminium_dust",
     "count": 1

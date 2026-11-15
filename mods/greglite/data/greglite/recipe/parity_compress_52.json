@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:polyethylene_ingot"
-  },
+  "ingredient": "greglite:polyethylene_ingot",
   "result": {
     "id": "greglite:polyethylene_plate",
     "count": 1

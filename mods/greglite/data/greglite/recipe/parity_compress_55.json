@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:polyvinyl_chloride_dust"
-  },
+  "ingredient": "greglite:polyvinyl_chloride_dust",
   "result": {
     "id": "greglite:polyvinyl_chloride_plate",
     "count": 1

@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:chromium_plate"
-  },
+  "ingredient": "greglite:chromium_plate",
   "result": {
     "id": "greglite:chromium_dust",
     "count": 1

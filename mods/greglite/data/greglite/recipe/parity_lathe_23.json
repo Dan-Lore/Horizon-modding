@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:battery_alloy_ingot"
-  },
+  "ingredient": "greglite:battery_alloy_ingot",
   "result": {
     "id": "greglite:battery_alloy_rod",
     "count": 2

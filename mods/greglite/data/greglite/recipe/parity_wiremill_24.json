@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:soldering_alloy_ingot"
-  },
+  "ingredient": "greglite:soldering_alloy_ingot",
   "result": {
     "id": "greglite:soldering_alloy_wire",
     "count": 2

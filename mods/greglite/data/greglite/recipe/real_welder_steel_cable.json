@@ -1,0 +1,13 @@
+{
+  "type": "greglite:welder",
+  "result": {
+    "id": "greglite:steel_cable_1x",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 24,
+  "ingredients": [
+    "greglite:steel_wire",
+    "greglite:rubber"
+  ]
+}

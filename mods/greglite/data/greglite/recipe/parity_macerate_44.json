@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:battery_alloy_plate"
-  },
+  "ingredient": "greglite:battery_alloy_plate",
   "result": {
     "id": "greglite:battery_alloy_dust",
     "count": 1

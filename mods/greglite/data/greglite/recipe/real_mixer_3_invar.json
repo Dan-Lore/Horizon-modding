@@ -1,0 +1,13 @@
+{
+  "type": "greglite:mixer",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "greglite:nickel_ingot"
+  ],
+  "result": {
+    "id": "greglite:invar_ingot",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 32
+}

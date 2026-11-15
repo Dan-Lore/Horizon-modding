@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:bronze_ingot"
-  },
+  "ingredient": "greglite:bronze_ingot",
   "result": {
     "id": "greglite:bronze_wire",
     "count": 2

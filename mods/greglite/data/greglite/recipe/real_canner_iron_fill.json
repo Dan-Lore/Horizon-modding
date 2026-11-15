@@ -1,0 +1,13 @@
+{
+  "type": "greglite:canner",
+  "result": {
+    "id": "greglite:iron_plate",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "ingredients": [
+    "greglite:iron_dust",
+    "greglite:iron_plate"
+  ]
+}

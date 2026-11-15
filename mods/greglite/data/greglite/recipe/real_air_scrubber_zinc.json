@@ -1,0 +1,10 @@
+{
+  "type": "greglite:air_scrubber",
+  "result": {
+    "id": "greglite:zinc_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "greglite:zinc_dust"
+}

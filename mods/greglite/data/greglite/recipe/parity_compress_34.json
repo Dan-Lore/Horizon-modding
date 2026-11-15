@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:manganese_ingot"
-  },
+  "ingredient": "greglite:manganese_ingot",
   "result": {
     "id": "greglite:manganese_plate",
     "count": 1

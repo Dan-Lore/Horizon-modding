@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:coal_ingot"
-  },
+  "ingredient": "greglite:coal_ingot",
   "result": {
     "id": "greglite:coal_rod",
     "count": 2

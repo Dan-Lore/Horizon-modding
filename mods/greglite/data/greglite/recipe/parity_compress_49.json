@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:soldering_alloy_dust"
-  },
+  "ingredient": "greglite:soldering_alloy_dust",
   "result": {
     "id": "greglite:soldering_alloy_plate",
     "count": 1

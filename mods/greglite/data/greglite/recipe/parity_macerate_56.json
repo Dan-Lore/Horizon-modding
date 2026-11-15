@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:silicone_rubber_plate"
-  },
+  "ingredient": "greglite:silicone_rubber_plate",
   "result": {
     "id": "greglite:silicone_rubber_dust",
     "count": 1

@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:electrum_plate"
-  },
+  "ingredient": "greglite:electrum_plate",
   "result": {
     "id": "greglite:electrum_dust",
     "count": 1

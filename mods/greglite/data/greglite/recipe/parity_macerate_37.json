@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:bismuth_ingot"
-  },
+  "ingredient": "greglite:bismuth_ingot",
   "result": {
     "id": "greglite:bismuth_dust",
     "count": 1

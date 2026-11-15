@@ -1,0 +1,10 @@
+{
+  "type": "greglite:sifter",
+  "result": {
+    "id": "greglite:invar_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "greglite:invar_dust"
+}

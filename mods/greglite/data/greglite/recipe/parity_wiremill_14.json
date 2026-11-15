@@ -1,8 +1,6 @@
 {
   "type": "greglite:wiremill",
-  "ingredient": {
-    "item": "greglite:aluminium_ingot"
-  },
+  "ingredient": "greglite:aluminium_ingot",
   "result": {
     "id": "greglite:aluminium_wire",
     "count": 2

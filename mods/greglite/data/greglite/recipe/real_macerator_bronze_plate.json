@@ -1,0 +1,10 @@
+{
+  "type": "greglite:macerator",
+  "result": {
+    "id": "greglite:bronze_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "greglite:bronze_plate"
+}

@@ -1,8 +1,6 @@
 {
   "type": "greglite:macerator",
-  "ingredient": {
-    "item": "greglite:bronze_ingot"
-  },
+  "ingredient": "greglite:bronze_ingot",
   "result": {
     "id": "greglite:bronze_dust",
     "count": 1

@@ -1,0 +1,10 @@
+{
+  "type": "greglite:extruder",
+  "result": {
+    "id": "greglite:aluminium_rod",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "greglite:aluminium_ingot"
+}

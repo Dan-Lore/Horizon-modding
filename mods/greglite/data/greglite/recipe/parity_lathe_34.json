@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:diamond_ingot"
-  },
+  "ingredient": "greglite:diamond_ingot",
   "result": {
     "id": "greglite:diamond_rod",
     "count": 2

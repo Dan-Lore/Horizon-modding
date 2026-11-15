@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:titanium_dust"
-  },
+  "ingredient": "greglite:titanium_dust",
   "result": {
     "id": "greglite:titanium_plate",
     "count": 1

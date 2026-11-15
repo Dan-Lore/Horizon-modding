@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:rubber_ingot"
-  },
+  "ingredient": "greglite:rubber_ingot",
   "result": {
     "id": "greglite:rubber_plate",
     "count": 1

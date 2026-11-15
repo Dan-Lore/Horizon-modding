@@ -1,7 +1,7 @@
 # Greglite 0.3 — Steam + LV Electric. Build on create-nightly-test (pin 4e5296d).
 [mod]
 id = "greglite"
-version = "0.4.2"
+version = "0.4.3"
 
 [compatibility]
 horizon_revision = "4e5296d1800b3f89f2ae48dfd99d431801df4d46"

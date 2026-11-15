@@ -7,11 +7,7 @@
   "duration": 80,
   "eu": 2,
   "ingredients": [
-    {
-      "item": "minecraft:sand"
-    },
-    {
-      "item": "minecraft:redstone"
-    }
+    "minecraft:sand",
+    "minecraft:redstone"
   ]
 }

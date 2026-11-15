@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:polyvinyl_chloride_ingot"
-  },
+  "ingredient": "greglite:polyvinyl_chloride_ingot",
   "result": {
     "id": "greglite:polyvinyl_chloride_rod",
     "count": 2

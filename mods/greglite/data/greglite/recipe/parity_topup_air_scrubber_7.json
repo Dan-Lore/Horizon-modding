@@ -6,7 +6,5 @@
   },
   "duration": 80,
   "eu": 2,
-  "ingredient": {
-    "item": "minecraft:redstone"
-  }
+  "ingredient": "minecraft:redstone"
 }

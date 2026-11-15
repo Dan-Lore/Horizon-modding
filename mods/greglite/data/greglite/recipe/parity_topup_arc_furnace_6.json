@@ -6,7 +6,5 @@
   },
   "duration": 80,
   "eu": 2,
-  "ingredient": {
-    "item": "minecraft:coal"
-  }
+  "ingredient": "minecraft:coal"
 }

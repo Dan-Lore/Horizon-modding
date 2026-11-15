@@ -1,8 +1,6 @@
 {
   "type": "greglite:lathe",
-  "ingredient": {
-    "item": "greglite:polyethylene_ingot"
-  },
+  "ingredient": "greglite:polyethylene_ingot",
   "result": {
     "id": "greglite:polyethylene_rod",
     "count": 2

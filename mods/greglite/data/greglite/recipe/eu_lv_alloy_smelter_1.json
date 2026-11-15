@@ -7,11 +7,7 @@
   "duration": 100,
   "eu": 32,
   "ingredients": [
-    {
-      "item": "greglite:copper_dust"
-    },
-    {
-      "item": "greglite:tin_dust"
-    }
+    "greglite:copper_dust",
+    "greglite:tin_dust"
   ]
 }

@@ -1,8 +1,6 @@
 {
   "type": "greglite:compressor",
-  "ingredient": {
-    "item": "greglite:antimony_dust"
-  },
+  "ingredient": "greglite:antimony_dust",
   "result": {
     "id": "greglite:antimony_plate",
     "count": 1
