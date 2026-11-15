@@ -21,6 +21,7 @@ Phases: `docs/mvp-tfg-plan.md`.
 | AppleSkin | AppleSkin | `appleskin` | Soft adopt | **built** |
 | Continuity / CTM | ContinuityHorizon | `connected_textures` | Soft adopt | **built** |
 | GregTech (Steam Age slice) | Greglite 0.2 | `greglite` | Own `mods/greglite/` | **built** |
+| Xaero-like map | World Map | `worldmap` | Adopt registry 0.7.1 | **installed** (rebuild pending) |
 
 **Working base:** `nightly-2026-11-08-fdc87ae` → `native-fdc87ae-8837f1d46495` (instance `create-dev`). `left_out` empty. **Create** not on working.
 
