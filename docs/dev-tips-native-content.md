@@ -1,62 +1,64 @@
 # Dev tips — native code + content registries
 
-Practical notes from Greglite Batch A (2026-11-12). Not policy — reminders for the next machine/item slice.
+**Locked 2026-11-15:** this is the mandatory smoke path after Greglite “in native-mods but JEI empty” / AE2-only creative. Also mirrored in `.cursor/rules/horizon-native-build-smoke.mdc`.
 
 ## Symptom → cause
 
 | What you see | Likely meaning |
 | --- | --- |
 | Chat tip / `player_logged_in` works | Native Hooks are in the binary |
-| `/give @s mod:item` → **Unknown item** | Registries never loaded |
-| No creative tab for your mod; AE2 tab is fine | AE2 can expose items from **native** registration — not proof your content pack loaded |
-| JEI `@modid` empty | Same as above; prefer `/give` as the smoke test |
-| `latest.log`: `content from N mod(s)` and your id never appears in creative/give | Your snapshot is missing or not on the active native version |
+| `/give` → **Unknown item** | Registries never loaded |
+| No creative tab; AE2 tab is fine | AE2 ≠ proof your content loaded |
+| JEI `@gre_` red / empty | Wrong query **or** content cache missing your id — check `@greglite` and `horizon-mod-ids.json` |
+| Log `content from 1 mod(s)` and ids file is `["ae2"]` | Greglite/TFC snapshots not in prepare cache — restore content, **wipe** `mod-content` cache, relaunch |
+| `native-build` “Up to date” after dropping new `.hnmod` | Stale native reused; remove that native tag or force a real rebuild |
 
-**Rule of thumb:** login message ≠ items exist. Always `/give` the block/item after join.
+**Rule:** login message ≠ items exist. **`/give` is the smoke test.** Creative/JEI only after `/give` works.
+
+## Truth ladder (stop early if a step fails)
+
+1. Instance plays the **active** `native-…` hash you built.
+2. That version’s `native-mods.json` lists the mod in `mods[]` (not only files on disk / `left_out`).
+3. `versions\<native>\native-content\<id>\` has `horizon-mod.toml` + `assets/` + `data/`.
+4. After Play: `instances\<id>\logs\latest.log` → `content from N mod(s)`.
+5. `instances\<id>\.horizon-cache\mod-content\<hash>\horizon-mod-ids.json` includes your id(s).
+6. `/give <id>:<item>` succeeds; then JEI `@<id>`.
 
 ## Where content actually lives
 
-- Combined mod ships as one **`.hmod`**: `horizon-mod.toml` + `assets/` + `data/` **and** `horizon-native.json` + `mixins/<id>/`.
-- A successful native build should snapshot content into  
-  `%AppData%\Roaming\horizon-launcher\versions\<native-…>\native-content\<id>\`.
-- The game reads that snapshot (beside the native exe), not “whatever is in the zip on disk today”.
-- Instance `horizon-mods/<id>/` (content-only folder or `.hmod`) is a useful **fallback** when the active native build has **no** `native-content/<id>`. If the snapshot *does* exist for that id, the game prefers it and ignores the loose copy.
+- Combined mod = `.hmod` with content **and** native bits.
+- Runtime prepare builds  
+  `instances\<id>\.horizon-cache\mod-content\<hash>\`  
+  from snapshots under the **played** native’s `native-content\` (and/or `horizon-mods\<id>\`).
+- Manually restoring `native-content` **without** deleting `mod-content` often leaves a stale cache that still only has `["ae2"]`.
 
-After every native-build that includes a combined mod, check:
+### Restore recipe (content missing, Hooks already in binary)
 
-```text
-versions\<native-hash>\native-content\<mod-id>\horizon-mod.toml
-```
-
-If that path is missing while Hooks clearly run — you will get exactly Greglite’s failure mode.
-
-**Observed 2026-11-12:** even successful incremental builds that list `greglite` 0.2.0 in `native-mods.json` can still omit `native-content/` entirely. Treat the check as mandatory; restore by copying `horizon-mod.toml` + `assets/` + `data/` from the workshop (or unpacking the `.hmod`) into that folder before Play.
-
-## Pack / zip pitfalls
-
-- Zip entries must use **POSIX `/`**, not Windows `\`. Prefer Python `zipfile` (`tools/pack-greglite.ps1` pattern); .NET zip helpers on Windows have bitten us.
-- Bump mod **version** (or change the packed hash) when the launcher claims “up to date” but you need a real rebuild.
-- Keep `horizon-mod.toml` `id` == `horizon-native.json` / mixin `[mod] id`.
-
-## Smoke checklist (new block/item slice)
-
-1. Join world → expect your login tip (optional).
-2. `/give @s <id>:<block_or_item>` — must succeed.
-3. Creative: your tab on page 2+ (after vanilla), or search by English name.
-4. Open machine UI / run the tick recipe once.
-5. Skim `instances\<…>\logs\latest.log` for content-mod count and any refuse lines.
-
-## Cheap fixes (before another full native-build)
-
-Missing registries only (binary already has your Hooks):
-
-1. Copy `horizon-mod.toml` + `assets/` + `data/` into  
+1. Unpack `.hmod` with **ZipFile / Python** (not PowerShell `Expand-Archive` — it rejects `.hmod`).
+2. Copy **only** `horizon-mod.toml`, `assets/`, `data/` →  
    `versions\<active-native>\native-content\<id>\`.
-2. Optionally mirror the same trio under `instances\<…>\horizon-mods\<id>\`.
-3. Fully quit the client and **Play** again (so `native-content` is linked beside the exe).
+3. Mirror the same trio → `instances\<id>\horizon-mods\<id>\`.
+4. Delete `instances\<id>\.horizon-cache\mod-content\`.
+5. Full quit → Play → re-check `horizon-mod-ids.json` → `/give`.
 
-Use a full native-build when the Rust Hooks change — not as the first response to Unknown item.
+## Pack pins
 
-## Instance pin
+| Want | Use |
+| --- | --- |
+| AE2 **15.4.18** + Greglite + JEI/Jade/… | `fdc87ae` (hooks 411) |
+| Create | Separate pin — cannot co-build with AE2 today |
+| Tip `9f42064` | No AE2 15.4.18 |
 
-`pack/draft-mods.toml` → `native_version` should match what the launcher actually plays (`instance_list` / Mods page). A rebuild can advance the hash (`native-fdc87ae-…`); old folders may still have content while the new active one does not.
+`horizon-mods.txt` must have `mod.<id>:true` for mods you expect.
+
+## Own mods (TFC)
+
+- `horizon-native.json` → `mixins` = **horizon-mixins** commit, not the game revision.
+- Keep pack `on = []` until `/give` smoke; content-only without Hooks is still not “TFC playable”.
+
+## Smoke checklist
+
+1. `horizon-mod-ids.json` lists every own content mod.
+2. `/give greglite:steam_macerator` (or current id) OK.
+3. JEI `@greglite` returns items (not `@gre_`).
+4. Creative tab / page only as a convenience check after that.

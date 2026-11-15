@@ -1,7 +1,7 @@
-# TFC Horizon 0.1.0. Pin matches tfg-horizon (AE2). Do not native-build it onto that instance until a wave is smoked on its own.
+# TFC Horizon 0.1.3. Pin matches tfg-horizon (AE2). Do not native-build it onto that instance until a wave is smoked on its own.
 [mod]
 id = "tfc"
-version = "0.1.0"
+version = "0.1.3"
 
 [compatibility]
 horizon_revision = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"

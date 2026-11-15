@@ -156,7 +156,8 @@ Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/
 3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence.
 4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
 
-Combined native+content tips (not rules): `docs/dev-tips-native-content.md` — Hooks≠registries, check `native-content/<id>/` after builds, `/give` smoke.
+**Native build smoke (mandatory):** `.cursor/rules/horizon-native-build-smoke.mdc` + `docs/dev-tips-native-content.md`.  
+Do **not** report a mod as playable from `native-mods.json` or a chat tip alone — require `horizon-mod-ids.json` includes the id and `/give <id>:…` succeeds. Stale `.horizon-cache/mod-content` with only `["ae2"]` is a known failure mode.
 
 ## Out of scope unless the user asks again
 

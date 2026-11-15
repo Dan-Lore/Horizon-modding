@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/chert_smooth"
+    "top": "tfc:block/chert_smooth",
+    "front": "tfc:block/chert_smooth",
+    "side": "tfc:block/chert_smooth",
+    "bottom": "tfc:block/chert_smooth",
+    "particle": "tfc:block/chert_smooth"
   }
 }

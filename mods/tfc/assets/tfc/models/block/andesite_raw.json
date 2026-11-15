@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/andesite_raw"
+    "top": "tfc:block/andesite_raw",
+    "front": "tfc:block/andesite_raw",
+    "side": "tfc:block/andesite_raw",
+    "bottom": "tfc:block/andesite_raw",
+    "particle": "tfc:block/andesite_raw"
   }
 }

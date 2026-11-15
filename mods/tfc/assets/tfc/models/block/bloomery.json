@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/bloomery"
+    "top": "tfc:block/bloomery",
+    "front": "tfc:block/bloomery",
+    "side": "tfc:block/bloomery",
+    "bottom": "tfc:block/bloomery",
+    "particle": "tfc:block/bloomery"
   }
 }

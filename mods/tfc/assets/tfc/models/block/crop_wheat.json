@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/crop_wheat"
+    "top": "tfc:block/crop_wheat",
+    "front": "tfc:block/crop_wheat",
+    "side": "tfc:block/crop_wheat",
+    "bottom": "tfc:block/crop_wheat",
+    "particle": "tfc:block/crop_wheat"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "template": "minecraft:iron_block",
+  "template": "minecraft:furnace",
   "properties": {
     "hardness": 1.2,
     "sounds": "minecraft:stone"

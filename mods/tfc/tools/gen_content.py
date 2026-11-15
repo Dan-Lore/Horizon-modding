@@ -5,16 +5,18 @@ Run from the repo root or anywhere:
 
     python3 mods/tfc/tools/gen_content.py
 
-Placeholder textures are solid 16×16 PNGs. No Mojang assets are copied.
+Placeholder textures are solid 16×16 PNGs. Run fetch_tfc_textures.py after this
+to replace them with TerraFirmaCraft (EUPL-1.2) assets. No Mojang assets.
 """
 
 from __future__ import annotations
 
 import json
 import shutil
-import struct
 import zlib
 from pathlib import Path
+
+from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets" / "tfc"
@@ -139,25 +141,92 @@ def write_json(path: Path, body: object) -> None:
     path.write_text(json.dumps(body, indent=2) + "\n", encoding="utf-8")
 
 
-def png(path: Path, rgb: tuple[int, int, int]) -> None:
-    def chunk(tag: bytes, data: bytes) -> bytes:
-        return (
-            struct.pack(">I", len(data))
-            + tag
-            + data
-            + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF)
-        )
+def _shade(rgb: tuple[int, int, int], factor: float) -> tuple[int, int, int]:
+    return tuple(max(0, min(255, int(c * factor))) for c in rgb)  # type: ignore[return-value]
 
-    raw = b"".join(b"\x00" + bytes(rgb) * 16 for _ in range(16))
-    ihdr = struct.pack(">IIBBBBB", 16, 16, 8, 2, 0, 0, 0)
-    data = (
-        b"\x89PNG\r\n\x1a\n"
-        + chunk(b"IHDR", ihdr)
-        + chunk(b"IDAT", zlib.compress(raw, 9))
-        + chunk(b"IEND", b"")
-    )
+
+def png(path: Path, rgb: tuple[int, int, int], shape: str = "flat") -> None:
+    """Write textures with PIL (same path as Greglite) so Horizon atlases them."""
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    hi, mid, lo = _shade(rgb, 1.2), rgb, _shade(rgb, 0.55)
+
+    def fill_rect(xy: tuple[int, int, int, int], color: tuple[int, int, int]) -> None:
+        d.rectangle(xy, fill=(*color, 255))
+
+    if shape == "block" or shape == "flat":
+        fill_rect((0, 0, 15, 15), mid)
+        d.rectangle((0, 0, 15, 15), outline=(*hi, 255))
+        d.rectangle((1, 1, 14, 14), outline=(*lo, 255))
+        # Noise so cubes aren't flat missing-texture look.
+        for y in range(2, 14):
+            for x in range(2, 14):
+                if (x * 3 + y * 5) % 7 == 0:
+                    img.putpixel((x, y), (*_shade(mid, 0.85), 255))
+    elif shape == "ingot":
+        fill_rect((3, 5, 12, 10), mid)
+        fill_rect((2, 6, 13, 9), mid)
+        d.line([(3, 5), (12, 5)], fill=(*hi, 255))
+        d.line([(3, 10), (12, 10)], fill=(*lo, 255))
+    elif shape == "double_ingot":
+        fill_rect((2, 2, 13, 6), mid)
+        fill_rect((2, 9, 13, 13), mid)
+        d.line([(2, 2), (13, 2)], fill=(*hi, 255))
+        d.line([(2, 9), (13, 9)], fill=(*hi, 255))
+    elif shape == "sheet":
+        fill_rect((1, 2, 14, 13), mid)
+        d.rectangle((1, 2, 14, 13), outline=(*hi, 255))
+    elif shape == "rod":
+        fill_rect((6, 1, 9, 14), mid)
+        fill_rect((7, 0, 8, 15), hi)
+    elif shape == "nugget":
+        d.ellipse((4, 4, 11, 11), fill=(*mid, 255), outline=(*hi, 255))
+    elif shape == "dust":
+        for xy in ((3, 5), (6, 4), (9, 5), (5, 7), (8, 8), (4, 9), (10, 9), (7, 11)):
+            fill_rect((xy[0], xy[1], xy[0] + 2, xy[1] + 2), mid)
+    elif shape == "tool":
+        # Thick pickaxe silhouette — thin masks were invisible in creative.
+        d.polygon([(14, 1), (15, 2), (15, 5), (12, 8), (10, 6), (13, 3)], fill=(*mid, 255))
+        fill_rect((3, 10, 5, 15), lo)
+        fill_rect((4, 6, 6, 12), lo)
+        fill_rect((6, 4, 9, 7), mid)
+    else:
+        fill_rect((2, 2, 13, 13), mid)
+
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(data)
+    img.save(path)
+
+
+def shape_for_item(name: str) -> str:
+    if name.endswith("_double_ingot"):
+        return "double_ingot"
+    if name.endswith("_ingot") or name in {"raw_iron_bloom"}:
+        return "ingot"
+    if name.endswith("_sheet"):
+        return "sheet"
+    if name.endswith("_rod"):
+        return "rod"
+    if name.startswith("nugget_") or name.endswith("_nugget"):
+        return "nugget"
+    if name.endswith("_dust") or name in {"flux", "flour", "glass_batch", "ore_deposit"}:
+        return "dust"
+    if any(
+        name.endswith(s)
+        for s in (
+            "_axe",
+            "_hoe",
+            "_knife",
+            "_pickaxe",
+            "_shovel",
+            "_hammer",
+            "_chisel",
+            "_propick",
+            "_blade",
+            "_head",
+        )
+    ) or name in {"prospector_pick"} or name.startswith("stone_"):
+        return "tool"
+    return "ingot"
 
 
 def color_for(key: str, bias: tuple[int, int, int] = (80, 80, 80)) -> tuple[int, int, int]:
@@ -170,34 +239,47 @@ def title(name: str) -> str:
 
 
 def block_files(name: str, rgb: tuple[int, int, int], furnace: bool, hardness: float, sounds: str) -> None:
-    template = "minecraft:furnace" if furnace else "minecraft:iron_block"
+    # Always use furnace + orientable: Horizon leaves cube_all / empty-variant
+    # rocks with empty model-states and invisible creative icons. Barrel (furnace)
+    # was the only TFC block that rendered.
+    _ = furnace
     write_json(
         DATA / "horizon" / "block" / f"{name}.json",
         {
-            "template": template,
+            "template": "minecraft:furnace",
             "properties": {"hardness": hardness, "sounds": sounds},
             "item": True,
         },
     )
-    model = {"parent": "minecraft:block/cube_all", "textures": {"all": f"tfc:block/{name}"}}
-    write_json(ASSETS / "models" / "block" / f"{name}.json", model)
+    tex = f"tfc:block/{name}"
+    write_json(
+        ASSETS / "models" / "block" / f"{name}.json",
+        {
+            "parent": "minecraft:block/orientable",
+            "textures": {
+                "top": tex,
+                "front": tex,
+                "side": tex,
+                "bottom": tex,
+                "particle": tex,
+            },
+        },
+    )
     write_json(ASSETS / "models" / "item" / f"{name}.json", {"parent": f"tfc:block/{name}"})
-    if furnace:
-        variants = {}
-        for facing, rot in (("north", None), ("south", 180), ("west", 270), ("east", 90)):
-            for lit in ("false", "true"):
-                entry: dict = {"model": f"tfc:block/{name}"}
-                if rot is not None:
-                    entry["y"] = rot
-                variants[f"facing={facing},lit={lit}"] = entry
-        write_json(ASSETS / "blockstates" / f"{name}.json", {"variants": variants})
-    else:
-        write_json(
-            ASSETS / "blockstates" / f"{name}.json",
-            {"variants": {"": {"model": f"tfc:block/{name}"}}},
-        )
-    png(ASSETS / "textures" / "block" / f"{name}.png", rgb)
-    slots = None
+    # JE 26.3 item definitions (Greglite has these; without them icons are blank/white).
+    write_json(
+        ASSETS / "items" / f"{name}.json",
+        {"model": {"type": "minecraft:model", "model": f"tfc:item/{name}"}},
+    )
+    variants = {}
+    for facing, rot in (("north", None), ("south", 180), ("west", 270), ("east", 90)):
+        for lit in ("false", "true"):
+            entry: dict = {"model": f"tfc:block/{name}"}
+            if rot is not None:
+                entry["y"] = rot
+            variants[f"facing={facing},lit={lit}"] = entry
+    write_json(ASSETS / "blockstates" / f"{name}.json", {"variants": variants})
+    png(ASSETS / "textures" / "block" / f"{name}.png", rgb, shape="block")
     write_json(
         DATA / "loot_table" / "blocks" / f"{name}.json",
         {
@@ -211,7 +293,7 @@ def block_files(name: str, rgb: tuple[int, int, int], furnace: bool, hardness: f
             ],
         },
     )
-    return slots
+    return None
 
 
 def item_files(name: str, rgb: tuple[int, int, int], template: str = "minecraft:iron_ingot") -> None:
@@ -220,7 +302,11 @@ def item_files(name: str, rgb: tuple[int, int, int], template: str = "minecraft:
         ASSETS / "models" / "item" / f"{name}.json",
         {"parent": "minecraft:item/generated", "textures": {"layer0": f"tfc:item/{name}"}},
     )
-    png(ASSETS / "textures" / "item" / f"{name}.png", rgb)
+    write_json(
+        ASSETS / "items" / f"{name}.json",
+        {"model": {"type": "minecraft:model", "model": f"tfc:item/{name}"}},
+    )
+    png(ASSETS / "textures" / "item" / f"{name}.png", rgb, shape=shape_for_item(name))
 
 
 def shapeless(name: str, ingredients: list[str], result: str, count: int = 1) -> None:
@@ -429,25 +515,34 @@ def main() -> None:
     machines = json.loads((TABLES / "machines.json").read_text(encoding="utf-8"))
     write_specs(machines)
     lang: dict[str, str] = {"itemGroup.tfc.tfc": "TFC Horizon"}
+    tab_items: list[str] = []
+
+    def tab(id_: str) -> None:
+        if id_ not in tab_items:
+            tab_items.append(id_)
 
     for name in ROCKS:
         for form in ROCK_FORMS:
             block = f"{name}_{form}"
             block_files(block, color_for(block, (90, 80, 70)), False, 1.8 if form == "raw" else 1.2, "minecraft:stone")
             lang[f"block.tfc.{block}"] = f"{title(name)} {title(form)}"
+            tab(f"tfc:{block}")
 
     for name, label, _metal, _path, rgb in ORES:
         block = f"ore_{name}"
         block_files(block, rgb, False, 2.5, "minecraft:stone")
         lang[f"block.tfc.{block}"] = title(label)
+        tab(f"tfc:{block}")
         item_files(f"nugget_{name}", rgb)
         lang[f"item.tfc.nugget_{name}"] = f"{title(label)} Nugget"
+        tab(f"tfc:nugget_{name}")
 
     for machine in MACHINES:
         name = machine["id"]
         rgb = color_for(name, (120, 70, 40))
         block_files(name, rgb, True, 3.0, "minecraft:stone")
         lang[f"block.tfc.{name}"] = title(name)
+        tab(f"tfc:{name}")
         out = output_index(machine)
         slots = machine["inputs"] if machine.get("storage") else (out or 0) + 1
         results = [] if out is None else [out]
@@ -456,29 +551,36 @@ def main() -> None:
     for name, _product, _seed, _lo, _hi, _seasons in CROPS:
         block_files(name, color_for(name, (40, 120, 40)), True, 0.4, "minecraft:stone")
         lang[f"block.tfc.{name}"] = title(name)
+        tab(f"tfc:{name}")
         menu(name, 1, [0])
 
     block_files("support_beam", (120, 86, 48), False, 1.5, "minecraft:stone")
     lang["block.tfc.support_beam"] = "Support Beam"
+    tab("tfc:support_beam")
     block_files("powderkeg", (90, 50, 40), False, 1.5, "minecraft:stone")
     lang["block.tfc.powderkeg"] = "Powderkeg"
+    tab("tfc:powderkeg")
 
     for metal, rgb in METALS:
         for form in METAL_FORMS:
             item = f"{metal}_{form}"
             item_files(item, rgb)
             lang[f"item.tfc.{item}"] = f"{title(metal)} {title(form)}"
+            tab(f"tfc:{item}")
         if metal in CAST_METALS or metal in FORGE_METALS:
             for tool in TOOL_KINDS:
                 item_files(f"{metal}_{tool}", rgb, "minecraft:iron_pickaxe")
                 lang[f"item.tfc.{metal}_{tool}"] = f"{title(metal)} {title(tool)}"
+                tab(f"tfc:{metal}_{tool}")
                 head = HEAD_OF[tool]
                 item_files(f"{metal}_{head}", rgb)
                 lang[f"item.tfc.{metal}_{head}"] = f"{title(metal)} {title(head)}"
+                tab(f"tfc:{metal}_{head}")
 
     for tool in STONE_TOOLS:
         item_files(f"stone_{tool}", (140, 140, 140), "minecraft:stone_pickaxe")
         lang[f"item.tfc.stone_{tool}"] = f"Stone {title(tool)}"
+        tab(f"tfc:stone_{tool}")
 
     extras = {
         "prospector_pick": ((160, 120, 70), "minecraft:iron_pickaxe"),
@@ -499,13 +601,16 @@ def main() -> None:
     for name, (rgb, template) in extras.items():
         item_files(name, rgb, template)
         lang[f"item.tfc.{name}"] = title(name)
+        tab(f"tfc:{name}")
 
     for name, *_rest in FOODS:
         if (DATA / "horizon" / "item" / f"{name}.json").exists():
             lang[f"item.tfc.{name}"] = title(name)
+            tab(f"tfc:{name}")
             continue
         item_files(name, color_for(name, (160, 80, 60)), "minecraft:apple")
         lang[f"item.tfc.{name}"] = title(name)
+        tab(f"tfc:{name}")
 
     # Crafting stand-ins.
     for tool in STONE_TOOLS:
@@ -592,8 +697,16 @@ def main() -> None:
     machine_recipe("sluice", "copper", ["tfc:ore_deposit"], "tfc:nugget_native_copper", duration=160)
     machine_recipe("charcoal_pit", "oak", ["minecraft:oak_log"], "minecraft:charcoal", duration=240)
 
+    write_json(
+        DATA / "horizon" / "creative_tab" / "tfc.json",
+        {
+            "title": "TFC Horizon",
+            "icon": "tfc:copper_ingot",
+            "items": tab_items,
+        },
+    )
     write_json(ASSETS / "lang" / "en_us.json", lang)
-    print(f"generated {len(lang)} lang entries under {ROOT}")
+    print(f"generated {len(lang)} lang entries, creative tab {len(tab_items)} items under {ROOT}")
 
 
 if __name__ == "__main__":

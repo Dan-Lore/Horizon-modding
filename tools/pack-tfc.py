@@ -17,6 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "mods" / "tfc"
 OUT = SRC / "dist" / "tfc.hmod"
 REV = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+# Must be a horizon-mixins commit, not the game revision (422 if GitHub can't resolve it).
+MIXINS = "5a64af938ec86b00d53d16a408aabc0038fb3e57"
+HOOKS = 411
 
 
 def main() -> None:
@@ -40,11 +43,11 @@ def main() -> None:
         native = {
             "schema": 1,
             "id": "tfc",
-            "version": "0.1.0",
+            "version": "0.1.3",
             "game": "26.3",
             "horizon": REV,
-            "mixins": REV,
-            "hooks": 97,
+            "mixins": MIXINS,
+            "hooks": HOOKS,
         }
         (stage / "horizon-native.json").write_text(json.dumps(native), encoding="utf-8")
         OUT.parent.mkdir(parents=True, exist_ok=True)

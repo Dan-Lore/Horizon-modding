@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/support_beam"
+    "top": "tfc:block/support_beam",
+    "front": "tfc:block/support_beam",
+    "side": "tfc:block/support_beam",
+    "bottom": "tfc:block/support_beam",
+    "particle": "tfc:block/support_beam"
   }
 }

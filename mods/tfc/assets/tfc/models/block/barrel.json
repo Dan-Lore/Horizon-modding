@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/barrel"
+    "top": "tfc:block/barrel",
+    "front": "tfc:block/barrel",
+    "side": "tfc:block/barrel",
+    "bottom": "tfc:block/barrel",
+    "particle": "tfc:block/barrel"
   }
 }

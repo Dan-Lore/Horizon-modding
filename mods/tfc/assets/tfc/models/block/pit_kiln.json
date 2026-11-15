@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/pit_kiln"
+    "top": "tfc:block/pit_kiln",
+    "front": "tfc:block/pit_kiln",
+    "side": "tfc:block/pit_kiln",
+    "bottom": "tfc:block/pit_kiln",
+    "particle": "tfc:block/pit_kiln"
   }
 }

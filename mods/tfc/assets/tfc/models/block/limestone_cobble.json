@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/limestone_cobble"
+    "top": "tfc:block/limestone_cobble",
+    "front": "tfc:block/limestone_cobble",
+    "side": "tfc:block/limestone_cobble",
+    "bottom": "tfc:block/limestone_cobble",
+    "particle": "tfc:block/limestone_cobble"
   }
 }
