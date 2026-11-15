@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adastra:steel_plate"
+    },
+    {
+      "item": "adastra:steel_plate"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    }
+  ],
+  "result": {
+    "id": "adastra:space_helmet",
+    "count": 1
+  }
+}

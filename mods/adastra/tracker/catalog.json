@@ -1,0 +1,85 @@
+{
+  "mod": "adastra",
+  "version": "0.1.0",
+  "horizon": "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca",
+  "hooks": 411,
+  "systems": [
+    {
+      "id": "w0_scaffold",
+      "wave": "W0",
+      "name": "Scaffold, attribution, pack script",
+      "status": "done",
+      "smoke": "python3 tools/pack-adastra.py writes mods/adastra/dist/adastra.hmod with POSIX paths, horizon-mod.toml, and horizon-native.json. Join a world and expect the Ad Astra Horizon 0.1.0 login line."
+    },
+    {
+      "id": "w1_materials",
+      "wave": "W1",
+      "name": "Materials and moon/mars blocksets",
+      "status": "done",
+      "smoke": "/give @s adastra:desh_ingot, adastra:moon_stone, adastra:mars_stone, adastra:cheese, adastra:flag. Place the stones; craft cobble from stone."
+    },
+    {
+      "id": "w2_energy",
+      "wave": "W2",
+      "name": "FE buffer, coal generator, solar",
+      "status": "done",
+      "smoke": "Place adastra:coal_generator with coal in slot 0 beside a machine. Energy gauge fills. Place adastra:solar_panel; daytime FE accumulates in its buffer."
+    },
+    {
+      "id": "w3_compressor",
+      "wave": "W3",
+      "name": "Compressor plates",
+      "status": "done",
+      "smoke": "Place adastra:compressor next to a charged generator. Put adastra:desh_ingot or steel_ingot in the input; take the plate. FE drains while progressing."
+    },
+    {
+      "id": "w4_oxygen",
+      "wave": "W4",
+      "name": "Oxygen, suit, vacuum marker",
+      "status": "done",
+      "smoke": "Use suit pieces to don. Fill adastra:oxygen_tank at adastra:oxygen_loader. Action bar shows O2. Stand near adastra:vacuum_marker without a sealed suit: chat reports vacuum damage."
+    },
+    {
+      "id": "w5_fuel",
+      "wave": "W5",
+      "name": "Fuel refinery",
+      "status": "done",
+      "smoke": "Put adastra:oil in adastra:fuel_refinery with FE; take adastra:rocket_fuel."
+    },
+    {
+      "id": "w6_rocket",
+      "wave": "W6",
+      "name": "NASA workbench and rocket stub",
+      "status": "done",
+      "smoke": "Craft adastra:rocket_t1 at the workbench recipes. Use the rocket: countdown chat, then launch stub (dimensions blocked)."
+    },
+    {
+      "id": "w7_distributor",
+      "wave": "W7",
+      "name": "Oxygen distributor",
+      "status": "done",
+      "smoke": "Place adastra:oxygen_distributor with FE and an oxygen tank inside a vacuum marker zone; sealed breathing resumes without suit drain while in range."
+    },
+    {
+      "id": "w8_cryo",
+      "wave": "W8",
+      "name": "Cryo freezer",
+      "status": "done",
+      "smoke": "adastra:cryo_freezer turns ice / blue ice into adastra:ice_shard (≥2 recipes) when powered."
+    },
+    {
+      "id": "w9_gravity",
+      "wave": "W9",
+      "name": "Gravity stub and pack notes",
+      "status": "done",
+      "smoke": "Stand on moon_stone or mars_stone: action bar shows low-g. Pack agent follows docs/adastra-plan.md smoke contract; keep on=[] until /give works."
+    },
+    {
+      "id": "w10_dimensions",
+      "wave": "W10",
+      "name": "Custom dimensions / planet travel",
+      "status": "blocked",
+      "smoke": "Horizon dimensions API not available on hooks 411. Rockets stay launch stubs."
+    }
+  ]
+}

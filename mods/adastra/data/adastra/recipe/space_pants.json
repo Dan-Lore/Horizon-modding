@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adastra:steel_plate"
+    },
+    {
+      "item": "adastra:steel_ingot"
+    },
+    {
+      "item": "adastra:steel_plate"
+    }
+  ],
+  "result": {
+    "id": "adastra:space_pants",
+    "count": 1
+  }
+}

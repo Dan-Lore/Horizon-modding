@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adastra:calorite_ingot"
+    }
+  ],
+  "result": {
+    "id": "adastra:calorite_nugget",
+    "count": 9
+  }
+}
