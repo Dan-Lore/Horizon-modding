@@ -25,7 +25,7 @@ $native = @{
     game    = "26.3"
     horizon = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
     mixins  = "5a64af938ec86b00d53d16a408aabc0038fb3e57"
-    hooks   = 381
+    hooks   = 411
 } | ConvertTo-Json -Compress
 $nativePath = Join-Path $stage "horizon-native.json"
 [System.IO.File]::WriteAllText($nativePath, $native)

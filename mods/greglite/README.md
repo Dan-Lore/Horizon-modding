@@ -28,4 +28,4 @@ Login chat and `tracker/coverage.json` do not prove a wave. The behaviour list i
 
 ## Build pin
 
-`tools/pack-greglite.ps1` records Horizon `fdc87ae` and hooks **381** (level reads plus fluid tanks). The launcher still rewrites the crate revision to the game it compiles.
+`tools/pack-greglite.ps1` records Horizon `fdc87ae`, mixins `5a64af93`, and hooks **411** so the next native-build of `tfg-horizon` still includes Greglite beside AE2 15.4.18. The launcher still rewrites the crate revision to the game it compiles.
