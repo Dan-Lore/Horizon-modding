@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "input": "tfc:raw_iron_bloom",
+      "result": "tfc:wrought_iron_ingot",
+      "hits": 5
+    },
+    {
+      "input": "tfc:copper_ingot",
+      "result": "tfc:copper_sheet",
+      "hits": 3
+    },
+    {
+      "input": "tfc:wrought_iron_ingot",
+      "result": "tfc:wrought_iron_sheet",
+      "hits": 3
+    }
+  ]
+}

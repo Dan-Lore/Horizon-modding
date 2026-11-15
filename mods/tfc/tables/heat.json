@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "tfc:nugget_native_copper",
+      "melt_temp": 1085,
+      "result": "tfc:copper_ingot"
+    },
+    {
+      "id": "tfc:copper_ingot",
+      "work_temp": 800
+    },
+    {
+      "id": "tfc:bronze_ingot",
+      "work_temp": 900
+    },
+    {
+      "id": "tfc:wrought_iron_ingot",
+      "work_temp": 1100
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    " S ",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "tfc:andesite_smooth"
+    }
+  },
+  "result": {
+    "id": "tfc:quern",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+TFC Horizon — Horizon-native workshop mod (TerraFirmaCraft-inspired survival).
+
+Inspired by TerraFirmaCraft (TFC) for Minecraft Java 1.20.1 as used in
+TerraFirmaGreg-Modern packs. Not affiliated with TFC / Dries007 / AlcatrazEscapee
+or TFG authors. Clean reimplementation for Horizon — not a jar port.
+
+Reference (read-only design): TerraFirmaCraft 1.20.1 open-source mechanics.
+Plan: docs/tfc-plan.md
+Tracker: mods/tfc/tracker/catalog.json
+
+Original Rust and JSON in this folder: MIT unless noted otherwise.
+Minecraft / Mojang assets are not redistributed. Placeholder textures are
+solid-color PNGs generated for workshop smoke; replace before public release.

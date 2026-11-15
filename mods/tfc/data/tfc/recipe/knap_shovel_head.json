@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:basalt_raw"
+    },
+    {
+      "item": "tfc:basalt_raw"
+    }
+  ],
+  "result": {
+    "id": "tfc:stone_shovel_head",
+    "count": 1
+  }
+}

@@ -20,6 +20,8 @@ __pycache__/
 
 # Generated / scratch (keep scripts; drop pack staging, smoke dumps, DBs)
 tools/_greglite-pack/
+tools/_tfc-pack/
+pack/mods/*.hmod
 tools/_*.txt
 tools/_*.png
 tools/_*.json

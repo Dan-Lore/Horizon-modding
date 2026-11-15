@@ -1,0 +1,12 @@
+{
+  "type": "tfc:charcoal_forge",
+  "ingredients": [
+    "tfc:copper_ingot",
+    "tfc:tin_ingot"
+  ],
+  "result": {
+    "id": "tfc:bronze_ingot",
+    "count": 1
+  },
+  "duration": 280
+}

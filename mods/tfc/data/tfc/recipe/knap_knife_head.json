@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:chert_raw"
+    },
+    {
+      "item": "tfc:chert_raw"
+    }
+  ],
+  "result": {
+    "id": "tfc:stone_knife_head",
+    "count": 1
+  }
+}

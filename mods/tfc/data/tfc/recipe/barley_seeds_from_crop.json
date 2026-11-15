@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:barley"
+    }
+  ],
+  "result": {
+    "id": "tfc:barley_seeds",
+    "count": 2
+  }
+}

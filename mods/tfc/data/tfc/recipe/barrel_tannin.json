@@ -1,0 +1,12 @@
+{
+  "type": "tfc:barrel",
+  "ingredients": [
+    "minecraft:oak_log",
+    "minecraft:water_bucket"
+  ],
+  "result": {
+    "id": "tfc:powder_wood_ash",
+    "count": 1
+  },
+  "duration": 800
+}

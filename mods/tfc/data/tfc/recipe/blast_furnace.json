@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "S S",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "tfc:wrought_iron_sheet"
+    }
+  },
+  "result": {
+    "id": "tfc:blast_furnace",
+    "count": 1
+  }
+}

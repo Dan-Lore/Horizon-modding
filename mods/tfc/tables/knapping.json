@@ -1,0 +1,19 @@
+{
+  "patterns": [
+    {
+      "id": "axe",
+      "result": "tfc:stone_axe_head",
+      "rock": "any"
+    },
+    {
+      "id": "knife",
+      "result": "tfc:stone_knife_head",
+      "rock": "any"
+    },
+    {
+      "id": "shovel",
+      "result": "tfc:stone_shovel_head",
+      "rock": "any"
+    }
+  ]
+}

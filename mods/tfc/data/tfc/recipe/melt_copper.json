@@ -1,0 +1,9 @@
+{
+  "type": "tfc:charcoal_forge",
+  "ingredient": "tfc:nugget_native_copper",
+  "result": {
+    "id": "tfc:copper_ingot",
+    "count": 1
+  },
+  "duration": 300
+}

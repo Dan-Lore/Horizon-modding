@@ -1,0 +1,11 @@
+# TFC Horizon 0.1 — hybrid climate + rock/ore slice + survival pillars.
+# Prefer Nightly fdc87ae (pack pin with AE2). allow-version-mismatch OK on tip.
+[mod]
+id = "tfc"
+version = "0.1.0"
+
+[compatibility]
+horizon_revision = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+
+[api]
+path = "api"

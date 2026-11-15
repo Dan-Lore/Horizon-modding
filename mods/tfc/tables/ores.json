@@ -1,0 +1,20 @@
+{
+  "prospect_radius": 12,
+  "ores": [
+    {
+      "block": "tfc:ore_native_copper",
+      "nugget": "tfc:nugget_native_copper",
+      "name": "Native Copper"
+    },
+    {
+      "block": "tfc:ore_native_gold",
+      "nugget": "tfc:nugget_native_gold",
+      "name": "Native Gold"
+    },
+    {
+      "block": "tfc:ore_hematite",
+      "nugget": "tfc:nugget_hematite",
+      "name": "Hematite"
+    }
+  ]
+}

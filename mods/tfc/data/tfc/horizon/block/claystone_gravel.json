@@ -1,0 +1,8 @@
+{
+  "template": "minecraft:gravel",
+  "properties": {
+    "hardness": 1.5,
+    "sounds": "minecraft:gravel"
+  },
+  "item": true
+}

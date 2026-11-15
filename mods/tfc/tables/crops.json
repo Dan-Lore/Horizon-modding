@@ -1,0 +1,43 @@
+{
+  "crops": [
+    {
+      "id": "barley",
+      "block": "tfc:crop_barley",
+      "seeds": "tfc:barley_seeds",
+      "min_temp": 0.0,
+      "max_temp": 35.0,
+      "min_rain": 100.0,
+      "max_rain": 500.0,
+      "seasons": [
+        "spring",
+        "summer"
+      ]
+    },
+    {
+      "id": "wheat",
+      "block": "tfc:crop_wheat",
+      "seeds": "tfc:wheat_seeds",
+      "min_temp": 0.0,
+      "max_temp": 35.0,
+      "min_rain": 100.0,
+      "max_rain": 500.0,
+      "seasons": [
+        "spring",
+        "summer"
+      ]
+    },
+    {
+      "id": "cabbage",
+      "block": "tfc:crop_cabbage",
+      "seeds": "tfc:cabbage_seeds",
+      "min_temp": 0.0,
+      "max_temp": 35.0,
+      "min_rain": 100.0,
+      "max_rain": 500.0,
+      "seasons": [
+        "spring",
+        "summer"
+      ]
+    }
+  ]
+}

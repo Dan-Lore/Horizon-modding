@@ -1,0 +1,127 @@
+{
+  "mod": "tfc",
+  "version": "0.1.0",
+  "updated": "2026-11-15",
+  "reference": "TerraFirmaCraft 1.20.1 (TFG design reference)",
+  "systems": [
+    {
+      "id": "scaffold",
+      "wave": "W0",
+      "status": "done",
+      "smoke": "mods/tfc tree + pack-tfc + gen_content"
+    },
+    {
+      "id": "calendar_climate",
+      "wave": "W1",
+      "status": "done",
+      "smoke": "action bar season/temp/rain on login and player_tick"
+    },
+    {
+      "id": "thirst",
+      "wave": "W1",
+      "status": "done",
+      "smoke": "vessel on water restores thirst"
+    },
+    {
+      "id": "rock_ore_slice",
+      "wave": "W2",
+      "status": "done",
+      "smoke": "place tfc:ore_* / rock blocks; JEI lists"
+    },
+    {
+      "id": "prospector_lite",
+      "wave": "W2",
+      "status": "done",
+      "smoke": "tfc:prospector_pick right-click near ore"
+    },
+    {
+      "id": "knapping_stone_tools",
+      "wave": "W3",
+      "status": "done",
+      "smoke": "craft stone_*_head + stick → tool; firepit craft"
+    },
+    {
+      "id": "pottery_pit_kiln",
+      "wave": "W4",
+      "status": "done",
+      "smoke": "unfired_vessel → pit_kiln → vessel"
+    },
+    {
+      "id": "heating_forge_copper",
+      "wave": "W5",
+      "status": "done",
+      "smoke": "charcoal_forge melt nugget → copper_ingot; mold head"
+    },
+    {
+      "id": "bloomery_anvil",
+      "wave": "W6",
+      "status": "done",
+      "smoke": "bloomery → bloom → anvil → wrought_iron"
+    },
+    {
+      "id": "food_nutrition",
+      "wave": "W7",
+      "status": "done",
+      "smoke": "eat tfc foods; nutrient line in chat/HUD"
+    },
+    {
+      "id": "crops_climate_gate",
+      "wave": "W8",
+      "status": "done",
+      "smoke": "seeds cancelled outside spring/summer climate"
+    },
+    {
+      "id": "quern_barrel",
+      "wave": "W9",
+      "status": "done",
+      "smoke": "quern chalk→flux; barrel recipe"
+    },
+    {
+      "id": "wood_collapse",
+      "wave": "W10",
+      "status": "done",
+      "smoke": "support_beam; unstable cobble action_bar warning"
+    },
+    {
+      "id": "pan_sluice",
+      "wave": "W11",
+      "status": "done",
+      "smoke": "sluice pan_gravel → native copper nugget"
+    },
+    {
+      "id": "full_worldgen",
+      "wave": "W12",
+      "status": "blocked",
+      "reason": "Horizon rock-layer / climate-map / vein worldgen hooks incomplete for TFC parity; hybrid vanilla overworld bridge remains"
+    },
+    {
+      "id": "animals",
+      "wave": "W13",
+      "status": "deferred",
+      "reason": "Entity/AI familiarity stack not sufficient for TFC animal behaviours yet"
+    },
+    {
+      "id": "parity_extras",
+      "wave": "W14",
+      "status": "done",
+      "smoke": "blast_furnace, powderkeg, glass_batch, chisel items, steel; checklist in tracker notes"
+    },
+    {
+      "id": "pack_polish",
+      "wave": "W15",
+      "status": "done",
+      "smoke": "draft-mods.toml entry; pack-tfc script; smoke notes for tfg-horizon co-build"
+    }
+  ],
+  "parity_checklist_w14": [
+    "chisel tool items per metal",
+    "powderkeg block",
+    "blast_furnace + steel",
+    "glass_batch",
+    "support beams",
+    "sluice/pan",
+    "deferred: full chisel modes GUI",
+    "deferred: powderkeg explosion tuning",
+    "blocked: TFC rock-layer worldgen"
+  ]
+}

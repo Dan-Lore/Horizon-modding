@@ -1,0 +1,12 @@
+{
+  "type": "tfc:blast_furnace",
+  "ingredients": [
+    "tfc:wrought_iron_ingot",
+    "minecraft:coal"
+  ],
+  "result": {
+    "id": "tfc:steel_ingot",
+    "count": 1
+  },
+  "duration": 800
+}

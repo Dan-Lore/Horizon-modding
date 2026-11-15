@@ -1,0 +1,6 @@
+{
+  "wave": "W12",
+  "status": "blocked",
+  "needed_hooks": ["climate_map", "rock_layers", "ore_veins", "custom_biome_source"],
+  "bridge": "vanilla_overworld_plus_placeable_tfc_rocks_ores"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tfc:bloomery",
+  "ingredients": [
+    "tfc:nugget_hematite",
+    "minecraft:charcoal"
+  ],
+  "result": {
+    "id": "tfc:raw_iron_bloom",
+    "count": 1
+  },
+  "duration": 600
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:andesite_raw"
+    },
+    {
+      "item": "tfc:andesite_raw"
+    },
+    {
+      "item": "tfc:andesite_raw"
+    }
+  ],
+  "result": {
+    "id": "tfc:stone_axe_head",
+    "count": 1
+  }
+}
