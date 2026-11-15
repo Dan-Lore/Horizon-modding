@@ -25,7 +25,7 @@ Pin: `fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca`, hooks 411.
 | W9 | Loot crates | done | /give quests:loot_crate then use item to roll reward_table starter_crate. |
 | W10 | In-game editor (ops) | done | /quests edit title <quest_id> <text...> writes world override; /quests reload picks it up. |
 | W11 | GUI themes | done | /quests theme <id> sets world theme; book lines use theme accent prefix. |
-| W12 | Tasks v2: location, inventory observe | done | location tasks complete near a block pos; inventory tasks mirror item detect. Advancement-like is /quests adv <id> stub. |
+| W12 | Tasks v2: location, inventory observe | done | location with `item` scans for that block within radius (quest board); fixed xyz otherwise. Inventory mirrors item detect. Advancement-like is /quests adv <id> stub. |
 | W13 | Pack questline (TFG Horizon) | done | Chapters intro, ae2_start, greglite_start, tfc_start — first five quests completable with sticks/book/board. |
 | W14 | Multiplayer polish | done | Invites expire; double-claim blocked; /team invites lists pending. Documented for 2-client smoke. |
 | W15 | Polish + blocked hooks | done | Tracker lists blocked: chapter graph pan-zoom, entity-death kill auto, FTB SNBT import, KubeJS bus. Agent smoke: `tools/smoke-quests.md`. |

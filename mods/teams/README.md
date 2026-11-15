@@ -6,6 +6,7 @@ Plan: [`docs/quests-plan.md`](../../docs/quests-plan.md).
 ## Build
 
 ```bash
+python3 mods/teams/tools/gen_content.py
 python3 tools/pack-teams.py
 ```
 

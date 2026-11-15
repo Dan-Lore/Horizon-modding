@@ -19,7 +19,7 @@ HOOKS = 411
 
 def main() -> None:
     if not (SRC / "assets").is_dir() or not (SRC / "data").is_dir():
-        raise SystemExit("missing teams content")
+        raise SystemExit("missing teams content; run mods/teams/tools/gen_content.py")
     stage = Path(tempfile.mkdtemp(prefix="teams-pack-"))
     try:
         mixin = stage / "mixins" / "teams"

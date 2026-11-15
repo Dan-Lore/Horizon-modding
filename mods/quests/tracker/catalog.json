@@ -75,7 +75,7 @@
       "id": "W12",
       "system": "Tasks v2: location, inventory observe",
       "status": "done",
-      "smoke": "location tasks complete near a block pos; inventory tasks mirror item detect. Advancement-like is /quests adv <id> stub."
+      "smoke": "location with item scans for that block within radius (quest board); fixed xyz otherwise. Inventory mirrors item detect. Advancement-like is /quests adv <id> stub."
     },
     {
       "id": "W13",

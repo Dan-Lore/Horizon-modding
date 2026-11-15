@@ -34,6 +34,15 @@
       ]
     },
     {
+      "id": "combat_demo",
+      "group": "pack",
+      "title": "Combat Demo",
+      "progression": "flexible",
+      "quests": [
+        "hunt_demo"
+      ]
+    },
+    {
       "id": "ae2_start",
       "group": "pack",
       "title": "Applied Energistics",
@@ -131,10 +140,11 @@
           "id": "near_board",
           "type": "location",
           "title": "Stand near a quest board",
+          "item": "quests:quest_board",
           "x": 0,
           "y": 64,
           "z": 0,
-          "radius": 100000
+          "radius": 8
         }
       ],
       "rewards": [

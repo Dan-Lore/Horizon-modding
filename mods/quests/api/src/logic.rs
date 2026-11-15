@@ -201,10 +201,29 @@ pub fn tick_item_and_location(host: &mut dyn Host, team: &str, uuid: u128) {
                     }
                 }
                 "location" => {
-                    let dx = pos[0] - task.x;
-                    let dy = pos[1] - task.y;
-                    let dz = pos[2] - task.z;
-                    if dx * dx + dy * dy + dz * dz <= task.radius * task.radius {
+                    let done = if let Some(block_id) = &task.item {
+                        // Scan a cube around the player for the named block (e.g. quest board).
+                        let r = task.radius.max(1);
+                        let mut found = false;
+                        'scan: for dy in -r..=r {
+                            for dx in -r..=r {
+                                for dz in -r..=r {
+                                    let p = [pos[0] + dx, pos[1] + dy, pos[2] + dz];
+                                    if host.block(p) == *block_id {
+                                        found = true;
+                                        break 'scan;
+                                    }
+                                }
+                            }
+                        }
+                        found
+                    } else {
+                        let dx = pos[0] - task.x;
+                        let dy = pos[1] - task.y;
+                        let dz = pos[2] - task.z;
+                        dx * dx + dy * dy + dz * dz <= task.radius * task.radius
+                    };
+                    if done {
                         progress::complete_task(team, &task.id);
                         host.tell(
                             uuid,

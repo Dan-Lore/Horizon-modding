@@ -22,7 +22,7 @@ pub fn baked() -> QuestFile {
         id: "open_board".into(),
         title: "Quest Board".into(),
         dependencies: vec!["gather_sticks".into()],
-        tasks: vec![Task { id: "near_board".into(), kind: "location".into(), title: "Stand near a quest board".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 100000 }],
+        tasks: vec![Task { id: "near_board".into(), kind: "location".into(), title: "Stand near a quest board".into(), item: Some("quests:quest_board".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "board_table".into(), kind: "table".into(), item: None, count: 1, amount: 0, command: None, table: Some("starter_crate".into()), options: vec![] }],
     });
     quests.insert("ae2_book".into(), Quest {
@@ -55,6 +55,7 @@ pub fn baked() -> QuestFile {
     });
     let chapters = vec![
         Chapter { id: "intro".into(), title: "Getting Started".into(), progression: "linear".into(), quests: vec!["welcome".into(), "gather_sticks".into(), "open_board".into()] },
+        Chapter { id: "combat_demo".into(), title: "Combat Demo".into(), progression: "flexible".into(), quests: vec!["hunt_demo".into()] },
         Chapter { id: "ae2_start".into(), title: "Applied Energistics".into(), progression: "flexible".into(), quests: vec!["ae2_book".into()] },
         Chapter { id: "greglite_start".into(), title: "Greglite".into(), progression: "flexible".into(), quests: vec!["see_greglite".into()] },
         Chapter { id: "tfc_start".into(), title: "TFC Horizon".into(), progression: "flexible".into(), quests: vec!["see_tfc".into()] },

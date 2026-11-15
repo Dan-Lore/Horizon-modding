@@ -32,6 +32,13 @@ def main() -> int:
     # First five pack-line quests exist
     for qid in ("welcome", "gather_sticks", "open_board", "ae2_book", "see_greglite"):
         assert qid in quests, qid
+    # Every quest must appear in at least one chapter (book visibility).
+    listed = {qid for c in data["chapters"] for qid in c["quests"]}
+    for qid in quests:
+        assert qid in listed, f"{qid} missing from chapters"
+    near = next(t for t in quests["open_board"]["tasks"] if t["id"] == "near_board")
+    assert near.get("item") == "quests:quest_board"
+    assert int(near.get("radius", 0)) <= 16
     print(f"ok {len(quests)} quests, {len(data['chapters'])} chapters")
     return 0
 
