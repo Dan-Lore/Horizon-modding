@@ -1,0 +1,9 @@
+{
+  "type": "tfc:firepit",
+  "result": {
+    "id": "tfc:cooked_meat",
+    "count": 1
+  },
+  "duration": 120,
+  "ingredient": "minecraft:porkchop"
+}

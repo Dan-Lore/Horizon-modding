@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:bronze_sheet"
+    },
+    {
+      "item": "tfc:bronze_sheet"
+    },
+    {
+      "item": "tfc:bronze_sheet"
+    }
+  ],
+  "result": {
+    "id": "tfc:bloomery",
+    "count": 1
+  }
+}

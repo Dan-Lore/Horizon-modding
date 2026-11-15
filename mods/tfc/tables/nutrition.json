@@ -1,0 +1,118 @@
+{
+  "drinks": [
+    "tfc:jug",
+    "tfc:wooden_bucket"
+  ],
+  "foods": [
+    {
+      "id": "tfc:red_apple",
+      "grain": 0,
+      "fruit": 1,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 4
+    },
+    {
+      "id": "tfc:carrot",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 1,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 5
+    },
+    {
+      "id": "tfc:bread",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 6
+    },
+    {
+      "id": "tfc:cooked_meat",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 1,
+      "dairy": 0,
+      "size": "medium",
+      "weight": "medium",
+      "decay_days": 3
+    },
+    {
+      "id": "tfc:cheese",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 1,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 5
+    },
+    {
+      "id": "tfc:cabbage",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 1,
+      "protein": 0,
+      "dairy": 0,
+      "size": "medium",
+      "weight": "medium",
+      "decay_days": 4
+    },
+    {
+      "id": "tfc:wheat",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 12
+    },
+    {
+      "id": "tfc:barley_grain",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 12
+    },
+    {
+      "id": "tfc:flour",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 8
+    },
+    {
+      "id": "tfc:dough",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "medium",
+      "decay_days": 3
+    }
+  ]
+}

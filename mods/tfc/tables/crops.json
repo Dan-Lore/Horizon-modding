@@ -1,0 +1,36 @@
+[
+  {
+    "id": "tfc:crop_wheat",
+    "product": "tfc:wheat",
+    "seed": "tfc:wheat_seed",
+    "min_temp": 10,
+    "max_temp": 30,
+    "seasons": [
+      "spring",
+      "summer"
+    ]
+  },
+  {
+    "id": "tfc:crop_barley",
+    "product": "tfc:barley_grain",
+    "seed": "tfc:barley_seed",
+    "min_temp": 4,
+    "max_temp": 28,
+    "seasons": [
+      "spring",
+      "autumn"
+    ]
+  },
+  {
+    "id": "tfc:crop_cabbage",
+    "product": "tfc:cabbage",
+    "seed": "tfc:cabbage_seed",
+    "min_temp": 5,
+    "max_temp": 26,
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ]
+  }
+]

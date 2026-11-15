@@ -1,0 +1,10 @@
+{
+  "note": "Knapping UI is a crafting stand-in in 0.1.0.",
+  "recipes": [
+    "stone_axe",
+    "stone_hoe",
+    "stone_knife",
+    "stone_shovel",
+    "stone_hammer"
+  ]
+}

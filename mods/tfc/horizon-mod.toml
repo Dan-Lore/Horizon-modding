@@ -1,0 +1,8 @@
+id = "tfc"
+name = "TFC Horizon"
+version = "0.1.0"
+description = "TerraFirmaCraft-inspired survival slice: climate, thirst, rocks, pottery, and an early metal loop."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

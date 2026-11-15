@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wheat"
+    },
+    {
+      "item": "tfc:wheat"
+    },
+    {
+      "item": "tfc:wheat"
+    },
+    {
+      "item": "tfc:wheat"
+    }
+  ],
+  "result": {
+    "id": "tfc:straw",
+    "count": 1
+  }
+}

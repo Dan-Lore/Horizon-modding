@@ -1,0 +1,9 @@
+{
+  "type": "tfc:sluice",
+  "result": {
+    "id": "tfc:nugget_native_copper",
+    "count": 1
+  },
+  "duration": 160,
+  "ingredient": "tfc:ore_deposit"
+}

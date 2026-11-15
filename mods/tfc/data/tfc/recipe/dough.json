@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:flour"
+    }
+  ],
+  "result": {
+    "id": "tfc:dough",
+    "count": 1
+  }
+}

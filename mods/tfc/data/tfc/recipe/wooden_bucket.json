@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:lumber"
+    },
+    {
+      "item": "tfc:lumber"
+    },
+    {
+      "item": "tfc:lumber"
+    }
+  ],
+  "result": {
+    "id": "tfc:wooden_bucket",
+    "count": 1
+  }
+}
