@@ -1,0 +1,9 @@
+{
+  "title": "Horizon Quests",
+  "icon": "quests:quest_book",
+  "items": [
+    "quests:quest_book",
+    "quests:loot_crate",
+    "quests:quest_board"
+  ]
+}

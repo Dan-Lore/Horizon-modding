@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "mod": "quests",
+  "version": "0.1.0",
+  "horizon": "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca",
+  "hooks": 411,
+  "waves": [
+    {
+      "id": "W0",
+      "system": "Scaffold, NOTICE, pack script, login tip",
+      "status": "done",
+      "smoke": "python3 tools/pack-quests.py writes mods/quests/dist/quests.hmod after gen_content. Login tip names Horizon Quests."
+    },
+    {
+      "id": "W2",
+      "system": "Quest schema v1 + demo chapter",
+      "status": "done",
+      "smoke": "/quests reload (op) prints chapter and quest counts from baked tables + world overrides."
+    },
+    {
+      "id": "W3",
+      "system": "TeamProgress store + sync",
+      "status": "done",
+      "smoke": "/quests progress shows team id and completed quests. Team A completion does not appear for Team B."
+    },
+    {
+      "id": "W4",
+      "system": "Tasks v1: checkmark, item, kill stub",
+      "status": "done",
+      "smoke": "/quests check completes checkmark tasks. Item tasks complete when count_items meets target (player_tick). Kill is command stub /quests kill <task_id> until entity-death hooks are wired."
+    },
+    {
+      "id": "W5",
+      "system": "Rewards v1: item, xp, command + claim",
+      "status": "done",
+      "smoke": "/quests claim <quest_id> grants unclaimed rewards once per claiming player after quest complete (team shares unlock)."
+    },
+    {
+      "id": "W6",
+      "system": "Quest book UI v1",
+      "status": "done",
+      "smoke": "Use quests:quest_book (or /quests book) to list chapters/quests in chat. Quest board block opens a submit menu for item tasks."
+    },
+    {
+      "id": "W7",
+      "system": "Dependencies + linear/flexible",
+      "status": "done",
+      "smoke": "Child quest locked until parents done in linear mode; flexible allows item progress early but claim waits for parents."
+    },
+    {
+      "id": "W8",
+      "system": "Reward tables + choice",
+      "status": "done",
+      "smoke": "/quests claim rolls weighted tables; /quests choose <quest_id> <index> picks a choice reward."
+    },
+    {
+      "id": "W9",
+      "system": "Loot crates",
+      "status": "done",
+      "smoke": "/give quests:loot_crate then use item to roll reward_table starter_crate."
+    },
+    {
+      "id": "W10",
+      "system": "In-game editor (ops)",
+      "status": "done",
+      "smoke": "/quests edit title <quest_id> <text...> writes world override; /quests reload picks it up."
+    },
+    {
+      "id": "W11",
+      "system": "GUI themes",
+      "status": "done",
+      "smoke": "/quests theme <id> sets world theme; book lines use theme accent prefix."
+    },
+    {
+      "id": "W12",
+      "system": "Tasks v2: location, inventory observe",
+      "status": "done",
+      "smoke": "location tasks complete near a block pos; inventory tasks mirror item detect. Advancement-like is /quests adv <id> stub."
+    },
+    {
+      "id": "W13",
+      "system": "Pack questline (TFG Horizon)",
+      "status": "done",
+      "smoke": "Chapters intro, ae2_start, greglite_start, tfc_start \u2014 first five quests completable with sticks/book/board."
+    },
+    {
+      "id": "W14",
+      "system": "Multiplayer polish",
+      "status": "done",
+      "smoke": "Invites expire; double-claim blocked; /team invites lists pending. Documented for 2-client smoke."
+    },
+    {
+      "id": "W15",
+      "system": "Polish + blocked hooks",
+      "status": "done",
+      "smoke": "Tracker lists blocked: chapter graph pan-zoom, entity-death kill auto, FTB SNBT import, KubeJS bus."
+    }
+  ],
+  "blocked": [
+    "chapter_graph_pan_zoom",
+    "ftb_snbt_import",
+    "auto_kill_from_entity_death",
+    "kubejs_compat"
+  ]
+}

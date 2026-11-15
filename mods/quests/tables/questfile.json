@@ -1,0 +1,257 @@
+{
+  "schema": 1,
+  "theme_default": "copper",
+  "themes": {
+    "copper": {
+      "accent": "\u00a76",
+      "label": "Copper"
+    },
+    "steel": {
+      "accent": "\u00a77",
+      "label": "Steel"
+    },
+    "ae2": {
+      "accent": "\u00a7b",
+      "label": "Fluix"
+    }
+  },
+  "chapter_groups": [
+    {
+      "id": "pack",
+      "title": "TFG Horizon"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "intro",
+      "group": "pack",
+      "title": "Getting Started",
+      "progression": "linear",
+      "quests": [
+        "welcome",
+        "gather_sticks",
+        "open_board"
+      ]
+    },
+    {
+      "id": "ae2_start",
+      "group": "pack",
+      "title": "Applied Energistics",
+      "progression": "flexible",
+      "quests": [
+        "ae2_book"
+      ]
+    },
+    {
+      "id": "greglite_start",
+      "group": "pack",
+      "title": "Greglite",
+      "progression": "flexible",
+      "quests": [
+        "see_greglite"
+      ]
+    },
+    {
+      "id": "tfc_start",
+      "group": "pack",
+      "title": "TFC Horizon",
+      "progression": "flexible",
+      "quests": [
+        "see_tfc"
+      ]
+    }
+  ],
+  "quests": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Horizon Quests",
+      "subtitle": "Read the book",
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "open_book",
+          "type": "checkmark",
+          "title": "Mark that you opened the quest book"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "welcome_apple",
+          "type": "item",
+          "item": "minecraft:apple",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "gather_sticks",
+      "title": "Gather Sticks",
+      "dependencies": [
+        "welcome"
+      ],
+      "tasks": [
+        {
+          "id": "sticks",
+          "type": "item",
+          "title": "Have 8 sticks",
+          "item": "minecraft:stick",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "id": "stick_xp",
+          "type": "xp",
+          "amount": 5
+        },
+        {
+          "id": "stick_choice",
+          "type": "choice",
+          "options": [
+            {
+              "item": "minecraft:oak_planks",
+              "count": 4
+            },
+            {
+              "item": "minecraft:torch",
+              "count": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "open_board",
+      "title": "Quest Board",
+      "dependencies": [
+        "gather_sticks"
+      ],
+      "tasks": [
+        {
+          "id": "near_board",
+          "type": "location",
+          "title": "Stand near a quest board",
+          "x": 0,
+          "y": 64,
+          "z": 0,
+          "radius": 100000
+        }
+      ],
+      "rewards": [
+        {
+          "id": "board_table",
+          "type": "table",
+          "table": "starter_crate"
+        }
+      ]
+    },
+    {
+      "id": "ae2_book",
+      "title": "AE2 On The Pack",
+      "dependencies": [
+        "welcome"
+      ],
+      "tasks": [
+        {
+          "id": "ae2_note",
+          "type": "checkmark",
+          "title": "Confirm AE2 is on the pack pin"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "ae2_cmd",
+          "type": "command",
+          "command": "say Horizon Quests: AE2 chapter noted"
+        }
+      ]
+    },
+    {
+      "id": "see_greglite",
+      "title": "Meet Greglite",
+      "dependencies": [
+        "welcome"
+      ],
+      "tasks": [
+        {
+          "id": "gl_note",
+          "type": "checkmark",
+          "title": "Confirm Greglite machines exist"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "gl_xp",
+          "type": "xp",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "id": "see_tfc",
+      "title": "Meet TFC Horizon",
+      "dependencies": [
+        "welcome"
+      ],
+      "tasks": [
+        {
+          "id": "tfc_note",
+          "type": "checkmark",
+          "title": "Confirm TFC content snapshot"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "tfc_xp",
+          "type": "xp",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "id": "hunt_demo",
+      "title": "Hunt Demo",
+      "dependencies": [
+        "welcome"
+      ],
+      "tasks": [
+        {
+          "id": "kill_any",
+          "type": "kill",
+          "title": "Record a kill (stub)",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "hunt_bone",
+          "type": "item",
+          "item": "minecraft:bone",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "reward_tables": [
+    {
+      "id": "starter_crate",
+      "entries": [
+        {
+          "item": "minecraft:stick",
+          "count": 16,
+          "weight": 5
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 4,
+          "weight": 3
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

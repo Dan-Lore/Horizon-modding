@@ -1,0 +1,13 @@
+Horizon Quests — Horizon-native workshop mod (FTB Quests–inspired).
+
+Inspired by FTB Quests for Minecraft Java. Not affiliated with FTB Team.
+Clean reimplementation for Horizon — not a jar port. Do not copy FTB assets/code
+(typically All Rights Reserved). No SNBT import of TFG quest packs.
+
+Requires Horizon Teams (`mods/teams/`) for party progress.
+
+Plan: docs/quests-plan.md
+Tracker: mods/quests/tracker/catalog.json
+
+Original Rust and JSON in this folder: MIT unless noted otherwise.
+Minecraft / Mojang assets are not redistributed.
