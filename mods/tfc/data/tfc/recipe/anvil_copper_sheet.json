@@ -1,0 +1,9 @@
+{
+  "type": "tfc:anvil",
+  "result": {
+    "id": "tfc:copper_sheet",
+    "count": 1
+  },
+  "duration": 160,
+  "ingredient": "tfc:copper_ingot"
+}

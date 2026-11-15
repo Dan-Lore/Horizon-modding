@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:copper_double_ingot"
+    },
+    {
+      "item": "tfc:copper_double_ingot"
+    }
+  ],
+  "result": {
+    "id": "tfc:anvil",
+    "count": 1
+  }
+}

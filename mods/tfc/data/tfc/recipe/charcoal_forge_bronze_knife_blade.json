@@ -1,0 +1,9 @@
+{
+  "type": "tfc:charcoal_forge",
+  "result": {
+    "id": "tfc:bronze_knife_blade",
+    "count": 1
+  },
+  "duration": 200,
+  "ingredient": "tfc:bronze_ingot"
+}

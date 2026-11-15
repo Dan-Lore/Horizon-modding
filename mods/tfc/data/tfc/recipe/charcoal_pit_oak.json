@@ -1,0 +1,9 @@
+{
+  "type": "tfc:charcoal_pit",
+  "result": {
+    "id": "minecraft:charcoal",
+    "count": 1
+  },
+  "duration": 240,
+  "ingredient": "minecraft:oak_log"
+}

@@ -1,0 +1,67 @@
+{
+  "days_per_month": 8,
+  "base_temp": 14.0,
+  "base_rain": 300.0,
+  "months": [
+    {
+      "name": "january",
+      "season": "winter",
+      "temp_offset": -8
+    },
+    {
+      "name": "february",
+      "season": "winter",
+      "temp_offset": -6
+    },
+    {
+      "name": "march",
+      "season": "spring",
+      "temp_offset": -2
+    },
+    {
+      "name": "april",
+      "season": "spring",
+      "temp_offset": 2
+    },
+    {
+      "name": "may",
+      "season": "spring",
+      "temp_offset": 6
+    },
+    {
+      "name": "june",
+      "season": "summer",
+      "temp_offset": 10
+    },
+    {
+      "name": "july",
+      "season": "summer",
+      "temp_offset": 12
+    },
+    {
+      "name": "august",
+      "season": "summer",
+      "temp_offset": 10
+    },
+    {
+      "name": "september",
+      "season": "autumn",
+      "temp_offset": 4
+    },
+    {
+      "name": "october",
+      "season": "autumn",
+      "temp_offset": 0
+    },
+    {
+      "name": "november",
+      "season": "autumn",
+      "temp_offset": -4
+    },
+    {
+      "name": "december",
+      "season": "winter",
+      "temp_offset": -8
+    }
+  ]
+}

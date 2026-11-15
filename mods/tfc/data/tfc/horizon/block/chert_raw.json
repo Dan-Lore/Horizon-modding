@@ -1,0 +1,8 @@
+{
+  "template": "minecraft:iron_block",
+  "properties": {
+    "hardness": 1.8,
+    "sounds": "minecraft:stone"
+  },
+  "item": true
+}

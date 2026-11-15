@@ -1,0 +1,9 @@
+{
+  "type": "tfc:pit_kiln",
+  "result": {
+    "id": "minecraft:glass",
+    "count": 1
+  },
+  "duration": 240,
+  "ingredient": "tfc:glass_batch"
+}

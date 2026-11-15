@@ -1,0 +1,9 @@
+{
+  "type": "tfc:bloomery",
+  "result": {
+    "id": "tfc:raw_iron_bloom",
+    "count": 1
+  },
+  "duration": 300,
+  "ingredient": "tfc:nugget_hematite"
+}

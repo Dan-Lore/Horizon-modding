@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:andesite_cobble"
+    },
+    {
+      "item": "tfc:andesite_cobble"
+    },
+    {
+      "item": "minecraft:charcoal"
+    }
+  ],
+  "result": {
+    "id": "tfc:charcoal_forge",
+    "count": 1
+  }
+}

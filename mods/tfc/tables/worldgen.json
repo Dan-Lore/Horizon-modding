@@ -1,0 +1,36 @@
+{
+  "status": "blocked",
+  "reason": "Chunk generation is not hooked. Rocks and ores are placed by hand; prospect reports a preview rock.",
+  "content_rocks": [
+    "andesite",
+    "granite",
+    "basalt",
+    "chalk",
+    "chert",
+    "shale",
+    "limestone",
+    "marble"
+  ],
+  "planned_layers": [
+    "andesite",
+    "granite",
+    "basalt",
+    "chalk",
+    "chert",
+    "shale",
+    "limestone",
+    "marble",
+    "diorite",
+    "gabbro",
+    "claystone",
+    "conglomerate",
+    "dolomite",
+    "quartzite",
+    "slate",
+    "phyllite",
+    "schist",
+    "gneiss",
+    "rhyolite",
+    "dacite"
+  ]
+}

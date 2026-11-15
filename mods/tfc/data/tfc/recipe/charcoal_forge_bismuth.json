@@ -1,0 +1,9 @@
+{
+  "type": "tfc:charcoal_forge",
+  "result": {
+    "id": "tfc:bismuth_ingot",
+    "count": 1
+  },
+  "duration": 120,
+  "ingredient": "tfc:nugget_bismuthinite"
+}
