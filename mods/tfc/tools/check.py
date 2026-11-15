@@ -182,6 +182,8 @@ def main() -> None:
     lib = (MOD / "api" / "src" / "lib.rs").read_text(encoding="utf-8")
     if "TFC Horizon 0.2.0" not in lib:
         fail("login line is not 0.2.0")
+    if "host.sneaking" in lib:
+        fail("anvil strike must read player.sneaking")
 
     draft = (ROOT / "pack" / "draft-mods.toml").read_text(encoding="utf-8")
     if 'id = "tfc"' not in draft or 'on = []' not in draft.split('id = "tfc"', 1)[1][:400]:
@@ -203,6 +205,10 @@ def main() -> None:
             "mixins/tfc/horizon-mixin.toml",
             "mixins/tfc/api/src/lib.rs",
             "mixins/tfc/api/src/specs.inc.rs",
+            "mixins/tfc/tables/heat.json",
+            "mixins/tfc/tables/alloys.json",
+            "mixins/tfc/tables/anvil.json",
+            "mixins/tfc/tables/knapping.json",
             "data/tfc/horizon/block/firepit.json",
             "assets/tfc/lang/en_us.json",
         ):

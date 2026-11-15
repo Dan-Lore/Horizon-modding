@@ -38,6 +38,8 @@ def main() -> None:
             mixin / "api",
             ignore=shutil.ignore_patterns("target", ".horizon-cache"),
         )
+        # include_str!("../../tables/…") from mixins/tfc/api/src resolves here.
+        shutil.copytree(SRC / "tables", mixin / "tables")
         for name in ("README.md", "NOTICE"):
             shutil.copy(SRC / name, mixin / name)
         native = {

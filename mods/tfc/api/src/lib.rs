@@ -137,7 +137,7 @@ impl Hooks for Tfc {
         let block = host.block(event.pos);
         let id = event.stack.item.as_ref();
         if block == "tfc:anvil" && prospect::is_hammer(id) {
-            let sneaking = host.sneaking();
+            let sneaking = player.sneaking;
             let pos = event.pos;
             let mut message = String::from("TFC: anvil is not ready.");
             let _changed = host.change_mod_block_entity(pos, &mut |entity| {
