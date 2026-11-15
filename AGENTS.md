@@ -123,7 +123,8 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 
 | Role | Id | Play version (2026-11-15) | Notes |
 | --- | --- | --- | --- |
-| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.5.0** + World Map **0.7.1** (installed, rebuild pending) on Nightly `fdc87ae` |
+| **Working save** | `tfg-horizon` («TFG Horizon») | **pinned** `native-fdc87ae-428278da87c5` | Last known-good. Do not native-build. Greglite **0.4.3** + AE2 15.4.18 |
+| **Dev build** | `tfg-dev` («TFG Dev») | `native-fdc87ae-01abd5b2b6a6` | Combined profile `dev`: Batch A + World Map + Greglite **0.5.0** + TFC **0.2.0** + Teams + Quests + Ad Astra. Rebuild only here |
 
 - `create-dev` / `create-nightly-test` deleted (tests only).
 - **Create** cannot join this native: registry 0.7 → `9c7f9b2`, local 0.9 → `4e5296d`; AE2 15.4.18 needs `fdc87ae`/hooks 411. Create hnmod parked under `horizon-native-mods/_parked/`.
@@ -131,9 +132,8 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Keep **prune-old-versions off** while `fdc87ae` + `9f42064` nightlies must remain.
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
-- TFC Horizon 0.2.0 (workshop, not on the pack pin): `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `mods/tfc/`. `on = []` so AE2/Greglite stay the native-build.
-- Horizon Teams + Quests (workshop, not on the pack pin): `docs/quests-plan.md`, `docs/quests-tracker.md`, `mods/teams/`, `mods/quests/`. `on = []` until W6+ intentional smoke.
-- Ad Astra Horizon 0.1.0 (workshop overworld slice, no dimensions): `docs/adastra-plan.md`, `docs/adastra-tracker.md`, `mods/adastra/`. Pack wiring is a separate agent.
+- TFC Horizon 0.2.0, Teams, Quests, and Ad Astra are in the **`tfg-dev`** native only. `on = []` in `pack/draft-mods.toml` still means “not on the pinned working instance”.
+- Plans: `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `docs/quests-plan.md`, `docs/quests-tracker.md`, `docs/adastra-plan.md`, `docs/adastra-tracker.md`. Build traps: `docs/dev-tips-native-content.md`.
 
 
 ## Links
@@ -153,11 +153,11 @@ Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/
 
 ## Suggested next work for agents
 
-1. Smoke `tfg-horizon` (JEI creative panel, AE2, Greglite machines) on `native-fdc87ae-428278da87c5`.
-2. Native-build **only** for that pack instance; do not pile tip+AE2 until registry AE2 supports `9f42064`.
+1. Smoke **`tfg-dev`** on `native-fdc87ae-01abd5b2b6a6` (`/give`, then JEI `@greglite` `@tfc` `@ae2` `@adastra`). Leave `tfg-horizon` pinned to `native-fdc87ae-428278da87c5`.
+2. Native-build only `tfg-dev`, base `nightly-2026-11-08-fdc87ae`. Do not pile tip `9f42064` (AE2 left_out).
 3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence.
 4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
-5. Ad Astra workshop smoke (`mods/adastra/`, `/give`) before any pack agent enables it.
+5. Do not vendor Ad Astra or FTB Quests PNGs (ARR). TFC textures come from `mods/tfc/tools/fetch_tfc_textures.py` (EUPL-1.2).
 
 **Native build smoke (mandatory):** `.cursor/rules/horizon-native-build-smoke.mdc` + `docs/dev-tips-native-content.md`.  
 Do **not** report a mod as playable from `native-mods.json` or a chat tip alone — require `horizon-mod-ids.json` includes the id and `/give <id>:…` succeeds. Stale `.horizon-cache/mod-content` with only `["ae2"]` is a known failure mode.

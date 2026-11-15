@@ -12,9 +12,11 @@ Agents have repeatedly claimed Greglite/TFC/AE2 were “in the build” while th
 - Mod file sitting in `instances/<id>/horizon-native-mods/`
 - Id listed in `native-mods.json` `mods[]`
 - Folder exists at `versions/<native>/native-content/<id>/`
-- Chat login tip / Hooks message (`Greglite 0.4…`)
+- Chat login tip, action bar, or HUD (`TFC winter… thirst`) — Hooks are in the binary, items may still be absent
 - Creative page shows AE2 (AE2 registers from its own path)
-- JEI search that is not the real `@modid` (e.g. `@gre_` ≠ `@greglite`)
+- Log line `the JEI kit in use is ae2's copy` — that is AE2's embedded JEI, not proof AE2 items loaded
+- JEI search that is not the real `@modid` (`@greg` / `@gre_` ≠ `@greglite`). A **red** box means zero matches
+- `left_out` reason `other-version` / “made for another Horizon version” **before** reading `native/build.log` — the launcher uses that label for rustc failures too
 - `native-build` finished in seconds with “Up to date” after adding new mods
 - Tip Nightly `9f42064` “актуальная” as a pack that includes AE2 15.4.18
 
@@ -27,7 +29,8 @@ Agents have repeatedly claimed Greglite/TFC/AE2 were “in the build” while th
    - Log: `Horizon: content from N mod(s)` 
    - File: `instances/<id>/.horizon-cache/mod-content/<hash>/horizon-mod-ids.json` must list your ids (e.g. `["greglite","tfc","ae2"]`).
    - If it says `["ae2"]` only — content did **not** load; fix and relaunch.
-5. **In-game smoke** — `/give <id>:<item>` must succeed (e.g. `greglite:steam_macerator`). Then JEI `@greglite` / `@tfc`.
+   - If `latest.log` has **no** `content from` line and instead `content mods not loaded:` — the whole content pack was rejected. Item count stays ~1658 (vanilla). JEI `@ae2` is red too.
+5. **In-game smoke** — `/give <id>:<item>` must succeed (e.g. `greglite:coke`, `tfc:crucible`, `adastra:desh_ingot`, `quests:quest_book`). Then JEI `@greglite` / `@tfc` / `@ae2` / `@adastra`.
 
 ## After every native-build that includes content mods
 
@@ -43,18 +46,48 @@ Agents have repeatedly claimed Greglite/TFC/AE2 were “in the build” while th
 
 `Expand-Archive` does **not** open `.hmod` — use .NET `ZipFile` or Python `zipfile`.
 
-## Pack pins (do not “try tip with everything”)
+## Instances (do not rebuild the working native)
+
+| Instance | Version | Role |
+| --- | --- | --- |
+| `tfg-horizon` | **pinned** `native-fdc87ae-428278da87c5` | Last working save. `instance version tfg-horizon native-fdc87ae-428278da87c5`. Do not native-build it. |
+| `tfg-dev` | `native-fdc87ae-01abd5b2b6a6` | Combined dev build (profile `dev`). Rebuild **only** this instance. |
+
+`prune-old-versions` stays **off**. `tools/pack-greglite.ps1` with no `-Out` writes into `tfg-horizon` — always pass `-Out`.
+
+## Pack pins
 
 | Goal | Base |
 | --- | --- |
-| AE2 15.4.18 + Greglite + Batch A | Nightly **`fdc87ae`** / hooks **411** |
+| AE2 15.4.18 + Greglite + Batch A + own mods | Nightly **`fdc87ae`** (`--version nightly-2026-11-08-fdc87ae`) |
 | Create | Own pin (`4e5296d` / registry `9c7f9b2`) — **not** with AE2 |
-| Tip `9f42064` | AE2 left_out (`other-version`) |
+| Tip `9f42064` | AE2 left_out |
 
 Enable mods in `horizon-mods.txt` (`mod.<id>:true`) or the launcher ignores loose files.
 
-## TFC / own combined .hmod
+```text
+horizon-launcher native-build --instance tfg-dev --version nightly-2026-11-08-fdc87ae --trust-native-code --ignore-pins
+```
 
-- `horizon-native.json` **`mixins`** must be a real **horizon-mixins** commit (e.g. `5a64af9…`), **not** the game `horizon` revision (GitHub 422 / left_out).
-- `on = []` in `pack/draft-mods.toml` until compile + `/give` smoke on purpose.
-- Content-only in `native-content` without Hooks ≠ full TFC; still verify via `horizon-mod-ids.json` + `/give`.
+## What actually failed on 2026-11-15
+
+**One bad sound drops every content mod.** `properties.sounds` must be a **block id**. `minecraft:metal` and `minecraft:wood` are not. Use `minecraft:iron_block`, `minecraft:stone`, or `minecraft:oak_planks`. Log: `content mods not loaded: adastra:coal_generator: sounds minecraft:metal is not a block`. Hooks/HUD keep working; JEI is empty for AE2 too. Fix the JSON in `native-content` and `horizon-mods`, wipe `mod-content`, full quit, Play again. No native rebuild needed for a data-only fix.
+
+**Mixin zip rejects JSON.** `unexpected native source: mixins/.../*.json` — even `api/tables/*.json`. Under `mixins/<id>/` the launcher accepts `.rs`, `.toml`, `.md`, and `NOTICE` only. Quest tables stay baked in `baked.rs`. TFC `include_str!` of JSON must be inlined into the `.rs` file before pack. Do not ship `tables/` inside the `.hmod`.
+
+**`hooks` in `horizon-native.json` forces a GitHub download** of all of `native_hooks.rs`. SSL EOF on that file is reported as `Horizon fdc87ae doesn't have the native hook points` even though the local checkout has `NATIVE_HOOKS_API = 411`. Mods that set `hooks` do **not** pin; only mods with `hooks` omitted pin `horizon`. `--ignore-pins` skips the pin fight; it does **not** skip that download while any mod still has `hooks`.
+
+**`other-version` after compile** means read `%AppData%\Roaming\horizon-launcher\native\build.log`. On this pin (rustc 1.99, hooks API in the generated file):
+
+- `HashMap::new()` is not const in a `static` — use `LazyLock`
+- Format braces that are not placeholders must be `}}`
+- `TooltipEvent` / `LivingEntityUseItemFinishEvent` take **one** lifetime (`<'_>`, not `<'_, '_>`)
+- `give_items` / `count_items` / `give_experience` take `u32`
+- `host.level(dim)` is `Option`; `block` / `block_property` are on `LevelRef` and take `self` by value
+- NBT map keys are `JavaString` (`From<&str>` only). Keep the `String`, then `.as_str().into()` so `get(&key)` / `insert` infer the key. `to_string_lossy()` here returns `String`, not `Cow`
+
+**`mixins`** must be horizon-mixins `5a64af938ec86b00d53d16a408aabc0038fb3e57`, not the game revision `fdc87ae` (GitHub 422 / left_out).
+
+**Textures.** TFC EUPL-1.2: `mods/tfc/tools/fetch_tfc_textures.py` is allowed. Ad Astra Terrarium License: PNG is All Rights Reserved (code is MIT). FTB Quests assets are ARR. Do not copy those PNGs. Placeholders are intentional.
+
+**`/team …` is left out** because vanilla already has `/team`. A new command needs a different first word.
