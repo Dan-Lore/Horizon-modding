@@ -1,16 +1,21 @@
-//! TFC Horizon 0.1.0 — climate, thirst, a rock/ore slice, and the early metal loop.
+//! TFC Horizon 0.2.0 — heat, alloys, anvil steps, knapping, and container rot.
 //! Animals stay deferred. Full worldgen stays blocked. See `docs/tfc-plan.md`.
 
 mod animals;
+mod anvil;
 mod climate;
 mod collapse;
 mod crops;
+mod crucible;
 mod food;
+mod heat;
+mod knapping;
 mod machines;
 mod player_state;
 mod prospect;
 mod recipes;
 mod registry;
+mod rot;
 mod screens;
 mod worldgen;
 
@@ -34,7 +39,7 @@ impl Hooks for Tfc {
         host.tell(
             event.player,
             Text::literal(
-                "TFC Horizon 0.1.0: calendar, thirst, rocks, and the copper-to-steel loop. Animals deferred; worldgen blocked.",
+                "TFC Horizon 0.2.0: heat, crucible, anvil steps, knapping, and container rot. Animals deferred; worldgen blocked.",
             ),
         );
     }
@@ -131,10 +136,20 @@ impl Hooks for Tfc {
         };
         let block = host.block(event.pos);
         let id = event.stack.item.as_ref();
+        if block == "tfc:anvil" && prospect::is_hammer(id) {
+            let sneaking = host.sneaking();
+            let pos = event.pos;
+            let mut message = String::from("TFC: anvil is not ready.");
+            let _changed = host.change_mod_block_entity(pos, &mut |entity| {
+                message = anvil::strike(entity, sneaking);
+            });
+            host.tell(player.uuid, Text::literal(message));
+            return Flow::Cancel;
+        }
         if block == "tfc:powderkeg" {
             host.tell(
                 player.uuid,
-                Text::literal("TFC: powderkeg is content-only in 0.1.0 (no fuse)."),
+                Text::literal("TFC: powderkeg is content-only (no fuse)."),
             );
             return Flow::Cancel;
         }
@@ -206,6 +221,7 @@ impl Hooks for Tfc {
         match spec.kind {
             Kind::Machine => machines::tick(host, event.entity, &spec),
             Kind::Crop => crops::tick(host, event.pos, event.entity),
+            Kind::Storage if event.entity.id == "tfc:small_vessel" => rot::tick_all(event.entity),
             Kind::Storage => {}
         }
     }

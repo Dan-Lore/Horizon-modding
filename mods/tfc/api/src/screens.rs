@@ -27,8 +27,30 @@ fn positions(spec: Spec) -> Vec<Option<[f32; 2]>> {
         .collect()
 }
 
+fn knapping_screen(spec: Spec) -> NativeScreen {
+    let mut slots = Vec::with_capacity(spec.slots());
+    for index in 0..spec.inputs {
+        let col = (index % 5) as f32;
+        let row = (index / 5) as f32;
+        slots.push(Some([8.0 + col * 16.0, 8.0 + row * 16.0]));
+    }
+    slots.push(Some([116.0, 36.0]));
+    NativeScreen {
+        width: 176.0,
+        height: 200.0,
+        slots,
+        inventory_y: 118.0,
+        inventory_x: 8.0,
+        own_labels: false,
+        own_background: false,
+    }
+}
+
 pub fn layout(event: &ScreenEvent<'_>) -> Option<NativeScreen> {
     let spec = registry::find(event.block)?;
+    if spec.id == "tfc:knapping" {
+        return Some(knapping_screen(spec));
+    }
     Some(NativeScreen {
         width: 176.0,
         height: 166.0,

@@ -30,8 +30,30 @@ def thirst_drain(value: float, seconds: float, sprint: bool = False) -> float:
     return max(0.0, value - rate * seconds)
 
 
-def crop_ok(temp: float, season: str, crop: dict) -> bool:
-    return crop["min_temp"] <= temp <= crop["max_temp"] and season in crop["seasons"]
+def i32(value: int) -> int:
+    value &= 0xFFFFFFFF
+    if value >= 0x80000000:
+        value -= 0x100000000
+    return value
+
+
+def rainfall(x: int, z: int, base: float = 300.0) -> float:
+    # Same expression as climate.rs at the given column.
+    mixed = i32(i32(x * 127) ^ i32(z * 311))
+    noise = abs(float(mixed) % 97.0)
+    return min(500.0, max(50.0, base + noise * 2.0))
+
+
+def crop_ok(temp: float, season: str, crop: dict, rain: float = 300.0) -> bool:
+    return (
+        crop["min_temp"] <= temp <= crop["max_temp"]
+        and season in crop["seasons"]
+        and crop["min_rain"] <= rain <= crop["max_rain"]
+    )
+
+
+def alloy_fraction(major: int, minor: int) -> float:
+    return major / (major + minor)
 
 
 def main() -> None:
@@ -52,6 +74,48 @@ def main() -> None:
     assert crop_ok(jul_temp, jul_season, wheat)
     assert not crop_ok(jan_temp, jan_season, wheat)
     assert not crop_ok(jul_temp, jul_season, barley)
+
+    rye = next(c for c in crops if c["id"] == "tfc:crop_rye")
+    squash = next(c for c in crops if c["id"] == "tfc:crop_squash")
+    onion = next(c for c in crops if c["id"] == "tfc:crop_onion")
+    assert crop_ok(jan_temp, jan_season, rye)
+    assert not crop_ok(jul_temp, jul_season, rye)
+    assert crop_ok(jul_temp, jul_season, squash)
+    assert not crop_ok(jan_temp, jan_season, squash)
+
+    dry = rainfall(0, 0, climate["base_rain"])
+    wet = rainfall(2, 0, climate["base_rain"])
+    assert dry == 300.0
+    assert wet == 420.0
+    assert not crop_ok(16.0, "spring", onion, dry)
+    assert crop_ok(16.0, "spring", onion, wet)
+
+    heat = json.loads((MOD / "tables" / "heat.json").read_text(encoding="utf-8"))
+    assert heat["forge_max"] < heat["metals"]["wrought_iron"]["melt"]
+    assert heat["metals"]["tin"]["melt"] < heat["metals"]["copper"]["melt"]
+    assert heat["items"]["tfc:nugget_hematite"] == "wrought_iron"
+    assert heat["metals"]["copper"]["melt"] <= heat["forge_max"]
+    assert heat["metals"]["copper"]["weld"] < heat["metals"]["copper"]["melt"]
+
+    alloys = json.loads((MOD / "tables" / "alloys.json").read_text(encoding="utf-8"))
+    bronze = next(row for row in alloys["alloys"] if row["id"] == "bronze")
+    inside = alloy_fraction(8, 1)
+    outside = alloy_fraction(1, 1)
+    assert bronze["min"] <= inside <= bronze["max"]
+    assert not (bronze["min"] <= outside <= bronze["max"])
+    assert (8 * alloys["ingot_units"] + alloys["ingot_units"]) % alloys["ingot_units"] == 0
+
+    anvil = json.loads((MOD / "tables" / "anvil.json").read_text(encoding="utf-8"))
+    bloom = next(row for row in anvil if row["input"] == "tfc:raw_iron_bloom")
+    assert bloom["output"] == "tfc:wrought_iron_ingot"
+    assert bloom["steps"] == ["hit", "hit", "hit"]
+    assert all(step in {"hit", "draw", "upset"} for row in anvil for step in row["steps"])
+
+    knapping = json.loads((MOD / "tables" / "knapping.json").read_text(encoding="utf-8"))
+    assert knapping["grid"] == 5
+    assert all(len(row["mask"]) == 25 for row in knapping["patterns"])
+    axe = next(row for row in knapping["patterns"] if row["output"] == "tfc:stone_axe_head")
+    assert axe["mask"] == "0010001110001000010000100"
 
     # ticks helper kept for HUD calendar smoke docs
     assert TICKS_PER_DAY == 24_000

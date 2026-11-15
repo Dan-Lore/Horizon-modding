@@ -77,12 +77,57 @@ HEAD_OF = {
     "propick": "propick_head",
 }
 STONE_TOOLS = ["axe", "hoe", "knife", "shovel", "hammer"]
+ANVIL_STEPS = ["hit", "draw", "upset"]
+# 5×5 masks, row-major. 1 is a placed rock, 0 is empty.
+KNAP_MASKS = {
+    "axe": "0010001110001000010000100",
+    "hoe": "1111100000001000010000100",
+    "knife": "0001000110001000100010000",
+    "shovel": "0010001110001000010001110",
+    "hammer": "0111001110001000010000100",
+}
+FORGE_MAX = 1400
+HEAT_PER_TICK = 20
+COOL_PER_TICK = 10
+# melt, weld. Weld stays under the forge cap; wrought melt does not.
+METAL_HEAT = {
+    "copper": (1080, 650),
+    "tin": (230, 150),
+    "bronze": (950, 570),
+    "bismuth": (270, 160),
+    "zinc": (420, 250),
+    "brass": (930, 560),
+    "silver": (961, 580),
+    "gold": (1064, 640),
+    "wrought_iron": (1535, 1100),
+    "steel": (1540, 1200),
+}
+ALLOYS = [
+    {
+        "id": "bronze",
+        "output": "tfc:bronze_ingot",
+        "major": "copper",
+        "minor": "tin",
+        "min": 0.88,
+        "max": 0.92,
+    },
+    {
+        "id": "brass",
+        "output": "tfc:brass_ingot",
+        "major": "copper",
+        "minor": "zinc",
+        "min": 0.88,
+        "max": 0.92,
+    },
+]
 
 MACHINES = [
     {"id": "firepit", "fuel": True, "inputs": 1, "recipe": "firepit"},
-    {"id": "charcoal_forge", "fuel": True, "inputs": 1, "recipe": "charcoal_forge"},
+    {"id": "charcoal_forge", "fuel": True, "inputs": 2, "recipe": "charcoal_forge"},
+    {"id": "crucible", "fuel": True, "inputs": 2, "recipe": "crucible"},
     {"id": "bloomery", "fuel": True, "inputs": 1, "recipe": "bloomery"},
     {"id": "anvil", "fuel": False, "inputs": 1, "recipe": "anvil"},
+    {"id": "knapping", "fuel": False, "inputs": 25, "recipe": None},
     {"id": "quern", "fuel": False, "inputs": 1, "recipe": "quern"},
     {"id": "barrel", "fuel": False, "inputs": 1, "recipe": "barrel"},
     {"id": "pit_kiln", "fuel": False, "inputs": 1, "recipe": "pit_kiln"},
@@ -90,6 +135,7 @@ MACHINES = [
     {"id": "sluice", "fuel": False, "inputs": 1, "recipe": "sluice"},
     {"id": "charcoal_pit", "fuel": False, "inputs": 1, "recipe": "charcoal_pit"},
     {"id": "log_pile", "fuel": False, "inputs": 9, "recipe": None, "storage": True},
+    {"id": "small_vessel", "fuel": False, "inputs": 4, "recipe": None, "storage": True},
 ]
 
 MONTHS = [
@@ -118,12 +164,22 @@ FOODS = [
     ("barley_grain", 1, 0, 0, 0, 0, "small", "light", 12),
     ("flour", 1, 0, 0, 0, 0, "small", "light", 8),
     ("dough", 1, 0, 0, 0, 0, "small", "medium", 3),
+    ("oat_grain", 1, 0, 0, 0, 0, "small", "light", 12),
+    ("rye_grain", 1, 0, 0, 0, 0, "small", "light", 12),
+    ("onion", 0, 0, 1, 0, 0, "small", "light", 5),
+    ("squash", 0, 0, 1, 0, 0, "medium", "medium", 6),
+    ("cooked_squash", 0, 0, 1, 0, 0, "medium", "medium", 4),
 ]
 
+# block, product, seed, min_temp, max_temp, seasons, min_rain, max_rain
 CROPS = [
-    ("crop_wheat", "wheat", "wheat_seed", 10, 30, ["spring", "summer"]),
-    ("crop_barley", "barley_grain", "barley_seed", 4, 28, ["spring", "autumn"]),
-    ("crop_cabbage", "cabbage", "cabbage_seed", 5, 26, ["spring", "summer", "autumn"]),
+    ("crop_wheat", "wheat", "wheat_seed", 10, 30, ["spring", "summer"], 50, 500),
+    ("crop_barley", "barley_grain", "barley_seed", 4, 28, ["spring", "autumn"], 50, 500),
+    ("crop_cabbage", "cabbage", "cabbage_seed", 5, 26, ["spring", "summer", "autumn"], 50, 500),
+    ("crop_oat", "oat_grain", "oat_seed", 8, 28, ["spring", "summer"], 50, 500),
+    ("crop_rye", "rye_grain", "rye_seed", 2, 22, ["autumn", "winter"], 50, 500),
+    ("crop_onion", "onion", "onion_seed", 6, 24, ["spring"], 400, 500),
+    ("crop_squash", "squash", "squash_seed", 12, 32, ["summer"], 50, 500),
 ]
 
 ANIMALS = ["cow", "sheep", "pig", "chicken", "horse", "wolf", "deer", "fish"]
@@ -327,17 +383,56 @@ def machine_recipe(
     result: str,
     count: int = 1,
     duration: int = 160,
+    heat: str | None = None,
 ) -> None:
     body: dict = {
         "type": f"tfc:{kind}",
         "result": {"id": result, "count": count},
         "duration": duration,
     }
+    if kind == "charcoal_forge" and heat is None:
+        heat = "melt"
+    if heat:
+        body["heat"] = heat
     if len(ingredients) == 1:
         body["ingredient"] = ingredients[0]
     else:
         body["ingredients"] = ingredients
     write_json(DATA / "recipe" / f"{kind}_{name}.json", body)
+
+
+def step_seq(index: int) -> list[str]:
+    return [ANVIL_STEPS[(index // (3**power)) % 3] for power in range(3)]
+
+
+def anvil_plans() -> list[dict]:
+    plans = [
+        {
+            "input": "tfc:raw_iron_bloom",
+            "output": "tfc:wrought_iron_ingot",
+            "steps": step_seq(0),
+        }
+    ]
+    by_input: dict[str, list[str]] = {}
+
+    def add(inp: str, out: str) -> None:
+        by_input.setdefault(inp, []).append(out)
+
+    add("tfc:copper_ingot", "tfc:copper_sheet")
+    add("tfc:bronze_ingot", "tfc:bronze_sheet")
+    add("tfc:wrought_iron_ingot", "tfc:wrought_iron_sheet")
+    for _tool, head in HEAD_OF.items():
+        add("tfc:wrought_iron_ingot", f"tfc:wrought_iron_{head}")
+    for inp, outputs in by_input.items():
+        for index, output in enumerate(outputs):
+            plans.append({"input": inp, "output": output, "steps": step_seq(index)})
+    return plans
+
+
+def heat_metal_name(name: str) -> str:
+    if name in {"iron", "hematite"}:
+        return "wrought_iron"
+    return name
 
 
 def menu(name: str, slots: int, results: list[int]) -> None:
@@ -396,9 +491,11 @@ def write_tables() -> None:
                 "seed": f"tfc:{seed}",
                 "min_temp": min_temp,
                 "max_temp": max_temp,
+                "min_rain": min_rain,
+                "max_rain": max_rain,
                 "seasons": seasons,
             }
-            for block, product, seed, min_temp, max_temp, seasons in CROPS
+            for block, product, seed, min_temp, max_temp, seasons, min_rain, max_rain in CROPS
         ],
     )
     write_json(
@@ -414,20 +511,36 @@ def write_tables() -> None:
             for name, label, metal, path, _rgb in ORES
         ],
     )
+    items: dict[str, str] = {"minecraft:gold_ingot": "gold"}
+    for name, _label, metal, _path, _rgb in ORES:
+        items[f"tfc:nugget_{name}"] = heat_metal_name(metal)
+    for metal, _rgb in METALS:
+        for form in METAL_FORMS:
+            items[f"tfc:{metal}_{form}"] = metal
     write_json(
         TABLES / "heat.json",
         {
-            "copper": 1080,
-            "tin": 230,
-            "bronze": 950,
-            "bismuth": 270,
-            "zinc": 420,
-            "brass": 930,
-            "silver": 961,
-            "wrought_iron": 1535,
-            "steel": 1540,
+            "forge_max": FORGE_MAX,
+            "per_tick": HEAT_PER_TICK,
+            "cool_per_tick": COOL_PER_TICK,
+            "metals": {
+                metal: {"melt": melt, "weld": weld}
+                for metal, (melt, weld) in METAL_HEAT.items()
+            },
+            "items": items,
         },
     )
+    write_json(
+        TABLES / "alloys.json",
+        {
+            "ingot_units": 100,
+            "nugget_units": 10,
+            "double_units": 200,
+            "duration": 200,
+            "alloys": ALLOYS,
+        },
+    )
+    write_json(TABLES / "anvil.json", anvil_plans())
     write_json(
         TABLES / "animals.json",
         [
@@ -456,11 +569,19 @@ def write_tables() -> None:
             "planned_layers": PLANNED_LAYERS,
         },
     )
+    for tool, mask in KNAP_MASKS.items():
+        if len(mask) != 25 or set(mask) - {"0", "1"}:
+            raise SystemExit(f"knapping mask for {tool} must be 25 bits")
     write_json(
         TABLES / "knapping.json",
         {
-            "note": "Knapping UI is a crafting stand-in in 0.1.0.",
-            "recipes": [f"stone_{tool}" for tool in STONE_TOOLS],
+            "rock": "tfc:andesite_cobble",
+            "grid": 5,
+            "ticks": 20,
+            "patterns": [
+                {"output": f"tfc:stone_{HEAD_OF[tool]}", "mask": mask}
+                for tool, mask in KNAP_MASKS.items()
+            ],
         },
     )
     machines = []
@@ -548,7 +669,7 @@ def main() -> None:
         results = [] if out is None else [out]
         menu(name, slots, results)
 
-    for name, _product, _seed, _lo, _hi, _seasons in CROPS:
+    for name, _product, _seed, _lo, _hi, _seasons, _min_rain, _max_rain in CROPS:
         block_files(name, color_for(name, (40, 120, 40)), True, 0.4, "minecraft:stone")
         lang[f"block.tfc.{name}"] = title(name)
         tab(f"tfc:{name}")
@@ -581,6 +702,10 @@ def main() -> None:
         item_files(f"stone_{tool}", (140, 140, 140), "minecraft:stone_pickaxe")
         lang[f"item.tfc.stone_{tool}"] = f"Stone {title(tool)}"
         tab(f"tfc:stone_{tool}")
+        head = HEAD_OF[tool]
+        item_files(f"stone_{head}", (150, 150, 150))
+        lang[f"item.tfc.stone_{head}"] = f"Stone {title(head)}"
+        tab(f"tfc:stone_{head}")
 
     extras = {
         "prospector_pick": ((160, 120, 70), "minecraft:iron_pickaxe"),
@@ -597,6 +722,7 @@ def main() -> None:
         "lumber": ((150, 110, 60), "minecraft:stick"),
         "tannin": ((120, 70, 40), "minecraft:potion"),
         "ore_deposit": ((130, 110, 80), "minecraft:gravel"),
+        "rot": ((90, 110, 50), "minecraft:rotten_flesh"),
     }
     for name, (rgb, template) in extras.items():
         item_files(name, rgb, template)
@@ -612,9 +738,13 @@ def main() -> None:
         lang[f"item.tfc.{name}"] = title(name)
         tab(f"tfc:{name}")
 
-    # Crafting stand-ins.
+    # Crafting. Stone tools come from a knapped head, not loose cobble.
     for tool in STONE_TOOLS:
-        shapeless(f"stone_{tool}", ["tfc:andesite_cobble", "minecraft:stick"], f"tfc:stone_{tool}")
+        head = HEAD_OF[tool]
+        shapeless(f"stone_{tool}", [f"tfc:stone_{head}", "minecraft:stick"], f"tfc:stone_{tool}")
+    shapeless("knapping", ["tfc:andesite_cobble"], "tfc:knapping")
+    shapeless("small_vessel", ["tfc:vessel"], "tfc:small_vessel")
+    shapeless("crucible", ["tfc:andesite_cobble", "tfc:andesite_cobble", "minecraft:charcoal"], "tfc:crucible")
     shapeless("prospector_pick", ["tfc:copper_ingot", "minecraft:stick"], "tfc:prospector_pick")
     shapeless("firepit", ["minecraft:stick", "minecraft:stick", "minecraft:oak_log"], "tfc:firepit")
     shapeless("charcoal_forge", ["tfc:andesite_cobble", "tfc:andesite_cobble", "minecraft:charcoal"], "tfc:charcoal_forge")
@@ -635,10 +765,6 @@ def main() -> None:
     shapeless("wooden_bucket", ["tfc:lumber", "tfc:lumber", "tfc:lumber"], "tfc:wooden_bucket")
     shapeless("pan", ["tfc:copper_sheet"], "tfc:pan")
     shapeless("dough", ["tfc:flour"], "tfc:dough")
-    shapeless("weld_copper", ["tfc:copper_ingot", "tfc:copper_ingot"], "tfc:copper_double_ingot")
-    shapeless("weld_bronze", ["tfc:bronze_ingot", "tfc:bronze_ingot"], "tfc:bronze_double_ingot")
-    shapeless("alloy_bronze", ["tfc:copper_ingot", "tfc:tin_ingot"], "tfc:bronze_ingot", 2)
-    shapeless("alloy_brass", ["tfc:copper_ingot", "tfc:zinc_ingot"], "tfc:brass_ingot", 2)
     shapeless("glass_batch", ["minecraft:sand", "tfc:flux"], "tfc:glass_batch")
     shapeless("powderkeg", ["minecraft:gunpowder", "tfc:lumber"], "tfc:powderkeg")
     shapeless("ore_deposit", ["minecraft:gravel", "tfc:pan"], "tfc:ore_deposit")
@@ -651,6 +777,7 @@ def main() -> None:
     machine_recipe("firepit", "beef", ["minecraft:beef"], "tfc:cooked_meat", duration=120)
     machine_recipe("firepit", "pork", ["minecraft:porkchop"], "tfc:cooked_meat", duration=120)
     machine_recipe("firepit", "dough", ["tfc:dough"], "tfc:bread", duration=120)
+    machine_recipe("firepit", "squash", ["tfc:squash"], "tfc:cooked_squash", duration=120)
     machine_recipe("charcoal_forge", "copper", ["tfc:nugget_native_copper"], "tfc:copper_ingot", duration=160)
     machine_recipe("charcoal_forge", "malachite", ["tfc:nugget_malachite"], "tfc:copper_ingot", duration=160)
     machine_recipe("charcoal_forge", "tin", ["tfc:nugget_cassiterite"], "tfc:tin_ingot", duration=140)
@@ -658,6 +785,37 @@ def main() -> None:
     machine_recipe("charcoal_forge", "zinc", ["tfc:nugget_sphalerite"], "tfc:zinc_ingot", duration=140)
     machine_recipe("charcoal_forge", "silver", ["tfc:nugget_native_silver"], "tfc:silver_ingot", duration=180)
     machine_recipe("charcoal_forge", "gold", ["tfc:nugget_native_gold"], "minecraft:gold_ingot", duration=180)
+    machine_recipe(
+        "charcoal_forge",
+        "hematite",
+        ["tfc:nugget_hematite"],
+        "tfc:wrought_iron_ingot",
+        duration=300,
+    )
+    for metal, _rgb in METALS:
+        machine_recipe(
+            "charcoal_forge",
+            f"weld_{metal}",
+            [f"tfc:{metal}_ingot", f"tfc:{metal}_ingot"],
+            f"tfc:{metal}_double_ingot",
+            heat="weld",
+        )
+    machine_recipe(
+        "crucible",
+        "bronze",
+        ["tfc:copper_ingot", "tfc:tin_ingot"],
+        "tfc:bronze_ingot",
+        count=9,
+        duration=200,
+    )
+    machine_recipe(
+        "crucible",
+        "brass",
+        ["tfc:copper_ingot", "tfc:zinc_ingot"],
+        "tfc:brass_ingot",
+        count=9,
+        duration=200,
+    )
     for tool, head in HEAD_OF.items():
         for metal in CAST_METALS:
             machine_recipe(
@@ -668,20 +826,13 @@ def main() -> None:
                 duration=200,
             )
     machine_recipe("bloomery", "hematite", ["tfc:nugget_hematite"], "tfc:raw_iron_bloom", duration=300)
-    machine_recipe("anvil", "bloom", ["tfc:raw_iron_bloom"], "tfc:wrought_iron_ingot", duration=200)
-    machine_recipe("anvil", "copper_sheet", ["tfc:copper_ingot"], "tfc:copper_sheet", duration=160)
-    machine_recipe("anvil", "bronze_sheet", ["tfc:bronze_ingot"], "tfc:bronze_sheet", duration=160)
-    machine_recipe("anvil", "wrought_sheet", ["tfc:wrought_iron_ingot"], "tfc:wrought_iron_sheet", duration=200)
-    for tool, head in HEAD_OF.items():
-        machine_recipe(
-            "anvil",
-            f"wrought_{head}",
-            ["tfc:wrought_iron_ingot"],
-            f"tfc:wrought_iron_{head}",
-            duration=220,
-        )
+    for plan in anvil_plans():
+        slug = plan["output"].split(":", 1)[1]
+        machine_recipe("anvil", slug, [plan["input"]], plan["output"], duration=200)
     machine_recipe("quern", "wheat", ["tfc:wheat"], "tfc:flour", duration=120)
     machine_recipe("quern", "barley", ["tfc:barley_grain"], "tfc:flour", duration=120)
+    machine_recipe("quern", "oat", ["tfc:oat_grain"], "tfc:flour", duration=120)
+    machine_recipe("quern", "rye", ["tfc:rye_grain"], "tfc:flour", duration=120)
     machine_recipe("quern", "flux", ["tfc:limestone_gravel"], "tfc:flux", duration=100)
     machine_recipe("barrel", "tannin", ["minecraft:oak_log"], "tfc:tannin", duration=200)
     machine_recipe("pit_kiln", "vessel", ["tfc:unfired_vessel"], "tfc:vessel", duration=240)

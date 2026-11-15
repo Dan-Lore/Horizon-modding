@@ -131,7 +131,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Keep **prune-old-versions off** while `fdc87ae` + `9f42064` nightlies must remain.
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
-- TFC Horizon 0.1.0 (workshop, not on the pack pin): `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `mods/tfc/`. `on = []` so AE2/Greglite stay the native-build.
+- TFC Horizon 0.2.0 (workshop, not on the pack pin): `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `mods/tfc/`. `on = []` so AE2/Greglite stay the native-build.
 
 
 ## Links

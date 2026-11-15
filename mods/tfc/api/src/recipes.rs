@@ -5,11 +5,19 @@ use horizon_client::mod_api::{Host, Ingredient, ItemStack};
 use std::collections::HashSet;
 use std::sync::Arc;
 
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HeatNeed {
+    None,
+    Melt,
+    Weld,
+}
+
 #[derive(Clone, Debug)]
 pub struct MachineRecipe {
     pub inputs: Vec<Ingredient>,
     pub output: ItemStack,
     pub duration: i32,
+    pub heat: HeatNeed,
 }
 
 pub fn stack(id: &str, count: u32) -> ItemStack {
@@ -51,10 +59,16 @@ fn parse(host: &dyn Host, json: &Value) -> Option<MachineRecipe> {
     if inputs.is_empty() {
         return None;
     }
+    let heat = match json.get("heat").and_then(|value| value.as_str()) {
+        Some("weld") => HeatNeed::Weld,
+        Some("melt") => HeatNeed::Melt,
+        _ => HeatNeed::None,
+    };
     Some(MachineRecipe {
         inputs,
         output,
         duration: duration.max(1),
+        heat,
     })
 }
 
@@ -70,10 +84,25 @@ fn item_ing(id: &str) -> Ingredient {
 }
 
 fn one(input: &str, output: &str, duration: i32) -> MachineRecipe {
+    heated(input, output, duration, HeatNeed::None)
+}
+
+fn heated(input: &str, output: &str, duration: i32, heat: HeatNeed) -> MachineRecipe {
     MachineRecipe {
         inputs: vec![item_ing(input)],
         output: stack(output, 1),
         duration,
+        heat,
+    }
+}
+
+fn weld(metal: &str, duration: i32) -> MachineRecipe {
+    let ingot = format!("tfc:{metal}_ingot");
+    MachineRecipe {
+        inputs: vec![item_ing(&ingot), item_ing(&ingot)],
+        output: stack(&format!("tfc:{metal}_double_ingot"), 1),
+        duration,
+        heat: HeatNeed::Weld,
     }
 }
 
@@ -83,18 +112,28 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             one("minecraft:beef", "tfc:cooked_meat", 120),
             one("minecraft:porkchop", "tfc:cooked_meat", 120),
             one("tfc:dough", "tfc:bread", 120),
+            one("tfc:squash", "tfc:cooked_squash", 120),
         ],
         "tfc:charcoal_forge" => vec![
-            one("tfc:nugget_native_copper", "tfc:copper_ingot", 160),
-            one("tfc:nugget_malachite", "tfc:copper_ingot", 160),
-            one("tfc:nugget_cassiterite", "tfc:tin_ingot", 140),
-            one("tfc:nugget_bismuthinite", "tfc:bismuth_ingot", 120),
-            one("tfc:nugget_sphalerite", "tfc:zinc_ingot", 140),
-            one("tfc:nugget_native_silver", "tfc:silver_ingot", 180),
-            one("tfc:nugget_native_gold", "minecraft:gold_ingot", 180),
-            one("tfc:copper_ingot", "tfc:copper_axe_head", 200),
-            one("tfc:bronze_ingot", "tfc:bronze_axe_head", 200),
+            heated("tfc:nugget_native_copper", "tfc:copper_ingot", 160, HeatNeed::Melt),
+            heated("tfc:nugget_malachite", "tfc:copper_ingot", 160, HeatNeed::Melt),
+            heated("tfc:nugget_cassiterite", "tfc:tin_ingot", 140, HeatNeed::Melt),
+            heated("tfc:nugget_bismuthinite", "tfc:bismuth_ingot", 120, HeatNeed::Melt),
+            heated("tfc:nugget_sphalerite", "tfc:zinc_ingot", 140, HeatNeed::Melt),
+            heated("tfc:nugget_native_silver", "tfc:silver_ingot", 180, HeatNeed::Melt),
+            heated("tfc:nugget_native_gold", "minecraft:gold_ingot", 180, HeatNeed::Melt),
+            heated("tfc:nugget_hematite", "tfc:wrought_iron_ingot", 300, HeatNeed::Melt),
+            heated("tfc:copper_ingot", "tfc:copper_axe_head", 200, HeatNeed::Melt),
+            heated("tfc:bronze_ingot", "tfc:bronze_axe_head", 200, HeatNeed::Melt),
+            weld("copper", 160),
+            weld("bronze", 160),
         ],
+        "tfc:crucible" => vec![MachineRecipe {
+            inputs: vec![item_ing("tfc:copper_ingot"), item_ing("tfc:tin_ingot")],
+            output: stack("tfc:bronze_ingot", 9),
+            duration: 200,
+            heat: HeatNeed::Melt,
+        }],
         "tfc:bloomery" => vec![one("tfc:nugget_hematite", "tfc:raw_iron_bloom", 300)],
         "tfc:anvil" => vec![
             one("tfc:raw_iron_bloom", "tfc:wrought_iron_ingot", 200),
@@ -106,6 +145,8 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
         "tfc:quern" => vec![
             one("tfc:wheat", "tfc:flour", 120),
             one("tfc:barley_grain", "tfc:flour", 120),
+            one("tfc:oat_grain", "tfc:flour", 120),
+            one("tfc:rye_grain", "tfc:flour", 120),
             one("tfc:limestone_gravel", "tfc:flux", 100),
         ],
         "tfc:barrel" => vec![one("minecraft:oak_log", "tfc:tannin", 200)],
@@ -118,6 +159,7 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             inputs: vec![item_ing("tfc:wrought_iron_ingot"), item_ing("tfc:flux")],
             output: stack("tfc:steel_ingot", 1),
             duration: 320,
+            heat: HeatNeed::None,
         }],
         "tfc:sluice" => vec![one("tfc:ore_deposit", "tfc:nugget_native_copper", 160)],
         "tfc:charcoal_pit" => vec![one("minecraft:oak_log", "minecraft:charcoal", 240)],

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/crop_squash",
+    "front": "tfc:block/crop_squash",
+    "side": "tfc:block/crop_squash",
+    "bottom": "tfc:block/crop_squash",
+    "particle": "tfc:block/crop_squash"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/crop_oat",
+    "front": "tfc:block/crop_oat",
+    "side": "tfc:block/crop_oat",
+    "bottom": "tfc:block/crop_oat",
+    "particle": "tfc:block/crop_oat"
+  }
+}

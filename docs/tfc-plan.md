@@ -3,7 +3,7 @@
 **Own mod:** `mods/tfc/` (clean-room Horizon rewrite, not a TerraFirmaCraft jar).  
 **Inspiration:** TerraFirmaCraft 1.20.1 as used by TerraFirmaGreg-Modern. Attribution: `mods/tfc/NOTICE`.  
 **Tracker:** `mods/tfc/tracker/catalog.json` → `docs/tfc-tracker.md`.  
-**Version:** 0.1.0 covers W0–W15 tables and the systems that hooks 411 can run.
+**Version:** 0.2.0 adds W16–W22 on the same hooks 411 pin. 0.1.x covered W0–W15.
 
 ## Locks
 
@@ -39,6 +39,20 @@
 | **W15** | Glass batch, chisel mark, powderkeg content, JEI recipe types | done |
 
 W12 here is the blast furnace. Worldgen is W14. That is the wave order this repo implements.
+
+## 0.2.0
+
+Same pin. Heat stays on the block entity. Inventory rot, collapse replacement, animals, and worldgen stay locked.
+
+| Wave | Deliverable | 0.2.0 |
+| --- | --- | --- |
+| **W16** | Forge heat from `tables/heat.json`, cap 1400. Copper melts at 1080, tin at 230, hematite does not become an ingot | done |
+| **W17** | Crucible ratios for bronze and brass. Shapeless alloys removed | done |
+| **W18** | Hammer steps on the anvil. Weld is two ingots in the forge | done |
+| **W19** | 5×5 knapping block. Stone tools are head plus stick | done |
+| **W20** | Bread in the small vessel or an idle barrel becomes `tfc:rot`. Inventory stacks do not | done |
+| **W21** | Rain gate. Oat, rye, onion, squash | done |
+| **W22** | Version 0.2.0, checker, tracker | done |
 
 ## What hooks 411 cannot do
 

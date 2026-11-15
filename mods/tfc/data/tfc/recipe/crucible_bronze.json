@@ -1,0 +1,12 @@
+{
+  "type": "tfc:crucible",
+  "result": {
+    "id": "tfc:bronze_ingot",
+    "count": 9
+  },
+  "duration": 200,
+  "ingredients": [
+    "tfc:copper_ingot",
+    "tfc:tin_ingot"
+  ]
+}

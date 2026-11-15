@@ -18,10 +18,11 @@ Stay off that instance's native-build until you mean to smoke TFC there.
 
 ## Play slice
 
-1. Login line names TFC Horizon 0.1.0.
+1. Login line names TFC Horizon 0.2.0.
 2. Action bar shows season, temperature, thirst, and five nutrients.
 3. `/give` a rock, an ore, and `tfc:prospector_pick`.
-4. Firepit, pit kiln, charcoal forge, bloomery, anvil, quern, barrel, sluice, blast furnace: fuel slot first when the block burns, then inputs, then the output.
-5. Animals are not spawned. Chunks are not rewritten. Unsupported rock is a chat warning.
+4. Firepit, pit kiln, charcoal forge, crucible, bloomery, anvil, knapping, quern, barrel, sluice, blast furnace, small vessel: fuel slot first when the block burns, then inputs, then the output.
+5. The forge heats items in place. Bronze and brass are crucible ratios. The anvil moves when hit with a hammer. Stone tools start as a knapped head. Bread in the small vessel becomes rot; bread in the inventory does not.
+6. Animals are not spawned. Chunks are not rewritten. Unsupported rock is a chat warning.
 
 Smoke paths for every wave are in the catalog. `done` is only used when that path is written down.
