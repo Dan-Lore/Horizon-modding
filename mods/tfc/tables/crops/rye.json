@@ -1,0 +1,8 @@
+{
+  "id": "rye",
+  "temp_min": -5,
+  "temp_max": 20,
+  "rain_min": 100,
+  "rain_max": 350,
+  "stages": 8
+}

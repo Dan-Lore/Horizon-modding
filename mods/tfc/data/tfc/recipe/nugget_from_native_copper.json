@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_native_copper"
+    },
+    {
+      "item": "tfc:small_ore_native_copper"
+    },
+    {
+      "item": "tfc:small_ore_native_copper"
+    },
+    {
+      "item": "tfc:small_ore_native_copper"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_native_copper",
+    "count": 1
+  }
+}

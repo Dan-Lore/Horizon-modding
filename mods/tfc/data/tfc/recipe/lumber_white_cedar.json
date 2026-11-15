@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood_white_cedar_log"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood_white_cedar_lumber",
+    "count": 8
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_sphalerite"
+    },
+    {
+      "item": "tfc:small_ore_sphalerite"
+    },
+    {
+      "item": "tfc:small_ore_sphalerite"
+    },
+    {
+      "item": "tfc:small_ore_sphalerite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_sphalerite",
+    "count": 1
+  }
+}

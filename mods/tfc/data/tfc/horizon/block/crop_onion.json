@@ -1,0 +1,8 @@
+{
+  "template": "minecraft:wheat",
+  "properties": {
+    "hardness": 0.0,
+    "sounds": "minecraft:stone"
+  },
+  "item": true
+}

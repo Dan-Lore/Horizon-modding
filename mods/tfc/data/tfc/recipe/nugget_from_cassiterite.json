@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_cassiterite"
+    },
+    {
+      "item": "tfc:small_ore_cassiterite"
+    },
+    {
+      "item": "tfc:small_ore_cassiterite"
+    },
+    {
+      "item": "tfc:small_ore_cassiterite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_cassiterite",
+    "count": 1
+  }
+}

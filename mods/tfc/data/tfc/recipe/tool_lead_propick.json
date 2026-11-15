@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H",
+    "S"
+  ],
+  "key": {
+    "H": {
+      "item": "tfc:metal_lead_propick_head"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfc:metal_lead_propick",
+    "count": 1
+  }
+}

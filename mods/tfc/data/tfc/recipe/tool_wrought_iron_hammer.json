@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H",
+    "S"
+  ],
+  "key": {
+    "H": {
+      "item": "tfc:metal_wrought_iron_hammer_head"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfc:metal_wrought_iron_hammer",
+    "count": 1
+  }
+}

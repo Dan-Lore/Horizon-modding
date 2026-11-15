@@ -1,0 +1,12 @@
+TFC Horizon — Horizon-native workshop mod (TerraFirmaCraft-inspired survival).
+
+Inspired by TerraFirmaCraft (https://github.com/TerraFirmaCraft/TerraFirmaCraft);
+not affiliated with the TerraFirmaCraft authors. Clean reimplementation for
+Horizon — not a jar port and not TerraFirmaGreg.
+
+Reference design target: TFC for Minecraft Java 1.20.1 (as used in TFG-Modern).
+
+Original Rust, JSON, and generated tables in this folder: MIT unless noted.
+Minecraft / Mojang assets are not redistributed.
+TFC textures are not copied; blocks/items use vanilla templates until original
+or licensed art is added.

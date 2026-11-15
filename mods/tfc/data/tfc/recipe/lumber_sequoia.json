@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood_sequoia_log"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood_sequoia_lumber",
+    "count": 8
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cooked_beef",
+  "nutrients": {
+    "grain": 0,
+    "fruit": 0,
+    "veg": 0,
+    "protein": 3,
+    "dairy": 0
+  },
+  "size": "large",
+  "weight": "heavy",
+  "decay_ticks": 48000
+}

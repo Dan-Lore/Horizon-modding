@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_garnierite"
+    },
+    {
+      "item": "tfc:small_ore_garnierite"
+    },
+    {
+      "item": "tfc:small_ore_garnierite"
+    },
+    {
+      "item": "tfc:small_ore_garnierite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_garnierite",
+    "count": 1
+  }
+}

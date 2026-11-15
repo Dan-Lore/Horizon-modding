@@ -1,0 +1,23 @@
+[
+  {
+    "id": "tannin",
+    "input_item": "tfc:wood_oak_log",
+    "fluid": "water",
+    "ticks": 8000,
+    "output": "tfc:wood_ash"
+  },
+  {
+    "id": "limewater",
+    "input_item": "tfc:flux",
+    "fluid": "water",
+    "ticks": 1000,
+    "output": "tfc:mortar"
+  },
+  {
+    "id": "alcohol_apple",
+    "input_item": "tfc:food_red_apple",
+    "fluid": "water",
+    "ticks": 72000,
+    "output": "tfc:food_red_apple"
+  }
+]

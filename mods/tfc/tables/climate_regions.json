@@ -1,0 +1,27 @@
+[
+  {
+    "id": "temperate",
+    "temp": 15.0,
+    "rain": 300.0
+  },
+  {
+    "id": "tropical",
+    "temp": 28.0,
+    "rain": 450.0
+  },
+  {
+    "id": "arid",
+    "temp": 25.0,
+    "rain": 40.0
+  },
+  {
+    "id": "boreal",
+    "temp": 2.0,
+    "rain": 250.0
+  },
+  {
+    "id": "polar",
+    "temp": -15.0,
+    "rain": 100.0
+  }
+]

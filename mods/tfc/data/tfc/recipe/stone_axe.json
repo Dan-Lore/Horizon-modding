@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H",
+    "S"
+  ],
+  "key": {
+    "H": {
+      "item": "tfc:stone_axe_head"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfc:stone_axe",
+    "count": 1
+  }
+}

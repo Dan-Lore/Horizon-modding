@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H",
+    "S"
+  ],
+  "key": {
+    "H": {
+      "item": "tfc:metal_bismuth_axe_head"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfc:metal_bismuth_axe",
+    "count": 1
+  }
+}

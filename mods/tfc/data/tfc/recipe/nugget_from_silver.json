@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_silver"
+    },
+    {
+      "item": "tfc:small_ore_silver"
+    },
+    {
+      "item": "tfc:small_ore_silver"
+    },
+    {
+      "item": "tfc:small_ore_silver"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_silver",
+    "count": 1
+  }
+}

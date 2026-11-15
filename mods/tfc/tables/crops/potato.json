@@ -1,0 +1,8 @@
+{
+  "id": "potato",
+  "temp_min": 0,
+  "temp_max": 25,
+  "rain_min": 150,
+  "rain_max": 400,
+  "stages": 8
+}

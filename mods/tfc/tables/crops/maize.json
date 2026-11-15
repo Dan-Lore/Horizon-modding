@@ -1,0 +1,8 @@
+{
+  "id": "maize",
+  "temp_min": 10,
+  "temp_max": 35,
+  "rain_min": 200,
+  "rain_max": 400,
+  "stages": 8
+}

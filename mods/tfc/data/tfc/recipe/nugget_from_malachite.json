@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_malachite"
+    },
+    {
+      "item": "tfc:small_ore_malachite"
+    },
+    {
+      "item": "tfc:small_ore_malachite"
+    },
+    {
+      "item": "tfc:small_ore_malachite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_malachite",
+    "count": 1
+  }
+}

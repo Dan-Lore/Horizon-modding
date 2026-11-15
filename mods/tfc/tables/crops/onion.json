@@ -1,0 +1,8 @@
+{
+  "id": "onion",
+  "temp_min": 0,
+  "temp_max": 30,
+  "rain_min": 100,
+  "rain_max": 400,
+  "stages": 8
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood_aspen_log"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood_aspen_lumber",
+    "count": 8
+  }
+}

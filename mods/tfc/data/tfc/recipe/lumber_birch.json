@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood_birch_log"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood_birch_lumber",
+    "count": 8
+  }
+}

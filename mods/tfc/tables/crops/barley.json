@@ -1,0 +1,8 @@
+{
+  "id": "barley",
+  "temp_min": 5,
+  "temp_max": 25,
+  "rain_min": 100,
+  "rain_max": 300,
+  "stages": 8
+}

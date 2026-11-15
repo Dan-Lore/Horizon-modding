@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock_limestone_loose"
+    },
+    {
+      "item": "tfc:rock_limestone_loose"
+    }
+  ],
+  "result": {
+    "item": "tfc:stone_axe_head",
+    "count": 1
+  }
+}

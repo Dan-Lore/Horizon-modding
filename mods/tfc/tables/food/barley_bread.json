@@ -1,0 +1,13 @@
+{
+  "id": "barley_bread",
+  "nutrients": {
+    "grain": 3,
+    "fruit": 0,
+    "veg": 0,
+    "protein": 0,
+    "dairy": 0
+  },
+  "size": "medium",
+  "weight": "light",
+  "decay_ticks": 48000
+}

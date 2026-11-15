@@ -1,0 +1,13 @@
+{
+  "id": "cheese",
+  "nutrients": {
+    "grain": 0,
+    "fruit": 0,
+    "veg": 0,
+    "protein": 0,
+    "dairy": 3
+  },
+  "size": "small",
+  "weight": "light",
+  "decay_ticks": 48000
+}

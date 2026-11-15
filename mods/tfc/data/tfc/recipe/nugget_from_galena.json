@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_galena"
+    },
+    {
+      "item": "tfc:small_ore_galena"
+    },
+    {
+      "item": "tfc:small_ore_galena"
+    },
+    {
+      "item": "tfc:small_ore_galena"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_galena",
+    "count": 1
+  }
+}

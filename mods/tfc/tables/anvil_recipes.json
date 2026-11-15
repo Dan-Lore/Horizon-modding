@@ -1,0 +1,46 @@
+[
+  {
+    "id": "copper_pick_head",
+    "input": "tfc:metal_copper_ingot",
+    "output": "tfc:metal_copper_pickaxe_head",
+    "tier": 1,
+    "steps": [
+      "hit",
+      "draw",
+      "hit"
+    ]
+  },
+  {
+    "id": "copper_axe_head",
+    "input": "tfc:metal_copper_ingot",
+    "output": "tfc:metal_copper_axe_head",
+    "tier": 1,
+    "steps": [
+      "hit",
+      "hit",
+      "punch"
+    ]
+  },
+  {
+    "id": "bronze_pick_head",
+    "input": "tfc:metal_bronze_ingot",
+    "output": "tfc:metal_bronze_pickaxe_head",
+    "tier": 2,
+    "steps": [
+      "hit",
+      "draw",
+      "hit"
+    ]
+  },
+  {
+    "id": "wrought_sheet",
+    "input": "tfc:metal_wrought_iron_ingot",
+    "output": "tfc:metal_wrought_iron_sheet",
+    "tier": 3,
+    "steps": [
+      "hit",
+      "hit",
+      "hit"
+    ]
+  }
+]

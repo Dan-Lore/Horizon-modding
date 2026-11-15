@@ -1,0 +1,13 @@
+{
+  "id": "red_apple",
+  "nutrients": {
+    "grain": 0,
+    "fruit": 2,
+    "veg": 0,
+    "protein": 0,
+    "dairy": 0
+  },
+  "size": "medium",
+  "weight": "light",
+  "decay_ticks": 48000
+}

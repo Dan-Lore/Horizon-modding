@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_bismuthinite"
+    },
+    {
+      "item": "tfc:small_ore_bismuthinite"
+    },
+    {
+      "item": "tfc:small_ore_bismuthinite"
+    },
+    {
+      "item": "tfc:small_ore_bismuthinite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_bismuthinite",
+    "count": 1
+  }
+}

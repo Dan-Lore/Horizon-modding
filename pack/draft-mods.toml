@@ -19,7 +19,7 @@ native_version = "native-fdc87ae-428278da87c5"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + Jade/AppleSkin/Continuity"
+notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + Jade/AppleSkin/Continuity; TFC Horizon 0.1 optional after smoke"
 
 # --- Batch A ---
 
@@ -83,6 +83,19 @@ batch = "A+electric"
 status = "built"
 on = ["pack"]
 minecraft_role = "GregTech-inspired Steam + LV Electric"
+
+# --- TFC Horizon (own) ---
+
+[[mods]]
+id = "tfc"
+name = "TFC Horizon"
+version = "0.1.0"
+source = "mods/tfc → tfc.hmod"
+batch = "TFC"
+status = "scaffold"
+on = ["pack"]
+minecraft_role = "TerraFirmaCraft core (hybrid)"
+why = "Clean-room rewrite; W12 worldgen blocked; W13 animals deferred. Plan: docs/tfc-plan.md"
 
 # --- Create (isolated) ---
 

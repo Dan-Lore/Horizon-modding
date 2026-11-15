@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:wood_maple_log"
+    }
+  ],
+  "result": {
+    "item": "tfc:wood_maple_lumber",
+    "count": 8
+  }
+}

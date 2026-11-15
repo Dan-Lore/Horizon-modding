@@ -1,0 +1,57 @@
+[
+  {
+    "input": "tfc:ore_native_copper",
+    "output": "tfc:metal_copper_ingot",
+    "temp": 1085
+  },
+  {
+    "input": "tfc:metal_tin_ingot",
+    "output": "tfc:metal_tin_ingot",
+    "temp": 230
+  },
+  {
+    "input": "tfc:metal_bronze_ingot",
+    "output": "tfc:metal_bronze_ingot",
+    "temp": 950
+  },
+  {
+    "input": "tfc:metal_gold_ingot",
+    "output": "tfc:metal_gold_ingot",
+    "temp": 1064
+  },
+  {
+    "input": "tfc:metal_silver_ingot",
+    "output": "tfc:metal_silver_ingot",
+    "temp": 962
+  },
+  {
+    "input": "tfc:metal_bismuth_ingot",
+    "output": "tfc:metal_bismuth_ingot",
+    "temp": 271
+  },
+  {
+    "input": "tfc:metal_zinc_ingot",
+    "output": "tfc:metal_zinc_ingot",
+    "temp": 420
+  },
+  {
+    "input": "tfc:metal_wrought_iron_ingot",
+    "output": "tfc:metal_wrought_iron_ingot",
+    "temp": 1535
+  },
+  {
+    "input": "tfc:metal_steel_ingot",
+    "output": "tfc:metal_steel_ingot",
+    "temp": 1540
+  },
+  {
+    "input": "tfc:metal_lead_ingot",
+    "output": "tfc:metal_lead_ingot",
+    "temp": 327
+  },
+  {
+    "input": "tfc:metal_nickel_ingot",
+    "output": "tfc:metal_nickel_ingot",
+    "temp": 1455
+  }
+]

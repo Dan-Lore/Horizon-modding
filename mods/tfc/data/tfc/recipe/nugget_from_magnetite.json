@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_magnetite"
+    },
+    {
+      "item": "tfc:small_ore_magnetite"
+    },
+    {
+      "item": "tfc:small_ore_magnetite"
+    },
+    {
+      "item": "tfc:small_ore_magnetite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_magnetite",
+    "count": 1
+  }
+}

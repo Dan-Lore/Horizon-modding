@@ -1,0 +1,28 @@
+[
+  {
+    "id": "bronze",
+    "inputs": {
+      "copper": 0.88,
+      "tin": 0.12
+    },
+    "output": "tfc:metal_bronze_ingot"
+  },
+  {
+    "id": "bismuth_bronze",
+    "inputs": {
+      "copper": 0.5,
+      "zinc": 0.3,
+      "bismuth": 0.2
+    },
+    "output": "tfc:metal_bismuth_bronze_ingot"
+  },
+  {
+    "id": "black_bronze",
+    "inputs": {
+      "copper": 0.5,
+      "gold": 0.25,
+      "silver": 0.25
+    },
+    "output": "tfc:metal_black_bronze_ingot"
+  }
+]

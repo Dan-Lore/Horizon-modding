@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_tetrahedrite"
+    },
+    {
+      "item": "tfc:small_ore_tetrahedrite"
+    },
+    {
+      "item": "tfc:small_ore_tetrahedrite"
+    },
+    {
+      "item": "tfc:small_ore_tetrahedrite"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_tetrahedrite",
+    "count": 1
+  }
+}

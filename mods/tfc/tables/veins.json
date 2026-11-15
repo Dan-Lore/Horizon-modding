@@ -1,0 +1,26 @@
+[
+  {
+    "id": "native_copper_surface",
+    "ore": "tfc:ore_native_copper",
+    "y_min": 40,
+    "y_max": 120,
+    "rarity": 40,
+    "status": "hybrid_placeable"
+  },
+  {
+    "id": "cassiterite",
+    "ore": "tfc:ore_cassiterite",
+    "y_min": 0,
+    "y_max": 80,
+    "rarity": 60,
+    "status": "blocked_worldgen"
+  },
+  {
+    "id": "hematite",
+    "ore": "tfc:ore_hematite",
+    "y_min": -32,
+    "y_max": 64,
+    "rarity": 50,
+    "status": "blocked_worldgen"
+  }
+]

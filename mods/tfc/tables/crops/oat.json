@@ -1,0 +1,8 @@
+{
+  "id": "oat",
+  "temp_min": 5,
+  "temp_max": 25,
+  "rain_min": 150,
+  "rain_max": 400,
+  "stages": 8
+}

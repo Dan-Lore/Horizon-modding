@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:small_ore_native_gold"
+    },
+    {
+      "item": "tfc:small_ore_native_gold"
+    },
+    {
+      "item": "tfc:small_ore_native_gold"
+    },
+    {
+      "item": "tfc:small_ore_native_gold"
+    }
+  ],
+  "result": {
+    "item": "tfc:ore_native_gold",
+    "count": 1
+  }
+}

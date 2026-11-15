@@ -1,0 +1,8 @@
+{
+  "template": "minecraft:stone_bricks",
+  "properties": {
+    "hardness": 1.5,
+    "sounds": "minecraft:stone"
+  },
+  "item": true
+}

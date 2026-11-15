@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:rock_dolomite_loose"
+    }
+  ],
+  "result": {
+    "item": "tfc:stone_knife_blade",
+    "count": 1
+  }
+}

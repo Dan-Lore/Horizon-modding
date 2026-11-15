@@ -131,6 +131,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Keep **prune-old-versions off** while `fdc87ae` + `9f42064` nightlies must remain.
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
+- TFC Horizon (own): `mods/tfc/` — plan `docs/tfc-plan.md`, tracker `docs/tfc-tracker.md`; pack via `python3 tools/pack-tfc.py`.
 
 
 ## Links
@@ -151,9 +152,9 @@ Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/
 ## Suggested next work for agents
 
 1. Smoke `tfg-horizon` (JEI creative panel, AE2, Greglite machines) on `native-fdc87ae-428278da87c5`.
-2. Native-build **only** for that pack instance; do not pile tip+AE2 until registry AE2 supports `9f42064`.
+2. Pack + native-build **TFC Horizon** (`python3 tools/pack-tfc.py`) on the same pin; smoke HUD/thirst/propick.
 3. Run `tools/check-registry.ps1` ≤1×/day UTC — watch Create / AE2 pin convergence.
-4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
+4. TFC waves from `mods/tfc/tracker/catalog.json` (W12 blocked / W13 deferred until hooks).
 
 Combined native+content tips (not rules): `docs/dev-tips-native-content.md` — Hooks≠registries, check `native-content/<id>/` after builds, `/give` smoke.
 

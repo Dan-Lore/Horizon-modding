@@ -1,0 +1,8 @@
+{
+  "template": "minecraft:anvil",
+  "properties": {
+    "hardness": 2.5,
+    "sounds": "minecraft:stone"
+  },
+  "item": true
+}

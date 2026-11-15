@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CI",
+    " S"
+  ],
+  "key": {
+    "C": {
+      "item": "tfc:metal_copper_ingot"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tfc:prospector_pick",
+    "count": 1
+  }
+}
