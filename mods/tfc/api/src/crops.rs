@@ -11,6 +11,8 @@ struct Crop {
     product: String,
     min_temp: f32,
     max_temp: f32,
+    min_rain: f32,
+    max_rain: f32,
     seasons: Vec<String>,
 }
 
@@ -28,6 +30,8 @@ fn crops() -> &'static Vec<Crop> {
                             product: row.get("product")?.as_str()?.to_owned(),
                             min_temp: row.get("min_temp")?.as_f64()? as f32,
                             max_temp: row.get("max_temp")?.as_f64()? as f32,
+                            min_rain: row.get("min_rain").and_then(|v| v.as_f64()).unwrap_or(0.0) as f32,
+                            max_rain: row.get("max_rain").and_then(|v| v.as_f64()).unwrap_or(500.0) as f32,
                             seasons: row
                                 .get("seasons")?
                                 .as_array()?
@@ -66,6 +70,8 @@ pub fn tick(host: &dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity) {
         &sample,
         crop.min_temp,
         crop.max_temp,
+        crop.min_rain,
+        crop.max_rain,
         &crop.seasons,
     );
     let mut growth = nbt_i32(entity, "Growth");

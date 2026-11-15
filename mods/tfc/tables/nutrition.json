@@ -113,6 +113,61 @@
       "size": "small",
       "weight": "medium",
       "decay_days": 3
+    },
+    {
+      "id": "tfc:oat_grain",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 12
+    },
+    {
+      "id": "tfc:rye_grain",
+      "grain": 1,
+      "fruit": 0,
+      "veg": 0,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 12
+    },
+    {
+      "id": "tfc:onion",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 1,
+      "protein": 0,
+      "dairy": 0,
+      "size": "small",
+      "weight": "light",
+      "decay_days": 5
+    },
+    {
+      "id": "tfc:squash",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 1,
+      "protein": 0,
+      "dairy": 0,
+      "size": "medium",
+      "weight": "medium",
+      "decay_days": 6
+    },
+    {
+      "id": "tfc:cooked_squash",
+      "grain": 0,
+      "fruit": 0,
+      "veg": 1,
+      "protein": 0,
+      "dairy": 0,
+      "size": "medium",
+      "weight": "medium",
+      "decay_days": 4
     }
   ]
 }

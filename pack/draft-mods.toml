@@ -113,7 +113,7 @@ why = "Pin 4e5296d (local 0.9) / 9c7f9b2 (registry 0.7); cannot join fdc87ae+AE2
 [[mods]]
 id = "tfc"
 name = "TFC Horizon"
-version = "0.1.0"
+version = "0.2.0"
 source = "mods/tfc → tfc.hmod"
 batch = "post-mvp"
 status = "workshop"

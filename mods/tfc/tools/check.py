@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 MOD = ROOT / "mods" / "tfc"
-WAVES = [f"W{n}" for n in range(16)]
+WAVES = [f"W{n}" for n in range(23)]
 REV = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 
 
@@ -30,7 +30,12 @@ def sample_temp(table: dict, day: int) -> tuple[str, float]:
 
 def crop_allowed(table: dict, crop: dict, day: int) -> bool:
     season, temp = sample_temp(table, day)
-    return crop["min_temp"] <= temp <= crop["max_temp"] and season in crop["seasons"]
+    rain = table["base_rain"]
+    return (
+        crop["min_temp"] <= temp <= crop["max_temp"]
+        and season in crop["seasons"]
+        and crop["min_rain"] <= rain <= crop["max_rain"]
+    )
 
 
 def write_tracker(catalog: dict) -> None:
@@ -58,7 +63,7 @@ def main() -> None:
     gen = MOD / "tools" / "gen_content.py"
     subprocess.check_call([sys.executable, str(gen)])
     catalog = json.loads((MOD / "tracker" / "catalog.json").read_text(encoding="utf-8"))
-    if catalog["version"] != "0.1.3" or catalog["horizon"] != REV:
+    if catalog["version"] != "0.2.0" or catalog["horizon"] != REV:
         fail("catalog pin drifted")
     seen = {system["wave"] for system in catalog["systems"]}
     missing = [wave for wave in WAVES if wave not in seen]
@@ -87,6 +92,16 @@ def main() -> None:
         fail("barley must not grow in July")
     if not crop_allowed(climate, barley, 72):
         fail("barley must grow on day 72 (October)")
+    rye = next(crop for crop in crops if crop["id"] == "tfc:crop_rye")
+    squash = next(crop for crop in crops if crop["id"] == "tfc:crop_squash")
+    if not crop_allowed(climate, rye, 0):
+        fail("rye must grow on day 0 (January)")
+    if crop_allowed(climate, rye, 48):
+        fail("rye must not grow in July")
+    if not crop_allowed(climate, squash, 48):
+        fail("squash must grow on day 48 (July)")
+    if crop_allowed(climate, squash, 0):
+        fail("squash must not grow in January")
 
     machines = json.loads((MOD / "tables" / "machines.json").read_text(encoding="utf-8"))
     specs = (MOD / "api" / "src" / "specs.inc.rs").read_text(encoding="utf-8")
@@ -102,24 +117,12 @@ def main() -> None:
         "tfc:blast_furnace": ("tfc:wrought_iron_ingot", "tfc:steel_ingot"),
         "tfc:sluice": ("tfc:ore_deposit", "tfc:nugget_native_copper"),
         "tfc:charcoal_pit": ("minecraft:oak_log", "minecraft:charcoal"),
+        "tfc:crucible": ("tfc:copper_ingot", "tfc:bronze_ingot"),
     }
+    recipe_dir = MOD / "data" / "tfc" / "recipe"
     for machine in machines:
         if machine["id"] not in specs:
             fail(f"spec missing {machine['id']}")
-        if machine["storage"]:
-            continue
-        kind = machine["recipe_type"].split(":", 1)[1]
-        found = list((MOD / "data" / "tfc" / "recipe").glob(f"{kind}_*.json"))
-        if not found:
-            fail(f"no recipes for {kind}")
-        for path in found:
-            body = json.loads(path.read_text(encoding="utf-8"))
-            count = 1 if "ingredient" in body else len(body.get("ingredients", []))
-            if count != machine["inputs"]:
-                fail(f"{path.name} has {count} inputs, spec wants {machine['inputs']}")
-        left, right = primaries[machine["recipe_type"]]
-        if left not in recipes_rs or right not in recipes_rs:
-            fail(f"fallback missing {left} -> {right}")
         menu = json.loads(
             (MOD / "data" / "tfc" / "horizon" / "menu" / f"{machine['id'].split(':', 1)[1]}.json").read_text(
                 encoding="utf-8"
@@ -128,6 +131,20 @@ def main() -> None:
         expect = machine["inputs"] if machine["output"] is None else machine["output"] + 1
         if menu["slots"] != expect:
             fail(f"menu slots for {machine['id']}")
+        if machine["storage"] or not machine["recipe_type"]:
+            continue
+        kind = machine["recipe_type"].split(":", 1)[1]
+        found = list(recipe_dir.glob(f"{kind}_*.json"))
+        if not found:
+            fail(f"no recipes for {kind}")
+        for path in found:
+            body = json.loads(path.read_text(encoding="utf-8"))
+            count = 1 if "ingredient" in body else len(body.get("ingredients", []))
+            if count > machine["inputs"]:
+                fail(f"{path.name} has {count} inputs, spec wants {machine['inputs']}")
+        left, right = primaries[machine["recipe_type"]]
+        if left not in recipes_rs or right not in recipes_rs:
+            fail(f"fallback missing {left} -> {right}")
 
     for needle in (
         "tfc:ore_native_copper",
@@ -143,6 +160,30 @@ def main() -> None:
         path = MOD / "data" / "tfc" / "horizon" / folder / f"{name}.json"
         if not path.exists():
             fail(f"missing content {needle}")
+
+    for name in ("alloy_bronze.json", "alloy_brass.json", "weld_copper.json", "weld_bronze.json"):
+        if (recipe_dir / name).exists():
+            fail(f"stand-in recipe remains: {name}")
+    for path in recipe_dir.glob("*.json"):
+        body = json.loads(path.read_text(encoding="utf-8"))
+        if body.get("type") != "minecraft:crafting_shapeless":
+            continue
+        result = body.get("result", {}).get("id", "")
+        ingredients = [entry.get("item") for entry in body.get("ingredients", [])]
+        if "tfc:andesite_cobble" in ingredients and result.startswith("tfc:stone_"):
+            fail(f"{path.name} still knaps from cobble")
+        if result in {"tfc:bronze_ingot", "tfc:brass_ingot"} or result.endswith("_double_ingot"):
+            fail(f"shapeless metal recipe {path.name}")
+    heat = json.loads((MOD / "tables" / "heat.json").read_text(encoding="utf-8"))
+    if heat["forge_max"] >= heat["metals"]["wrought_iron"]["melt"]:
+        fail("forge cap must stay below wrought iron")
+    if "heat.json" not in (MOD / "api" / "src" / "heat.rs").read_text(encoding="utf-8"):
+        fail("heat table is not read")
+    lib = (MOD / "api" / "src" / "lib.rs").read_text(encoding="utf-8")
+    if "TFC Horizon 0.2.0" not in lib:
+        fail("login line is not 0.2.0")
+    if "host.sneaking" in lib:
+        fail("anvil strike must read player.sneaking")
 
     draft = (ROOT / "pack" / "draft-mods.toml").read_text(encoding="utf-8")
     if 'id = "tfc"' not in draft or 'on = []' not in draft.split('id = "tfc"', 1)[1][:400]:
@@ -164,6 +205,10 @@ def main() -> None:
             "mixins/tfc/horizon-mixin.toml",
             "mixins/tfc/api/src/lib.rs",
             "mixins/tfc/api/src/specs.inc.rs",
+            "mixins/tfc/tables/heat.json",
+            "mixins/tfc/tables/alloys.json",
+            "mixins/tfc/tables/anvil.json",
+            "mixins/tfc/tables/knapping.json",
             "data/tfc/horizon/block/firepit.json",
             "assets/tfc/lang/en_us.json",
         ):

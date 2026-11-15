@@ -10,10 +10,18 @@
   {
     "id": "tfc:charcoal_forge",
     "fuel": true,
-    "inputs": 1,
-    "output": 2,
+    "inputs": 2,
+    "output": 3,
     "storage": false,
     "recipe_type": "tfc:charcoal_forge"
+  },
+  {
+    "id": "tfc:crucible",
+    "fuel": true,
+    "inputs": 2,
+    "output": 3,
+    "storage": false,
+    "recipe_type": "tfc:crucible"
   },
   {
     "id": "tfc:bloomery",
@@ -30,6 +38,14 @@
     "output": 1,
     "storage": false,
     "recipe_type": "tfc:anvil"
+  },
+  {
+    "id": "tfc:knapping",
+    "fuel": false,
+    "inputs": 25,
+    "output": 25,
+    "storage": false,
+    "recipe_type": null
   },
   {
     "id": "tfc:quern",
@@ -83,6 +99,14 @@
     "id": "tfc:log_pile",
     "fuel": false,
     "inputs": 9,
+    "output": null,
+    "storage": true,
+    "recipe_type": null
+  },
+  {
+    "id": "tfc:small_vessel",
+    "fuel": false,
+    "inputs": 4,
     "output": null,
     "storage": true,
     "recipe_type": null

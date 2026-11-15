@@ -62,8 +62,17 @@ pub fn hud_line(c: &ClimateSample, thirst: f32, nutrients: &str) -> String {
     )
 }
 
-pub fn crop_allowed(c: &ClimateSample, min_temp: f32, max_temp: f32, seasons: &[String]) -> bool {
+pub fn crop_allowed(
+    c: &ClimateSample,
+    min_temp: f32,
+    max_temp: f32,
+    min_rain: f32,
+    max_rain: f32,
+    seasons: &[String],
+) -> bool {
     c.temp_c >= min_temp
         && c.temp_c <= max_temp
+        && c.rainfall >= min_rain
+        && c.rainfall <= max_rain
         && seasons.iter().any(|season| season == c.season)
 }

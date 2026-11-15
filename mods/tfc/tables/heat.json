@@ -1,11 +1,94 @@
 {
-  "copper": 1080,
-  "tin": 230,
-  "bronze": 950,
-  "bismuth": 270,
-  "zinc": 420,
-  "brass": 930,
-  "silver": 961,
-  "wrought_iron": 1535,
-  "steel": 1540
+  "forge_max": 1400,
+  "per_tick": 20,
+  "cool_per_tick": 10,
+  "metals": {
+    "copper": {
+      "melt": 1080,
+      "weld": 650
+    },
+    "tin": {
+      "melt": 230,
+      "weld": 150
+    },
+    "bronze": {
+      "melt": 950,
+      "weld": 570
+    },
+    "bismuth": {
+      "melt": 270,
+      "weld": 160
+    },
+    "zinc": {
+      "melt": 420,
+      "weld": 250
+    },
+    "brass": {
+      "melt": 930,
+      "weld": 560
+    },
+    "silver": {
+      "melt": 961,
+      "weld": 580
+    },
+    "gold": {
+      "melt": 1064,
+      "weld": 640
+    },
+    "wrought_iron": {
+      "melt": 1535,
+      "weld": 1100
+    },
+    "steel": {
+      "melt": 1540,
+      "weld": 1200
+    }
+  },
+  "items": {
+    "minecraft:gold_ingot": "gold",
+    "tfc:nugget_native_copper": "copper",
+    "tfc:nugget_native_gold": "gold",
+    "tfc:nugget_native_silver": "silver",
+    "tfc:nugget_cassiterite": "tin",
+    "tfc:nugget_hematite": "wrought_iron",
+    "tfc:nugget_bismuthinite": "bismuth",
+    "tfc:nugget_sphalerite": "zinc",
+    "tfc:nugget_malachite": "copper",
+    "tfc:copper_ingot": "copper",
+    "tfc:copper_double_ingot": "copper",
+    "tfc:copper_sheet": "copper",
+    "tfc:copper_rod": "copper",
+    "tfc:tin_ingot": "tin",
+    "tfc:tin_double_ingot": "tin",
+    "tfc:tin_sheet": "tin",
+    "tfc:tin_rod": "tin",
+    "tfc:bronze_ingot": "bronze",
+    "tfc:bronze_double_ingot": "bronze",
+    "tfc:bronze_sheet": "bronze",
+    "tfc:bronze_rod": "bronze",
+    "tfc:bismuth_ingot": "bismuth",
+    "tfc:bismuth_double_ingot": "bismuth",
+    "tfc:bismuth_sheet": "bismuth",
+    "tfc:bismuth_rod": "bismuth",
+    "tfc:zinc_ingot": "zinc",
+    "tfc:zinc_double_ingot": "zinc",
+    "tfc:zinc_sheet": "zinc",
+    "tfc:zinc_rod": "zinc",
+    "tfc:brass_ingot": "brass",
+    "tfc:brass_double_ingot": "brass",
+    "tfc:brass_sheet": "brass",
+    "tfc:brass_rod": "brass",
+    "tfc:silver_ingot": "silver",
+    "tfc:silver_double_ingot": "silver",
+    "tfc:silver_sheet": "silver",
+    "tfc:silver_rod": "silver",
+    "tfc:wrought_iron_ingot": "wrought_iron",
+    "tfc:wrought_iron_double_ingot": "wrought_iron",
+    "tfc:wrought_iron_sheet": "wrought_iron",
+    "tfc:wrought_iron_rod": "wrought_iron",
+    "tfc:steel_ingot": "steel",
+    "tfc:steel_double_ingot": "steel",
+    "tfc:steel_sheet": "steel",
+    "tfc:steel_rod": "steel"
+  }
 }

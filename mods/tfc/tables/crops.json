@@ -5,6 +5,8 @@
     "seed": "tfc:wheat_seed",
     "min_temp": 10,
     "max_temp": 30,
+    "min_rain": 50,
+    "max_rain": 500,
     "seasons": [
       "spring",
       "summer"
@@ -16,6 +18,8 @@
     "seed": "tfc:barley_seed",
     "min_temp": 4,
     "max_temp": 28,
+    "min_rain": 50,
+    "max_rain": 500,
     "seasons": [
       "spring",
       "autumn"
@@ -27,10 +31,62 @@
     "seed": "tfc:cabbage_seed",
     "min_temp": 5,
     "max_temp": 26,
+    "min_rain": 50,
+    "max_rain": 500,
     "seasons": [
       "spring",
       "summer",
       "autumn"
+    ]
+  },
+  {
+    "id": "tfc:crop_oat",
+    "product": "tfc:oat_grain",
+    "seed": "tfc:oat_seed",
+    "min_temp": 8,
+    "max_temp": 28,
+    "min_rain": 50,
+    "max_rain": 500,
+    "seasons": [
+      "spring",
+      "summer"
+    ]
+  },
+  {
+    "id": "tfc:crop_rye",
+    "product": "tfc:rye_grain",
+    "seed": "tfc:rye_seed",
+    "min_temp": 2,
+    "max_temp": 22,
+    "min_rain": 50,
+    "max_rain": 500,
+    "seasons": [
+      "autumn",
+      "winter"
+    ]
+  },
+  {
+    "id": "tfc:crop_onion",
+    "product": "tfc:onion",
+    "seed": "tfc:onion_seed",
+    "min_temp": 6,
+    "max_temp": 24,
+    "min_rain": 400,
+    "max_rain": 500,
+    "seasons": [
+      "spring"
+    ]
+  },
+  {
+    "id": "tfc:crop_squash",
+    "product": "tfc:squash",
+    "seed": "tfc:squash_seed",
+    "min_temp": 12,
+    "max_temp": 32,
+    "min_rain": 50,
+    "max_rain": 500,
+    "seasons": [
+      "summer"
     ]
   }
 ]

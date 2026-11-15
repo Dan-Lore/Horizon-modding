@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "tfc:andesite_cobble"
+      "item": "tfc:stone_hoe_head"
     },
     {
       "item": "minecraft:stick"

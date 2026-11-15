@@ -37,6 +37,10 @@ pub fn is_chisel(item: &str) -> bool {
     item.ends_with("_chisel")
 }
 
+pub fn is_hammer(item: &str) -> bool {
+    item.ends_with("_hammer")
+}
+
 pub fn is_pan(item: &str) -> bool {
     item == "tfc:pan"
 }

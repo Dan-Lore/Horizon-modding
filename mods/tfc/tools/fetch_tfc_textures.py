@@ -95,6 +95,13 @@ DIRECT: dict[str, str] = {
     "block/crop_wheat.png": "block/crop/wheat_7.png",
     "block/crop_barley.png": "block/crop/barley_7.png",
     "block/crop_cabbage.png": "block/crop/cabbage_5.png",
+    "block/crop_oat.png": "block/crop/oat_7.png",
+    "block/crop_rye.png": "block/crop/rye_7.png",
+    "block/crop_onion.png": "block/crop/onion_5.png",
+    "block/crop_squash.png": "block/crop/squash_5.png",
+    "block/crucible.png": "block/devices/crucible/side.png",
+    "block/knapping.png": "block/rock/raw/andesite.png",
+    "block/small_vessel.png": "item/ceramic/vessel.png",
     # items
     "item/prospector_pick.png": "item/metal/propick/copper.png",
     "item/pan.png": "item/ceramic/unfired_pan.png",
@@ -120,6 +127,12 @@ DIRECT: dict[str, str] = {
     "item/barley_grain.png": "item/food/barley_grain.png",
     "item/flour.png": "item/food/wheat_flour.png",
     "item/dough.png": "item/food/wheat_dough.png",
+    "item/oat_grain.png": "item/food/oat_grain.png",
+    "item/rye_grain.png": "item/food/rye_grain.png",
+    "item/onion.png": "item/food/onion.png",
+    "item/squash.png": "item/food/squash.png",
+    "item/cooked_squash.png": "item/food/squash.png",
+    "item/rot.png": "item/compost.png",
 }
 
 
@@ -162,6 +175,9 @@ def build_map() -> dict[str, str]:
                 mapping[f"item/{metal}_{head}.png"] = f"item/metal/{head}/{metal}.png"
     for tool in STONE_TOOLS:
         mapping[f"item/stone_{tool}.png"] = f"item/stone/{tool}.png"
+        head = HEAD_OF[tool]
+        upstream_head = "knife_head" if head == "knife_blade" else head
+        mapping[f"item/stone_{head}.png"] = f"item/stone/{upstream_head}.png"
     return mapping
 
 

@@ -1,6 +1,6 @@
 {
   "mod": "tfc",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "horizon": "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca",
   "hooks": 411,
   "systems": [
@@ -9,7 +9,7 @@
       "wave": "W0",
       "name": "Scaffold, attribution, pack script",
       "status": "done",
-      "smoke": "python3 tools/pack-tfc.py writes mods/tfc/dist/tfc.hmod with POSIX paths, horizon-mod.toml, and horizon-native.json. Join a world and expect the TFC Horizon 0.1.0 login line."
+      "smoke": "python3 tools/pack-tfc.py writes mods/tfc/dist/tfc.hmod with POSIX paths, horizon-mod.toml, and horizon-native.json. Join a world and expect the TFC Horizon 0.2.0 login line."
     },
     {
       "id": "w1_climate",
@@ -30,7 +30,7 @@
       "wave": "W3",
       "name": "Knapping stand-in, stone tools, firepit",
       "status": "done",
-      "smoke": "Craft tfc:stone_axe from andesite cobble + stick (knapping UI is this crafting recipe). Craft and place tfc:firepit, fuel it with coal or a log in slot 0, put minecraft:beef in the input, and take tfc:cooked_meat."
+      "smoke": "Stone tools are a knapped head plus a stick (W19), not andesite cobble plus a stick. Craft and place tfc:firepit, fuel it with coal or a log in slot 0, put minecraft:beef in the input, and take tfc:cooked_meat."
     },
     {
       "id": "w4_pottery",
@@ -51,7 +51,7 @@
       "wave": "W6",
       "name": "Bloomery, anvil, welding stand-in",
       "status": "done",
-      "smoke": "Bloomery turns tfc:nugget_hematite into tfc:raw_iron_bloom. Anvil turns that bloom into tfc:wrought_iron_ingot and an ingot into a sheet. Two copper ingots craft into tfc:copper_double_ingot (weld stand-in)."
+      "smoke": "Bloomery turns tfc:nugget_hematite into tfc:raw_iron_bloom. The anvil turns that bloom into tfc:wrought_iron_ingot only after the hammer steps in W18, and an ingot into a sheet the same way. Two copper ingots become tfc:copper_double_ingot in the forge at weld heat (W18), not in the crafting grid."
     },
     {
       "id": "w7_nutrition",
@@ -107,7 +107,7 @@
       "wave": "W12",
       "name": "Blast furnace and brass",
       "status": "done",
-      "smoke": "Blast furnace with fuel, tfc:wrought_iron_ingot, and tfc:flux yields tfc:steel_ingot. Craft copper + zinc ingots into tfc:brass_ingot. Forge also melts tin, bismuth, silver, and gold nuggets."
+      "smoke": "Blast furnace with fuel, tfc:wrought_iron_ingot, and tfc:flux yields tfc:steel_ingot. Brass is the crucible ratio in W17, not a crafting grid. Forge also melts tin, bismuth, silver, and gold nuggets once Heat reaches the metal."
     },
     {
       "id": "w13_animals",
@@ -129,6 +129,55 @@
       "name": "Glass, chisel, powderkeg, JEI recipe types",
       "status": "done",
       "smoke": "Craft tfc:glass_batch from sand + flux and fire it in the pit kiln to minecraft:glass. Right-click a tfc rock with a chisel for the mark line. Right-click tfc:powderkeg for the content-only line. Custom recipe types tfc:firepit, tfc:charcoal_forge, tfc:pit_kiln, tfc:quern, tfc:barrel, tfc:bloomery, tfc:anvil, tfc:sluice, tfc:charcoal_pit, and tfc:blast_furnace are in data/tfc/recipe for JEI once the content snapshot loads. Do not native-build this onto tfg-horizon beside AE2 until that smoke is intentional."
+    },
+    {
+      "id": "w16_heat",
+      "wave": "W16",
+      "name": "Charcoal forge heat gate",
+      "status": "done",
+      "smoke": "Place tfc:charcoal_forge with fuel in slot 0. Heat on the block rises by 20 degrees per burning tick and stops at forge_max 1400. tfc:nugget_native_copper becomes tfc:copper_ingot only after Heat reaches 1080 and the 160-tick duration finishes. tfc:nugget_cassiterite reaches its 230 threshold sooner, so a tin run finishes before a copper run. tfc:nugget_hematite stays in the slot: wrought iron melts at 1535, above the forge cap, so that forge recipe never completes. Bloomery still turns the same nugget into tfc:raw_iron_bloom."
+    },
+    {
+      "id": "w17_crucible",
+      "wave": "W17",
+      "name": "Crucible bronze and brass",
+      "status": "done",
+      "smoke": "Place tfc:crucible with fuel. 8 tfc:copper_ingot plus 1 tfc:tin_ingot is 88.9 percent copper, inside the 88-92 window. After Heat reaches bronze 950 and 200 ticks, the output is 9 tfc:bronze_ingot. 1 copper ingot plus 1 tin ingot stays in the slots. Brass is 8 copper plus 1 tfc:zinc_ingot the same way. Shapeless alloy_bronze and alloy_brass are gone."
+    },
+    {
+      "id": "w18_anvil",
+      "wave": "W18",
+      "name": "Anvil steps and forge weld",
+      "status": "done",
+      "smoke": "Put tfc:raw_iron_bloom in tfc:anvil. Sneak-hit with a hammer to cycle the plan; a normal hit performs the next step from tables/anvil.json (hit, draw, upset). The last step yields tfc:wrought_iron_ingot. An ingot plan yields a sheet or a tool head the same way. The anvil does not finish by itself. Two tfc:copper_ingot in the forge at copper weld temperature 650 yield tfc:copper_double_ingot. Shapeless weld_copper and weld_bronze are gone."
+    },
+    {
+      "id": "w19_knapping",
+      "wave": "W19",
+      "name": "Knapping grid",
+      "status": "done",
+      "smoke": "Craft tfc:knapping from andesite cobble and place it. Fill the 5x5 grid with tfc:andesite_cobble using the axe mask 0010001110001000010000100 from tables/knapping.json. After 20 ticks the output slot is tfc:stone_axe_head. Craft that head with a stick into tfc:stone_axe. Shapeless andesite cobble plus stick no longer makes stone tools. The screen is 25 input slots plus one output."
+    },
+    {
+      "id": "w20_container_rot",
+      "wave": "W20",
+      "name": "Rot inside a vessel or barrel",
+      "status": "done",
+      "smoke": "Craft tfc:small_vessel from tfc:vessel and place it. Put tfc:bread in a slot. Bread spoils in 6 days and each day is 200 ticks, so after 1200 ticks the slot becomes tfc:rot. The same bread in the player inventory does not change. Bread in tfc:barrel, which has no barrel recipe, also becomes rot. w7_stack_rot stays blocked."
+    },
+    {
+      "id": "w21_crops",
+      "wave": "W21",
+      "name": "Rain gate, oat, rye, onion, squash",
+      "status": "done",
+      "smoke": "Place tfc:crop_rye. On day 0 (January, winter, about 6C) growth advances; on day 48 (July, summer, about 26C) it stays put. Quern grinds tfc:oat_grain and tfc:rye_grain into tfc:flour. Firepit cooks tfc:squash into tfc:cooked_squash. tfc:crop_onion needs rainfall of at least 400: at x=0,z=0 rainfall is 300 and it does not grow; at x=2,z=0 rainfall is 420. mods/tfc/tools/test_logic.py checks that column."
+    },
+    {
+      "id": "w22_version",
+      "wave": "W22",
+      "name": "Version 0.2.0 and pack check",
+      "status": "done",
+      "smoke": "python3 mods/tfc/tools/check.py passes with catalog 0.2.0 on Horizon fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca. The login line says TFC Horizon 0.2.0. The hmod is not copied onto tfg-horizon."
     }
   ]
 }

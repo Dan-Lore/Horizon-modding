@@ -1,7 +1,12 @@
 //! Fuel and recipe progress for firepit, forge, kiln, and the other benches.
 
+use crate::anvil;
+use crate::crucible;
+use crate::heat;
+use crate::knapping;
 use crate::recipes::{self, can_output, ingredient_accepts, merge_output, MachineRecipe};
 use crate::registry::Spec;
+use crate::rot;
 use horizon_client::mod_api::{Host, ModBlockEntity, Tag};
 
 fn nbt_i32(entity: &ModBlockEntity, key: &str) -> i32 {
@@ -65,7 +70,7 @@ fn find_recipe<'a>(
     out_slot: usize,
 ) -> Option<&'a MachineRecipe> {
     for recipe in recipes {
-        if recipe.inputs.len() != inputs {
+        if recipe.inputs.is_empty() || recipe.inputs.len() > inputs {
             continue;
         }
         let fits = recipe.inputs.iter().enumerate().all(|(index, ingredient)| {
@@ -75,7 +80,14 @@ fn find_recipe<'a>(
                 .and_then(|slot| slot.as_ref())
                 .is_some_and(|stack| ingredient_accepts(ingredient, stack.item.as_ref()))
         });
-        if !fits {
+        let rest_empty = (recipe.inputs.len()..inputs).all(|index| {
+            entity
+                .items
+                .get(start + index)
+                .and_then(|slot| slot.as_ref())
+                .is_none()
+        });
+        if !fits || !rest_empty {
             continue;
         }
         if entity
@@ -90,6 +102,14 @@ fn find_recipe<'a>(
 }
 
 pub fn tick(host: &mut dyn Host, entity: &mut ModBlockEntity, spec: &Spec) {
+    if spec.id == "tfc:anvil" {
+        anvil::gauge(entity);
+        return;
+    }
+    if spec.id == "tfc:knapping" {
+        knapping::tick(entity);
+        return;
+    }
     let (Some(recipe_type), Some(out_slot)) = (spec.recipe_type, spec.output) else {
         return;
     };
@@ -98,27 +118,64 @@ pub fn tick(host: &mut dyn Host, entity: &mut ModBlockEntity, spec: &Spec) {
         entity.items.resize(need, None);
     }
     let hot = if spec.fuel { feed_fuel(entity) } else { true };
-    let recipes = recipes::load(host, recipe_type);
+    if spec.id == "tfc:crucible" {
+        crucible::tick(entity, hot);
+        return;
+    }
+    let forge = recipe_type == "tfc:charcoal_forge";
     let start = if spec.fuel { 1 } else { 0 };
+    let previous_sig = nbt_i32(entity, "HeatSig");
+    let temperature = if forge {
+        heat::sync(entity, hot, start, spec.inputs)
+    } else {
+        0
+    };
+    let recipes = recipes::load(host, recipe_type);
     let matched = if hot {
         find_recipe(entity, &recipes, start, spec.inputs, out_slot)
     } else {
         None
     };
     let mut progress = nbt_i32(entity, "Progress");
+    if forge && nbt_i32(entity, "HeatSig") != previous_sig {
+        progress = 0;
+    }
     let mut progress_max = 1;
     if let Some(recipe) = matched {
         progress_max = recipe.duration.max(1);
-        progress += 1;
-        if progress >= recipe.duration {
-            for index in 0..spec.inputs {
-                shrink(&mut entity.items[start + index]);
+        let ids: Vec<String> = recipe
+            .inputs
+            .iter()
+            .enumerate()
+            .filter_map(|(index, _)| {
+                entity
+                    .items
+                    .get(start + index)
+                    .and_then(|slot| slot.as_ref())
+                    .map(|stack| stack.item.as_ref().to_owned())
+            })
+            .collect();
+        let refs: Vec<&str> = ids.iter().map(String::as_str).collect();
+        let heat_ready = if forge {
+            heat::ready(temperature, heat::target(&refs, recipe.heat))
+        } else {
+            true
+        };
+        if heat_ready {
+            progress += 1;
+            if progress >= recipe.duration {
+                for index in 0..recipe.inputs.len() {
+                    shrink(&mut entity.items[start + index]);
+                }
+                merge_output(&mut entity.items[out_slot], &recipe.output);
+                progress = 0;
             }
-            merge_output(&mut entity.items[out_slot], &recipe.output);
-            progress = 0;
         }
     } else {
         progress = 0;
+        if spec.id == "tfc:barrel" {
+            rot::tick_slot(entity, start);
+        }
     }
     nbt_set(entity, "Progress", progress);
     nbt_set(entity, "ProgressMax", progress_max);
@@ -129,6 +186,11 @@ pub fn tick(host: &mut dyn Host, entity: &mut ModBlockEntity, spec: &Spec) {
     let burn_max = nbt_i32(entity, "BurnMax").max(1);
     entity.data[0] = progress;
     entity.data[1] = progress_max;
-    entity.data[2] = if spec.fuel { burn } else { progress };
-    entity.data[3] = if spec.fuel { burn_max } else { progress_max };
+    if forge {
+        entity.data[2] = temperature;
+        entity.data[3] = heat::forge_max().max(1);
+    } else {
+        entity.data[2] = if spec.fuel { burn } else { progress };
+        entity.data[3] = if spec.fuel { burn_max } else { progress_max };
+    }
 }

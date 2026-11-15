@@ -84,6 +84,24 @@ pub fn is_drink(id: &str) -> bool {
     table().drinks.iter().any(|drink| drink == id)
 }
 
+pub const DECAY_TICKS_PER_DAY: i32 = 200;
+
+pub fn decay_ticks(id: &str) -> Option<i32> {
+    let food = table().foods.iter().find(|food| food.id == id)?;
+    if food.decay_days <= 0 {
+        return None;
+    }
+    Some((food.decay_days as i32).saturating_mul(DECAY_TICKS_PER_DAY))
+}
+
+pub fn item_stamp(id: &str) -> i32 {
+    let mut hash = 0i32;
+    for byte in id.bytes() {
+        hash = hash.wrapping_mul(31).wrapping_add(byte as i32);
+    }
+    hash
+}
+
 pub fn is_edible(id: &str) -> bool {
     nutrients(id).is_some() || is_drink(id)
 }
@@ -91,7 +109,7 @@ pub fn is_edible(id: &str) -> bool {
 pub fn tooltip_line(id: &str) -> Option<String> {
     let food = table().foods.iter().find(|food| food.id == id)?;
     Some(format!(
-        "{}, {}, spoils in {} days (stack timer not simulated)",
+        "{}, {}, spoils in {} days inside a vessel or barrel",
         food.size, food.weight, food.decay_days
     ))
 }
