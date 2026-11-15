@@ -1,0 +1,60 @@
+---
+description: Mandatory Horizon native-build + content smoke (do not fake “mods are in”)
+alwaysApply: true
+---
+
+# Horizon native build / content — mandatory checks
+
+Agents have repeatedly claimed Greglite/TFC/AE2 were “in the build” while the player saw only AE2. **Do not trust surface signals.**
+
+## Never treat these as success
+
+- Mod file sitting in `instances/<id>/horizon-native-mods/`
+- Id listed in `native-mods.json` `mods[]`
+- Folder exists at `versions/<native>/native-content/<id>/`
+- Chat login tip / Hooks message (`Greglite 0.4…`)
+- Creative page shows AE2 (AE2 registers from its own path)
+- JEI search that is not the real `@modid` (e.g. `@gre_` ≠ `@greglite`)
+- `native-build` finished in seconds with “Up to date” after adding new mods
+- Tip Nightly `9f42064` “актуальная” as a pack that includes AE2 15.4.18
+
+## Truth sources (in order)
+
+1. **Active play version** — `instance list` / launcher: must be the native you just built (e.g. `native-fdc87ae-…`), not a stale tip native.
+2. **`native-mods.json`** on **that** version — id in `mods[]`, not only `left_out`.
+3. **Content snapshot** — `versions/<active-native>/native-content/<id>/horizon-mod.toml` **plus** `assets/` and `data/` (not only mixins zip junk).
+4. **Prepared content cache** after a real Play launch:
+   - Log: `Horizon: content from N mod(s)` 
+   - File: `instances/<id>/.horizon-cache/mod-content/<hash>/horizon-mod-ids.json` must list your ids (e.g. `["greglite","tfc","ae2"]`).
+   - If it says `["ae2"]` only — content did **not** load; fix and relaunch.
+5. **In-game smoke** — `/give <id>:<item>` must succeed (e.g. `greglite:steam_macerator`). Then JEI `@greglite` / `@tfc`.
+
+## After every native-build that includes content mods
+
+```text
+1. Confirm instance plays the NEW native hash.
+2. If native-content/<id> missing → unpack .hmod: ONLY horizon-mod.toml + assets/ + data/
+3. Mirror same trio to instances/<id>/horizon-mods/<id>/
+4. Delete instances/<id>/.horizon-cache/mod-content/ (stale prepare lists only ae2)
+5. Full quit client → Play again
+6. Read latest.log "content from N mod(s)" + horizon-mod-ids.json
+7. /give one item per own mod — only then tell the user it works
+```
+
+`Expand-Archive` does **not** open `.hmod` — use .NET `ZipFile` or Python `zipfile`.
+
+## Pack pins (do not “try tip with everything”)
+
+| Goal | Base |
+| --- | --- |
+| AE2 15.4.18 + Greglite + Batch A | Nightly **`fdc87ae`** / hooks **411** |
+| Create | Own pin (`4e5296d` / registry `9c7f9b2`) — **not** with AE2 |
+| Tip `9f42064` | AE2 left_out (`other-version`) |
+
+Enable mods in `horizon-mods.txt` (`mod.<id>:true`) or the launcher ignores loose files.
+
+## TFC / own combined .hmod
+
+- `horizon-native.json` **`mixins`** must be a real **horizon-mixins** commit (e.g. `5a64af9…`), **not** the game `horizon` revision (GitHub 422 / left_out).
+- `on = []` in `pack/draft-mods.toml` until compile + `/give` smoke on purpose.
+- Content-only in `native-content` without Hooks ≠ full TFC; still verify via `horizon-mod-ids.json` + `/give`.

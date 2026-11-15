@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/log_pile"
+    "top": "tfc:block/log_pile",
+    "front": "tfc:block/log_pile",
+    "side": "tfc:block/log_pile",
+    "bottom": "tfc:block/log_pile",
+    "particle": "tfc:block/log_pile"
   }
 }

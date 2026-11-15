@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/ore_native_silver"
+    "top": "tfc:block/ore_native_silver",
+    "front": "tfc:block/ore_native_silver",
+    "side": "tfc:block/ore_native_silver",
+    "bottom": "tfc:block/ore_native_silver",
+    "particle": "tfc:block/ore_native_silver"
   }
 }

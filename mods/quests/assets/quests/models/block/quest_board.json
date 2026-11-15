@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "quests:block/quest_board",
+    "front": "quests:block/quest_board",
+    "side": "quests:block/quest_board",
+    "bottom": "quests:block/quest_board",
+    "particle": "quests:block/quest_board"
+  }
+}

@@ -19,7 +19,7 @@ native_version = "native-fdc87ae-428278da87c5"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + Jade/AppleSkin/Continuity"
+notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.4.3 + Jade/AppleSkin/Continuity + World Map (installed, rebuild pending)"
 
 # --- Batch A ---
 
@@ -84,6 +84,17 @@ status = "built"
 on = ["pack"]
 minecraft_role = "GregTech-inspired Steam + LV Electric"
 
+[[mods]]
+id = "worldmap"
+name = "World Map"
+version = "0.7.1"
+source = "horizon-registry"
+batch = "A"
+status = "installed"
+on = ["pack"]
+minecraft_role = "Xaero-like minimap + world map"
+why = "Pinned to fdc87ae (hooks 404). Installed into tfg-horizon; native-build deferred."
+
 # --- Create (isolated) ---
 
 [[mods]]
@@ -109,6 +120,30 @@ status = "workshop"
 on = []
 minecraft_role = "TerraFirmaCraft-inspired core slice"
 why = "Sources only. Do not native-build onto tfg-horizon until a wave is smoked; pin stays fdc87ae for AE2."
+
+# --- Quests / Teams (workshop; not on the pack native until W6+ smoked) ---
+
+[[mods]]
+id = "teams"
+name = "Horizon Teams"
+version = "0.1.0"
+source = "mods/teams → teams.hmod"
+batch = "post-mvp"
+status = "workshop"
+on = []
+minecraft_role = "FTB Teams–inspired parties"
+why = "Required by Horizon Quests. Do not native-build onto tfg-horizon until intentional smoke; pin fdc87ae."
+
+[[mods]]
+id = "quests"
+name = "Horizon Quests"
+version = "0.1.0"
+source = "mods/quests → quests.hmod"
+batch = "post-mvp"
+status = "workshop"
+on = []
+minecraft_role = "FTB Quests–inspired quest book"
+why = "Requires teams. Own JSON questfile; no FTB SNBT. Keep on=[] until W6+ smoked on purpose."
 
 # --- Ad Astra (workshop; not on the pack native) ---
 

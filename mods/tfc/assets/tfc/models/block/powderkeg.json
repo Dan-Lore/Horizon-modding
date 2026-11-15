@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/powderkeg"
+    "top": "tfc:block/powderkeg",
+    "front": "tfc:block/powderkeg",
+    "side": "tfc:block/powderkeg",
+    "bottom": "tfc:block/powderkeg",
+    "particle": "tfc:block/powderkeg"
   }
 }

@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/marble_gravel"
+    "top": "tfc:block/marble_gravel",
+    "front": "tfc:block/marble_gravel",
+    "side": "tfc:block/marble_gravel",
+    "bottom": "tfc:block/marble_gravel",
+    "particle": "tfc:block/marble_gravel"
   }
 }

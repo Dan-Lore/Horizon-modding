@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/shale_cobble"
+    "top": "tfc:block/shale_cobble",
+    "front": "tfc:block/shale_cobble",
+    "side": "tfc:block/shale_cobble",
+    "bottom": "tfc:block/shale_cobble",
+    "particle": "tfc:block/shale_cobble"
   }
 }

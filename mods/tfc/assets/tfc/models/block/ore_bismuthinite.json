@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/ore_bismuthinite"
+    "top": "tfc:block/ore_bismuthinite",
+    "front": "tfc:block/ore_bismuthinite",
+    "side": "tfc:block/ore_bismuthinite",
+    "bottom": "tfc:block/ore_bismuthinite",
+    "particle": "tfc:block/ore_bismuthinite"
   }
 }

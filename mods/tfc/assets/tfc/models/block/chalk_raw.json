@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/chalk_raw"
+    "top": "tfc:block/chalk_raw",
+    "front": "tfc:block/chalk_raw",
+    "side": "tfc:block/chalk_raw",
+    "bottom": "tfc:block/chalk_raw",
+    "particle": "tfc:block/chalk_raw"
   }
 }

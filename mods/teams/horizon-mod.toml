@@ -1,0 +1,8 @@
+id = "teams"
+name = "Horizon Teams"
+version = "0.1.0"
+description = "FTB Teams–inspired parties for Horizon Quests."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

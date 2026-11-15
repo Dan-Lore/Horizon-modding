@@ -123,7 +123,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 
 | Role | Id | Play version (2026-11-15) | Notes |
 | --- | --- | --- | --- |
-| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.4.3** on Nightly `fdc87ae` |
+| **Pack** | `tfg-horizon` («TFG Horizon») | `native-fdc87ae-428278da87c5` | Batch A + JustEnoughItems 1.1.2 + AE2 **15.4.18** + Greglite **0.4.3** + World Map **0.7.1** (installed, rebuild pending) on Nightly `fdc87ae` |
 
 - `create-dev` / `create-nightly-test` deleted (tests only).
 - **Create** cannot join this native: registry 0.7 → `9c7f9b2`, local 0.9 → `4e5296d`; AE2 15.4.18 needs `fdc87ae`/hooks 411. Create hnmod parked under `horizon-native-mods/_parked/`.
@@ -132,6 +132,7 @@ Workshop repo → use/contrib registry mods + WIP in `mods/` → daily registry 
 - Create clone: `mods/create-horizon/`. Manifest: `pack/draft-mods.toml`.
 - Greglite Electric Age plan + tracker: `docs/greglite-electric-plan.md`, `docs/greglite-electric-tracker.md`, `mods/greglite/tracker/catalog.json`.
 - TFC Horizon 0.1.0 (workshop, not on the pack pin): `docs/tfc-plan.md`, `docs/tfc-tracker.md`, `mods/tfc/`. `on = []` so AE2/Greglite stay the native-build.
+- Horizon Teams + Quests (workshop, not on the pack pin): `docs/quests-plan.md`, `docs/quests-tracker.md`, `mods/teams/`, `mods/quests/`. `on = []` until W6+ intentional smoke.
 - Ad Astra Horizon 0.1.0 (workshop overworld slice, no dimensions): `docs/adastra-plan.md`, `docs/adastra-tracker.md`, `mods/adastra/`. Pack wiring is a separate agent.
 
 
@@ -158,7 +159,8 @@ Create stays isolated until upstream shares a pin with AE2. Electric Age: `docs/
 4. Greglite waves from `mods/greglite/tracker/catalog.json` gaps after smoke.
 5. Ad Astra workshop smoke (`mods/adastra/`, `/give`) before any pack agent enables it.
 
-Combined native+content tips (not rules): `docs/dev-tips-native-content.md` — Hooks≠registries, check `native-content/<id>/` after builds, `/give` smoke.
+**Native build smoke (mandatory):** `.cursor/rules/horizon-native-build-smoke.mdc` + `docs/dev-tips-native-content.md`.  
+Do **not** report a mod as playable from `native-mods.json` or a chat tip alone — require `horizon-mod-ids.json` includes the id and `/give <id>:…` succeeds. Stale `.horizon-cache/mod-content` with only `["ae2"]` is a known failure mode.
 
 ## Out of scope unless the user asks again
 

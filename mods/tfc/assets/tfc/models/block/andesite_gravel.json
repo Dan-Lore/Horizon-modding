@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/andesite_gravel"
+    "top": "tfc:block/andesite_gravel",
+    "front": "tfc:block/andesite_gravel",
+    "side": "tfc:block/andesite_gravel",
+    "bottom": "tfc:block/andesite_gravel",
+    "particle": "tfc:block/andesite_gravel"
   }
 }

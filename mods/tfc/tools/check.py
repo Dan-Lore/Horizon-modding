@@ -58,7 +58,7 @@ def main() -> None:
     gen = MOD / "tools" / "gen_content.py"
     subprocess.check_call([sys.executable, str(gen)])
     catalog = json.loads((MOD / "tracker" / "catalog.json").read_text(encoding="utf-8"))
-    if catalog["version"] != "0.1.0" or catalog["horizon"] != REV:
+    if catalog["version"] != "0.1.3" or catalog["horizon"] != REV:
         fail("catalog pin drifted")
     seen = {system["wave"] for system in catalog["systems"]}
     missing = [wave for wave in WAVES if wave not in seen]

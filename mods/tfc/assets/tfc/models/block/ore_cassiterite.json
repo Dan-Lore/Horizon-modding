@@ -1,6 +1,10 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "tfc:block/ore_cassiterite"
+    "top": "tfc:block/ore_cassiterite",
+    "front": "tfc:block/ore_cassiterite",
+    "side": "tfc:block/ore_cassiterite",
+    "bottom": "tfc:block/ore_cassiterite",
+    "particle": "tfc:block/ore_cassiterite"
   }
 }
