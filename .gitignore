@@ -18,13 +18,22 @@ Desktop.ini
 __pycache__/
 *.pyc
 
-# Generated / scratch (keep scripts; drop pack staging, smoke dumps, DBs)
+# Generated / scratch (keep real tools/*.ps1|*.py; drop staging dumps)
 tools/_greglite-pack/
 tools/_tfc-pack/
+tools/_horizon_src*/
+tools/_mixins_*/
+tools/stage_*/
+tools/._*
+tools/.stage_*
 tools/_*.txt
 tools/_*.png
 tools/_*.json
+tools/_*.toml
+tools/_*.py
+tools/_*.ps1
 tools/_native-build-*.log*
+tools/*.horizon-mixins-*.lock
 mods/**/tracker/*.db
 mods/**/target/
 **/.horizon-cache/
