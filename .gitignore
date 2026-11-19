@@ -12,13 +12,14 @@ upstream/
 .local/
 *.log
 *.log.err
+tmp-*.log
 Thumbs.db
 Desktop.ini
 .DS_Store
 __pycache__/
 *.pyc
 
-# Generated / scratch (keep real tools/*.ps1|*.py; drop staging dumps)
+# Generated / scratch — keep tools/_*.py|ps1 helpers; ignore dumps/logs/screenshots
 tools/_greglite-pack/
 tools/_tfc-pack/
 tools/_horizon_src*/
@@ -30,10 +31,9 @@ tools/_*.txt
 tools/_*.png
 tools/_*.json
 tools/_*.toml
-tools/_*.py
-tools/_*.ps1
 tools/_native-build-*.log*
 tools/*.horizon-mixins-*.lock
+mods/**/dist/
 mods/**/tracker/*.db
 mods/**/target/
 **/.horizon-cache/
