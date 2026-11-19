@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:scanner",
+  "result": {
+    "id": "gtceu:lead_rod",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "ingredient": "gtceu:lead_plate"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:almandine_dust",
+    "gtceu:almandine_plate"
+  ],
+  "result": {
+    "id": "gtceu:almandine_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

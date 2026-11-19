@@ -12,6 +12,6 @@ Firmalife-inspired food vertical slice for Horizon. Version **0.1.2**.
 
 ## Pin
 
-Same as Greglite / TFC: Horizon `fdc87ae`, hooks 411. Pack into `tfg-dev` only when asked.
+Same as GregTech / TFC: Horizon `fdc87ae`, hooks 411. Pack into `tfg-dev` only when asked.
 
 **Textures:** MIT Firmalife jar via `python mods/firmalife/tools/fetch_firmalife_textures.py` (TFG instance path).

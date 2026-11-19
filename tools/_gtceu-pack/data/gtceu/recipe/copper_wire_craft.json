@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:copper_plate"
+    }
+  ],
+  "result": {
+    "id": "gtceu:copper_wire",
+    "count": 2
+  }
+}

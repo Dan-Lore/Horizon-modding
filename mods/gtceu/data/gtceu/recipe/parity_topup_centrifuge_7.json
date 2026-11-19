@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:centrifuge",
+  "result": {
+    "id": "gtceu:redstone_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    "minecraft:redstone",
+    "minecraft:redstone"
+  ]
+}

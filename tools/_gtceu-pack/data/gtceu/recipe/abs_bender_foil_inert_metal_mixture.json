@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:inert_metal_mixture_plate"
+  },
+  "result": {
+    "id": "gtceu:inert_metal_mixture_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

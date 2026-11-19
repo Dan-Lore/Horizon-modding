@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:lv_motor"
+    },
+    {
+      "item": "gtceu:iron_plate"
+    },
+    {
+      "item": "gtceu:tin_cable_1x"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "id": "gtceu:lv_piston",
+    "count": 1
+  }
+}

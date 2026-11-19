@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:arc_furnace",
+  "ingredient": {
+    "item": "gtceu:meitnerium_dust"
+  },
+  "result": {
+    "id": "gtceu:meitnerium_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 64,
+  "min_voltage": 32
+}

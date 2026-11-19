@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:cupronickel_plate",
+    "gtceu:cupronickel_dust"
+  ],
+  "result": {
+    "id": "gtceu:cupronickel_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

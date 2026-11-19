@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:butene_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:butene_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:butene_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:cracked_bauxite_slurry_plate"
+  },
+  "result": {
+    "id": "gtceu:cracked_bauxite_slurry_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

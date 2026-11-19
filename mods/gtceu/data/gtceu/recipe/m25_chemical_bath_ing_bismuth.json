@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:bismuth_plate",
+    "gtceu:bismuth_dust"
+  ],
+  "result": {
+    "id": "gtceu:bismuth_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

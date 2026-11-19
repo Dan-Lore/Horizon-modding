@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "greglite:block/uranium_rhodium_dinaquadide_cable_4x_side"
-  }
-}

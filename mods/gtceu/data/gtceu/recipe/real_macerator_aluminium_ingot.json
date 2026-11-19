@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:macerator",
+  "result": {
+    "id": "gtceu:aluminium_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "gtceu:aluminium_ingot"
+}

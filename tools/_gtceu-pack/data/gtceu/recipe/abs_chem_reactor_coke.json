@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:coke_dust",
+    "gtceu:coke_plate"
+  ],
+  "result": {
+    "id": "gtceu:coke_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

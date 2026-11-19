@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:ore_washer",
+  "ingredient": {
+    "item": "gtceu:construction_foam_dust"
+  },
+  "result": {
+    "id": "gtceu:construction_foam_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "min_voltage": 32
+}

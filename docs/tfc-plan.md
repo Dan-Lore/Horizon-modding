@@ -10,7 +10,7 @@
 - TFC **core only**. Firmalife and other addons stay out.
 - **Hybrid worldgen (choice C):** calendar, temperature, and rainfall early; a hand-placed rock and ore slice; full layers, climate maps, biomes, and veins stay `blocked`.
 - Pin `fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca` (hooks 411), the same native as `tfg-horizon` / AE2 15.4.18.
-- `pack/draft-mods.toml` lists TFC with `on = []`. Do not native-build it into the AE2/Greglite pin until a wave is smoked on purpose.
+- `pack/draft-mods.toml` lists TFC with `on = []`. Do not native-build it into the AE2/GregTech pin until a wave is smoked on purpose.
 
 ## Statuses
 

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:activated_carbon_plate"
+  },
+  "result": {
+    "id": "gtceu:activated_carbon_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

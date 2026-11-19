@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:dark_ash_plate"
+  },
+  "result": {
+    "id": "gtceu:dark_ash_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

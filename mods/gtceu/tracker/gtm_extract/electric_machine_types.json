@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "source": "GTMachines.java SimpleMachineBuilder",
+  "machines": [
+    {
+      "id": "air_scrubber",
+      "recipe_type": "air_scrubber",
+      "typical_inputs": 1,
+      "notes": "registerTieredMachines"
+    },
+    {
+      "id": "alloy_smelter",
+      "recipe_type": "alloy_smelter",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "arc_furnace",
+      "recipe_type": "arc_furnace",
+      "typical_inputs": 1,
+      "notes": "registerTieredMachines"
+    },
+    {
+      "id": "assembler",
+      "recipe_type": "assembler",
+      "typical_inputs": 2,
+      "notes": "HV-capped fluid tank; pollution debuff"
+    },
+    {
+      "id": "autoclave",
+      "recipe_type": "autoclave",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "bender",
+      "recipe_type": "bender",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "brewery",
+      "recipe_type": "brewery",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "canner",
+      "recipe_type": "canner",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "centrifuge",
+      "recipe_type": "centrifuge",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "chemical_bath",
+      "recipe_type": "chemical_bath",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "chemical_reactor",
+      "recipe_type": "chemical_reactor",
+      "typical_inputs": 2,
+      "notes": "16B fluid tank per tier"
+    },
+    {
+      "id": "circuit_assembler",
+      "recipe_type": "circuit_assembler",
+      "typical_inputs": 2,
+      "notes": "Cleanroom-oriented; pollution debuff"
+    },
+    {
+      "id": "compressor",
+      "recipe_type": "compressor",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "cutter",
+      "recipe_type": "cutter",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "distillery",
+      "recipe_type": "distillery",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "electric_furnace",
+      "recipe_type": "electric_furnace",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "electrolyzer",
+      "recipe_type": "electrolyzer",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "electromagnetic_separator",
+      "recipe_type": "electromagnetic_separator",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "extractor",
+      "recipe_type": "extractor",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "extruder",
+      "recipe_type": "extruder",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "fermenter",
+      "recipe_type": "fermenter",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "fluid_heater",
+      "recipe_type": "fluid_heater",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "fluid_solidifier",
+      "recipe_type": "fluid_solidifier",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "forge_hammer",
+      "recipe_type": "forge_hammer",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "forming_press",
+      "recipe_type": "forming_press",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "gas_collector",
+      "recipe_type": "gas_collector",
+      "typical_inputs": 1,
+      "notes": "Pollution debuff; large fluid tank"
+    },
+    {
+      "id": "laser_engraver",
+      "recipe_type": "laser_engraver",
+      "typical_inputs": 2,
+      "notes": "Pollution debuff"
+    },
+    {
+      "id": "lathe",
+      "recipe_type": "lathe",
+      "typical_inputs": 1,
+      "notes": "Custom LatheRecipeLogic"
+    },
+    {
+      "id": "macerator",
+      "recipe_type": "macerator",
+      "typical_inputs": 1,
+      "notes": "registerTieredMachines"
+    },
+    {
+      "id": "mixer",
+      "recipe_type": "mixer",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "ore_washer",
+      "recipe_type": "ore_washer",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "packer",
+      "recipe_type": "packer",
+      "typical_inputs": 2,
+      "notes": ""
+    },
+    {
+      "id": "polarizer",
+      "recipe_type": "polarizer",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "rock_crusher",
+      "recipe_type": "rock_breaker",
+      "typical_inputs": 1,
+      "notes": "registerTieredMachines; GTM id rock_crusher"
+    },
+    {
+      "id": "scanner",
+      "recipe_type": "scanner",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "sifter",
+      "recipe_type": "sifter",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "spooler",
+      "recipe_type": "spooling",
+      "typical_inputs": 1,
+      "notes": "registerTieredMachines; block id spooler"
+    },
+    {
+      "id": "thermal_centrifuge",
+      "recipe_type": "thermal_centrifuge",
+      "typical_inputs": 1,
+      "notes": ""
+    },
+    {
+      "id": "welder",
+      "recipe_type": "welder",
+      "typical_inputs": 2,
+      "notes": "registerTieredMachines"
+    },
+    {
+      "id": "wiremill",
+      "recipe_type": "wiremill",
+      "typical_inputs": 2,
+      "notes": ""
+    }
+  ]
+}

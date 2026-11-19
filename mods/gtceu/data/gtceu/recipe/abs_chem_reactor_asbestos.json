@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:asbestos_dust",
+    "gtceu:asbestos_plate"
+  ],
+  "result": {
+    "id": "gtceu:asbestos_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

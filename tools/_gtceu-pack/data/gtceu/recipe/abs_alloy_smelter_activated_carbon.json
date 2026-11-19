@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredient": {
+    "item": "gtceu:activated_carbon_dust"
+  },
+  "result": {
+    "id": "gtceu:activated_carbon_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "gtceu:block/lv_casing_top",
+    "bottom": "gtceu:block/lv_casing_bottom",
+    "side": "gtceu:block/lv_casing_side",
+    "front": "gtceu:block/lv_extruder_front_on",
+    "particle": "gtceu:block/lv_casing_side"
+  }
+}

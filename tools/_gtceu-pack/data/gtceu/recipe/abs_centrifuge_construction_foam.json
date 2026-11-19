@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:construction_foam_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:construction_foam_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:construction_foam_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

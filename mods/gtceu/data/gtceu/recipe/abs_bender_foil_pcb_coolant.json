@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:pcb_coolant_plate"
+  },
+  "result": {
+    "id": "gtceu:pcb_coolant_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

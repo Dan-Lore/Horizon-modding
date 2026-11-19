@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:aluminium_sulfite_dust"
+  },
+  "result": {
+    "id": "gtceu:aluminium_sulfite_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:diamond_plate",
+    "gtceu:diamond_dust"
+  ],
+  "result": {
+    "id": "gtceu:diamond_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

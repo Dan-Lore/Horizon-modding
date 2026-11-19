@@ -1,106 +1,22 @@
 ﻿{
-    "date_utc":  "2026-11-15",
-    "checked_at":  "2026-11-15T05:53:56.0461211Z",
+    "date_utc":  "2026-11-19",
+    "checked_at":  "2026-11-19T14:14:55.2895736Z",
     "index_path":  "C:\\Users\\smoln\\AppData\\Roaming\\horizon\\mod-browser\\horizon-index.json",
-    "project_count":  165,
-    "summary":  "create=0.7.0-alpha.2 dl=6188; tracked=12; keyword_hits=0; changes=12",
+    "project_count":  59,
+    "summary":  "create=\u003cmissing\u003e; keyword_hits=0; changes=12",
     "snapshot":  {
-                     "create":  {
-                                    "id":  "create",
-                                    "name":  "Create for Horizon",
-                                    "kind":  "native-mod",
-                                    "downloads":  6188,
-                                    "version":  "0.7.0-alpha.2",
-                                    "summary":  "Build rotating machines and small factories in Horizon with gears, belts, presses and fans."
-                                },
-                     "ae2":  {
-                                 "id":  "ae2",
-                                 "name":  "Applied Energistics 2",
-                                 "kind":  "native-mod",
-                                 "downloads":  4706,
-                                 "version":  "15.4.18",
-                                 "summary":  "Unofficial port of Applied Energistics 2 15.4.12: ME networks, autocrafting, spatial storage and more."
-                             },
-                     "jei":  {
-                                 "id":  "jei",
-                                 "name":  "JEI for Horizon",
-                                 "kind":  "native-mod",
-                                 "downloads":  33359,
-                                 "version":  "0.2.1",
-                                 "summary":  "An item and recipe viewer for Horizon: every item beside container screens, with search, recipes, uses, tooltips and bookmarks"
-                             },
-                     "justenoughitems":  {
-                                             "id":  "justenoughitems",
-                                             "name":  "Just Enough Items",
-                                             "kind":  "native-mod",
-                                             "downloads":  4104,
-                                             "version":  "1.1.2",
-                                             "summary":  "JEI for Horizon: every item beside your inventory, JEI\u0027s search, recipes and uses, the \"+\" button, bookmarks and cheat mode."
-                                         },
-                     "roughlyenoughitems":  {
-                                                "id":  "roughlyenoughitems",
-                                                "name":  "Roughly Enough Items",
-                                                "kind":  "native-mod",
-                                                "downloads":  906,
-                                                "version":  "1.1.2",
-                                                "summary":  "REI for Horizon: REI\u0027s item list, search, recipe screen, favorites, craftable filter and \"+\" button, in REI\u0027s own look."
-                                            },
-                     "jade":  {
-                                  "id":  "jade",
-                                  "name":  "Jade",
-                                  "kind":  "native-mod",
-                                  "downloads":  18078,
-                                  "version":  "26.3.8",
-                                  "summary":  "The look-at tooltip: what you\u0027re pointing at, its mod, its details and its state."
-                              },
-                     "lookat":  {
-                                    "id":  "lookat",
-                                    "name":  "LookAt",
-                                    "kind":  "native-mod",
-                                    "downloads":  19958,
-                                    "version":  "0.2.1",
-                                    "summary":  "The block or mob under your crosshair as a vanilla tooltip: icon, name in your language, health, the tool it needs and where it comes from"
-                                },
-                     "appleskin":  {
-                                       "id":  "appleskin",
-                                       "name":  "AppleSkin",
-                                       "kind":  "native-mod",
-                                       "downloads":  66965,
-                                       "version":  "0.1.3",
-                                       "summary":  "Shows how much HP, hunger, and saturation will be restored."
-                                   },
-                     "appleskin_horizon":  {
-                                               "id":  "appleskin_horizon",
-                                               "name":  "AppleSkin",
-                                               "kind":  "native-mod",
-                                               "downloads":  7374,
-                                               "version":  "1.0.0",
-                                               "summary":  "1:1 Minecraft Java parity food value preview \u0026 saturation HUD overlay."
-                                           },
-                     "connected_textures":  {
-                                                "id":  "connected_textures",
-                                                "name":  "ContinuityHorizon",
-                                                "kind":  "native-mod",
-                                                "downloads":  10931,
-                                                "version":  "0.1.7",
-                                                "summary":  "Continuity for Horizon"
-                                            },
-                     "voicechat":  {
-                                       "id":  "voicechat",
-                                       "name":  "Horizon Voice Chat",
-                                       "kind":  "native-mod",
-                                       "downloads":  10815,
-                                       "version":  "1.0.0",
-                                       "summary":  "Talk with Simple Voice Chat players: proximity voice, groups, push to talk and a menu (V)."
-                                   },
-                     "horizonmatica":  {
-                                           "id":  "horizonmatica",
-                                           "name":  "Horizonmatica",
-                                           "kind":  "native-mod",
-                                           "downloads":  6002,
-                                           "version":  "0.3.2",
-                                           "summary":  "Litematica for Horizon: schematics as ghost blocks, a verifier, material lists and a printer that builds the missing blocks for you."
-                                       }
+                     "create":  null,
+                     "ae2":  null,
+                     "jei":  null,
+                     "justenoughitems":  null,
+                     "roughlyenoughitems":  null,
+                     "jade":  null,
+                     "lookat":  null,
+                     "appleskin":  null,
+                     "appleskin_horizon":  null,
+                     "connected_textures":  null,
+                     "voicechat":  null,
+                     "horizonmatica":  null
                  },
     "keyword_hits":  [
 

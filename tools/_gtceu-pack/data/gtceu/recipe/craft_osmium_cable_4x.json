@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "C": {
+      "item": "gtceu:osmium_cable_1x"
+    }
+  },
+  "result": {
+    "id": "gtceu:osmium_cable_4x",
+    "count": 1
+  }
+}

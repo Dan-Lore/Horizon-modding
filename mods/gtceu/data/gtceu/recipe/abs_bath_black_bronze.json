@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredient": {
+    "item": "gtceu:black_bronze_dust"
+  },
+  "result": {
+    "id": "gtceu:black_bronze_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

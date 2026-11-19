@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:canner",
+  "result": {
+    "id": "gtceu:copper_plate",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "ingredients": [
+    "gtceu:copper_dust",
+    "gtceu:copper_plate"
+  ]
+}

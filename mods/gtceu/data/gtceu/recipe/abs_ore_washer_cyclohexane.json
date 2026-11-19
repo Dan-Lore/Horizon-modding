@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:ore_washer",
+  "ingredient": {
+    "item": "gtceu:cyclohexane_dust"
+  },
+  "result": {
+    "id": "gtceu:cyclohexane_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "min_voltage": 32
+}

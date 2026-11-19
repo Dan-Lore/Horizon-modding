@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:manganese_plate",
+    "gtceu:manganese_dust"
+  ],
+  "result": {
+    "id": "gtceu:manganese_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "result": {
+    "id": "gtceu:iron_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": "minecraft:raw_iron"
+}

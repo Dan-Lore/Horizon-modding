@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:enriched_bacterial_sludge_plate"
+  },
+  "result": {
+    "id": "gtceu:enriched_bacterial_sludge_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

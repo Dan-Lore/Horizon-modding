@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:cupronickel_dust"
+  },
+  "result": {
+    "id": "gtceu:cupronickel_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:compressor",
+  "ingredient": {
+    "item": "gtceu:glycolonitrile_ingot"
+  },
+  "result": {
+    "id": "gtceu:glycolonitrile_plate",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

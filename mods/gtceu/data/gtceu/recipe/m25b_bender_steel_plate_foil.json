@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:steel_plate"
+  },
+  "result": {
+    "id": "gtceu:steel_foil",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

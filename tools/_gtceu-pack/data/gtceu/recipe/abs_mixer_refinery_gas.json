@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:refinery_gas_dust",
+    "gtceu:refinery_gas_plate"
+  ],
+  "result": {
+    "id": "gtceu:refinery_gas_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

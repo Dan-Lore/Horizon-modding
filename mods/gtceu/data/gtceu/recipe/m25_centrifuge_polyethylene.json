@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:polyethylene_dust"
+  },
+  "result": {
+    "id": "gtceu:polyethylene_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredient": {
+    "item": "gtceu:reinforced_epoxy_resin_dust"
+  },
+  "result": {
+    "id": "gtceu:reinforced_epoxy_resin_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

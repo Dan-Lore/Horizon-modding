@@ -1,0 +1,11 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": "gtceu:steel_plate",
+  "result": {
+    "id": "gtceu:steel_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "steam": 1
+}

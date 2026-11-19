@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "gtceu:block/mv_circuit_assembler"
+    },
+    "facing=north,lit=true": {
+      "model": "gtceu:block/mv_circuit_assembler_on"
+    },
+    "facing=south,lit=false": {
+      "model": "gtceu:block/mv_circuit_assembler",
+      "y": 180
+    },
+    "facing=south,lit=true": {
+      "model": "gtceu:block/mv_circuit_assembler_on",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "gtceu:block/mv_circuit_assembler",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "gtceu:block/mv_circuit_assembler_on",
+      "y": 270
+    },
+    "facing=east,lit=false": {
+      "model": "gtceu:block/mv_circuit_assembler",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "gtceu:block/mv_circuit_assembler_on",
+      "y": 90
+    }
+  }
+}

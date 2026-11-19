@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": {
+    "item": "gtceu:potassium_carbonate_ingot"
+  },
+  "result": {
+    "id": "gtceu:potassium_carbonate_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

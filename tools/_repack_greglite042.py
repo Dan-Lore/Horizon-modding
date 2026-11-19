@@ -1,4 +1,4 @@
-"""Pack Greglite 0.4.2 and restore content onto create-nightly-test native."""
+"""Pack GregTech 0.4.2 and restore content onto create-nightly-test native."""
 import json
 import shutil
 import zipfile
@@ -6,25 +6,25 @@ from pathlib import Path
 
 VER = "0.4.2"
 NATIVE = "native-9f42064-410452aa31d8"
-src = Path(r"C:/Dev/Horizon-modding/mods/greglite")
-stage = Path(r"C:/Dev/Horizon-modding/tools/_greglite-pack")
+src = Path(r"C:/Dev/Horizon-modding/mods/gtceu")
+stage = Path(r"C:/Dev/Horizon-modding/tools/_gtceu-pack")
 out = (
     Path.home()
-    / "AppData/Roaming/horizon/instances/create-nightly-test/horizon-native-mods/greglite.hmod"
+    / "AppData/Roaming/horizon/instances/create-nightly-test/horizon-native-mods/gtceu.hmod"
 )
 
 shutil.rmtree(stage, ignore_errors=True)
-(stage / "mixins/greglite").mkdir(parents=True)
+(stage / "mixins/gtceu").mkdir(parents=True)
 shutil.copy(src / "horizon-mod.toml", stage)
 shutil.copytree(src / "assets", stage / "assets")
 shutil.copytree(src / "data", stage / "data")
-shutil.copy(src / "horizon-mixin.toml", stage / "mixins/greglite/")
-shutil.copytree(src / "api", stage / "mixins/greglite/api")
+shutil.copy(src / "horizon-mixin.toml", stage / "mixins/gtceu/")
+shutil.copytree(src / "api", stage / "mixins/gtceu/api")
 (stage / "horizon-native.json").write_text(
     json.dumps(
         {
             "schema": 1,
-            "id": "greglite",
+            "id": "gtceu",
             "version": VER,
             "game": "26.3",
             "horizon": "4e5296d1800b3f89f2ae48dfd99d431801df4d46",
@@ -41,7 +41,7 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
             z.write(p, p.relative_to(stage).as_posix())
 print("packed", out, out.stat().st_size)
 
-d = Path.home() / f"AppData/Roaming/horizon-launcher/versions/{NATIVE}/native-content/greglite"
+d = Path.home() / f"AppData/Roaming/horizon-launcher/versions/{NATIVE}/native-content/gtceu"
 if d.exists():
     shutil.rmtree(d)
 d.mkdir(parents=True)
@@ -50,7 +50,7 @@ shutil.copytree(src / "assets", d / "assets")
 shutil.copytree(src / "data", d / "data")
 print("restored", NATIVE)
 
-hm = Path.home() / "AppData/Roaming/horizon/instances/create-nightly-test/horizon-mods/greglite"
+hm = Path.home() / "AppData/Roaming/horizon/instances/create-nightly-test/horizon-mods/gtceu"
 if hm.exists():
     shutil.rmtree(hm)
 hm.mkdir(parents=True)

@@ -1,7 +1,7 @@
 # MVP plan — TFG-inspired pack on Horizon
 
 > **Status (2026-11-19): historical.** Batch A on Nightly `fdc87ae` is done.  
-> Current instances / next work: **`AGENTS.md`**, `pack/draft-mods.toml`, **`docs/greglite-continuation-plan.md`**.  
+> Current instances / next work: **`AGENTS.md`**, `pack/draft-mods.toml`, **`docs/gtceu-continuation-plan.md`**.  
 > Do not resurrect `create-dev` / single-instance wording below as live policy.
 
 **Goal of MVP:** one playable Nightly-based draft instance that feels like the *start* of a TFG-style stack (QoL + early tech hooks), not TerraFirmaGreg parity.
@@ -74,7 +74,7 @@ Base: **latest published Nightly** (today: `fdc87ae`).
 | **Yes** | AE2 | `ae2` | Fits Nightly `fdc87ae` (was in `native-fdc87ae-…`); only clashed with Create’s newer pin `4e5296d` |
 | Soft yes | AppleSkin | `appleskin` | Cheap HUD; drop if left out |
 | Soft yes | Continuity | `connected_textures` | Cheap visuals; drop if left out |
-| **Yes (own)** | Greglite | `greglite` | Tiny GT-inspired alloy smelter (`mods/greglite/`) |
+| **Yes (own)** | GregTech | `gtceu` | Tiny GT-inspired alloy smelter (`mods/gtceu/`) |
 | **No — wait** | Create | `create` | No build for our Nightly; 0.9 needs newer Horizon |
 
 One `native-build` with that set (not one rebuild per soft mod).
@@ -135,9 +135,9 @@ Only after Phase 1–2 are green:
 | Item | State |
 | --- | --- |
 | Nightly / play | `fdc87ae` → `native-fdc87ae-0b62c5b257f2` |
-| Batch A | JEI, Jade, AE2, AppleSkin, Continuity, **Greglite 0.1.1** — `left_out` empty |
+| Batch A | JEI, Jade, AE2, AppleSkin, Continuity, **GregTech 0.1.1** — `left_out` empty |
 | Create | removed from instance / waiting (≥ `4e5296d`) |
-| Greglite | `mods/greglite/` → `greglite.hmod` 0.2 — Steam Age (boiler + 3 machines) |
+| GregTech | `mods/gtceu/` → `gtceu.hmod` 0.2 — Steam Age (boiler + 3 machines) |
 | TFC | still post-MVP |
 
 ---

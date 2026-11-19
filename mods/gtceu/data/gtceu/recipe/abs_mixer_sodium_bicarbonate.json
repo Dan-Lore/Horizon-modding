@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:sodium_bicarbonate_dust",
+    "gtceu:sodium_bicarbonate_plate"
+  ],
+  "result": {
+    "id": "gtceu:sodium_bicarbonate_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

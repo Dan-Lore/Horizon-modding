@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:redstone_dust"
+  },
+  "result": {
+    "id": "gtceu:redstone_nugget",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

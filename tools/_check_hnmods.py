@@ -3,7 +3,7 @@ import zipfile
 from pathlib import Path
 
 nm = Path.home() / "AppData/Roaming/horizon/instances/create-nightly-test/horizon-native-mods"
-for name in ["jei.hnmod", "jade.hnmod", "greglite.hmod", "create.hnmod"]:
+for name in ["jei.hnmod", "jade.hnmod", "gtceu.hmod", "create.hnmod"]:
     path = nm / name
     print("===", name, path.exists(), path.stat().st_size if path.exists() else 0, "===")
     if not path.exists():

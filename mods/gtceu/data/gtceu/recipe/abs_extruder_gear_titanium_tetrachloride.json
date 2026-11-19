@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extruder",
+  "ingredient": {
+    "item": "gtceu:titanium_tetrachloride_plate"
+  },
+  "result": {
+    "id": "gtceu:titanium_tetrachloride_gear",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "min_voltage": 32
+}

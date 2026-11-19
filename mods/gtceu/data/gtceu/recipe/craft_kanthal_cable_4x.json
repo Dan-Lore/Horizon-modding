@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "key": {
+    "C": {
+      "item": "gtceu:kanthal_cable_1x"
+    }
+  },
+  "result": {
+    "id": "gtceu:kanthal_cable_4x",
+    "count": 1
+  }
+}

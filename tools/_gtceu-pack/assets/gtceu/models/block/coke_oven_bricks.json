@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "gtceu:block/coke_oven_bricks",
+    "bottom": "gtceu:block/coke_oven_bricks",
+    "side": "gtceu:block/coke_oven_bricks",
+    "front": "gtceu:block/coke_oven_bricks",
+    "particle": "gtceu:block/coke_oven_bricks"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:polyvinyl_chloride_dust"
+  },
+  "result": {
+    "id": "gtceu:polyvinyl_chloride_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:welder",
+  "result": {
+    "id": "gtceu:copper_cable_1x",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 24,
+  "ingredients": [
+    "gtceu:copper_wire",
+    "gtceu:rubber"
+  ]
+}

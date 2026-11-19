@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:forge_hammer",
+  "ingredient": {
+    "item": "gtceu:ruthenium_trinium_americium_neutronate_ingot"
+  },
+  "result": {
+    "id": "gtceu:ruthenium_trinium_americium_neutronate_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

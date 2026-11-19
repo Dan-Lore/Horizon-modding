@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:ore_washer",
+  "ingredient": {
+    "item": "gtceu:sodium_bicarbonate_dust"
+  },
+  "result": {
+    "id": "gtceu:sodium_bicarbonate_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "min_voltage": 32
+}

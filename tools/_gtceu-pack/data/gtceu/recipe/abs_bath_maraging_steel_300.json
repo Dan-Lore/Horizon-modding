@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredient": {
+    "item": "gtceu:maraging_steel_300_dust"
+  },
+  "result": {
+    "id": "gtceu:maraging_steel_300_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

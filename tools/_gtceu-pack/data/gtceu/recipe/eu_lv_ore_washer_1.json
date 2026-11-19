@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:ore_washer",
+  "result": {
+    "id": "gtceu:copper_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": "minecraft:raw_copper"
+}

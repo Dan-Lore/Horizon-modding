@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:spodumene_dust"
+  },
+  "result": {
+    "id": "gtceu:spodumene_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

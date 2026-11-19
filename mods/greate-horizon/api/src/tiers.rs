@@ -1,5 +1,5 @@
 //! Greate-inspired kinetic tier rules (pure logic, no Host).
-//! Voltage mirrors Greglite / GTCEu packet volts. Stress is a Create-like capacity proxy.
+//! Voltage mirrors GregTech / GTCEu packet volts. Stress is a Create-like capacity proxy.
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
 pub enum KineticTier {

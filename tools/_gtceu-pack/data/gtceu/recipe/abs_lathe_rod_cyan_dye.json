@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:lathe",
+  "ingredient": {
+    "item": "gtceu:cyan_dye_ingot"
+  },
+  "result": {
+    "id": "gtceu:cyan_dye_rod",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

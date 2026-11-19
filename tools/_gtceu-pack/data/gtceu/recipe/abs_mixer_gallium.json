@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:gallium_dust",
+    "gtceu:gallium_plate"
+  ],
+  "result": {
+    "id": "gtceu:gallium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electrolyzer",
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    "gtceu:copper_dust",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "id": "gtceu:copper_ingot",
+    "count": 1
+  }
+}

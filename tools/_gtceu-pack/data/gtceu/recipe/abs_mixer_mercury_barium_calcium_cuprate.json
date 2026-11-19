@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:mercury_barium_calcium_cuprate_dust",
+    "gtceu:mercury_barium_calcium_cuprate_plate"
+  ],
+  "result": {
+    "id": "gtceu:mercury_barium_calcium_cuprate_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": {
+    "item": "gtceu:salt_water_ingot"
+  },
+  "result": {
+    "id": "gtceu:salt_water_wire",
+    "count": 2
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

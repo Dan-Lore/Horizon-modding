@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "minecraft:coal"
+  ],
+  "result": {
+    "id": "gtceu:steel_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2,
+  "steam": 1
+}

@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:cutter",
+  "result": {
+    "id": "gtceu:electrum_screw",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "gtceu:electrum_plate"
+}

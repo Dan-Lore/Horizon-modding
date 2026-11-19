@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extruder",
+  "ingredient": {
+    "item": "gtceu:sulfur_dioxide_plate"
+  },
+  "result": {
+    "id": "gtceu:sulfur_dioxide_gear",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "min_voltage": 32
+}

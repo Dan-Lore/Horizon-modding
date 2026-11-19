@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": "gtceu:glass_ingot",
+  "result": {
+    "id": "gtceu:glass_wire",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

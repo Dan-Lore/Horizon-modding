@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:lpg_dust",
+    "gtceu:lpg_plate"
+  ],
+  "result": {
+    "id": "gtceu:lpg_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

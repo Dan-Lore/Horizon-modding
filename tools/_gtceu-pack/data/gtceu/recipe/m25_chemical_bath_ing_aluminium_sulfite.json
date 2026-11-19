@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:aluminium_sulfite_plate",
+    "gtceu:aluminium_sulfite_dust"
+  ],
+  "result": {
+    "id": "gtceu:aluminium_sulfite_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

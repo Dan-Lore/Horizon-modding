@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate Horizon Quests content (book, board, loot crate) + 26.3 items/ defs.
 
-Textures use PIL (RGBA) so Horizon atlases them — same path as TFC/Greglite.
+Textures use PIL (RGBA) so Horizon atlases them — same path as TFC/GregTech.
 """
 
 from __future__ import annotations

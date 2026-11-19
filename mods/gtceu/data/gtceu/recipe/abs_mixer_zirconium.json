@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:zirconium_dust",
+    "gtceu:zirconium_plate"
+  ],
+  "result": {
+    "id": "gtceu:zirconium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

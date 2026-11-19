@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:electric_furnace",
+  "ingredient": "minecraft:clay_ball",
+  "result": {
+    "id": "minecraft:brick",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

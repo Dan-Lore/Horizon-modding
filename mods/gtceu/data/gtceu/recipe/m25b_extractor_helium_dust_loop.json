@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extractor",
+  "ingredient": {
+    "item": "gtceu:helium_dust"
+  },
+  "result": {
+    "id": "gtceu:helium_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

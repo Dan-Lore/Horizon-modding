@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:hafnium_dust",
+    "gtceu:hafnium_plate"
+  ],
+  "result": {
+    "id": "gtceu:hafnium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

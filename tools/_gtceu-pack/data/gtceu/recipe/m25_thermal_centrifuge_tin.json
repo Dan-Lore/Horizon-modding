@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:tin_dust"
+  },
+  "result": {
+    "id": "gtceu:tin_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

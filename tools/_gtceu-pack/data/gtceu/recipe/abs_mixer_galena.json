@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:galena_dust",
+    "gtceu:galena_plate"
+  ],
+  "result": {
+    "id": "gtceu:galena_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

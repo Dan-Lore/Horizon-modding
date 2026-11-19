@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:asbestos_dust",
+    "gtceu:asbestos_plate"
+  ],
+  "result": {
+    "id": "gtceu:asbestos_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

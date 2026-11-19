@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": {
+    "item": "gtceu:severely_hydro_cracked_light_fuel_ingot"
+  },
+  "result": {
+    "id": "gtceu:severely_hydro_cracked_light_fuel_wire",
+    "count": 2
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:nitric_acid_plate",
+    "gtceu:nitric_acid_dust"
+  ],
+  "result": {
+    "id": "gtceu:nitric_acid_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

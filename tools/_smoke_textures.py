@@ -22,7 +22,7 @@ print("auth", cmd("auth " + info["token"]))
 st = cmd("status")
 print("screen", st.get("screen"))
 if st.get("screen") == "title" or not st.get("player"):
-    print("open", cmd("open greglite-parity-smoke"))
+    print("open", cmd("open gtceu-parity-smoke"))
     for i in range(60):
         time.sleep(0.5)
         st = cmd("status")
@@ -31,10 +31,10 @@ if st.get("screen") == "title" or not st.get("player"):
             break
 
 for it in [
-    "greglite:lv_macerator",
-    "greglite:silver_cable_4x",
-    "greglite:bronze_plate",
-    "greglite:tin_dust",
+    "gtceu:lv_macerator",
+    "gtceu:silver_cable_4x",
+    "gtceu:bronze_plate",
+    "gtceu:tin_dust",
 ]:
     print("give", it, cmd(f"give {it} 1"))
 

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": {
+    "item": "gtceu:strontium_ingot"
+  },
+  "result": {
+    "id": "gtceu:strontium_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

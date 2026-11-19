@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:bender",
+  "result": {
+    "id": "gtceu:soldering_alloy_foil",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "gtceu:soldering_alloy_plate"
+}

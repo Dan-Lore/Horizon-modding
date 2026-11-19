@@ -35,3 +35,26 @@ Keyword hits (tfc/gt/…): none
 - **updated** `connected_textures`: v0.1.7→v0.1.7, dl 4893→10931
 - **updated** `voicechat`: v1.0.0→v1.0.0, dl 6393→10815
 - **updated** `horizonmatica`: v0.3.2→v0.3.2, dl 3481→6002
+
+## 2026-11-19
+
+- Batch A ids **missing from public registry** (`ae2`, `create`, `jade`, `jei`, `justenoughitems`, `appleskin`, `connected_textures`, …). Pages return “Not in the registry.”
+- Keep smoked native `e0aa` (still has AE2 15.4.18 in-binary). Do **not** migrate pack to tip `dd67b76` yet.
+- Keyword TFC/GT/Firmalife: still none.
+- New TFG-adjacent listings to watch (not adopted): `create_hypertube`, `industrialforegoing`, `pneumaticcraft`, `deepbore_quarry`, `factory_blocks`, `vastores` / Vast*, `voltz`.
+- Detail: `docs/horizon-pin-roadmap-2026-11-19.md`.
+
+## 2026-11-19
+
+- `create` removed / missing from registry
+- `ae2` removed / missing from registry
+- `jei` removed / missing from registry
+- `justenoughitems` removed / missing from registry
+- `roughlyenoughitems` removed / missing from registry
+- `jade` removed / missing from registry
+- `lookat` removed / missing from registry
+- `appleskin` removed / missing from registry
+- `appleskin_horizon` removed / missing from registry
+- `connected_textures` removed / missing from registry
+- `voicechat` removed / missing from registry
+- `horizonmatica` removed / missing from registry

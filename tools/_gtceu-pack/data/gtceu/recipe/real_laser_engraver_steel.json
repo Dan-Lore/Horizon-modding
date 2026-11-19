@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:laser_engraver",
+  "result": {
+    "id": "gtceu:steel_foil",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "ingredient": "gtceu:steel_plate"
+}

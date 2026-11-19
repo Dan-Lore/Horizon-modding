@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:polyvinyl_chloride_dust"
+  },
+  "result": {
+    "id": "gtceu:polyvinyl_chloride_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

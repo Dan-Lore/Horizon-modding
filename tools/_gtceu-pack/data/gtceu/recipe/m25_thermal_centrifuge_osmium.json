@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:osmium_dust"
+  },
+  "result": {
+    "id": "gtceu:osmium_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

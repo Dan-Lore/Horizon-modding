@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": {
+    "item": "gtceu:caesium_ingot"
+  },
+  "result": {
+    "id": "gtceu:caesium_wire",
+    "count": 2
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:palladium_dust"
+  },
+  "result": {
+    "id": "gtceu:palladium_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

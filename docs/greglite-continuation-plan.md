@@ -1,9 +1,9 @@
-# Greglite — continuation after the Electric Age checklist
+# GregTech — continuation after the Electric Age checklist
 
 **Date:** 2026-11-15  
-**Supersedes for next work:** [`greglite-electric-plan.md`](greglite-electric-plan.md) (W0–W9 content checklist, locked 2026-11-14).  
-**Own mod:** `mods/greglite/` — clean Horizon rewrite, GTM textures + `NOTICE`.  
-**Play instance:** `tfg-dev` → `native-fdc87ae-e0aa83869033` (Nightly `fdc87ae`, hooks 411, AE2 15.4.18, Greglite 0.5.5).  
+**Supersedes for next work:** [`gtceu-electric-plan.md`](gtceu-electric-plan.md) (W0–W9 content checklist, locked 2026-11-14).  
+**Own mod:** `mods/gtceu/` — clean Horizon rewrite, GTM textures + `NOTICE`.  
+**Play instance:** `tfg-dev` → `native-fdc87ae-e0aa83869033` (Nightly `fdc87ae`, hooks 411, AE2 15.4.18, GregTech 0.5.5).  
 `tfg-horizon` pinned to the same smoked native. Do not native-build it; rebuild only `tfg-dev`, then re-pin + drop older hashes.  
 Create stays off this pin (`4e5296d` / `9c7f9b2`).
 
@@ -16,13 +16,13 @@ The 2026-11-14 plan’s instances `create-dev` and `create-nightly-test` are gon
 | Signal | What the scorer counts | What the tick does |
 | --- | --- | --- |
 | 40 types × LV–UV | block JSON exists | one `EuProcessor` path: 1 input, or 2 for a short dual-input list, 1 output, consume 1 item |
-| ≥8 recipes / type | non-placeholder JSON | shared recipe type `greglite:<mtype>` for every tier |
-| 34 `multi_*` blocks | `multiblocks_hit` | `Kind::Multiblock`: 128 V, 1 in / 1 out, recipe type `greglite:multiblock`, no structure |
+| ≥8 recipes / type | non-placeholder JSON | shared recipe type `gtceu:<mtype>` for every tier |
+| 34 `multi_*` blocks | `multiblocks_hit` | `Kind::Multiblock`: 128 V, 1 in / 1 out, recipe type `gtceu:multiblock`, no structure |
 | EU net 100% | cable + transformer + buffer + diode files exist, plus a flat +10% | adjacent EU push; every cable is `V = 32 × amps`; transformer and diode are `Kind::Cable` |
 | Generators | LV–HV block names | combustion and gas turbine burn solid coal; steam is an integer counter |
 | Materials | dust/plate/rod/wire items | no material properties, no ore veins, no machine crafts |
 
-Code: `mods/greglite/api/src/registry.rs`, `processor.rs`, `generator.rs`, `net.rs`.
+Code: `mods/gtceu/api/src/registry.rs`, `processor.rs`, `generator.rs`, `net.rs`.
 
 There is no crafting recipe for `lv_macerator`, `lv_machine_hull`, or LV components (motor, piston, robot arm). A player reaches machines with `/give`.
 
@@ -33,7 +33,7 @@ There is no crafting recipe for `lv_macerator`, `lv_machine_hull`, or LV compone
 A wave is done only on **`tfg-dev`** after a real Play:
 
 1. Active version is `native-fdc87ae-01abd5b2b6a6` (or a newer native built from that same pin).
-2. `instances/tfg-dev/.horizon-cache/mod-content/<hash>/horizon-mod-ids.json` lists `greglite`.
+2. `instances/tfg-dev/.horizon-cache/mod-content/<hash>/horizon-mod-ids.json` lists `gtceu`.
 3. `/give` of the wave’s item succeeds.
 4. The scenario in the wave table succeeds in game.
 5. Login chat and `coverage.json` do not count.
@@ -52,7 +52,7 @@ Scenario: coal in LP boiler beside `lv_steam_turbine`, tin cable, copper in `lv_
 
 If content is missing or the cache lists only `ae2`, restore `horizon-mod.toml` + `assets/` + `data/`, delete `.horizon-cache/mod-content/`, relaunch. No new Rust in that case.
 
-Also point `docs/greglite-electric-tracker.md` and `mods/greglite/README.md` at `tfg-dev`. Leave `coverage.json` as the **content** score. Add a separate behavior checklist that starts at N0 = 1 loop, everything else open.
+Also point `docs/gtceu-electric-tracker.md` and `mods/gtceu/README.md` at `tfg-dev`. Leave `coverage.json` as the **content** score. Add a separate behavior checklist that starts at N0 = 1 loop, everything else open.
 
 ### N1 — EU network v2
 
@@ -125,7 +125,7 @@ Scenario: a turbine with an empty steam buffer does not make EU; a boiler with w
 - Coal → coke. Creosote only if N4 fluids exist.
 - Other `multi_*` blocks stay out of the behavior checklist.
 
-Scenario: incomplete structure is inert; complete structure turns coal into coke. `/give greglite:multi_coke_oven` alone is not the smoke.
+Scenario: incomplete structure is inert; complete structure turns coal into coke. `/give gtceu:multi_coke_oven` alone is not the smoke.
 
 ### N6 — Electric blast furnace
 
@@ -144,7 +144,7 @@ Scenario: incomplete EBF is inert; complete EBF with EU and coke yields steel.
 
 - Face-centred 3×3×3 shell: `ebf_casing` + `input_hatch` + `output_hatch` + `energy_hatch` (no coils; frost-proof casing deferred).
 - Incomplete structure does not tick.
-- Recipe type `greglite:vacuum_freezer`: `hot_steel_ingot` → `steel_ingot` with EU.
+- Recipe type `gtceu:vacuum_freezer`: `hot_steel_ingot` → `steel_ingot` with EU.
 - EBF steel recipe now outputs `hot_steel_ingot` so the freezer is required for cold steel.
 
 Scenario: incomplete freezer is inert; formed freezer with EU cools hot steel. EBF alone no longer yields cold `steel_ingot`.
@@ -158,13 +158,13 @@ Each one is its own wave and its own smoke:
 3. Cleanroom, then circuit assembler rules that require it.
 4. Assembly line.
 
-Parked until a named wave: fusion, bedrock miner, large turbines, GCYM, ore-vein worldgen, the rest of the ~120 material dict, Create×Greglite.
+Parked until a named wave: fusion, bedrock miner, large turbines, GCYM, ore-vein worldgen, the rest of the ~120 material dict, Create×GregTech.
 
 ## Out of scope
 
 - Treating `coverage.json` 100% as GregTech parity.
 - Porting a GTM jar or executing Java machine code.
-- Native-building TFC onto `tfg-horizon` in the same change as a Greglite wave.
+- Native-building TFC onto `tfg-horizon` in the same change as a GregTech wave.
 - Tip Nightly `9f42064` while AE2 15.4.18 is on `fdc87ae`.
 - Overvolt explosions (refuse the packet in N1; explosions wait).
 - A third pack instance.

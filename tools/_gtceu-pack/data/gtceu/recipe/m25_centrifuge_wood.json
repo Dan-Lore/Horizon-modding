@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:wood_dust"
+  },
+  "result": {
+    "id": "gtceu:wood_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

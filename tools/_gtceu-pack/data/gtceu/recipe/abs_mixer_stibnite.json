@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:stibnite_dust",
+    "gtceu:stibnite_plate"
+  ],
+  "result": {
+    "id": "gtceu:stibnite_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

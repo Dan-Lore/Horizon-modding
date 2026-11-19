@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:sodium_plate",
+    "gtceu:sodium_dust"
+  ],
+  "result": {
+    "id": "gtceu:sodium_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

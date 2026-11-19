@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:lathe",
+  "ingredient": "gtceu:charcoal_ingot",
+  "result": {
+    "id": "gtceu:charcoal_rod",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

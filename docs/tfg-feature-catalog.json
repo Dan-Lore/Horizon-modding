@@ -91,210 +91,210 @@
     },
     {
       "id": "gl_steam_boiler",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N1"
     },
     {
       "id": "gl_solid_boiler",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N1"
     },
     {
       "id": "gl_steam_machines",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N2 steam age"
     },
     {
       "id": "gl_lv_eu_network",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N3 cables/battery/machines"
     },
     {
       "id": "gl_mv_hv_tiers",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N3+ tiered EU"
     },
     {
       "id": "gl_wires_cables",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "Wire/cable items + logic"
     },
     {
       "id": "gl_batteries",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "Battery packs"
     },
     {
       "id": "gl_electric_machines_basic",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "Macerator alloy smelter etc"
     },
     {
       "id": "gl_circuit_boards",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "phenolic_circuit_board craft + items"
     },
     {
       "id": "gl_circuits_full_chain",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "basic+good circuits only — no IV+ items in workshop set"
     },
     {
       "id": "gl_materials_ingots",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "workshop metal set (not Absolute GT table)"
     },
     {
       "id": "gl_materials_plates_rods",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "plate/rod recipes for workshop metals"
     },
     {
       "id": "gl_dusts_ores",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "macerator dust chain for shipped metals/ores"
     },
     {
       "id": "gl_coke_oven_multi",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N5 shell"
     },
     {
       "id": "gl_ebf_multi",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N6 EBF + steel"
     },
     {
       "id": "gl_vacuum_freezer",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N7 hot→cold"
     },
     {
       "id": "gl_distillation_tower",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N8 shell + oil_cell recipe"
     },
     {
       "id": "gl_oil_cracker",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N8 shell + naphtha crack"
     },
     {
       "id": "gl_large_chem_reactor",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N8 shell + LCR polyethylene"
     },
     {
       "id": "gl_cleanroom_shell",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "N8 shell + epoxy foil"
     },
     {
       "id": "gl_hot_ingot_chain",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "EBF hot_steel/hot_aluminium + vacuum freezer cool"
     },
     {
       "id": "gl_assembler_recipes",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "assembler boards→basic circuit; circuit assembler basic→good"
     },
     {
       "id": "gl_chemical_reactor_single",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "single-block chem + fluid tanks on LV chem/distillery"
     },
     {
       "id": "gl_fluid_pipes",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "item/fluid pipe transfer on BE tick; fluid tanks on pipes/boilers"
     },
     {
       "id": "gl_covers_conveyors",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "cover attach/remove + filter; conveyor/pipe ticks"
     },
     {
       "id": "gl_tool_electric",
-      "pillar": "greglite",
+      "pillar": "gtceu",
       "status": "done",
       "horizon_gap": null,
-      "mod": "greglite",
+      "mod": "gtceu",
       "note": "lv_drill craft + break_speed ×8 while held"
     },
     {

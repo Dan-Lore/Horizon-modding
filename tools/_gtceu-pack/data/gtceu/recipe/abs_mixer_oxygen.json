@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:oxygen_dust",
+    "gtceu:oxygen_plate"
+  ],
+  "result": {
+    "id": "gtceu:oxygen_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

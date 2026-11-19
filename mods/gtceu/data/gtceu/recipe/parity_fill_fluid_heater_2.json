@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:fluid_heater",
+  "duration": 80,
+  "eu": 2,
+  "ingredient": "gtceu:tin_dust",
+  "result": {
+    "id": "gtceu:tin_plate",
+    "count": 1
+  }
+}

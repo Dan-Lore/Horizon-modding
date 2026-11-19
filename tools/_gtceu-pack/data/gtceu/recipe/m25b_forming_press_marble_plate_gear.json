@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:forming_press",
+  "ingredient": {
+    "item": "gtceu:marble_plate"
+  },
+  "result": {
+    "id": "gtceu:marble_gear",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

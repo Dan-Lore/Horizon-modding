@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "result": {
+    "id": "firmalife:dried_fruit",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:lv_machine_hull"
+    },
+    {
+      "item": "gtceu:lv_piston"
+    },
+    {
+      "item": "gtceu:programmed_circuit_1"
+    },
+    {
+      "item": "gtceu:iron_plate"
+    }
+  ],
+  "result": {
+    "id": "gtceu:lv_bender",
+    "count": 1
+  }
+}

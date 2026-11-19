@@ -1,22 +1,22 @@
-# Greglite Electric Age — plan (locked 2026-11-14)
+# GregTech Electric Age — plan (locked 2026-11-14)
 
 > **CLOSED / historical (W0–W9 content checklist).**  
-> **Active plan:** [`greglite-continuation-plan.md`](greglite-continuation-plan.md) on **`tfg-dev`**.  
-> Behaviour checklist: [`greglite-behavior.md`](greglite-behavior.md).  
+> **Active plan:** [`gtceu-continuation-plan.md`](gtceu-continuation-plan.md) on **`tfg-dev`**.  
+> Behaviour checklist: [`gtceu-behavior.md`](gtceu-behavior.md).  
 > Do **not** native-build pinned `tfg-horizon`. Instances `create-dev` / `create-nightly-test` in tables below are **retired** — ignore them.
 
 Play / pack pin reference: `tfg-horizon` → `native-fdc87ae-428278da87c5`. Dev rebuilds: `tfg-dev`. File coverage: `tracker/coverage.json`.
 
-**Own mod:** `mods/greglite/` (not a GTM/TFG jar port).  
+**Own mod:** `mods/gtceu/` (not a GTM/TFG jar port).  
 **Inspiration / textures:** GregTech Modern (LGPL) — clean Horizon rewrite + `NOTICE`.  
-**Tracker:** `mods/greglite/tracker/catalog.json` → SQLite via `tools/greglite-tracker.ps1` (when present) → summary `docs/greglite-electric-tracker.md`.
+**Tracker:** `mods/gtceu/tracker/catalog.json` → SQLite via `tools/gtceu-tracker.ps1` (when present) → summary `docs/gtceu-electric-tracker.md`.
 
 ## Pack instances (exactly two)
 
 | Role | Launcher id | Label | Play version (2026-11-14) | Create |
 | --- | --- | --- | --- | --- |
-| **Working** (tested, do not break) | `create-dev` | TFG Horizon Draft | `native-fdc87ae-8837f1d46495` (Nightly `fdc87ae`) | no — Batch A + greglite 0.2 |
-| **Test** (new work) | `create-nightly-test` | Create Nightly Test | `native-9f42064-e72cd9c26fa6` (Nightly tip + Greglite 0.3) | Create 0.9 isolated on `native-4e5296d-649518ee8b9d` (pin clash on tip) |
+| **Working** (tested, do not break) | `create-dev` | TFG Horizon Draft | `native-fdc87ae-8837f1d46495` (Nightly `fdc87ae`) | no — Batch A + gtceu 0.2 |
+| **Test** (new work) | `create-nightly-test` | Create Nightly Test | `native-9f42064-e72cd9c26fa6` (Nightly tip + GregTech 0.3) | Create 0.9 isolated on `native-4e5296d-649518ee8b9d` (pin clash on tip) |
 
 Rules:
 
@@ -28,7 +28,7 @@ Rules:
 ## Goal
 
 EU + generators + **all GTM singleblock electric machine types**, with **≥2 recipes per implemented machine**.  
-World content starts **LV-only** (`greglite:lv_*`); higher tiers live in the tracker and ship in a later wave.
+World content starts **LV-only** (`gtceu:lv_*`); higher tiers live in the tracker and ship in a later wave.
 
 ### In scope (tracker `todo` / waves)
 
@@ -76,7 +76,7 @@ Multitask: after W2 is green on **test**, parallelize 2–4 machines per task in
 ## Tracker statuses
 
 Machine `done` only if block + logic + GUI + energy **and** ≥2 recipes `done`.  
-`source_mod`: usually `gregtech_modern`; items may be `minecraft` / `greglite` / later `create`.
+`source_mod`: usually `gregtech_modern`; items may be `minecraft` / `gtceu` / later `create`.
 
 ## Shipped (2026-11-14)
 
@@ -86,12 +86,12 @@ Multiblocks remain `deferred`. Create co-build on tip: `left_out` (use Create-on
 ## Smoke (obsolete instance names)
 
 The steps that named `create-nightly-test` / `create-dev` are obsolete.  
-Use **`tfg-dev`** + [`greglite-behavior.md`](greglite-behavior.md) / [`greglite-continuation-plan.md`](greglite-continuation-plan.md).
+Use **`tfg-dev`** + [`gtceu-behavior.md`](gtceu-behavior.md) / [`gtceu-continuation-plan.md`](gtceu-continuation-plan.md).
 
 ## Related docs
 
-- Continuation (active): `docs/greglite-continuation-plan.md`
-- Behaviour checklist: `docs/greglite-behavior.md`
-- Mod README: `mods/greglite/README.md`
+- Continuation (active): `docs/gtceu-continuation-plan.md`
+- Behaviour checklist: `docs/gtceu-behavior.md`
+- Mod README: `mods/gtceu/README.md`
 - Transfer list: `docs/mod-transfer-list.md`
-- Progress board: `docs/greglite-electric-tracker.md`  
+- Progress board: `docs/gtceu-electric-tracker.md`  

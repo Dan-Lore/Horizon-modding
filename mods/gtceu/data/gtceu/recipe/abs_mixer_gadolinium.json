@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:gadolinium_dust",
+    "gtceu:gadolinium_plate"
+  ],
+  "result": {
+    "id": "gtceu:gadolinium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

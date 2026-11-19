@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extruder",
+  "ingredient": {
+    "item": "gtceu:perlite_plate"
+  },
+  "result": {
+    "id": "gtceu:perlite_gear",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "min_voltage": 32
+}

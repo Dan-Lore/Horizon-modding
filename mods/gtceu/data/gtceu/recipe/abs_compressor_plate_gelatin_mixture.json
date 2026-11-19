@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:compressor",
+  "ingredient": {
+    "item": "gtceu:gelatin_mixture_ingot"
+  },
+  "result": {
+    "id": "gtceu:gelatin_mixture_plate",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

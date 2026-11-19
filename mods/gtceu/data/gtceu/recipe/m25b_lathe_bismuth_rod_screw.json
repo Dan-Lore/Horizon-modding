@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:lathe",
+  "ingredient": {
+    "item": "gtceu:bismuth_rod"
+  },
+  "result": {
+    "id": "gtceu:bismuth_screw",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

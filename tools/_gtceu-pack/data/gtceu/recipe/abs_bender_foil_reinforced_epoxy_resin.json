@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:reinforced_epoxy_resin_plate"
+  },
+  "result": {
+    "id": "gtceu:reinforced_epoxy_resin_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

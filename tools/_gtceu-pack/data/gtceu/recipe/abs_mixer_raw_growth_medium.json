@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:raw_growth_medium_dust",
+    "gtceu:raw_growth_medium_plate"
+  ],
+  "result": {
+    "id": "gtceu:raw_growth_medium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -23,7 +23,7 @@ Closest legal analogue to TFG would be shipping an **official Horizon package fr
 | **Ad Astra** | `ad_astra-forge-1.20.1-1.15.21.jar` — Terrarium License | **MIT** (defined “Code”) | **ARR** (everything else) | Read/reimplement code; **do not** vendor PNG/ogg without permission |
 | **TFC** (in TFG) | Bundled in `TerraFirmaGreg-Core-Modern-*.jar` as fork; upstream TFC is **EUPL-1.2** | Open (EUPL / TFG-Core **LGPLv3**) | Generally with the Work — use via attributed fetch (see `mods/tfc/tools/fetch_tfc_textures.py`) | Allowed with attribution + license copy |
 | **Firmalife** | `Firmalife-*.jar` says **MIT** | MIT | Treat as MIT unless NOTICE says otherwise | OK to vendor with attribution |
-| **GTCEu Modern** | `gtceu-*.jar` — **LGPL-3.0** | LGPL-3.0 | Mostly usable (many from GregTech Refreshed **MIT**); keep credits | Greglite path: OK with NOTICE |
+| **GTCEu Modern** | `gtceu-*.jar` — **LGPL-3.0** | LGPL-3.0 | Mostly usable (many from GregTech Refreshed **MIT**); keep credits | GregTech path: OK with NOTICE |
 | **Create** | `create-1.20.1-6.0.8.jar` — **MIT** | MIT | MIT (usual Create practice) | OK with attribution |
 | **Greate** | `greate-0.0.81.jar` — **MIT** | MIT | Treat as MIT unless NOTICE says otherwise; workshop uses placeholders | `mods/greate-horizon/` rewrite; co-build parked (Create pin ≠ AE2) |
 | **AE2** | `appliedenergistics2-*-uelm.jar` — “See GitHub” | Check AE2 repo (typically LGPLv3) | Follow AE2 repo asset terms | Prefer registry AE2 on Horizon; don’t re-vendor unless checked |

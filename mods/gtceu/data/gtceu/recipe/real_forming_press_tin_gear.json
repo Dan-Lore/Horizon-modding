@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:forming_press",
+  "result": {
+    "id": "gtceu:tin_gear",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "gtceu:tin_plate"
+}

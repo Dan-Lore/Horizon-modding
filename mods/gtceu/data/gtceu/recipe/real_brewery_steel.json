@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:brewery",
+  "result": {
+    "id": "gtceu:steel_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 16,
+  "ingredient": "gtceu:steel_dust"
+}

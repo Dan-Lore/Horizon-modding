@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:compressor",
+  "ingredient": {
+    "item": "gtceu:samarium_iron_arsenic_oxide_ingot"
+  },
+  "result": {
+    "id": "gtceu:samarium_iron_arsenic_oxide_plate",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

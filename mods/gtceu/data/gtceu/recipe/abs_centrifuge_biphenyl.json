@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:biphenyl_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:biphenyl_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:biphenyl_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

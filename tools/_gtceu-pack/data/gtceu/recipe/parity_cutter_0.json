@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:cutter",
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredient": "minecraft:cobblestone"
+}

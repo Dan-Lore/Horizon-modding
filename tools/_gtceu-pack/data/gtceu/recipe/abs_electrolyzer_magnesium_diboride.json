@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electrolyzer",
+  "ingredient": {
+    "item": "gtceu:magnesium_diboride_dust"
+  },
+  "result": {
+    "id": "gtceu:magnesium_diboride_dust",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

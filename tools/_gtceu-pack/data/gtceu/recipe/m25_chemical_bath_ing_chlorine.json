@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:chlorine_plate",
+    "gtceu:chlorine_dust"
+  ],
+  "result": {
+    "id": "gtceu:chlorine_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

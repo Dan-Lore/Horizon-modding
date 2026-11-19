@@ -11,7 +11,7 @@
 | JEI `@ae2` **and** `@tfc` both red; ~1658 items | Whole content pack rejected. Look for `content mods not loaded:` |
 | `content mods not loaded: … sounds minecraft:metal is not a block` | `properties.sounds` must be a block id. `minecraft:metal` and `minecraft:wood` are not. Use `minecraft:iron_block`, `minecraft:stone`, or `minecraft:oak_planks`. One bad block drops **every** content mod, including AE2 |
 | No creative tab; AE2 tab is fine | AE2 ≠ proof your content loaded. `the JEI kit in use is ae2's copy` is the embedded JEI, not AE2 items |
-| JEI `@greg` / `@gre_` red | Wrong id. The query is `@greglite` |
+| JEI `@greg` / `@gre_` red | Wrong id. The query is `@gtceu` |
 | Log `content from 1 mod(s)` and ids file is `["ae2"]` | Snapshots not in the prepare cache — restore content, **wipe** `mod-content`, relaunch |
 | `left_out` `other-version` / “made for another Horizon version” | Often a **rustc** error, not a pin mismatch. Read `%AppData%\Roaming\horizon-launcher\native\build.log` |
 | `unexpected native source: mixins/…json` | The `.hmod` mixin tree may contain only `.rs`, `.toml`, `.md`, and `NOTICE`. No `tables/*.json`, including under `api/` |
@@ -53,7 +53,7 @@
 | `tfg-horizon` | pinned `native-fdc87ae-e0aa83869033` | Last smoked working save. Do not native-build. Re-pin after a good `tfg-dev` build |
 | `tfg-dev` | `native-fdc87ae-e0aa83869033` | Only instance to rebuild; remove older `native-fdc87ae-*` after re-pinning the pack |
 
-`prune-old-versions` stays off. `tools/pack-greglite.ps1` without `-Out` overwrites `tfg-horizon\horizon-native-mods\greglite.hmod`.
+`prune-old-versions` stays off. `tools/pack-gtceu.ps1` without `-Out` overwrites `tfg-horizon\horizon-native-mods\gtceu.hmod`.
 
 Build command that matches the 2026-11-15 dev native:
 
@@ -65,7 +65,7 @@ horizon-launcher native-build --instance tfg-dev --version nightly-2026-11-08-fd
 
 | Want | Use |
 | --- | --- |
-| AE2 **15.4.18** + Greglite + JEI/Jade/… + own mods | Nightly `fdc87ae` |
+| AE2 **15.4.18** + GregTech + JEI/Jade/… + own mods | Nightly `fdc87ae` |
 | Create | Separate pin — cannot co-build with AE2 today |
 | Tip `9f42064` | No AE2 15.4.18 |
 
@@ -84,6 +84,6 @@ horizon-launcher native-build --instance tfg-dev --version nightly-2026-11-08-fd
 
 1. `latest.log` contains `content from N mod(s)` and does **not** contain `content mods not loaded`.
 2. `horizon-mod-ids.json` lists every own content mod.
-3. `/give greglite:coke`, `/give tfc:crucible`, `/give adastra:desh_ingot`, `/give quests:quest_book`.
-4. JEI `@greglite` `@tfc` `@ae2` `@adastra` return items (`@greg` does not).
+3. `/give gtceu:coke`, `/give tfc:crucible`, `/give adastra:desh_ingot`, `/give quests:quest_book`.
+4. JEI `@gtceu` `@tfc` `@ae2` `@adastra` return items (`@greg` does not).
 5. Creative tab only after those succeed. Flat colored icons on Ad Astra / Quests are the allowed placeholders, not a failed load.

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:lightly_hydro_cracked_naphtha_dust",
+    "gtceu:lightly_hydro_cracked_naphtha_plate"
+  ],
+  "result": {
+    "id": "gtceu:lightly_hydro_cracked_naphtha_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

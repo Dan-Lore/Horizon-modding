@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:calcium_ferrocyanide_dust",
+    "gtceu:calcium_ferrocyanide_plate"
+  ],
+  "result": {
+    "id": "gtceu:calcium_ferrocyanide_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:air_scrubber",
+  "result": {
+    "id": "gtceu:nickel_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "gtceu:nickel_dust"
+}

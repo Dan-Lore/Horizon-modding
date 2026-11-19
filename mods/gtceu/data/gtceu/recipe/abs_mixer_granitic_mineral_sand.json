@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:granitic_mineral_sand_dust",
+    "gtceu:granitic_mineral_sand_plate"
+  ],
+  "result": {
+    "id": "gtceu:granitic_mineral_sand_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

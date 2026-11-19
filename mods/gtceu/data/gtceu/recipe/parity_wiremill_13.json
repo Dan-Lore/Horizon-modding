@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": "gtceu:stainless_steel_ingot",
+  "result": {
+    "id": "gtceu:stainless_steel_wire",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

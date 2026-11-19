@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:galena_dust"
+  },
+  "result": {
+    "id": "gtceu:galena_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

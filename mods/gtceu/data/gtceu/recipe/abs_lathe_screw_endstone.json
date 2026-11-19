@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:lathe",
+  "ingredient": {
+    "item": "gtceu:endstone_rod"
+  },
+  "result": {
+    "id": "gtceu:endstone_screw",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "min_voltage": 32
+}

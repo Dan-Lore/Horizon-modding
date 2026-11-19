@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": {
+    "item": "gtceu:boron_ingot"
+  },
+  "result": {
+    "id": "gtceu:boron_wire",
+    "count": 2
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

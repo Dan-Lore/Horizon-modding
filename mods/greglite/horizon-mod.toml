@@ -1,8 +1,0 @@
-id = "greglite"
-name = "GregTech"
-version = "0.5.5"
-description = "GregTech Modern–inspired EU machines on Horizon (rewrite). Technical id remains greglite until gtceu migration. Not the Forge jar."
-authors = ["Horizon-modding workshop"]
-api = "0.2"
-side = "both"
-capabilities = ["registries"]

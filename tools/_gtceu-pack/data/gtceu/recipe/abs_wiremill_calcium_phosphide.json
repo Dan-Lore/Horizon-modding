@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": {
+    "item": "gtceu:calcium_phosphide_ingot"
+  },
+  "result": {
+    "id": "gtceu:calcium_phosphide_wire",
+    "count": 2
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

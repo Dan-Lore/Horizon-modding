@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only parse of GregTech-Modern 1.20.1 Java sources for Greglite parity codegen."""
+"""Read-only parse of GregTech-Modern 1.20.1 Java sources for GregTech parity codegen."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 GTM_ROOT = Path(__file__).resolve().parents[1] / "reference" / "GregTech-Modern"
-OUT_DIR = Path(__file__).resolve().parents[1] / "mods" / "greglite" / "tracker" / "gtm_extract"
+OUT_DIR = Path(__file__).resolve().parents[1] / "mods" / "gtceu" / "tracker" / "gtm_extract"
 
 TIER_NAMES = (
     "ULV",
@@ -67,7 +67,7 @@ MULTIBLOCK_ROLES: dict[str, str] = {
     "central_monitor": "Central monitor display",
 }
 
-# Early-mid game priority (Greglite Electric / MV-HV focus); extras filled from parsed materials.
+# Early-mid game priority (GregTech Electric / MV-HV focus); extras filled from parsed materials.
 MATERIAL_PRIORITY: tuple[str, ...] = (
     "Iron",
     "Copper",
@@ -573,7 +573,7 @@ def coverage_weights() -> dict:
     total = sum(c["weight"] for c in categories)
     return {
         "schema": 1,
-        "source": "greglite_proposal",
+        "source": "gtceu_proposal",
         "gtm_branch": "1.20.1",
         "weight_total": total,
         "categories": categories,

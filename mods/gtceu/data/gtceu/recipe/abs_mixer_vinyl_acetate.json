@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:vinyl_acetate_dust",
+    "gtceu:vinyl_acetate_plate"
+  ],
+  "result": {
+    "id": "gtceu:vinyl_acetate_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

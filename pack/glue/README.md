@@ -4,7 +4,7 @@ Datapack-style glue for the TFG Horizon draft. Not a native mod.
 
 ## Contents
 
-- `c:` item tags bridging Greglite / TFC / Ad Astra / Firmalife / vanilla
+- `c:` item tags bridging GregTech / TFC / Ad Astra / Firmalife / vanilla
 - Balance recipes (stick bundle, oil-from-lava, honey jar from raw honey)
 
 ## Install (manual, when smoking)

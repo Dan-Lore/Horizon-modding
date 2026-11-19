@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:wrought_iron_plate",
+    "gtceu:wrought_iron_dust"
+  ],
+  "result": {
+    "id": "gtceu:wrought_iron_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

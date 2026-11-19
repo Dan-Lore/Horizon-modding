@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:ruthenium_tetroxide_plate"
+  },
+  "result": {
+    "id": "gtceu:ruthenium_tetroxide_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:conveyor_module"
+    },
+    {
+      "item": "gtceu:iron_plate"
+    }
+  ],
+  "result": {
+    "id": "gtceu:cover_conveyor",
+    "count": 1
+  }
+}

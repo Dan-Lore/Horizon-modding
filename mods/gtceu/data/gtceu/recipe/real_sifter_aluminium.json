@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:sifter",
+  "result": {
+    "id": "gtceu:aluminium_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "ingredient": "gtceu:aluminium_dust"
+}

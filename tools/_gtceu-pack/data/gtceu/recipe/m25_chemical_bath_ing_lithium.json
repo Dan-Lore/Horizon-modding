@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:lithium_plate",
+    "gtceu:lithium_dust"
+  ],
+  "result": {
+    "id": "gtceu:lithium_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:kanthal_wire"
+    },
+    {
+      "item": "gtceu:rubber"
+    }
+  ],
+  "result": {
+    "id": "gtceu:kanthal_cable_1x",
+    "count": 1
+  }
+}

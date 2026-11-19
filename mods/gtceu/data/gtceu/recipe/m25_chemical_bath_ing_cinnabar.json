@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:cinnabar_plate",
+    "gtceu:cinnabar_dust"
+  ],
+  "result": {
+    "id": "gtceu:cinnabar_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

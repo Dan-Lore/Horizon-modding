@@ -1,8 +1,8 @@
 # Pack instances (locked 2026-11-15, refreshed 2026-11-19)
 # Content coverage (quote this, not catalog 100%): docs/tfg-content-coverage.md
-# GregTech plan: docs/greglite-continuation-plan.md
-# Closed checklist: docs/greglite-electric-plan.md
-# Tracker: mods/greglite/tracker/catalog.json
+# GregTech plan: docs/gtceu-continuation-plan.md
+# Closed checklist: docs/gtceu-electric-plan.md
+# Tracker: mods/gtceu/tracker/catalog.json
 # Transfer list: docs/mod-transfer-list.md
 # Agents: AGENTS.md
 
@@ -22,7 +22,7 @@ native_version = "native-fdc87ae-e0aa83869033"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "Pinned working save (smoked 2026-11-19). Do not native-build. Greglite 0.5.5 + AE2 15.4.18 + content pack."
+notes = "Pinned working save (smoked 2026-11-19). Do not native-build. GregTech 0.5.5 + AE2 15.4.18 + content pack."
 
 [[instances]]
 role = "dev"
@@ -88,14 +88,14 @@ on = ["pack"]
 minecraft_role = "Continuity / CTM"
 
 [[mods]]
-id = "greglite"
+id = "gtceu"
 name = "GregTech"
 version = "0.5.5"
-source = "mods/greglite → greglite.hmod"
+source = "mods/gtceu → gtceu.hmod"
 batch = "A+electric"
 status = "built"
 on = ["pack"]
-minecraft_role = "GregTech Modern rewrite (id greglite until gtceu migration)"
+minecraft_role = "GregTech Modern rewrite (id gtceu until gtceu migration)"
 
 [[mods]]
 id = "worldmap"

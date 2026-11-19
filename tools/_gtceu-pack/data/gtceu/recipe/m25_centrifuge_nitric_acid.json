@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:nitric_acid_dust"
+  },
+  "result": {
+    "id": "gtceu:nitric_acid_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

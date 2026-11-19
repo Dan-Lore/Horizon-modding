@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:chromium_plate",
+    "gtceu:chromium_dust"
+  ],
+  "result": {
+    "id": "gtceu:chromium_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

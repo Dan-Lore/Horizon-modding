@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:rock_crusher",
+  "result": {
+    "id": "gtceu:invar_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "gtceu:invar_ingot"
+}

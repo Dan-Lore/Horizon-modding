@@ -57,12 +57,12 @@
       ]
     },
     {
-      "id": "greglite_start",
+      "id": "gtceu_start",
       "group": "pack",
       "title": "GregTech",
       "progression": "flexible",
       "quests": [
-        "see_greglite",
+        "see_gtceu",
         "gl_coke",
         "gl_hot_steel",
         "gl_oil_slice",
@@ -234,7 +234,7 @@
       ]
     },
     {
-      "id": "see_greglite",
+      "id": "see_gtceu",
       "title": "Meet GregTech",
       "dependencies": [
         "welcome"
@@ -258,14 +258,14 @@
       "id": "gl_coke",
       "title": "Make Coke",
       "dependencies": [
-        "see_greglite"
+        "see_gtceu"
       ],
       "tasks": [
         {
           "id": "coke",
           "type": "item",
           "title": "Have 1 GregTech coke",
-          "item": "greglite:coke",
+          "item": "gtceu:coke",
           "count": 1
         }
       ],
@@ -288,7 +288,7 @@
           "id": "hot_steel",
           "type": "item",
           "title": "Have 1 hot steel ingot (or steel)",
-          "item": "greglite:steel_ingot",
+          "item": "gtceu:steel_ingot",
           "count": 1
         }
       ],
@@ -304,14 +304,14 @@
       "id": "gl_oil_slice",
       "title": "Oil Cell Slice",
       "dependencies": [
-        "see_greglite"
+        "see_gtceu"
       ],
       "tasks": [
         {
           "id": "oil_cell",
           "type": "item",
           "title": "Craft an oil cell",
-          "item": "greglite:oil_cell",
+          "item": "gtceu:oil_cell",
           "count": 1
         }
       ],
@@ -486,14 +486,14 @@
       "id": "gl_circuit",
       "title": "Basic Circuit",
       "dependencies": [
-        "see_greglite"
+        "see_gtceu"
       ],
       "tasks": [
         {
           "id": "circ",
           "type": "item",
           "title": "Have a basic electronic circuit",
-          "item": "greglite:basic_electronic_circuit",
+          "item": "gtceu:basic_electronic_circuit",
           "count": 1
         }
       ],
@@ -509,14 +509,14 @@
       "id": "gl_conveyor",
       "title": "Conveyor Module",
       "dependencies": [
-        "see_greglite"
+        "see_gtceu"
       ],
       "tasks": [
         {
           "id": "conv",
           "type": "item",
           "title": "Have a conveyor module",
-          "item": "greglite:conveyor_module",
+          "item": "gtceu:conveyor_module",
           "count": 1
         }
       ],

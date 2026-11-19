@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:calcium_carbonate_dust",
+    "gtceu:calcium_carbonate_plate"
+  ],
+  "result": {
+    "id": "gtceu:calcium_carbonate_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

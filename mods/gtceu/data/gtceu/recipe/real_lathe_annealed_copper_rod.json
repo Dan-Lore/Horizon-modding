@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:lathe",
+  "result": {
+    "id": "gtceu:annealed_copper_rod",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "gtceu:annealed_copper_ingot"
+}

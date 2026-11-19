@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:nihonium_dust",
+    "gtceu:nihonium_plate"
+  ],
+  "result": {
+    "id": "gtceu:nihonium_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extruder",
+  "ingredient": {
+    "item": "gtceu:black_bronze_plate"
+  },
+  "result": {
+    "id": "gtceu:black_bronze_gear",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "min_voltage": 32
+}

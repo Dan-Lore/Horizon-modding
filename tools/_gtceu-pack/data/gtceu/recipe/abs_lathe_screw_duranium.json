@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:lathe",
+  "ingredient": {
+    "item": "gtceu:duranium_rod"
+  },
+  "result": {
+    "id": "gtceu:duranium_screw",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "min_voltage": 32
+}

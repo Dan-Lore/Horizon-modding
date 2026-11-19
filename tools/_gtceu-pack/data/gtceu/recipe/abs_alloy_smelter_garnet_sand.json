@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredient": {
+    "item": "gtceu:garnet_sand_dust"
+  },
+  "result": {
+    "id": "gtceu:garnet_sand_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

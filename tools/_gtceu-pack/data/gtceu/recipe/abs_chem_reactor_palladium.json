@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:palladium_dust",
+    "gtceu:palladium_plate"
+  ],
+  "result": {
+    "id": "gtceu:palladium_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

@@ -28,7 +28,7 @@ python -c "import json; from pathlib import Path; c=json.loads(Path('docs/tfg-fe
 | --- | --- | --- |
 | qol_registry | done | Batch A |
 | ae2 | done | Registry AE2 on `fdc87ae` |
-| greglite | done | Through 0.5.5 + drill `break_speed` |
+| gtceu | done | Through 0.5.5 + drill `break_speed` |
 | tfc | done (core) | Animals/worldgen/per-stack rot blocked |
 | firmalife | done | 0.1.2 ticks + recipes |
 | adastra | done (overworld) | Planets/rocket travel #1 |

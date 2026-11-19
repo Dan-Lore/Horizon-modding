@@ -39,8 +39,8 @@ pub fn baked() -> QuestFile {
         tasks: vec![Task { id: "fluix".into(), kind: "item".into(), title: "Have 1 fluix crystal".into(), item: Some("ae2:fluix_crystal".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "fluix_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 8, command: None, table: None, options: vec![] }],
     });
-    quests.insert("see_greglite".into(), Quest {
-        id: "see_greglite".into(),
+    quests.insert("see_gtceu".into(), Quest {
+        id: "see_gtceu".into(),
         title: "Meet GregTech".into(),
         dependencies: vec!["welcome".into()],
         tasks: vec![Task { id: "gl_note".into(), kind: "checkmark".into(), title: "Confirm GregTech machines exist".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
@@ -49,22 +49,22 @@ pub fn baked() -> QuestFile {
     quests.insert("gl_coke".into(), Quest {
         id: "gl_coke".into(),
         title: "Make Coke".into(),
-        dependencies: vec!["see_greglite".into()],
-        tasks: vec![Task { id: "coke".into(), kind: "item".into(), title: "Have 1 GregTech coke".into(), item: Some("greglite:coke".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        dependencies: vec!["see_gtceu".into()],
+        tasks: vec![Task { id: "coke".into(), kind: "item".into(), title: "Have 1 GregTech coke".into(), item: Some("gtceu:coke".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "coke_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 10, command: None, table: None, options: vec![] }],
     });
     quests.insert("gl_hot_steel".into(), Quest {
         id: "gl_hot_steel".into(),
         title: "Hot Steel Path".into(),
         dependencies: vec!["gl_coke".into()],
-        tasks: vec![Task { id: "hot_steel".into(), kind: "item".into(), title: "Have 1 hot steel ingot (or steel)".into(), item: Some("greglite:steel_ingot".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        tasks: vec![Task { id: "hot_steel".into(), kind: "item".into(), title: "Have 1 hot steel ingot (or steel)".into(), item: Some("gtceu:steel_ingot".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "steel_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 15, command: None, table: None, options: vec![] }],
     });
     quests.insert("gl_oil_slice".into(), Quest {
         id: "gl_oil_slice".into(),
         title: "Oil Cell Slice".into(),
-        dependencies: vec!["see_greglite".into()],
-        tasks: vec![Task { id: "oil_cell".into(), kind: "item".into(), title: "Craft an oil cell".into(), item: Some("greglite:oil_cell".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        dependencies: vec!["see_gtceu".into()],
+        tasks: vec![Task { id: "oil_cell".into(), kind: "item".into(), title: "Craft an oil cell".into(), item: Some("gtceu:oil_cell".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "oil_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 8, command: None, table: None, options: vec![] }],
     });
     quests.insert("see_tfc".into(), Quest {
@@ -119,15 +119,15 @@ pub fn baked() -> QuestFile {
     quests.insert("gl_circuit".into(), Quest {
         id: "gl_circuit".into(),
         title: "Basic Circuit".into(),
-        dependencies: vec!["see_greglite".into()],
-        tasks: vec![Task { id: "circ".into(), kind: "item".into(), title: "Have a basic electronic circuit".into(), item: Some("greglite:basic_electronic_circuit".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        dependencies: vec!["see_gtceu".into()],
+        tasks: vec![Task { id: "circ".into(), kind: "item".into(), title: "Have a basic electronic circuit".into(), item: Some("gtceu:basic_electronic_circuit".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "circ_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 12, command: None, table: None, options: vec![] }],
     });
     quests.insert("gl_conveyor".into(), Quest {
         id: "gl_conveyor".into(),
         title: "Conveyor Module".into(),
-        dependencies: vec!["see_greglite".into()],
-        tasks: vec![Task { id: "conv".into(), kind: "item".into(), title: "Have a conveyor module".into(), item: Some("greglite:conveyor_module".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        dependencies: vec!["see_gtceu".into()],
+        tasks: vec![Task { id: "conv".into(), kind: "item".into(), title: "Have a conveyor module".into(), item: Some("gtceu:conveyor_module".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "conv_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 8, command: None, table: None, options: vec![] }],
     });
     quests.insert("fl_vat".into(), Quest {
@@ -155,7 +155,7 @@ pub fn baked() -> QuestFile {
         Chapter { id: "intro".into(), title: "Getting Started".into(), progression: "linear".into(), quests: vec!["welcome".into(), "gather_sticks".into(), "open_board".into()] },
         Chapter { id: "combat_demo".into(), title: "Combat Demo".into(), progression: "flexible".into(), quests: vec!["hunt_demo".into()] },
         Chapter { id: "ae2_start".into(), title: "Applied Energistics".into(), progression: "flexible".into(), quests: vec!["ae2_book".into(), "ae2_fluix".into()] },
-        Chapter { id: "greglite_start".into(), title: "GregTech".into(), progression: "flexible".into(), quests: vec!["see_greglite".into(), "gl_coke".into(), "gl_hot_steel".into(), "gl_oil_slice".into(), "gl_circuit".into(), "gl_conveyor".into()] },
+        Chapter { id: "gtceu_start".into(), title: "GregTech".into(), progression: "flexible".into(), quests: vec!["see_gtceu".into(), "gl_coke".into(), "gl_hot_steel".into(), "gl_oil_slice".into(), "gl_circuit".into(), "gl_conveyor".into()] },
         Chapter { id: "tfc_start".into(), title: "TerraFirmaCraft".into(), progression: "flexible".into(), quests: vec!["see_tfc".into(), "tfc_crucible".into()] },
         Chapter { id: "firmalife_start".into(), title: "Firmalife".into(), progression: "flexible".into(), quests: vec!["fl_cheese".into(), "fl_oven".into(), "fl_vat".into(), "fl_hive".into(), "fl_sprinkler".into()] },
         Chapter { id: "adastra_start".into(), title: "Ad Astra".into(), progression: "flexible".into(), quests: vec!["aa_desh".into(), "aa_generator".into()] },

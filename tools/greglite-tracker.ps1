@@ -1,10 +1,10 @@
 ﻿#Requires -Version 5.1
 <#
 .SYNOPSIS
-  Greglite Electric Age tracker — catalog.json ↔ SQLite + progress markdown.
+  GregTech Electric Age tracker — catalog.json ↔ SQLite + progress markdown.
 
 .DESCRIPTION
-  build-db  — import mods/greglite/tracker/catalog.json, scan content, write greglite.db, regenerate docs/greglite-electric-tracker.md
+  build-db  — import mods/gtceu/tracker/catalog.json, scan content, write gtceu.db, regenerate docs/gtceu-electric-tracker.md
   status    — summary counts by tier/kind/wave
   gaps      — machines missing block, menu, or min EU recipes (processors)
 #>
@@ -22,13 +22,13 @@ if (-not $RepoRoot) {
   $RepoRoot = Split-Path $scriptDir -Parent
 }
 
-$catalogPath = Join-Path $RepoRoot 'mods\greglite\tracker\catalog.json'
-$dbPath = Join-Path $RepoRoot 'mods\greglite\tracker\greglite.db'
-$gregliteRoot = Join-Path $RepoRoot 'mods\greglite'
-$docPath = Join-Path $RepoRoot 'docs\greglite-electric-tracker.md'
-$recipeDir = Join-Path $gregliteRoot 'data\greglite\recipe'
-$blockDir = Join-Path $gregliteRoot 'data\greglite\horizon\block'
-$menuDir = Join-Path $gregliteRoot 'data\greglite\horizon\menu'
+$catalogPath = Join-Path $RepoRoot 'mods\gtceu\tracker\catalog.json'
+$dbPath = Join-Path $RepoRoot 'mods\gtceu\tracker\gtceu.db'
+$gtceuRoot = Join-Path $RepoRoot 'mods\gtceu'
+$docPath = Join-Path $RepoRoot 'docs\gtceu-electric-tracker.md'
+$recipeDir = Join-Path $gtceuRoot 'data\gtceu\recipe'
+$blockDir = Join-Path $gtceuRoot 'data\gtceu\horizon\block'
+$menuDir = Join-Path $gtceuRoot 'data\gtceu\horizon\menu'
 
 if (-not (Test-Path $catalogPath)) {
   throw "Catalog not found: $catalogPath"
@@ -44,7 +44,7 @@ function Get-MenuFileName([string]$MachineId) {
 }
 
 function Invoke-TrackerDbImport($Rows, $CatalogPath, $DbPath) {
-  $py = Join-Path $RepoRoot 'mods\greglite\tools\tracker_db.py'
+  $py = Join-Path $RepoRoot 'mods\gtceu\tools\tracker_db.py'
   if (-not (Test-Path $py)) { throw "Missing $py" }
   $rowsFile = [System.IO.Path]::GetTempFileName()
   try {
@@ -73,7 +73,7 @@ function Get-RecipeCount([string]$MachineId, [string]$GtmType, [string]$Tier) {
   if ($Tier -eq 'lv') {
     return @(Get-ChildItem -Path $recipeDir -Filter "eu_$MachineId`_*.json" -File).Count
   }
-  $pattern = "greglite:$GtmType"
+  $pattern = "gtceu:$GtmType"
   $n = 0
   Get-ChildItem -Path $recipeDir -Filter '*.json' -File | ForEach-Object {
     if ($_.Name -like 'eu_*') { return }
@@ -124,11 +124,11 @@ $rows = foreach ($m in $catalog.machines) { Get-ContentRow $m }
 function Write-TrackerDoc($Rows, $Catalog) {
   $today = [DateTime]::UtcNow.ToString('yyyy-MM-dd')
   $sb = New-Object System.Text.StringBuilder
-  [void]$sb.AppendLine('# Greglite Electric Age — progress board')
+  [void]$sb.AppendLine('# GregTech Electric Age — progress board')
   [void]$sb.AppendLine('')
-  [void]$sb.AppendLine('**Generated from:** `mods/greglite/tracker/catalog.json` + content scan')
-  [void]$sb.AppendLine('**Plan:** [`docs/greglite-electric-plan.md`](greglite-electric-plan.md)')
-  [void]$sb.AppendLine("**Updated:** $today UTC (``tools/greglite-tracker.ps1`` build-db)")
+  [void]$sb.AppendLine('**Generated from:** `mods/gtceu/tracker/catalog.json` + content scan')
+  [void]$sb.AppendLine('**Plan:** [`docs/gtceu-electric-plan.md`](gtceu-electric-plan.md)')
+  [void]$sb.AppendLine("**Updated:** $today UTC (``tools/gtceu-tracker.ps1`` build-db)")
   [void]$sb.AppendLine('')
   [void]$sb.AppendLine('Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`')
   [void]$sb.AppendLine('')
@@ -193,7 +193,7 @@ switch ($Action) {
   }
   'status' {
     $byTier = $rows | Group-Object tier | Sort-Object Name
-    Write-Output "Greglite tracker — $($catalog.updated)"
+    Write-Output "GregTech tracker — $($catalog.updated)"
     Write-Output "DB: $(if (Test-Path $dbPath) { $dbPath } else { '(run build-db)' })"
     foreach ($g in $byTier) {
       $ok = @($g.Group | Where-Object { $_.content_status -eq 'content_ok' }).Count

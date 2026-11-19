@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "result": {
+    "id": "gtceu:annealed_copper_dust",
+    "count": 1
+  },
+  "duration": 120,
+  "eu": 48,
+  "ingredient": "gtceu:annealed_copper_dust"
+}

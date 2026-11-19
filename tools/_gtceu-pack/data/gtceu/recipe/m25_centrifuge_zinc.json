@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:zinc_dust"
+  },
+  "result": {
+    "id": "gtceu:zinc_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

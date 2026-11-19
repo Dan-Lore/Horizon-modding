@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:plutonium_dust",
+    "gtceu:plutonium_plate"
+  ],
+  "result": {
+    "id": "gtceu:plutonium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

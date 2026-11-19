@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:magnetic_samarium_dust",
+    "gtceu:magnetic_samarium_plate"
+  ],
+  "result": {
+    "id": "gtceu:magnetic_samarium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

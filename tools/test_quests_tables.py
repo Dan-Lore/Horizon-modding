@@ -30,7 +30,7 @@ def main() -> int:
     tables = {t["id"] for t in data["reward_tables"]}
     assert "starter_crate" in tables
     # First five pack-line quests exist
-    for qid in ("welcome", "gather_sticks", "open_board", "ae2_book", "see_greglite"):
+    for qid in ("welcome", "gather_sticks", "open_board", "ae2_book", "see_gtceu"):
         assert qid in quests, qid
     # Every quest must appear in at least one chapter (book visibility).
     listed = {qid for c in data["chapters"] for qid in c["quests"]}

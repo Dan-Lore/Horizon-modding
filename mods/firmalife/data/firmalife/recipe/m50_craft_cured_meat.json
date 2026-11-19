@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    }
+  ],
+  "result": {
+    "id": "firmalife:cured_meat",
+    "count": 1
+  }
+}

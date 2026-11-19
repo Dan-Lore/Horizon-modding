@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredients": [
+    "minecraft:copper_ingot",
+    "gtceu:tin_ingot"
+  ],
+  "result": {
+    "id": "gtceu:bronze_ingot",
+    "count": 2
+  },
+  "duration": 200,
+  "steam": 32
+}

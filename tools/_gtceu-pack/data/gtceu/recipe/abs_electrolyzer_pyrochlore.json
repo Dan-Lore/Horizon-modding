@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electrolyzer",
+  "ingredient": {
+    "item": "gtceu:pyrochlore_dust"
+  },
+  "result": {
+    "id": "gtceu:pyrochlore_dust",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

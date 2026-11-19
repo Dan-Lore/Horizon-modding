@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:hydrogen_dust",
+    "gtceu:hydrogen_plate"
+  ],
+  "result": {
+    "id": "gtceu:hydrogen_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

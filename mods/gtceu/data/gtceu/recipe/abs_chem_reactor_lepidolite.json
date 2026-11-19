@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:lepidolite_dust",
+    "gtceu:lepidolite_plate"
+  ],
+  "result": {
+    "id": "gtceu:lepidolite_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

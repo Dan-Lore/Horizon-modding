@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:tellurium_dust",
+    "gtceu:tellurium_plate"
+  ],
+  "result": {
+    "id": "gtceu:tellurium_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

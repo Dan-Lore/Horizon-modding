@@ -1,0 +1,11 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": "gtceu:epoxy_ingot",
+  "result": {
+    "id": "gtceu:epoxy_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "steam": 1
+}

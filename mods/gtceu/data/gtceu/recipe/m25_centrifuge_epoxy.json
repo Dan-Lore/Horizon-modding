@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:epoxy_dust"
+  },
+  "result": {
+    "id": "gtceu:epoxy_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

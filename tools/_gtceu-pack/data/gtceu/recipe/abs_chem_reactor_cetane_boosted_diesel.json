@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:cetane_boosted_diesel_dust",
+    "gtceu:cetane_boosted_diesel_plate"
+  ],
+  "result": {
+    "id": "gtceu:cetane_boosted_diesel_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

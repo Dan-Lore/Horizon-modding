@@ -202,7 +202,7 @@ def _shade(rgb: tuple[int, int, int], factor: float) -> tuple[int, int, int]:
 
 
 def png(path: Path, rgb: tuple[int, int, int], shape: str = "flat") -> None:
-    """Write textures with PIL (same path as Greglite) so Horizon atlases them."""
+    """Write textures with PIL (same path as GregTech) so Horizon atlases them."""
     img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     hi, mid, lo = _shade(rgb, 1.2), rgb, _shade(rgb, 0.55)
@@ -322,7 +322,7 @@ def block_files(name: str, rgb: tuple[int, int, int], furnace: bool, hardness: f
         },
     )
     write_json(ASSETS / "models" / "item" / f"{name}.json", {"parent": f"tfc:block/{name}"})
-    # JE 26.3 item definitions (Greglite has these; without them icons are blank/white).
+    # JE 26.3 item definitions (GregTech has these; without them icons are blank/white).
     write_json(
         ASSETS / "items" / f"{name}.json",
         {"model": {"type": "minecraft:model", "model": f"tfc:item/{name}"}},

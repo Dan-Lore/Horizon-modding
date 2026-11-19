@@ -9,10 +9,10 @@ Doc map: [`docs/README.md`](docs/README.md).
 ## Goal
 
 Grow a TFG-shaped Horizon pack. Display names match upstream (**GregTech**, **TerraFirmaCraft**, **Ad Astra**, …).  
-Technical ids may still be `greglite` / `tfc` / … until a namespace migration.
+GregTech technical id is **`gtceu`** (folder `mods/gtceu/`).
 
-**Player-facing completeness** → [`docs/tfg-content-coverage.md`](docs/tfg-content-coverage.md) (resources / recipes / mechanics vs TFG).  
-Today’s pack blend is on the order of **~10%**, not Absolute parity.
+**Player-facing completeness** → [`docs/tfg-content-coverage.md`](docs/tfg-content-coverage.md) + `tools/score-tfg-content.py` (Absolute denominators, milestone ladder).  
+Live scoreboard: see `docs/tfg-content-score.json` (M50 band after Absolute expanders — not M100).
 
 Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern overnight.
 
@@ -31,8 +31,8 @@ Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern overnight.
 
 | Role | Id | Version | Rule |
 | --- | --- | --- | --- |
-| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-8a627f102c73` | Do **not** native-build |
-| Dev | `tfg-dev` | `native-fdc87ae-8a627f102c73` | Rebuild **only** here (each build replaces this pin) |
+| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-f6c782b85878` | Do **not** native-build |
+| Dev | `tfg-dev` | `native-fdc87ae-f6c782b85878` | Rebuild **only** here (each build replaces this pin) |
 
 - Base: Nightly `fdc87ae` (`nightly-2026-11-08-fdc87ae`), hooks **411**, AE2 **15.4.18**.
 - Create parked (pin clash with AE2). Tip `9f42064`: AE2 left_out — base only.
@@ -55,8 +55,8 @@ Registry watch ≤1×/day: `tools/check-registry.ps1`.
 | Area | Active doc |
 | --- | --- |
 | **Content % (quote this)** | **`docs/tfg-content-coverage.md`** (+ `tools/score-tfg-content.py`) |
-| GregTech next waves | `docs/greglite-continuation-plan.md` (+ `docs/greglite-behavior.md`) |
-| GregTech W0–W9 checklist | `docs/greglite-electric-plan.md` (**closed** / historical) |
+| GregTech next waves | `docs/gtceu-continuation-plan.md` (+ `docs/gtceu-behavior.md`) |
+| GregTech W0–W9 checklist | `docs/gtceu-electric-plan.md` (**closed** / historical) |
 | TFC / Ad Astra / Quests | `docs/tfc-plan.md`, `adastra-plan.md`, `quests-plan.md` (+ trackers) |
 | Transfer list | `docs/mod-transfer-list.md` |
 | MVP Batch A | `docs/mvp-tfg-plan.md` (**done** / historical) |
@@ -90,7 +90,7 @@ Allowed unfinished for content: only **#1** API, **#2** pin clash, **#3** regist
 ## Suggested next work
 
 1. Grow **GregTech** recipe/material coverage (bath, centrifuge, ores) per `tfg-content-coverage.md`.  
-2. Optional later: migrate id `greglite` → `gtceu` so JEI matches `gtceu:` / stops looking for bare `gregtech:`.  
+2. Optional later: migrate id `gtceu` → `gtceu` so JEI matches `gtceu:` / stops looking for bare `gregtech:`.  
 3. Stay on **`native-fdc87ae-8a627f102c73`** (or newer after green `tfg-dev` build); tip `dd67b76` watch-only until AE2 is back (#3).  
 4. Registry ≤1×/day.
 

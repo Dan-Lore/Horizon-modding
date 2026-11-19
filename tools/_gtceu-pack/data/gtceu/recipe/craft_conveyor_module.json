@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "CMC",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "gtceu:tin_cable_1x"
+    },
+    "M": {
+      "item": "gtceu:lv_motor"
+    }
+  },
+  "result": {
+    "id": "gtceu:conveyor_module",
+    "count": 2
+  }
+}

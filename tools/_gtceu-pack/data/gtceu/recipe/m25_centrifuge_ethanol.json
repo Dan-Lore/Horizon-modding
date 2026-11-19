@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:ethanol_dust"
+  },
+  "result": {
+    "id": "gtceu:ethanol_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

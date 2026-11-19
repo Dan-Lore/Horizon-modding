@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:indium_plate",
+    "gtceu:indium_dust"
+  ],
+  "result": {
+    "id": "gtceu:indium_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

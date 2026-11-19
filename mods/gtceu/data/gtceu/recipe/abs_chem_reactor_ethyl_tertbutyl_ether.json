@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:ethyl_tertbutyl_ether_dust",
+    "gtceu:ethyl_tertbutyl_ether_plate"
+  ],
+  "result": {
+    "id": "gtceu:ethyl_tertbutyl_ether_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

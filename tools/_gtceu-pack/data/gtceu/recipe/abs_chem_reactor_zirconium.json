@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:zirconium_dust",
+    "gtceu:zirconium_plate"
+  ],
+  "result": {
+    "id": "gtceu:zirconium_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

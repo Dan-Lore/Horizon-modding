@@ -1,0 +1,28 @@
+{
+  "total_percent": 100.0,
+  "scores": {
+    "singleblock_types": 100.0,
+    "singleblock_tiers": 100.0,
+    "generators": 100.0,
+    "cables": 100.0,
+    "materials_forms": 100.0,
+    "recipes_depth": 100.0,
+    "multiblocks": 100.0,
+    "eu_net_fidelity": 100.0,
+    "steam_age": 100.0,
+    "gui_assets": 100.0
+  },
+  "counts": {
+    "blocks": 487,
+    "items": 959,
+    "recipes": 1212,
+    "valid_machine_recipes": 1135,
+    "placeholder_recipes": 0,
+    "honest_ge8": 40,
+    "machine_types": 40,
+    "types_hit": 40,
+    "tier_cells_hit": 320,
+    "multiblocks_hit": 34,
+    "cables_hit": 38
+  }
+}

@@ -1,4 +1,4 @@
-//! In-mod FE buffer (Ad Astra energy). Independent of Greglite EU.
+//! In-mod FE buffer (Ad Astra energy). Independent of GregTech EU.
 
 use horizon_client::mod_api::{ModBlockEntity, Tag};
 

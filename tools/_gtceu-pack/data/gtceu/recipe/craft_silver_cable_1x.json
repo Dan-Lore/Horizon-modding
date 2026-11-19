@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:silver_wire"
+    },
+    {
+      "item": "gtceu:rubber"
+    }
+  ],
+  "result": {
+    "id": "gtceu:silver_cable_1x",
+    "count": 1
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "schema": 1,
+  "source": "materials/*.java cableProperties",
+  "cables": [
+    {
+      "id": "cobalt",
+      "material": "Cobalt",
+      "voltage_tier": "lv",
+      "voltage_tier_index": 1,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "manganese_phosphide",
+      "material": "ManganesePhosphide",
+      "voltage_tier": "lv",
+      "voltage_tier_index": 1,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "nickel",
+      "material": "Nickel",
+      "voltage_tier": "lv",
+      "voltage_tier_index": 1,
+      "max_amperage": 3,
+      "voltage_loss_per_block": 3
+    },
+    {
+      "id": "tin",
+      "material": "Tin",
+      "voltage_tier": "lv",
+      "voltage_tier_index": 1,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "annealed_copper",
+      "material": "AnnealedCopper",
+      "voltage_tier": "mv",
+      "voltage_tier_index": 2,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "copper",
+      "material": "Copper",
+      "voltage_tier": "mv",
+      "voltage_tier_index": 2,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "cupronickel",
+      "material": "Cupronickel",
+      "voltage_tier": "mv",
+      "voltage_tier_index": 2,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "iron",
+      "material": "Iron",
+      "voltage_tier": "mv",
+      "voltage_tier_index": 2,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 3
+    },
+    {
+      "id": "magnesium_diboride",
+      "material": "MagnesiumDiboride",
+      "voltage_tier": "mv",
+      "voltage_tier_index": 2,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "electrum",
+      "material": "Electrum",
+      "voltage_tier": "hv",
+      "voltage_tier_index": 3,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "gold",
+      "material": "Gold",
+      "voltage_tier": "hv",
+      "voltage_tier_index": 3,
+      "max_amperage": 3,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "kanthal",
+      "material": "Kanthal",
+      "voltage_tier": "hv",
+      "voltage_tier_index": 3,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 3
+    },
+    {
+      "id": "mercury_barium_calcium_cuprate",
+      "material": "MercuryBariumCalciumCuprate",
+      "voltage_tier": "hv",
+      "voltage_tier_index": 3,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "silver",
+      "material": "Silver",
+      "voltage_tier": "hv",
+      "voltage_tier_index": 3,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "aluminium",
+      "material": "Aluminium",
+      "voltage_tier": "ev",
+      "voltage_tier_index": 4,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "black_steel",
+      "material": "BlackSteel",
+      "voltage_tier": "ev",
+      "voltage_tier_index": 4,
+      "max_amperage": 3,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "nichrome",
+      "material": "Nichrome",
+      "voltage_tier": "ev",
+      "voltage_tier_index": 4,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 4
+    },
+    {
+      "id": "rtm_alloy",
+      "material": "RTMAlloy",
+      "voltage_tier": "ev",
+      "voltage_tier_index": 4,
+      "max_amperage": 6,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "steel",
+      "material": "Steel",
+      "voltage_tier": "ev",
+      "voltage_tier_index": 4,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "uranium_triplatinum",
+      "material": "UraniumTriplatinum",
+      "voltage_tier": "ev",
+      "voltage_tier_index": 4,
+      "max_amperage": 6,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "graphene",
+      "material": "Graphene",
+      "voltage_tier": "iv",
+      "voltage_tier_index": 5,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "platinum",
+      "material": "Platinum",
+      "voltage_tier": "iv",
+      "voltage_tier_index": 5,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "tungsten",
+      "material": "Tungsten",
+      "voltage_tier": "iv",
+      "voltage_tier_index": 5,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "tungsten_steel",
+      "material": "TungstenSteel",
+      "voltage_tier": "iv",
+      "voltage_tier_index": 5,
+      "max_amperage": 3,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "indium_tin_barium_titanium_cuprate",
+      "material": "IndiumTinBariumTitaniumCuprate",
+      "voltage_tier": "luv",
+      "voltage_tier_index": 6,
+      "max_amperage": 8,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "niobium_nitride",
+      "material": "NiobiumNitride",
+      "voltage_tier": "luv",
+      "voltage_tier_index": 6,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 1
+    },
+    {
+      "id": "niobium_titanium",
+      "material": "NiobiumTitanium",
+      "voltage_tier": "luv",
+      "voltage_tier_index": 6,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "osmium",
+      "material": "Osmium",
+      "voltage_tier": "luv",
+      "voltage_tier_index": 6,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "naquadah",
+      "material": "Naquadah",
+      "voltage_tier": "zpm",
+      "voltage_tier_index": 7,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "trinium",
+      "material": "Trinium",
+      "voltage_tier": "zpm",
+      "voltage_tier_index": 7,
+      "max_amperage": 6,
+      "voltage_loss_per_block": 4
+    },
+    {
+      "id": "uranium_rhodium_dinaquadide",
+      "material": "UraniumRhodiumDinaquadide",
+      "voltage_tier": "zpm",
+      "voltage_tier_index": 7,
+      "max_amperage": 8,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "vanadium_gallium",
+      "material": "VanadiumGallium",
+      "voltage_tier": "zpm",
+      "voltage_tier_index": 7,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 2
+    },
+    {
+      "id": "naquadah_alloy",
+      "material": "NaquadahAlloy",
+      "voltage_tier": "uv",
+      "voltage_tier_index": 8,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 4
+    },
+    {
+      "id": "tritanium",
+      "material": "Tritanium",
+      "voltage_tier": "uv",
+      "voltage_tier_index": 8,
+      "max_amperage": 1,
+      "voltage_loss_per_block": 8
+    },
+    {
+      "id": "yttrium_barium_cuprate",
+      "material": "YttriumBariumCuprate",
+      "voltage_tier": "uv",
+      "voltage_tier_index": 8,
+      "max_amperage": 4,
+      "voltage_loss_per_block": 4
+    },
+    {
+      "id": "europium",
+      "material": "Europium",
+      "voltage_tier": "uhv",
+      "voltage_tier_index": 9,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 32
+    },
+    {
+      "id": "ruthenium_trinium_americium_neutronate",
+      "material": "RutheniumTriniumAmericiumNeutronate",
+      "voltage_tier": "uhv",
+      "voltage_tier_index": 9,
+      "max_amperage": 24,
+      "voltage_loss_per_block": 0
+    },
+    {
+      "id": "lead",
+      "material": "Lead",
+      "voltage_tier": "ulv",
+      "voltage_tier_index": 0,
+      "max_amperage": 2,
+      "voltage_loss_per_block": 2
+    }
+  ]
+}

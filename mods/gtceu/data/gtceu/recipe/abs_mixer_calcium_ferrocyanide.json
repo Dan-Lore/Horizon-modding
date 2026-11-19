@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:calcium_ferrocyanide_dust",
+    "gtceu:calcium_ferrocyanide_plate"
+  ],
+  "result": {
+    "id": "gtceu:calcium_ferrocyanide_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

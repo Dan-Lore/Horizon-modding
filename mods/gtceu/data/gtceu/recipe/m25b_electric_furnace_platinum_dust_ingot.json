@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electric_furnace",
+  "ingredient": {
+    "item": "gtceu:platinum_dust"
+  },
+  "result": {
+    "id": "gtceu:platinum_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 48,
+  "min_voltage": 32
+}

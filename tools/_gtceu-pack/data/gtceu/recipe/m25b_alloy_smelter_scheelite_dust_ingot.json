@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredient": {
+    "item": "gtceu:scheelite_dust"
+  },
+  "result": {
+    "id": "gtceu:scheelite_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 48,
+  "min_voltage": 32
+}

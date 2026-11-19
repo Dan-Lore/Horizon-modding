@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:lanthanum_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:lanthanum_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:lanthanum_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

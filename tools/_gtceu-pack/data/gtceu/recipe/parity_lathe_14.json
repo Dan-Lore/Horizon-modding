@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:lathe",
+  "ingredient": "gtceu:aluminium_ingot",
+  "result": {
+    "id": "gtceu:aluminium_rod",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

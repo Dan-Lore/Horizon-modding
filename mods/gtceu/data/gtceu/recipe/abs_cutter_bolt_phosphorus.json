@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:cutter",
+  "ingredient": {
+    "item": "gtceu:phosphorus_rod"
+  },
+  "result": {
+    "id": "gtceu:phosphorus_bolt",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 16,
+  "min_voltage": 32
+}

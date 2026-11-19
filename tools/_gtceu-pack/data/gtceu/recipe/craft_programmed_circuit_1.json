@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:copper_wire"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "gtceu:iron_plate"
+    }
+  ],
+  "result": {
+    "id": "gtceu:programmed_circuit_1",
+    "count": 1
+  }
+}

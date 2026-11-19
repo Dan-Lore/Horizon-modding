@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gtceu:niobium_nitride_wire"
+    },
+    {
+      "item": "gtceu:rubber"
+    }
+  ],
+  "result": {
+    "id": "gtceu:niobium_nitride_cable_1x",
+    "count": 1
+  }
+}

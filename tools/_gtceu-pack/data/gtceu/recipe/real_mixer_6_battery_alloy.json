@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:lead_ingot",
+    "gtceu:tin_ingot"
+  ],
+  "result": {
+    "id": "gtceu:battery_alloy_ingot",
+    "count": 1
+  },
+  "duration": 120,
+  "eu": 32
+}

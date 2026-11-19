@@ -35,8 +35,8 @@ function Invoke-Pack {
 }
 
 if (-not $SkipPack) {
-    Invoke-Pack greglite {
-        & powershell -NoProfile -File (Join-Path $Root "tools\pack-greglite.ps1") -Out (Join-Path $NativeMods "greglite.hmod")
+    Invoke-Pack gtceu {
+        & powershell -NoProfile -File (Join-Path $Root "tools\pack-gtceu.ps1") -Out (Join-Path $NativeMods "gtceu.hmod")
     }
     Invoke-Pack adastra {
         python (Join-Path $Root "tools\pack-adastra.py")

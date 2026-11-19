@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:compressor",
+  "result": {
+    "id": "gtceu:electrum_plate",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "gtceu:electrum_ingot"
+}

@@ -8,7 +8,7 @@
 ## Locks
 
 - **Overworld slice only.** No custom dimensions, planet registry, orbital mechanics, or space stations.
-- **Energy:** in-mod FE buffer (`Fe` NBT). No Greglite EU dependency. Pack bridging is out of scope for this mod agent.
+- **Energy:** in-mod FE buffer (`Fe` NBT). No GregTech EU dependency. Pack bridging is out of scope for this mod agent.
 - Pin `fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca` (hooks **411**), same native as AE2 15.4.18 when a pack agent integrates.
 - Pack `horizon-native.json`: `mixins` = horizon-mixins commit `5a64af938ec86b00d53d16a408aabc0038fb3e57` (not the game rev), `hooks` = `411`. Wrong `mixins` → GitHub 422 / `left_out` before content loads.
 - Pack agent owns `pack/draft-mods.toml` / `tfg-horizon`. Recommend `on = []` until `/give` smoke. This workshop does not native-build the pack.

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extruder",
+  "ingredient": {
+    "item": "gtceu:acidic_osmium_solution_ingot"
+  },
+  "result": {
+    "id": "gtceu:acidic_osmium_solution_rod",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

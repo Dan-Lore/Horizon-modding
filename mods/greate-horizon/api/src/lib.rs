@@ -1,4 +1,4 @@
-//! Greate Horizon 0.1.0 — tiered Create×Greglite bridge (awaits pin convergence).
+//! Greate Horizon 0.1.0 — tiered Create×GregTech bridge (awaits pin convergence).
 
 mod tiers;
 
@@ -17,7 +17,7 @@ impl Hooks for Greate {
         host.tell(
             event.player,
             Text::literal(
-                "Greate Horizon 0.1.0: tiered shafts ready in content; Create+Greglite co-build parked (pin).",
+                "Greate Horizon 0.1.0: tiered shafts ready in content; Create+GregTech co-build parked (pin).",
             ),
         );
     }

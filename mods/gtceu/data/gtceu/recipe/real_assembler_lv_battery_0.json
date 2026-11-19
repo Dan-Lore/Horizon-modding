@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:assembler",
+  "result": {
+    "id": "gtceu:lv_battery",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 48,
+  "ingredients": [
+    "gtceu:tin_plate",
+    "gtceu:tin_wire"
+  ]
+}

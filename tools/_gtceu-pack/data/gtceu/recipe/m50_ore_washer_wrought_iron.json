@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:ore_washer",
+  "ingredient": {
+    "item": "gtceu:wrought_iron_dust"
+  },
+  "result": {
+    "id": "gtceu:wrought_iron_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "min_voltage": 32
+}

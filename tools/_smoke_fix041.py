@@ -21,7 +21,7 @@ def cmd(line: str):
 print("auth", cmd("auth " + info["token"]))
 st = cmd("status")
 if st.get("screen") == "title" or not st.get("player"):
-    print("open", cmd("open greglite-parity-smoke"))
+    print("open", cmd("open gtceu-parity-smoke"))
     for _ in range(40):
         time.sleep(0.5)
         st = cmd("status")
@@ -32,12 +32,12 @@ if st.get("screen") == "title" or not st.get("player"):
 cmd("options-set guiScale 2")
 cmd("command gamemode creative")
 for it in [
-    "greglite:lv_macerator",
-    "greglite:tin_cable_1x",
-    "greglite:silver_cable_4x",
-    "greglite:tin_ingot",
-    "greglite:lv_steam_turbine",
-    "greglite:steam_solid_boiler_lp",
+    "gtceu:lv_macerator",
+    "gtceu:tin_cable_1x",
+    "gtceu:silver_cable_4x",
+    "gtceu:tin_ingot",
+    "gtceu:lv_steam_turbine",
+    "gtceu:steam_solid_boiler_lp",
     "minecraft:coal",
 ]:
     print("give", it, cmd(f"give {it} 1"))
@@ -45,8 +45,8 @@ for it in [
 # place macerator in front
 st = cmd("status")
 x, y, z = [int(v) for v in st["player"]["position"]]
-print("setblock mac", cmd(f"setblock {x} {y} {z + 2} greglite:lv_macerator"))
-print("setblock cable", cmd(f"setblock {x} {y} {z + 1} greglite:tin_cable_1x"))
+print("setblock mac", cmd(f"setblock {x} {y} {z + 2} gtceu:lv_macerator"))
+print("setblock cable", cmd(f"setblock {x} {y} {z + 1} gtceu:tin_cable_1x"))
 print("look", cmd("look 0 20"))
 time.sleep(0.3)
 # interact to open GUI

@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:hydrogen_peroxide_dust"
+  },
+  "result": {
+    "id": "gtceu:hydrogen_peroxide_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

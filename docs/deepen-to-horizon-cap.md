@@ -20,8 +20,8 @@
 
 | ID | Mod | Status | Notes |
 | --- | --- | --- | --- |
-| `gl_covers` / pipes / world miner-pump | greglite | **done** | attach, transfer, `destroy_block` / water absorb |
-| `gl_tool_electric` | greglite | **done** | `lv_drill` + `break_speed` ×8 |
+| `gl_covers` / pipes / world miner-pump | gtceu | **done** | attach, transfer, `destroy_block` / water absorb |
+| `gl_tool_electric` | gtceu | **done** | `lv_drill` + `break_speed` ×8 |
 | Firmalife ticks / recipes | firmalife | **done** | cheese, greenhouse panel, multi-input oven/vat/drying |
 | Quests kill / adv / UI | quests | **done** | `living_death`, `mob_killed`, `player_advancement_done`, book UI |
 | Teams `/hteam` | teams | **done** | |
@@ -32,7 +32,7 @@
 
 | Mod | Textures | Sounds |
 | --- | --- | --- |
-| greglite | GTM LGPL/MIT via fetch | ogg + `sounds.json`; block sounds = valid block ids |
+| gtceu | GTM LGPL/MIT via fetch | ogg + `sounds.json`; block sounds = valid block ids |
 | firmalife | MIT jar fetch | MIT/vanilla refs |
 | tfc | EUPL fetch | vanilla event refs (NOTICE) |
 | adastra / quests / teams | workshop procedural (ARR upstream) | vanilla refs / silent-by-design (NOTICE) |

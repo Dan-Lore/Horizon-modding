@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:electric_furnace",
+  "ingredient": "minecraft:netherrack",
+  "result": {
+    "id": "minecraft:nether_brick",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

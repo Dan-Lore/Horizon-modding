@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "minecraft:gold_ingot",
+    "gtceu:silver_ingot"
+  ],
+  "result": {
+    "id": "gtceu:electrum_ingot",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 32
+}

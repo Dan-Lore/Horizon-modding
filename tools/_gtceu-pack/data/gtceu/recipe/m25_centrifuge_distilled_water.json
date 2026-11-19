@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:distilled_water_dust"
+  },
+  "result": {
+    "id": "gtceu:distilled_water_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

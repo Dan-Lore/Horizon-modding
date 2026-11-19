@@ -19,7 +19,7 @@
 Automated checks against `mods/`, `pack/glue/`, questfile bake:
 
 - Firmalife blocks/ticks (vat, beehive, drying, sprinkler) — present
-- Greglite N8 shells, circuits, covers, pipes, drill — present
+- GregTech N8 shells, circuits, covers, pipes, drill — present
 - Pack glue tags/recipes — present
 - Quests depth (`fl_sprinkler`, `gl_circuit`, …) — present
 - Create kinetics — evidence in `mods/create-horizon` (awaits pin notes)

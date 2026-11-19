@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:macerator",
+  "result": {
+    "id": "gtceu:copper_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "minecraft:copper_ingot"
+}

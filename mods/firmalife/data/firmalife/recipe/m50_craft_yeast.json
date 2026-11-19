@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "id": "firmalife:yeast",
+    "count": 1
+  }
+}

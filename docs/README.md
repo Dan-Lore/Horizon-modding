@@ -11,10 +11,10 @@
 | [`mod-transfer-list.md`](mod-transfer-list.md) | What we adopt / wait / rewrite |
 | [`pipeline-and-horizon-mcp.md`](pipeline-and-horizon-mcp.md) | Launcher + MCP |
 | [`tfg-content-coverage.md`](tfg-content-coverage.md) | **Quote this:** resources / recipes / mechanics % vs TFG |
-| [`greglite-continuation-plan.md`](greglite-continuation-plan.md) | Active GregTech (`greglite` id) waves |
-| [`greglite-behavior.md`](greglite-behavior.md) | In-game behaviour checklist |
-| [`greglite-electric-plan.md`](greglite-electric-plan.md) | Historical W0–W9 content checklist (closed) |
-| [`greglite-electric-tracker.md`](greglite-electric-tracker.md) | Generated file-coverage board (not Absolute %) |
+| [`gtceu-continuation-plan.md`](gtceu-continuation-plan.md) | Active GregTech (`gtceu` id) waves |
+| [`gtceu-behavior.md`](gtceu-behavior.md) | In-game behaviour checklist |
+| [`gtceu-electric-plan.md`](gtceu-electric-plan.md) | Historical W0–W9 content checklist (closed) |
+| [`gtceu-electric-tracker.md`](gtceu-electric-tracker.md) | Generated file-coverage board (not Absolute %) |
 | [`tfc-plan.md`](tfc-plan.md) / [`tfc-tracker.md`](tfc-tracker.md) | TerraFirmaCraft rewrite |
 | [`adastra-plan.md`](adastra-plan.md) / [`adastra-tracker.md`](adastra-tracker.md) | Ad Astra rewrite |
 | [`quests-plan.md`](quests-plan.md) / [`quests-tracker.md`](quests-tracker.md) | FTB Quests + Teams |

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:cyclohexane_dust",
+    "gtceu:cyclohexane_plate"
+  ],
+  "result": {
+    "id": "gtceu:cyclohexane_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

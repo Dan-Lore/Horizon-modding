@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:forming_press",
+  "ingredient": {
+    "item": "gtceu:technetium_ingot"
+  },
+  "result": {
+    "id": "gtceu:technetium_plate",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

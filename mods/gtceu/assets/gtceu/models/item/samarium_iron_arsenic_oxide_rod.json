@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gtceu:item/samarium_iron_arsenic_oxide_rod"
+  }
+}

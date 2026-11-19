@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:canner",
+  "result": {
+    "id": "gtceu:silver_plate",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 16,
+  "ingredients": [
+    "gtceu:silver_dust",
+    "gtceu:silver_plate"
+  ]
+}

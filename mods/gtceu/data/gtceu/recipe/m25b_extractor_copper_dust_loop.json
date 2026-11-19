@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extractor",
+  "ingredient": {
+    "item": "gtceu:copper_dust"
+  },
+  "result": {
+    "id": "gtceu:copper_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}
