@@ -88,6 +88,8 @@ horizon-launcher native-build --instance tfg-dev --version nightly-2026-11-08-fd
 
 **`mixins`** must be horizon-mixins `5a64af938ec86b00d53d16a408aabc0038fb3e57`, not the game revision `fdc87ae` (GitHub 422 / left_out).
 
-**Textures.** TFC EUPL-1.2: `mods/tfc/tools/fetch_tfc_textures.py` is allowed. Ad Astra Terrarium License: PNG is All Rights Reserved (code is MIT). FTB Quests assets are ARR. Do not copy those PNGs. Placeholders are intentional.
+**Assets / licenses** — do not duplicate here. Follow `.cursor/rules/tfg-horizon-porting.mdc` + `docs/asset-license-table.md`.
 
 **`/team …` is left out** because vanilla already has `/team`. A new command needs a different first word.
+
+**Detail tip sheet:** `docs/dev-tips-native-content.md` (same smoke ladder, longer symptom table).

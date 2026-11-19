@@ -1,7 +1,7 @@
 # TFC Horizon — full core port (waves)
 
-**Own mod:** `mods/tfc/` (clean-room Horizon rewrite, not a TerraFirmaCraft jar).  
-**Inspiration:** TerraFirmaCraft 1.20.1 as used by TerraFirmaGreg-Modern. Attribution: `mods/tfc/NOTICE`.  
+**Own mod:** `mods/tfc/` (Horizon rewrite — not a runnable TFC jar).  
+**Reference:** TerraFirmaCraft / TFG-Modern sources (read freely; textures via EUPL fetch). Attribution: `mods/tfc/NOTICE`.  
 **Tracker:** `mods/tfc/tracker/catalog.json` → `docs/tfc-tracker.md`.  
 **Version:** 0.2.0 adds W16–W22 on the same hooks 411 pin. 0.1.x covered W0–W15.
 

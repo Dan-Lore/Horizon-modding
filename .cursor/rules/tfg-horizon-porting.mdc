@@ -1,0 +1,50 @@
+---
+description: TFG-Modern → Horizon porting — read sources freely; check asset licenses per mod
+alwaysApply: true
+---
+
+# TFG → Horizon porting (mandatory)
+
+## What we are doing
+
+We reimplement / port **open-source** content and mechanics from **TerraFirmaGreg-Modern** (Minecraft Java Edition **1.20.1** Forge pack) onto **Horizon JE 26.3** + native mods (`.hmod` / `.hnmod`).
+
+Reference instance (always OK to open):
+
+`C:\Users\smoln\curseforge\minecraft\Instances\TerraFirmaGreg-Modern`
+
+Also OK: GitHub / Modrinth sources of pack mods, `kubejs/`, datapacks, configs, decompiled jars when sources help.
+
+## Code — no artificial “don’t look” rule
+
+- **Read freely:** Java sources, jars, KubeJS, JSON data, recipes, tags, loot, configs from TFG or upstream.
+- Forge code does **not** run on Horizon — we **rewrite** against Horizon APIs — but studying the original is expected and allowed.
+- Do **not** invent a clean-room wall for this workshop. Craft Anything “Clean room” is optional tooling, not pack policy.
+- Prefer **source** (GitHub / extracted jar) over guessing. Use Craft Anything / decompilers only when source is missing or binary layout matters.
+
+## Assets (textures, sounds, models, lang art)
+
+For **each** asset you vendor into `mods/<id>/`:
+
+1. Find the **upstream license** (mods.toml / LICENSE / NOTICE / Modrinth).
+2. If redistribution of that asset class is allowed → **copy from TFG jar or original mod**, attribute in `NOTICE`, prefer a fetch script.
+3. If **not** allowed → **do not copy**; use placeholders and **say why in one line** (license name + ARR clause). Do not soft-pedal.
+
+Pack membership ≠ relicensed assets. Table: `docs/asset-license-table.md`.
+
+**“Same as TFG / whole mod on Rust”:** TFG ships the **author’s jar intact**. Our Horizon `mods/<id>/` is a **new package**. That is not the same act. Open licenses on **code** let us rewrite logic; **ARR non-code** still blocks copying textures/sounds into the new package unless upstream allows it (or we ship an official upstream Horizon build — which does not exist).
+
+## Ad Astra (Terrarium License v1) — correct reading
+
+| Part | License |
+| --- | --- |
+| Code (`.java`, `data/`, configs, shaders, docs as defined) | **MIT** — read and reimplement freely |
+| Non-code (textures, models, sounds, most `assets/`) | **All Rights Reserved** |
+
+Looking at / rewriting Ad Astra **code** is fine. Putting Ad Astra **PNGs/sounds** into `mods/adastra/` needs Terrarium permission (or placeholders).
+
+Same pattern for other dual-license mods (check each one). TFC textures: EUPL-1.2 via `mods/tfc/tools/fetch_tfc_textures.py` — allowed. FTB Quests art: typically ARR — placeholders.
+
+## Horizon deliverable
+
+Runnable on Horizon (`tfg-dev` for new work; do not native-build pinned `tfg-horizon`). Java jars never execute.

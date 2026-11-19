@@ -1,8 +1,10 @@
 # Greglite behaviour checklist (0.5.0)
 
-File coverage in `mods/greglite/tracker/coverage.json` only counts blocks and recipe JSON. This list is the playable behaviour. A row is done only after Play on `tfg-horizon` / `native-fdc87ae-428278da87c5`: `greglite` is in that native's `horizon-mod-ids.json`, `/give` of the block works, and the scenario below succeeds.
+File coverage in `mods/greglite/tracker/coverage.json` only counts blocks and recipe JSON. This list is the playable behaviour.
 
-This workshop pass did not launch Horizon. Every row is therefore still open. The code and datapack for the rows are in `mods/greglite` at 0.5.0. `api/src/eu_rules.rs` is the part that can be tested without the game; `rustc --edition 2021 --test` on that file passed (cable voltage, machine voltage match, overclock, chance, transformer ratio, coke shell, EBF heat).
+A row is **done** only after Play on **`tfg-dev`** (or a newer native built for that pin): `greglite` in `horizon-mod-ids.json`, `/give` works, scenario succeeds. Do not native-build pinned `tfg-horizon` just to tick these boxes.
+
+Code/datapack for these rows shipped in Greglite 0.5.0. Unit tests live in `api/src/eu_rules.rs` (no game required).
 
 ## N0 — base loop
 

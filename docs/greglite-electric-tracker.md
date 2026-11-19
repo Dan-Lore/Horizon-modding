@@ -1,8 +1,8 @@
 # Greglite Electric Age — progress board
 
 **Generated from:** `mods/greglite/tracker/catalog.json` + content scan
-**Plan:** [`docs/greglite-electric-plan.md`](greglite-electric-plan.md)
-**Updated:** 2026-11-15 — file coverage **100%** (`tracker/coverage.json`). Behaviour checklist: [`greglite-behavior.md`](greglite-behavior.md). Greglite **0.5.0**.
+**Plans:** W0–W9 closed → [`greglite-electric-plan.md`](greglite-electric-plan.md); **next** → [`greglite-continuation-plan.md`](greglite-continuation-plan.md).  
+**Updated:** 2026-11-15 (coverage); instance lines refreshed 2026-11-19. Behaviour: [`greglite-behavior.md`](greglite-behavior.md). Greglite **0.5.0**.
 
 Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
@@ -10,8 +10,9 @@ Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
 | Role | Id | Version | Notes |
 | --- | --- | --- | --- |
-| pack | `tfg-horizon` | `native-fdc87ae-428278da87c5` | The only play instance. Nightly `fdc87ae`, hooks 411, AE2 15.4.18, Greglite 0.5.0. Native-build here. |
-| retired | `create-dev`, `create-nightly-test` | — | Deleted. Do not pack or native-build them. |
+| pack (pinned) | `tfg-horizon` | `native-fdc87ae-428278da87c5` | Working save. **Do not native-build.** |
+| dev | `tfg-dev` | `native-fdc87ae-01abd5b2b6a6` | Rebuild here for Greglite N-waves + workshop mods. |
+| retired | `create-dev`, `create-nightly-test` | — | Deleted. |
 
 ## Coverage (weighted checklist vs GTM extract)
 

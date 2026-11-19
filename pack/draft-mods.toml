@@ -1,14 +1,16 @@
-# Pack instance: one (locked 2026-11-15)
-# Plan: docs/greglite-electric-plan.md
+# Pack instances (locked 2026-11-15, refreshed 2026-11-19)
+# Active Greglite plan: docs/greglite-continuation-plan.md
+# Closed checklist: docs/greglite-electric-plan.md
 # Tracker: mods/greglite/tracker/catalog.json
 # Transfer list: docs/mod-transfer-list.md
+# Agents: AGENTS.md
 
 [pack]
 name = "TFG Horizon"
 notes = """
-Single instance tfg-horizon on Nightly fdc87ae (AE2 15.4.18 pin).
-Create parked: cannot co-build with AE2 (Create→4e5296d/9c7f9b2, AE2→fdc87ae).
-Tip 9f42064 kept installed as base only — AE2 left_out there.
+Two instances: tfg-horizon (pinned working save) + tfg-dev (rebuild only).
+Nightly fdc87ae / AE2 15.4.18. Create parked (pin clash).
+Tip 9f42064 installed as base only — AE2 left_out there.
 """
 
 [[instances]]
@@ -19,7 +21,17 @@ native_version = "native-fdc87ae-428278da87c5"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "JustEnoughItems 1.1.2 + AE2 15.4.18 + Greglite 0.5.0 + Jade/AppleSkin/Continuity + World Map (installed, rebuild pending)"
+notes = "Pinned. Do not native-build. JEI + AE2 15.4.18 + Greglite 0.5.0 + Jade/AppleSkin/Continuity + World Map installed."
+
+[[instances]]
+role = "dev"
+id = "tfg-dev"
+label = "TFG Dev"
+native_version = "native-fdc87ae-01abd5b2b6a6"
+horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+horizon_base = "nightly-2026-11-08-fdc87ae"
+create = false
+notes = "Rebuild only here. Combined: Batch A + World Map + Greglite 0.5.0 + TFC 0.2.0 + Teams + Quests + Ad Astra."
 
 # --- Batch A ---
 

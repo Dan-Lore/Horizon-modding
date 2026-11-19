@@ -1,8 +1,11 @@
 # Greglite Electric Age — plan (locked 2026-11-14)
 
-**Next work:** [`greglite-continuation-plan.md`](greglite-continuation-plan.md) (N0–N6) on **`tfg-dev`**. This file is the closed W0–W9 content checklist. Instances below (`create-dev`, `create-nightly-test`) are retired. Do not native-build `tfg-horizon`.
+> **CLOSED / historical (W0–W9 content checklist).**  
+> **Active plan:** [`greglite-continuation-plan.md`](greglite-continuation-plan.md) on **`tfg-dev`**.  
+> Behaviour checklist: [`greglite-behavior.md`](greglite-behavior.md).  
+> Do **not** native-build pinned `tfg-horizon`. Instances `create-dev` / `create-nightly-test` in tables below are **retired** — ignore them.
 
-Play Greglite on **`tfg-horizon`** / `native-fdc87ae-428278da87c5` only. `create-dev` and `create-nightly-test` are gone. File coverage stays in `tracker/coverage.json`. Behaviour is `docs/greglite-behavior.md` (0.5.0).
+Play / pack pin reference: `tfg-horizon` → `native-fdc87ae-428278da87c5`. Dev rebuilds: `tfg-dev`. File coverage: `tracker/coverage.json`.
 
 **Own mod:** `mods/greglite/` (not a GTM/TFG jar port).  
 **Inspiration / textures:** GregTech Modern (LGPL) — clean Horizon rewrite + `NOTICE`.  
@@ -80,18 +83,15 @@ Machine `done` only if block + logic + GUI + energy **and** ≥2 recipes `done`.
 W0–W9 content + Rust table-driven EU/steam on test. Smoke: boiler lit → copper → `lv_macerator` → copper dust.  
 Multiblocks remain `deferred`. Create co-build on tip: `left_out` (use Create-only native).
 
-## Smoke (test only)
+## Smoke (obsolete instance names)
 
-1. `pwsh tools/pack-greglite.ps1` into `create-nightly-test`  
-2. `native-build --instance create-nightly-test`  
-3. Restore native-content if needed  
-4. Loop: coal → LP boiler → steam turbine → cable → `lv_macerator`  
-5. `greglite-tracker` gaps for the wave = 0  
-6. Leave `create-dev` / `8837` untouched  
+The steps that named `create-nightly-test` / `create-dev` are obsolete.  
+Use **`tfg-dev`** + [`greglite-behavior.md`](greglite-behavior.md) / [`greglite-continuation-plan.md`](greglite-continuation-plan.md).
 
 ## Related docs
 
-- Steam slice: `mods/greglite/README.md`  
-- MVP pack history: `docs/mvp-tfg-plan.md`  
-- Transfer list: `docs/mod-transfer-list.md`  
+- Continuation (active): `docs/greglite-continuation-plan.md`
+- Behaviour checklist: `docs/greglite-behavior.md`
+- Mod README: `mods/greglite/README.md`
+- Transfer list: `docs/mod-transfer-list.md`
 - Progress board: `docs/greglite-electric-tracker.md`  

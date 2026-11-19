@@ -1,38 +1,42 @@
 # Horizon modding
 
-Working directory for **Horizon** (Minecraft JE on Rust) and native mods.
+Workshop for **Horizon** (Minecraft JE on Rust) and native mods.
 
 Path: `C:\Dev\Horizon-modding`
+
+**Agents:** read [`AGENTS.md`](AGENTS.md) first. Doc map: [`docs/README.md`](docs/README.md).
 
 ## Layout
 
 | Path | Contents |
 | --- | --- |
-| `AGENTS.md` | Short briefing for Cursor/other agents — **read first** |
-| `docs/CONTEXT.md` | Longer chat/decision dump |
-| `mods/<mod-id>/` | **One folder per WIP mod** (`.hmod` / `.hnmod`) |
-| `pack/` | Local/draft pack experiments only — **public pack = other repo** |
-| `docs/benchmarks/` | Perf snapshots (e.g. vanilla Horizon baseline) |
-| `reference/` | Design notes / pointers (e.g. TFG), not shippable content |
+| `AGENTS.md` | Current briefing — instances, rules, next work |
+| `docs/` | Plans, trackers, license table, smoke tips |
+| `.cursor/rules/` | Always-on: porting licenses + native smoke |
+| `mods/<mod-id>/` | One folder per WIP Horizon mod |
+| `pack/` | Draft pack manifest (`draft-mods.toml`) — public pack = other repo |
+| `reference/` | Pointers to Java packs (TFG), not shippable content |
 | `tools/` | Helper scripts |
-| `upstream/` | Shallow clone of [horizon-rust/horizon](https://github.com/horizon-rust/horizon) (local) |
-| `launcher/` | Portable Windows launcher `0.2.59` |
+| `upstream/` | Shallow clone of horizon (local, gitignored) |
+| `launcher/` | Portable Windows launcher |
 
-## Play (launcher)
+## Play
 
-1. Run `launcher\windows-x64\horizon-launcher.exe` (path may vary after extract).
-2. Sign in with a Microsoft account that owns Java Edition.
-3. Install a Horizon version → **Prepare** against your Minecraft **26.3** files → Play.
+1. `launcher\windows-x64\horizon-launcher.exe`
+2. Microsoft account that owns Java Edition
+3. Install / Prepare **26.3** → Play
+
+Instances: **`tfg-horizon`** (pinned) · **`tfg-dev`** (rebuild only). Details in `AGENTS.md`.
 
 ## Develop
 
-See upstream `docs/mods.md` and the [native mod template](https://github.com/horizon-rust/horizon-native-mod-template). Put new mods under `mods/`.
+Upstream mods docs + [native mod template](https://github.com/horizon-rust/horizon-native-mod-template). New work under `mods/`.
 
-Pipeline + Horizon MCP: `docs/pipeline-and-horizon-mcp.md`.  
-Sourcing policy: `docs/mod-sourcing-policy.md`.  
-**MVP plan:** `docs/mvp-tfg-plan.md`.  
-Daily registry: `tools/check-registry.ps1`.
+- Pipeline / MCP: `docs/pipeline-and-horizon-mcp.md`
+- Sourcing: `docs/mod-sourcing-policy.md`
+- Licenses: `docs/asset-license-table.md`
+- Registry watch: `tools/check-registry.ps1` (≤1×/day)
 
 ## License note
 
-Upstream Horizon is MIT (their original work). Minecraft assets/code are Mojang/Microsoft; this workspace does not redistribute them.
+Upstream Horizon is MIT. Minecraft assets/code are Mojang/Microsoft — not redistributed here. Third-party mod assets: check `docs/asset-license-table.md` before vendoring.

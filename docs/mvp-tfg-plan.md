@@ -1,5 +1,9 @@
 # MVP plan — TFG-inspired pack on Horizon
 
+> **Status (2026-11-19): historical.** Batch A on Nightly `fdc87ae` is done.  
+> Current instances / next work: **`AGENTS.md`**, `pack/draft-mods.toml`, **`docs/greglite-continuation-plan.md`**.  
+> Do not resurrect `create-dev` / single-instance wording below as live policy.
+
 **Goal of MVP:** one playable Nightly-based draft instance that feels like the *start* of a TFG-style stack (QoL + early tech hooks), not TerraFirmaGreg parity.
 
 **Non-goals for MVP:** full TFC, GregTech, Greate, Ad Astra, quest book, balance, public pack repo polish.

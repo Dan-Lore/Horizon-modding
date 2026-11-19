@@ -1,6 +1,6 @@
 # Dev tips — native code + content registries
 
-**Locked 2026-11-15:** this is the mandatory smoke path after Greglite “in native-mods but JEI empty” / AE2-only creative. Also mirrored in `.cursor/rules/horizon-native-build-smoke.mdc`.
+**Locked 2026-11-15:** detailed smoke / failure tip sheet. Short mandatory rule: `.cursor/rules/horizon-native-build-smoke.mdc`. Assets/licenses: `.cursor/rules/tfg-horizon-porting.mdc` + `docs/asset-license-table.md`.
 
 ## Symptom → cause
 

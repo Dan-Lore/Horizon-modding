@@ -1,13 +1,13 @@
 # Mod transfer list (Minecraft / TFG → Horizon)
 
-**Locked 2026-11-11.**
+**Locked 2026-11-11 · refreshed 2026-11-19.**
 
-This is **not** “port TFG jars”. For each Minecraft-side need we either **adopt** a Horizon registry mod, **wait** for one, or **reimplement** later. Java code does not run.
+This is **not** “run TFG jars on Horizon”. For each Minecraft-side need we **adopt** a registry mod, **wait**, or **reimplement** in `mods/<id>/` (reading upstream/TFG sources is allowed — see porting rule + `docs/asset-license-table.md`).
 
-**Build rule (locked):** one native-build for the whole batch. Broken mods go to `left_out`. One-mod builds only for blame/debug.
+**Build rule:** native-build batches on **`tfg-dev` only**; keep **`tfg-horizon`** pinned. Broken mods → `left_out`.
 
-Source of truth for instance pins: `pack/draft-mods.toml`.  
-Phases: `docs/mvp-tfg-plan.md`.
+Source of truth for pins: `pack/draft-mods.toml`.  
+MVP history: `docs/mvp-tfg-plan.md`. Greglite next: `docs/greglite-continuation-plan.md`.
 
 ---
 
@@ -20,22 +20,21 @@ Phases: `docs/mvp-tfg-plan.md`.
 | Applied Energistics 2 | AE2 | `ae2` | Adopt registry | **built** |
 | AppleSkin | AppleSkin | `appleskin` | Soft adopt | **built** |
 | Continuity / CTM | ContinuityHorizon | `connected_textures` | Soft adopt | **built** |
-| GregTech (Steam Age slice) | Greglite 0.2 | `greglite` | Own `mods/greglite/` | **built** |
-| Xaero-like map | World Map | `worldmap` | Adopt registry 0.7.1 | **installed** (rebuild pending) |
+| GregTech (Steam → Electric) | Greglite **0.5.0** | `greglite` | Own `mods/greglite/` | **built** (behaviour: `greglite-behavior.md`) |
+| Xaero-like map | World Map | `worldmap` | Adopt registry 0.7.1 | **installed** on pack; rebuild policy per AGENTS |
 
-**Working base:** `nightly-2026-11-08-fdc87ae` → `native-fdc87ae-8837f1d46495` (instance `create-dev`). `left_out` empty. **Create** not on working.
-
-**Instances (locked 2026-11-14):** exactly **two** — working `create-dev` + test `create-nightly-test`. See `docs/greglite-electric-plan.md`.
+**Working base:** `nightly-2026-11-08-fdc87ae`.  
+**Instances (2026-11-15+):** `tfg-horizon` (pinned) + `tfg-dev` (rebuild). Retired: `create-dev`, `create-nightly-test`.
 
 ---
 
-## Batch B — Create (on test, 2026-11-14)
+## Batch B — Create (parked)
 
 | Minecraft / TFG role | Horizon mod | id | How | Status |
 | --- | --- | --- | --- | --- |
-| Create | Create for Horizon | `create` | GitHub 0.9.0 on Nightly ≥ `4e5296d` | **built on test** `native-4e5296d-649518ee8b9d` |
+| Create | Create for Horizon | `create` | Needs pin `4e5296d` / `9c7f9b2` | **parked** — cannot co-build with AE2 on `fdc87ae` |
 
-Promote Batch A + Create onto working only after intentional smoke — do not rebuild working casually.
+Do not promote Create onto the AE2 pack native until pins converge.
 
 ---
 
@@ -43,13 +42,13 @@ Promote Batch A + Create onto working only after intentional smoke — do not re
 
 | Minecraft / TFG role | Horizon plan | Notes |
 | --- | --- | --- |
-| TerraFirmaCraft | **TFC Horizon 0.2.0** in `mods/tfc/` | Clean-room core slice. Plan `docs/tfc-plan.md`. Not installed on `tfg-horizon` (`on = []`) |
-| GregTech Modern | **Greglite** Steam → **Electric Age** | v0.2 Steam done. EU + all singleblock electrics: `docs/greglite-electric-plan.md` + `mods/greglite/tracker/catalog.json` |
-| Greate / Create×GT | After Create on working + Greglite EU | |
-| Ad Astra | **Ad Astra Horizon 0.1.0** in `mods/adastra/` | Overworld slice (no dimensions). Plan `docs/adastra-plan.md`. Pack agent wires install; workshop keeps off pack pin until smoked |
-| FTB Teams | **Horizon Teams** in `mods/teams/` | Clean-room. Plan `docs/quests-plan.md`. `on = []` until smoke |
-| FTB Quests / quest book | **Horizon Quests** in `mods/quests/` (requires Teams) | Clean-room own JSON; no FTB SNBT/ARR assets. `on = []` until W6+ smoked |
-| Full TFG-Modern pack | Never as jar import | Separate public pack repo only when draft is worth sharing |
+| TerraFirmaCraft | **TFC Horizon 0.2.0** in `mods/tfc/` | Rewrite from TFC/TFG sources. Plan `docs/tfc-plan.md`. On `tfg-dev`; `on = []` for pinned pack |
+| GregTech Modern | **Greglite 0.5.0** + N-waves | Checklist closed: `greglite-electric-plan.md`. **Next:** `greglite-continuation-plan.md` |
+| Greate / Create×GT | After Create pin + Greglite EU | Parked with Create |
+| Ad Astra | **Ad Astra Horizon 0.1.0** in `mods/adastra/` | Overworld slice. Code MIT / assets ARR — `asset-license-table.md` |
+| FTB Teams | **Horizon Teams** in `mods/teams/` | Own rewrite. `on = []` on pack pin |
+| FTB Quests / quest book | **Horizon Quests** in `mods/quests/` | Own JSON; no FTB SNBT/ARR art |
+| Full TFG-Modern as jars | Never | Incremental Horizon rewrite; public pack = separate repo later |
 
 ---
 
@@ -63,10 +62,8 @@ Launcher **content port** of TFG jars (assets/data only) is experimental referen
 
 - [x] QoL: JEI, Jade (+ AppleSkin, Continuity soft)
 - [x] Tech early: AE2 on Nightly
-- [x] Own Greglite v0.2 Steam Age slice in Batch A
-- [x] Create on **test** instance (Nightly line / pin `4e5296d`)
-- [ ] Promote Create + Batch A onto **working** after smoke
-- [x] TFC Horizon 0.2.0 workshop slice (`mods/tfc/`, not on the AE2 pin)
-- [x] Horizon Teams + Horizon Quests workshop (`mods/teams/`, `mods/quests/`, `on = []`)
-- [ ] Greglite Electric Age (W0–W9) — `docs/greglite-electric-plan.md`
-- [x] Ad Astra Horizon 0.1.0 workshop slice (`mods/adastra/`, pack wiring by pack agent)
+- [x] Own Greglite through Electric Age content checklist (0.5.0)
+- [x] Create built once on old test pin — now **parked** (AE2 clash)
+- [ ] Create + AE2 on one native (blocked on upstream pin)
+- [x] TFC / Teams / Quests / Ad Astra workshop slices (live on `tfg-dev` when built there)
+- [ ] Greglite N-waves behaviour verification / next after N6 — `greglite-continuation-plan.md`

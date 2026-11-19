@@ -9,11 +9,18 @@ Reference (read-only design): Ad Astra 1.20.x mechanics.
 Plan: docs/adastra-plan.md
 Tracker: mods/adastra/tracker/catalog.json
 
-Textures
---------
-Placeholder textures are solid-color PNGs generated for workshop smoke.
-If Ad Astra assets are later vendored, respect upstream LICENSE (typically
-LGPL-3.0 for code; verify asset terms) and document the fetch script here.
+Textures / non-code assets
+--------------------------
+Upstream **Terrarium License v1** (mods.toml `license = "Terrarium License"`):
+- **Code** (Java, `data/`, configs, shaders, docs as defined in LICENSE) → **MIT**.
+- **Non-code** (textures, models, sounds, most `assets/`) → **All Rights Reserved**.
+
+TFG-Modern shipping `ad_astra-*.jar` redistributes the whole mod under that
+license; it does **not** relicense ARR assets for a separate Horizon rewrite.
+
+Placeholder textures here are solid-color PNGs for workshop smoke. Do not
+copy Ad Astra PNGs/sounds into this tree unless Terrarium grants permission;
+if that happens, document a fetch script and attribution here.
 
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.

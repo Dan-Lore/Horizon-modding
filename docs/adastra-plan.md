@@ -1,7 +1,7 @@
 # Ad Astra Horizon — port plan (0.1.0 vertical slice)
 
-**Own mod:** `mods/adastra/` (clean-room Horizon rewrite, not an Ad Astra / TFG jar).  
-**Inspiration:** Ad Astra (Terrarium) as used beside TerraFirmaGreg-Modern. Attribution: `mods/adastra/NOTICE`.  
+**Own mod:** `mods/adastra/` (Horizon rewrite — Forge jar does not run).  
+**Reference:** Ad Astra / TFG sources (code MIT; **assets ARR** — see `docs/asset-license-table.md`). Attribution: `mods/adastra/NOTICE`.  
 **Tracker:** `mods/adastra/tracker/catalog.json` → `docs/adastra-tracker.md`.  
 **Version:** 0.1.0 covers W0–W9 overworld systems that hooks 411 can run.
 

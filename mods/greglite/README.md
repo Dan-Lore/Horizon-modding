@@ -4,15 +4,16 @@ GregTech-inspired native mod for Horizon. Version **0.5.0**. Clean rewrite; text
 
 ## Play
 
-One instance: **`tfg-horizon`**, native `native-fdc87ae-428278da87c5` (Nightly `fdc87ae`, hooks 411).
+| Instance | Role |
+| --- | --- |
+| `tfg-horizon` / `native-fdc87ae-428278da87c5` | Pinned working save — **do not native-build** |
+| `tfg-dev` | Rebuild / N-waves — **only** here |
 
 ```powershell
-powershell -File tools/pack-greglite.ps1
+powershell -File tools/pack-greglite.ps1 -Out <path-for-tfg-dev>
 ```
 
-That writes `greglite.hmod` into the `tfg-horizon` native-mods folder. Then native-build that instance only. `create-dev` and `create-nightly-test` are not pack targets.
-
-Login chat and `tracker/coverage.json` do not prove a wave. The behaviour list is [`docs/greglite-behavior.md`](../../docs/greglite-behavior.md). This environment did not run Horizon, so that list is still unchecked in game.
+Always pass `-Out` (default without `-Out` targets `tfg-horizon`). Next waves: [`docs/greglite-continuation-plan.md`](../../docs/greglite-continuation-plan.md). Behaviour list: [`docs/greglite-behavior.md`](../../docs/greglite-behavior.md) — login tip / `coverage.json` do not prove a wave.
 
 ## What 0.5.0 adds
 
@@ -28,4 +29,4 @@ Login chat and `tracker/coverage.json` do not prove a wave. The behaviour list i
 
 ## Build pin
 
-`tools/pack-greglite.ps1` records Horizon `fdc87ae`, mixins `5a64af93`, and hooks **411** so the next native-build of `tfg-horizon` still includes Greglite beside AE2 15.4.18. The launcher still rewrites the crate revision to the game it compiles.
+`tools/pack-greglite.ps1` records Horizon `fdc87ae`, mixins `5a64af93`, and hooks **411** so native-builds on this pin stay beside AE2 15.4.18. The launcher still rewrites the crate revision to the game it compiles.
