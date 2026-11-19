@@ -1,0 +1,8 @@
+id = "greate"
+name = "Greate Horizon"
+version = "0.1.0"
+description = "Greate-inspired Create×Greglite bridge: tiered shafts (awaits Create+AE2 same pin)."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

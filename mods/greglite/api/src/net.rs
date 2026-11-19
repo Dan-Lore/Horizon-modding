@@ -117,7 +117,10 @@ pub fn transfer_eu_in(
 
 fn facing_name(host: &mut dyn Host, pos: [i32; 3]) -> String {
     let dim = host.dimension();
-    host.level(dim)
+    let Some(level) = host.level(dim) else {
+        return "north".to_owned();
+    };
+    level
         .block_property(host, pos, "facing")
         .unwrap_or_else(|| "north".to_owned())
 }

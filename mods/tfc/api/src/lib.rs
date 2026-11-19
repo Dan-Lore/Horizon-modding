@@ -72,7 +72,7 @@ impl Hooks for Tfc {
         host.action_bar(player.uuid, Text::literal(line));
     }
 
-    fn tooltip(&self, _host: &dyn Host, event: &mut TooltipEvent<'_, '_>) {
+    fn tooltip(&self, _host: &dyn Host, event: &mut TooltipEvent<'_>) {
         let Some(line) = food::tooltip_line(event.stack.item.as_ref()) else {
             return;
         };
@@ -94,7 +94,7 @@ impl Hooks for Tfc {
     fn living_entity_use_item_finish(
         &self,
         host: &mut dyn Host,
-        event: &mut LivingEntityUseItemFinishEvent<'_, '_>,
+        event: &mut LivingEntityUseItemFinishEvent<'_>,
     ) {
         let id = event.stack.item.as_ref().to_owned();
         let count = event.stack.count;

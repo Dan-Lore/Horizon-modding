@@ -41,8 +41,7 @@ fn read_list(entity: &ModBlockEntity) -> Vec<(Option<String>, i32)> {
             Tag::Compound(map) => {
                 let fluid = match map.get(&"Fluid".into()) {
                     Some(Tag::String(fluid)) => {
-                        let name = fluid.to_string_lossy();
-                        let name = name.as_ref().to_owned();
+                        let name: String = fluid.to_string_lossy();
                         if name == "minecraft:empty" || name.is_empty() {
                             None
                         } else {
@@ -209,9 +208,11 @@ pub fn absorb_water_block(
     per_tick: i32,
 ) {
     let dim = host.dimension();
-    let level = host.level(dim);
     for offset in OFFSETS {
         let npos = [pos[0] + offset[0], pos[1] + offset[1], pos[2] + offset[2]];
+        let Some(level) = host.level(dim) else {
+            continue;
+        };
         if level.block(host, npos).as_deref() == Some(WATER) {
             let _ = fill(entity, index, count, WATER, per_tick, capacity);
             return;

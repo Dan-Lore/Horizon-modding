@@ -1,0 +1,11 @@
+{
+  "type": "greglite:distillation_tower",
+  "ingredient": "greglite:oil_cell",
+  "result": {
+    "id": "greglite:naphtha_cell",
+    "count": 1
+  },
+  "duration": 200,
+  "eu": 16,
+  "min_voltage": 32
+}

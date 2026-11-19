@@ -1,0 +1,8 @@
+id = "firmalife"
+name = "Firmalife Horizon"
+version = "0.1.2"
+description = "Firmalife-inspired food slice: cheese, drying, oven, greenhouse, vat, beehive, sprinkler (no worldgen)."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

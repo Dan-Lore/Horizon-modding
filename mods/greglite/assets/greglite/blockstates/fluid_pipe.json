@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "greglite:block/fluid_pipe"
+    }
+  }
+}

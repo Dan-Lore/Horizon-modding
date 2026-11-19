@@ -11,6 +11,7 @@
 
 **Locked mod transfer list:** `docs/mod-transfer-list.md`  
 **Instance / batch statuses:** `draft-mods.toml`  
+**Pack glue (tags/balance datapack):** [`glue/`](glue/) — no native-build  
 **Build rule:** one batch native-build; do not rebuild per mod.
 
 Next rebuild → Nightly + Batch A (JEI, Jade, AE2, ± AppleSkin/Continuity). Create = Batch B when Nightly catches up.

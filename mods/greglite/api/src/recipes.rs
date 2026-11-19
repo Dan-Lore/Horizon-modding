@@ -179,6 +179,10 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             ("greglite:bronze_ingot", "greglite:bronze_dust"),
             ("minecraft:iron_ingot", "greglite:iron_dust"),
             ("minecraft:raw_iron", "greglite:iron_dust"),
+            ("greglite:aluminium_ingot", "greglite:aluminium_dust"),
+            ("greglite:steel_ingot", "greglite:steel_dust"),
+            ("minecraft:coal", "greglite:coal_dust"),
+            ("minecraft:gold_ingot", "greglite:gold_dust"),
         ]
         .into_iter()
         .map(|(i, o)| one_in(i, o, 80, 1, 2))
@@ -230,6 +234,105 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
         .into_iter()
         .map(|(i, o)| one_in(i, o, 80, 0, 2))
         .collect(),
+        "greglite:vacuum_freezer" => vec![
+            one_in("greglite:hot_steel_ingot", "greglite:steel_ingot", 100, 0, 8),
+            one_in(
+                "greglite:hot_aluminium_ingot",
+                "greglite:aluminium_ingot",
+                120,
+                0,
+                8,
+            ),
+        ],
+        "greglite:assembler" => vec![one_in(
+            "greglite:phenolic_circuit_board",
+            "greglite:basic_electronic_circuit",
+            100,
+            0,
+            8,
+        )],
+        "greglite:circuit_assembler" => vec![one_in(
+            "greglite:basic_electronic_circuit",
+            "greglite:good_electronic_circuit",
+            160,
+            0,
+            16,
+        )],
+        // N8 oil / chem shells — item proxies until real fluids land.
+        "greglite:distillation_tower" => vec![one_in(
+            "greglite:oil_cell",
+            "greglite:naphtha_cell",
+            200,
+            0,
+            16,
+        )],
+        "greglite:cracker" => vec![one_in(
+            "greglite:naphtha_cell",
+            "greglite:ethylene_dust",
+            160,
+            0,
+            16,
+        )],
+        "greglite:large_chemical_reactor" => vec![MachineRecipe {
+            inputs: vec![
+                item_ing("greglite:ethylene_dust"),
+                item_ing("minecraft:coal"),
+            ],
+            outputs: vec![RecipeOutput {
+                stack: stack("greglite:polyethylene_ingot", 1),
+                chance: 100,
+            }],
+            circuit: None,
+            duration: 240,
+            steam: 0,
+            eu: 32,
+            min_voltage: 128,
+            heat: 0,
+            fluid_in: None,
+            fluid_out: None,
+        }],
+        "greglite:cleanroom" => vec![one_in(
+            "greglite:epoxy_dust",
+            "greglite:epoxy_foil",
+            120,
+            0,
+            8,
+        )],
+        "greglite:electric_blast_furnace" => vec![
+            MachineRecipe {
+                inputs: vec![item_ing("minecraft:iron_ingot"), item_ing("greglite:coke")],
+                outputs: vec![RecipeOutput {
+                    stack: stack("greglite:hot_steel_ingot", 1),
+                    chance: 100,
+                }],
+                circuit: None,
+                duration: 200,
+                steam: 0,
+                eu: 16,
+                min_voltage: 32,
+                heat: 1000,
+                fluid_in: None,
+                fluid_out: None,
+            },
+            MachineRecipe {
+                inputs: vec![
+                    item_ing("greglite:aluminium_dust"),
+                    item_ing("greglite:coke"),
+                ],
+                outputs: vec![RecipeOutput {
+                    stack: stack("greglite:hot_aluminium_ingot", 1),
+                    chance: 100,
+                }],
+                circuit: None,
+                duration: 240,
+                steam: 0,
+                eu: 24,
+                min_voltage: 32,
+                heat: 1700,
+                fluid_in: None,
+                fluid_out: None,
+            },
+        ],
         _ => {
             // Generic fallback so every recipe type still processes something.
             vec![

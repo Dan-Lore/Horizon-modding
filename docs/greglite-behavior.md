@@ -1,4 +1,4 @@
-# Greglite behaviour checklist (0.5.0)
+# Greglite behaviour checklist (0.5.1)
 
 File coverage in `mods/greglite/tracker/coverage.json` only counts blocks and recipe JSON. This list is the playable behaviour.
 
@@ -63,5 +63,13 @@ Horizon `fdc87ae` has fluid tanks (API 54) and custom fluid ids inside tanks. Th
 After N1 and N5. Controller `greglite:multi_electric_blast_furnace` on a face of a 3×3×3 shell. The other cells are `greglite:ebf_casing`, `greglite:cupronickel_coil_block` (heat 1800) or `greglite:kanthal_coil_block` (heat 2700), plus one `input_hatch`, one `output_hatch`, and one `energy_hatch`.
 
 1. An incomplete shell does not tick.
-2. Iron in the input hatch and coke beside it, with EU in the energy hatch, become `greglite:steel_ingot` in the output hatch. The recipe heat is 1000, which the LV electric furnace does not run.
+2. Iron in the input hatch and coke beside it, with EU in the energy hatch, become `greglite:hot_steel_ingot` in the output hatch. The recipe heat is 1000, which the LV electric furnace does not run.
 3. A corner controller does not count as a formed shell.
+
+## N7 — vacuum freezer
+
+Controller `greglite:multi_vacuum_freezer` on a face of a 3×3×3 shell of `greglite:ebf_casing` plus one `input_hatch`, one `output_hatch`, and one `energy_hatch` (no coils).
+
+1. An incomplete shell does not tick.
+2. `greglite:hot_steel_ingot` in the input hatch with EU becomes `greglite:steel_ingot` in the output hatch.
+3. A coil block in the shell breaks formation (freezer casings only).

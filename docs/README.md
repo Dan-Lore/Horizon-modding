@@ -17,6 +17,8 @@
 | [`tfc-plan.md`](tfc-plan.md) / [`tfc-tracker.md`](tfc-tracker.md) | TFC Horizon |
 | [`adastra-plan.md`](adastra-plan.md) / [`adastra-tracker.md`](adastra-tracker.md) | Ad Astra Horizon |
 | [`quests-plan.md`](quests-plan.md) / [`quests-tracker.md`](quests-tracker.md) | Teams + Quests |
+| [`tfg-feature-coverage.md`](tfg-feature-coverage.md) / [`tfg-feature-catalog.json`](tfg-feature-catalog.json) | Implementable TFG feature % (100% board) |
+| [`tfg-feature-audit.md`](tfg-feature-audit.md) | Evidence audit of catalog statuses |
 | [`mvp-tfg-plan.md`](mvp-tfg-plan.md) | Historical MVP Batch A (done) |
 | [`CONTEXT.md`](CONTEXT.md) | Archival chat dump — prefer AGENTS |
 | `registry-watch/` | Daily registry check state |

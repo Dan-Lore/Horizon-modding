@@ -82,6 +82,7 @@
   "item.greglite.brass_gear": "Brass Gear",
   "item.greglite.brass_foil": "Brass Foil",
   "item.greglite.steel_ingot": "Steel Ingot",
+  "item.greglite.hot_steel_ingot": "Hot Steel Ingot",
   "item.greglite.steel_dust": "Steel Dust",
   "item.greglite.steel_plate": "Steel Plate",
   "item.greglite.steel_rod": "Steel Rod",
@@ -1445,5 +1446,18 @@
   "block.greglite.lv_miner": "Lv Miner",
   "block.greglite.lv_pump": "Lv Pump",
   "block.greglite.lv_rock_crusher": "Lv Rock Crusher",
-  "block.greglite.mv_macerator": "Mv Macerator"
+  "block.greglite.mv_macerator": "Mv Macerator",
+  "item.greglite.oil_cell": "Oil Cell",
+  "item.greglite.naphtha_cell": "Naphtha Cell",
+  "block.greglite.conveyor_module": "Conveyor Module",
+  "item.greglite.cover_item_filter": "Item Filter Cover",
+  "item.greglite.cover_conveyor": "Conveyor Cover",
+  "item.greglite.cover_pump": "Pump Cover",
+  "item.greglite.phenolic_circuit_board": "Phenolic Circuit Board",
+  "item.greglite.basic_electronic_circuit": "Basic Electronic Circuit",
+  "item.greglite.good_electronic_circuit": "Good Electronic Circuit",
+  "item.greglite.hot_aluminium_ingot": "Hot Aluminium Ingot",
+  "block.greglite.fluid_pipe": "Fluid Pipe",
+  "block.greglite.item_pipe": "Item Pipe",
+  "item.greglite.lv_drill": "LV Drill"
 }

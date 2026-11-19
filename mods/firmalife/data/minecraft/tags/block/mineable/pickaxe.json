@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "firmalife:oven",
+    "firmalife:cheese_wheel",
+    "firmalife:greenhouse_panel",
+    "firmalife:vat",
+    "firmalife:sprinkler"
+  ]
+}

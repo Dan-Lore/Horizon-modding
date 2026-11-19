@@ -65,7 +65,8 @@ pub struct QuestFile {
 }
 
 static FILE: Mutex<Option<QuestFile>> = Mutex::new(None);
-static TITLE_OVERRIDES: Mutex<HashMap<String, String>> = Mutex::new(HashMap::new());
+static TITLE_OVERRIDES: std::sync::LazyLock<Mutex<HashMap<String, String>>> =
+    std::sync::LazyLock::new(|| Mutex::new(HashMap::new()));
 
 fn apply_overrides(mut file: QuestFile) -> QuestFile {
     let map = TITLE_OVERRIDES.lock().unwrap_or_else(|e| e.into_inner());

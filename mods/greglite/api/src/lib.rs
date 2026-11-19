@@ -1,4 +1,4 @@
-//! Greglite 0.5 — EU net, LV craft chain, fluids, coke oven, blast furnace.
+//! Greglite 0.5.1 — EU net, LV craft chain, fluids, coke oven, blast furnace, vacuum freezer.
 mod energy;
 mod eu_rules;
 mod fluids;
@@ -29,7 +29,7 @@ impl Hooks for Greglite {
         host.tell(
             event.player,
             Text::literal(
-                "Greglite 0.5: EU voltage and amps, LV craft chain, coke oven, blast furnace.",
+                "Greglite 0.5.1: EU net, LV craft chain, coke oven, blast furnace, vacuum freezer.",
             ),
         );
     }
@@ -86,6 +86,26 @@ impl Hooks for Greglite {
         }
         if spec.id.ends_with("multi_electric_blast_furnace") {
             multiblock::tick_ebf(host, event.pos, event.entity, &spec);
+            return;
+        }
+        if spec.id.ends_with("multi_vacuum_freezer") {
+            multiblock::tick_freezer(host, event.pos, event.entity, &spec);
+            return;
+        }
+        if spec.id.ends_with("multi_distillation_tower") {
+            multiblock::tick_distillation(host, event.pos, event.entity, &spec);
+            return;
+        }
+        if spec.id.ends_with("multi_cracker") {
+            multiblock::tick_cracker(host, event.pos, event.entity, &spec);
+            return;
+        }
+        if spec.id.ends_with("multi_large_chemical_reactor") {
+            multiblock::tick_lcr(host, event.pos, event.entity, &spec);
+            return;
+        }
+        if spec.id.ends_with("multi_cleanroom") {
+            multiblock::tick_cleanroom(host, event.pos, event.entity, &spec);
             return;
         }
         match spec.kind {

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "source": "Greate-inspired (MIT rewrite)",
+  "shafts": [
+    {
+      "id": "andesteel_shaft",
+      "tier": "ULV",
+      "voltage": 8
+    },
+    {
+      "id": "steel_shaft",
+      "tier": "LV",
+      "voltage": 32
+    },
+    {
+      "id": "aluminium_shaft",
+      "tier": "MV",
+      "voltage": 128
+    },
+    {
+      "id": "stainless_shaft",
+      "tier": "HV",
+      "voltage": 512
+    }
+  ]
+}

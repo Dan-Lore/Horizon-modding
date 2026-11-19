@@ -84,6 +84,13 @@
     "greglite:brass_gear",
     "greglite:brass_foil",
     "greglite:steel_ingot",
+    "greglite:hot_steel_ingot",
+    "greglite:hot_aluminium_ingot",
+    "greglite:good_electronic_circuit",
+    "greglite:basic_electronic_circuit",
+    "greglite:phenolic_circuit_board",
+    "greglite:naphtha_cell",
+    "greglite:oil_cell",
     "greglite:steel_dust",
     "greglite:steel_plate",
     "greglite:steel_rod",
@@ -1439,6 +1446,13 @@
     "greglite:iv_welder",
     "greglite:luv_welder",
     "greglite:zpm_welder",
-    "greglite:uv_welder"
+    "greglite:uv_welder",
+    "greglite:conveyor_module",
+    "greglite:cover_conveyor",
+    "greglite:cover_item_filter",
+    "greglite:cover_pump",
+    "greglite:fluid_pipe",
+    "greglite:item_pipe",
+    "greglite:lv_drill"
   ]
 }

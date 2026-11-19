@@ -1,0 +1,10 @@
+{
+  "title": "Greate Horizon",
+  "icon": "greate:steel_shaft",
+  "items": [
+    "greate:andesteel_shaft",
+    "greate:steel_shaft",
+    "greate:aluminium_shaft",
+    "greate:stainless_shaft"
+  ]
+}

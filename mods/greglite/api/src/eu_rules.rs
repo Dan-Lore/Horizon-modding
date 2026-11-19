@@ -177,6 +177,44 @@ const INWARD: [[i32; 3]; 6] = [
     [0, 0, -1],
 ];
 
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ShellKind {
+    Coke,
+    Ebf,
+    /// Same hatch layout as EBF; casings only (no coils). Reuses `ebf_casing`.
+    Freezer,
+    /// N8 oil slice — casings + hatches, same 3×3×3 shell as freezer.
+    Distillation,
+    Cracker,
+    Lcr,
+    Cleanroom,
+}
+
+impl ShellKind {
+    fn controller_suffix(self) -> Option<&'static str> {
+        match self {
+            ShellKind::Coke => Some("multi_coke_oven"),
+            ShellKind::Ebf => Some("multi_electric_blast_furnace"),
+            ShellKind::Freezer => Some("multi_vacuum_freezer"),
+            ShellKind::Distillation => Some("multi_distillation_tower"),
+            ShellKind::Cracker => Some("multi_cracker"),
+            ShellKind::Lcr => Some("multi_large_chemical_reactor"),
+            ShellKind::Cleanroom => Some("multi_cleanroom"),
+        }
+    }
+
+    fn hatch_casing(self) -> bool {
+        matches!(
+            self,
+            ShellKind::Freezer
+                | ShellKind::Distillation
+                | ShellKind::Cracker
+                | ShellKind::Lcr
+                | ShellKind::Cleanroom
+        )
+    }
+}
+
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct ShellScan {
     pub heat: i32,
@@ -186,8 +224,12 @@ pub struct ShellScan {
 }
 
 /// Face-centred controller, one-block air interior, 3×3×3 shell.
-/// Coke shells are only `coke_oven_bricks`. EBF shells are casings, coils, and hatches.
-pub fn scan_shell(origin: [i32; 3], block_at: &dyn Fn([i32; 3]) -> String, ebf: bool) -> Option<ShellScan> {
+/// Coke: bricks only. EBF: casings, coils, hatches. Freezer: casings + hatches.
+pub fn scan_shell(
+    origin: [i32; 3],
+    block_at: &dyn Fn([i32; 3]) -> String,
+    kind: ShellKind,
+) -> Option<ShellScan> {
     for inward in INWARD {
         let center = add(origin, inward);
         if !is_air(&block_at(center)) {
@@ -207,33 +249,50 @@ pub fn scan_shell(origin: [i32; 3], block_at: &dyn Fn([i32; 3]) -> String, ebf: 
                     let pos = add(center, [dx, dy, dz]);
                     let block = block_at(pos);
                     if pos == origin {
-                        let controller = if ebf {
-                            block.ends_with("multi_electric_blast_furnace")
-                        } else {
-                            block.ends_with("multi_coke_oven")
-                        };
-                        if !controller {
+                        let suffix = kind.controller_suffix().unwrap_or("");
+                        if !block.ends_with(suffix) {
                             ok = false;
                         }
                         continue;
                     }
-                    if ebf {
-                        if block.ends_with("input_hatch") {
-                            input_hatch = Some(pos);
-                        } else if block.ends_with("output_hatch") {
-                            output_hatch = Some(pos);
-                        } else if block.ends_with("energy_hatch") {
-                            energy_hatch = Some(pos);
-                        } else if block.ends_with("cupronickel_coil_block") {
-                            heat = heat.max(1_800);
-                        } else if block.ends_with("kanthal_coil_block") {
-                            heat = heat.max(2_700);
-                        } else if block.ends_with("ebf_casing") {
-                        } else {
-                            ok = false;
+                    match kind {
+                        ShellKind::Coke => {
+                            if !block.ends_with("coke_oven_bricks") {
+                                ok = false;
+                            }
                         }
-                    } else if !block.ends_with("coke_oven_bricks") {
-                        ok = false;
+                        ShellKind::Ebf => {
+                            if block.ends_with("input_hatch") {
+                                input_hatch = Some(pos);
+                            } else if block.ends_with("output_hatch") {
+                                output_hatch = Some(pos);
+                            } else if block.ends_with("energy_hatch") {
+                                energy_hatch = Some(pos);
+                            } else if block.ends_with("cupronickel_coil_block") {
+                                heat = heat.max(1_800);
+                            } else if block.ends_with("kanthal_coil_block") {
+                                heat = heat.max(2_700);
+                            } else if block.ends_with("ebf_casing") {
+                            } else {
+                                ok = false;
+                            }
+                        }
+                        ShellKind::Freezer
+                        | ShellKind::Distillation
+                        | ShellKind::Cracker
+                        | ShellKind::Lcr
+                        | ShellKind::Cleanroom => {
+                            if block.ends_with("input_hatch") {
+                                input_hatch = Some(pos);
+                            } else if block.ends_with("output_hatch") {
+                                output_hatch = Some(pos);
+                            } else if block.ends_with("energy_hatch") {
+                                energy_hatch = Some(pos);
+                            } else if block.ends_with("ebf_casing") {
+                            } else {
+                                ok = false;
+                            }
+                        }
                     }
                 }
             }
@@ -241,7 +300,9 @@ pub fn scan_shell(origin: [i32; 3], block_at: &dyn Fn([i32; 3]) -> String, ebf: 
         if !ok {
             continue;
         }
-        if ebf && (input_hatch.is_none() || output_hatch.is_none() || energy_hatch.is_none()) {
+        let needs_hatches = matches!(kind, ShellKind::Ebf) || kind.hatch_casing();
+        if needs_hatches && (input_hatch.is_none() || output_hatch.is_none() || energy_hatch.is_none())
+        {
             continue;
         }
         return Some(ShellScan {
@@ -339,17 +400,18 @@ mod tests {
     #[test]
     fn coke_shell_needs_every_brick() {
         let map = fill_coke([0, 1, 0], [0, -1, 0]);
-        assert!(scan_shell([0, 1, 0], &|p| at(&map, p), false).is_some());
+        assert!(scan_shell([0, 1, 0], &|p| at(&map, p), ShellKind::Coke).is_some());
         let mut broken = map.clone();
         broken.insert([1, 1, 1], "minecraft:stone".into());
-        assert!(scan_shell([0, 1, 0], &|p| at(&broken, p), false).is_none());
-        assert!(scan_shell([0, 1, 0], &|_| "minecraft:air".into(), false).is_none());
+        assert!(scan_shell([0, 1, 0], &|p| at(&broken, p), ShellKind::Coke).is_none());
+        assert!(scan_shell([0, 1, 0], &|_| "minecraft:air".into(), ShellKind::Coke).is_none());
     }
 
-    #[test]
-    fn ebf_shell_needs_hatches_and_reports_heat() {
-        let controller = [0, 1, 0];
-        let inward = [0, -1, 0];
+    fn fill_hatch_shell(
+        controller: [i32; 3],
+        controller_id: &str,
+        coil: Option<&str>,
+    ) -> HashMap<[i32; 3], String> {
         let center = [0, 0, 0];
         let mut cells = Vec::new();
         for dz in -1..=1 {
@@ -360,7 +422,7 @@ mod tests {
                     }
                     let pos = [center[0] + dx, center[1] + dy, center[2] + dz];
                     let block = if pos == controller {
-                        "greglite:multi_electric_blast_furnace"
+                        controller_id
                     } else if pos == [1, 0, 0] {
                         "greglite:input_hatch"
                     } else if pos == [-1, 0, 0] {
@@ -368,7 +430,7 @@ mod tests {
                     } else if pos == [0, 0, 1] {
                         "greglite:energy_hatch"
                     } else if pos == [0, 0, -1] {
-                        "greglite:cupronickel_coil_block"
+                        coil.unwrap_or("greglite:ebf_casing")
                     } else {
                         "greglite:ebf_casing"
                     };
@@ -376,11 +438,51 @@ mod tests {
                 }
             }
         }
-        let _ = inward;
-        let map = world(&cells);
-        let hit = scan_shell(controller, &|p| at(&map, p), true).expect("shell");
+        world(&cells)
+    }
+
+    #[test]
+    fn ebf_shell_needs_hatches_and_reports_heat() {
+        let controller = [0, 1, 0];
+        let map = fill_hatch_shell(
+            controller,
+            "greglite:multi_electric_blast_furnace",
+            Some("greglite:cupronickel_coil_block"),
+        );
+        let hit = scan_shell(controller, &|p| at(&map, p), ShellKind::Ebf).expect("shell");
         assert_eq!(hit.heat, 1_800);
         assert_eq!(hit.input_hatch, Some([1, 0, 0]));
         assert_eq!(hit.energy_hatch, Some([0, 0, 1]));
+    }
+
+    #[test]
+    fn freezer_shell_needs_hatches_no_coils() {
+        let controller = [0, 1, 0];
+        let map = fill_hatch_shell(controller, "greglite:multi_vacuum_freezer", None);
+        let hit = scan_shell(controller, &|p| at(&map, p), ShellKind::Freezer).expect("shell");
+        assert_eq!(hit.heat, 0);
+        assert_eq!(hit.input_hatch, Some([1, 0, 0]));
+        assert_eq!(hit.output_hatch, Some([-1, 0, 0]));
+        assert_eq!(hit.energy_hatch, Some([0, 0, 1]));
+        let mut broken = map.clone();
+        broken.insert([0, 0, -1], "greglite:cupronickel_coil_block".into());
+        assert!(scan_shell(controller, &|p| at(&broken, p), ShellKind::Freezer).is_none());
+    }
+
+    #[test]
+    fn n8_hatch_shells_form_with_casings() {
+        let controller = [0, 1, 0];
+        for (id, kind) in [
+            ("greglite:multi_distillation_tower", ShellKind::Distillation),
+            ("greglite:multi_cracker", ShellKind::Cracker),
+            ("greglite:multi_large_chemical_reactor", ShellKind::Lcr),
+            ("greglite:multi_cleanroom", ShellKind::Cleanroom),
+        ] {
+            let map = fill_hatch_shell(controller, id, None);
+            let hit = scan_shell(controller, &|p| at(&map, p), kind).expect(id);
+            assert_eq!(hit.input_hatch, Some([1, 0, 0]));
+            assert_eq!(hit.output_hatch, Some([-1, 0, 0]));
+            assert_eq!(hit.energy_hatch, Some([0, 0, 1]));
+        }
     }
 }

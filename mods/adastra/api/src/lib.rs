@@ -95,7 +95,7 @@ impl Hooks for AdAstra {
     fn living_entity_use_item_finish(
         &self,
         host: &mut dyn Host,
-        event: &mut LivingEntityUseItemFinishEvent<'_, '_>,
+        event: &mut LivingEntityUseItemFinishEvent<'_>,
     ) {
         let id = event.stack.item.as_ref().to_owned();
         let count = event.stack.count;

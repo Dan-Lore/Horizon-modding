@@ -175,15 +175,17 @@ fn battery_item(voltage: i32) -> String {
 }
 
 fn battery_charge(entity: &ModBlockEntity, slot: usize) -> i32 {
-    match entity.nbt.get(&format!("Bat{slot}").into()) {
+    let key = format!("Bat{slot}");
+    match entity.nbt.get(&key.as_str().into()) {
         Some(horizon_client::mod_api::Tag::Int(v)) => (*v).max(0),
         _ => 0,
     }
 }
 
 fn set_battery_charge(entity: &mut ModBlockEntity, slot: usize, value: i32) {
+    let key = format!("Bat{slot}");
     entity.nbt.insert(
-        format!("Bat{slot}").into(),
+        key.as_str().into(),
         horizon_client::mod_api::Tag::Int(value.max(0)),
     );
 }

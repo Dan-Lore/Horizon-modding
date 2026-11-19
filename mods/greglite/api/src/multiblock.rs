@@ -1,7 +1,9 @@
-//! Coke oven and electric blast furnace. A controller with an incomplete shell does nothing.
+//! Coke oven, EBF, vacuum freezer, and N8 hatch-shell multis
+//! (distillation / cracker / LCR / cleanroom).
+//! A controller with an incomplete shell does nothing.
 
 use crate::energy::{eu, set_eu, set_packet_voltage};
-use crate::eu_rules::{self, ShellScan};
+use crate::eu_rules::{self, ShellKind, ShellScan};
 use crate::fluids::{self, CREOSOTE};
 use crate::recipes::{self, merge_output};
 use crate::registry::{self, Spec};
@@ -12,13 +14,34 @@ const TANK: i32 = 16_000;
 
 fn block_at(host: &mut dyn Host, pos: [i32; 3]) -> String {
     let dim = host.dimension();
-    host.level(dim)
+    let Some(level) = host.level(dim) else {
+        return "minecraft:air".to_owned();
+    };
+    level
         .block(host, pos)
         .unwrap_or_else(|| "minecraft:air".to_owned())
 }
 
-fn scan(host: &mut dyn Host, origin: [i32; 3], ebf: bool) -> Option<ShellScan> {
-    eu_rules::scan_shell(origin, &|pos| block_at(host, pos), ebf)
+fn scan(host: &mut dyn Host, origin: [i32; 3], kind: ShellKind) -> Option<ShellScan> {
+    // Prefetch so scan_shell's Fn does not need &mut Host.
+    let mut map = std::collections::HashMap::new();
+    for dz in -2..=2 {
+        for dy in -2..=2 {
+            for dx in -2..=2 {
+                let pos = [origin[0] + dx, origin[1] + dy, origin[2] + dz];
+                map.insert(pos, block_at(host, pos));
+            }
+        }
+    }
+    eu_rules::scan_shell(
+        origin,
+        &|pos| {
+            map.get(&pos)
+                .cloned()
+                .unwrap_or_else(|| "minecraft:air".to_owned())
+        },
+        kind,
+    )
 }
 
 fn item_count(entity: &ModBlockEntity, slot: usize, item: &str) -> u32 {
@@ -44,7 +67,7 @@ pub fn tick_coke(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity
     if entity.items.len() < 2 {
         entity.items.resize(2, None);
     }
-    let formed = scan(host, pos, false).is_some();
+    let formed = scan(host, pos, ShellKind::Coke).is_some();
     entity.nbt.insert("Formed".into(), Tag::Int(if formed { 1 } else { 0 }));
     if !formed {
         let _ = host.set_block_property(pos, "lit", "false");
@@ -78,14 +101,48 @@ pub fn tick_coke(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity
 }
 
 pub fn tick_ebf(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
-    let Some(shell) = scan(host, pos, true) else {
+    tick_hatch_machine(host, pos, entity, spec, ShellKind::Ebf, "greglite:electric_blast_furnace", true);
+}
+
+pub fn tick_freezer(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
+    tick_hatch_machine(host, pos, entity, spec, ShellKind::Freezer, "greglite:vacuum_freezer", false);
+}
+
+pub fn tick_distillation(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
+    tick_hatch_machine(host, pos, entity, spec, ShellKind::Distillation, "greglite:distillation_tower", false);
+}
+
+pub fn tick_cracker(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
+    tick_hatch_machine(host, pos, entity, spec, ShellKind::Cracker, "greglite:cracker", false);
+}
+
+pub fn tick_lcr(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
+    tick_hatch_machine(host, pos, entity, spec, ShellKind::Lcr, "greglite:large_chemical_reactor", false);
+}
+
+pub fn tick_cleanroom(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
+    tick_hatch_machine(host, pos, entity, spec, ShellKind::Cleanroom, "greglite:cleanroom", false);
+}
+
+fn tick_hatch_machine(
+    host: &mut dyn Host,
+    pos: [i32; 3],
+    entity: &mut ModBlockEntity,
+    spec: &Spec,
+    kind: ShellKind,
+    recipe_type: &str,
+    use_heat: bool,
+) {
+    let Some(shell) = scan(host, pos, kind) else {
         entity.nbt.insert("Formed".into(), Tag::Int(0));
         crate::energy::set_progress(entity, 0, 1);
         let _ = host.set_block_property(pos, "lit", "false");
         return;
     };
     entity.nbt.insert("Formed".into(), Tag::Int(1));
-    entity.nbt.insert("Heat".into(), Tag::Int(shell.heat));
+    if use_heat {
+        entity.nbt.insert("Heat".into(), Tag::Int(shell.heat));
+    }
     if let Some(hatch) = shell.energy_hatch {
         pull_eu(host, hatch, entity, spec);
     }
@@ -95,7 +152,7 @@ pub fn tick_ebf(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity,
     let Some(output_pos) = shell.output_hatch else {
         return;
     };
-    let recipes = recipes::load(host, "greglite:electric_blast_furnace");
+    let recipes = recipes::load(host, recipe_type);
     let mut working = false;
     let (mut prog, _) = crate::energy::progress(entity);
     let mut prog_max = 1;
@@ -105,8 +162,7 @@ pub fn tick_ebf(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity,
     });
     let inputs = snapshot_in.unwrap_or_default();
     if let Some(recipe) = recipes.iter().find(|recipe| {
-        recipe.heat > 0
-            && recipe.heat <= shell.heat
+        (!use_heat || (recipe.heat > 0 && recipe.heat <= shell.heat))
             && recipe.inputs.len() <= 2
             && recipe.inputs.iter().enumerate().all(|(i, ing)| {
                 inputs.get(i).and_then(|s| s.as_ref()).is_some_and(|stack| {

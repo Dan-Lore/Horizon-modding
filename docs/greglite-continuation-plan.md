@@ -3,8 +3,8 @@
 **Date:** 2026-11-15  
 **Supersedes for next work:** [`greglite-electric-plan.md`](greglite-electric-plan.md) (W0–W9 content checklist, locked 2026-11-14).  
 **Own mod:** `mods/greglite/` — clean Horizon rewrite, GTM textures + `NOTICE`.  
-**Play instance:** `tfg-dev` → `native-fdc87ae-01abd5b2b6a6` (Nightly `fdc87ae`, hooks 411, AE2 15.4.18, Greglite 0.5.0).  
-`tfg-horizon` stays pinned on `native-fdc87ae-428278da87c5`. Do not native-build it.  
+**Play instance:** `tfg-dev` → `native-fdc87ae-e0aa83869033` (Nightly `fdc87ae`, hooks 411, AE2 15.4.18, Greglite 0.5.5).  
+`tfg-horizon` pinned to the same smoked native. Do not native-build it; rebuild only `tfg-dev`, then re-pin + drop older hashes.  
 Create stays off this pin (`4e5296d` / `9c7f9b2`).
 
 The 2026-11-14 plan’s instances `create-dev` and `create-nightly-test` are gone. Do not native-build them.
@@ -138,15 +138,25 @@ After N1 (EU) and N5 (coke):
 
 Scenario: incomplete EBF is inert; complete EBF with EU and coke yields steel.
 
-## After N6 (order only, no design yet)
+### N7 — Vacuum freezer (0.5.1)
+
+`multi_vacuum_freezer` is no longer a fake singleblock.
+
+- Face-centred 3×3×3 shell: `ebf_casing` + `input_hatch` + `output_hatch` + `energy_hatch` (no coils; frost-proof casing deferred).
+- Incomplete structure does not tick.
+- Recipe type `greglite:vacuum_freezer`: `hot_steel_ingot` → `steel_ingot` with EU.
+- EBF steel recipe now outputs `hot_steel_ingot` so the freezer is required for cold steel.
+
+Scenario: incomplete freezer is inert; formed freezer with EU cools hot steel. EBF alone no longer yields cold `steel_ingot`.
+
+## After N7 (order only, no design yet)
 
 Each one is its own wave and its own smoke:
 
-1. Vacuum freezer (hot ingots that EBF starts to require).
-2. Distillation tower and cracker (only after N4).
-3. Large chemical reactor.
-4. Cleanroom, then circuit assembler rules that require it.
-5. Assembly line.
+1. Distillation tower and cracker (only after N4).
+2. Large chemical reactor.
+3. Cleanroom, then circuit assembler rules that require it.
+4. Assembly line.
 
 Parked until a named wave: fusion, bedrock miner, large turbines, GCYM, ore-vein worldgen, the rest of the ~120 material dict, Create×Greglite.
 
@@ -161,4 +171,4 @@ Parked until a named wave: fusion, bedrock miner, large turbines, GCYM, ore-vein
 
 ## Suggested next session
 
-N0 on `tfg-dev`. If the copper-dust loop passes, start N1 in `net.rs` / `registry.rs` (cable voltage from material, diode direction, transformer ratio). N2 starts only after that smoke.
+Verify N7 on `tfg-dev` (formed freezer cools hot steel). Then distillation tower / cracker, or behaviour checklist rows still open for N0–N6.

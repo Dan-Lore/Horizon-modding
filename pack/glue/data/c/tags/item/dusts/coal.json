@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:coal",
+    "greglite:coal_dust"
+  ]
+}

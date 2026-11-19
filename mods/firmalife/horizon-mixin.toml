@@ -1,0 +1,10 @@
+# Firmalife Horizon 0.1.0. Pin matches tfg-dev / AE2.
+[mod]
+id = "firmalife"
+version = "0.1.2"
+
+[compatibility]
+horizon_revision = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+
+[api]
+path = "api"

@@ -4221,8 +4221,8 @@
       "kind": "multiblock",
       "source_mod": "gregtech_modern",
       "status": "done",
-      "wave": "parity",
-      "notes": "Vacuum freezer"
+      "wave": "N7",
+      "notes": "Real shell (ebf_casing + hatches); cools hot_steel_ingot → steel_ingot"
     },
     {
       "id": "multi_wooden_multiblock_tank",

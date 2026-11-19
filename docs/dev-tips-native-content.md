@@ -50,8 +50,8 @@
 
 | Instance | Play version | Do |
 | --- | --- | --- |
-| `tfg-horizon` | pinned `native-fdc87ae-428278da87c5` | Last working save. Do not native-build. Re-pin with `instance version tfg-horizon native-fdc87ae-428278da87c5` if it starts following updates |
-| `tfg-dev` | `native-fdc87ae-01abd5b2b6a6` | Combined dev native (profile `dev`). This is the only instance to rebuild |
+| `tfg-horizon` | pinned `native-fdc87ae-e0aa83869033` | Last smoked working save. Do not native-build. Re-pin after a good `tfg-dev` build |
+| `tfg-dev` | `native-fdc87ae-e0aa83869033` | Only instance to rebuild; remove older `native-fdc87ae-*` after re-pinning the pack |
 
 `prune-old-versions` stays off. `tools/pack-greglite.ps1` without `-Out` overwrites `tfg-horizon\horizon-native-mods\greglite.hmod`.
 

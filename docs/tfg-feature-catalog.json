@@ -1,0 +1,781 @@
+{
+  "schema": 1,
+  "title": "TFG Horizon implementable feature catalog",
+  "metric": {
+    "denominator": "features with status todo|partial|done (exclude horizon_blocked)",
+    "numerator": "partial|done (usable vertical slice in mods/ or registry; Create may note awaits pin)",
+    "goal_pct": 60
+  },
+  "updated": "2026-11-19",
+  "features": [
+    {
+      "id": "qol_jei",
+      "pillar": "qol_registry",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "JustEnoughItems 1.1.2 Batch A"
+    },
+    {
+      "id": "qol_jade",
+      "pillar": "qol_registry",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "Jade"
+    },
+    {
+      "id": "qol_appleskin",
+      "pillar": "qol_registry",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "AppleSkin"
+    },
+    {
+      "id": "qol_continuity",
+      "pillar": "qol_registry",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "Continuity"
+    },
+    {
+      "id": "qol_worldmap",
+      "pillar": "qol_registry",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "World Map on tfg-dev"
+    },
+    {
+      "id": "qol_sodium_like",
+      "pillar": "qol_registry",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "Horizon renderer baseline"
+    },
+    {
+      "id": "ae2_core_items",
+      "pillar": "ae2",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "AE2 15.4.18 on fdc87ae"
+    },
+    {
+      "id": "ae2_crafting",
+      "pillar": "ae2",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "ME crafting from registry"
+    },
+    {
+      "id": "ae2_channels_storage",
+      "pillar": "ae2",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "registry",
+      "note": "Core storage; deep GT integration TBD"
+    },
+    {
+      "id": "ae2_quest_entry",
+      "pillar": "ae2",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests",
+      "note": "ae2_book quest"
+    },
+    {
+      "id": "gl_steam_boiler",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N1"
+    },
+    {
+      "id": "gl_solid_boiler",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N1"
+    },
+    {
+      "id": "gl_steam_machines",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N2 steam age"
+    },
+    {
+      "id": "gl_lv_eu_network",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N3 cables/battery/machines"
+    },
+    {
+      "id": "gl_mv_hv_tiers",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N3+ tiered EU"
+    },
+    {
+      "id": "gl_wires_cables",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "Wire/cable items + logic"
+    },
+    {
+      "id": "gl_batteries",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "Battery packs"
+    },
+    {
+      "id": "gl_electric_machines_basic",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "Macerator alloy smelter etc"
+    },
+    {
+      "id": "gl_circuit_boards",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "phenolic_circuit_board craft + items"
+    },
+    {
+      "id": "gl_circuits_full_chain",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "basic+good circuits; IV+ still stubs"
+    },
+    {
+      "id": "gl_materials_ingots",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "Core metals; not full GT table"
+    },
+    {
+      "id": "gl_materials_plates_rods",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "Plate/rod recipes present"
+    },
+    {
+      "id": "gl_dusts_ores",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "macerator: Al/steel/coal/gold dusts + prior ores"
+    },
+    {
+      "id": "gl_coke_oven_multi",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N5 shell"
+    },
+    {
+      "id": "gl_ebf_multi",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N6 EBF + steel"
+    },
+    {
+      "id": "gl_vacuum_freezer",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N7 hot→cold"
+    },
+    {
+      "id": "gl_distillation_tower",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N8 shell + oil_cell recipe"
+    },
+    {
+      "id": "gl_oil_cracker",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N8 shell + naphtha crack"
+    },
+    {
+      "id": "gl_large_chem_reactor",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N8 shell + LCR polyethylene"
+    },
+    {
+      "id": "gl_cleanroom_shell",
+      "pillar": "greglite",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "N8 shell + epoxy foil"
+    },
+    {
+      "id": "gl_hot_ingot_chain",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "hot_steel + hot_aluminium EBF/freezer"
+    },
+    {
+      "id": "gl_assembler_recipes",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "assembler boards->basic circuit"
+    },
+    {
+      "id": "gl_chemical_reactor_single",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "Single-block chem machine"
+    },
+    {
+      "id": "gl_fluid_pipes",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "fluid_pipe + item_pipe blocks/crafts; fluid sim still limited"
+    },
+    {
+      "id": "gl_covers_conveyors",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "conveyor_module + covers; attach shallow"
+    },
+    {
+      "id": "gl_tool_electric",
+      "pillar": "greglite",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "greglite",
+      "note": "lv_drill craft + prior tools"
+    },
+    {
+      "id": "tfc_climate_hud",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Season/thirst HUD"
+    },
+    {
+      "id": "tfc_thirst",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Drink/thirst"
+    },
+    {
+      "id": "tfc_heat_forge",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Charcoal forge heat"
+    },
+    {
+      "id": "tfc_anvil_welding",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Anvil recipes"
+    },
+    {
+      "id": "tfc_alloy_calc",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Alloy rules"
+    },
+    {
+      "id": "tfc_knapping",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Clay/stone knapping"
+    },
+    {
+      "id": "tfc_pottery",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Pottery firing"
+    },
+    {
+      "id": "tfc_barrel_soak",
+      "pillar": "tfc",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Barrel soak slice"
+    },
+    {
+      "id": "tfc_food_decay_container",
+      "pillar": "tfc",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Container rot; not per-stack"
+    },
+    {
+      "id": "tfc_crops_basic",
+      "pillar": "tfc",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Crop items; no climate worldgen"
+    },
+    {
+      "id": "tfc_tools_metals",
+      "pillar": "tfc",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Metal tools subset"
+    },
+    {
+      "id": "tfc_crucible",
+      "pillar": "tfc",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Crucible alloy"
+    },
+    {
+      "id": "tfc_quern",
+      "pillar": "tfc",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "tfc",
+      "note": "Quern grind"
+    },
+    {
+      "id": "tfc_collapse_cobble",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "BlockStateId place-replace needs hooks API 446+",
+      "mod": "tfc"
+    },
+    {
+      "id": "tfc_chisel_mutate",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "No default_state / BlockStateId place-replace on hooks 411",
+      "mod": "tfc"
+    },
+    {
+      "id": "tfc_rock_layers",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "No chunk/worldgen place hook",
+      "mod": "tfc"
+    },
+    {
+      "id": "tfc_ore_veins",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "No chunk/worldgen place hook",
+      "mod": "tfc"
+    },
+    {
+      "id": "tfc_climate_maps",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "No worldgen climate maps",
+      "mod": "tfc"
+    },
+    {
+      "id": "tfc_animals",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "No reliable custom entity spawn",
+      "mod": "tfc"
+    },
+    {
+      "id": "tfc_food_rot_per_stack",
+      "pillar": "tfc",
+      "status": "horizon_blocked",
+      "horizon_gap": "No item-component write on this pin",
+      "mod": "tfc"
+    },
+    {
+      "id": "fl_cheese_wheel",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "cheese + wheel crafts"
+    },
+    {
+      "id": "fl_drying_mat",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "drying_mat tick crop->dried_fruit"
+    },
+    {
+      "id": "fl_oven",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "oven tick"
+    },
+    {
+      "id": "fl_greenhouse",
+      "pillar": "firmalife",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "panel placeable; no climate link"
+    },
+    {
+      "id": "fl_vat_boiling",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "vat milk->cheese"
+    },
+    {
+      "id": "fl_jars_canning",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "jar/honey_jar + raw honey path"
+    },
+    {
+      "id": "fl_beehive",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "beehive raw_honey"
+    },
+    {
+      "id": "fl_irrigation",
+      "pillar": "firmalife",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "firmalife",
+      "note": "sprinkler moistens farmland"
+    },
+    {
+      "id": "aa_desh_ostrum_calorite",
+      "pillar": "adastra",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "adastra",
+      "note": "Materials + recipes"
+    },
+    {
+      "id": "aa_coal_generator",
+      "pillar": "adastra",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "adastra"
+    },
+    {
+      "id": "aa_compressor",
+      "pillar": "adastra",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "adastra"
+    },
+    {
+      "id": "aa_oxygen_gear",
+      "pillar": "adastra",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "adastra",
+      "note": "Items; no space dim"
+    },
+    {
+      "id": "aa_fuel_refinery",
+      "pillar": "adastra",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "adastra"
+    },
+    {
+      "id": "aa_rocket_stub",
+      "pillar": "adastra",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "adastra",
+      "note": "Item/block stub"
+    },
+    {
+      "id": "aa_more_overworld_machines",
+      "pillar": "adastra",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "adastra",
+      "note": "compressor/refinery/oxygen already in adastra 0.1"
+    },
+    {
+      "id": "aa_planets_dims",
+      "pillar": "adastra",
+      "status": "horizon_blocked",
+      "horizon_gap": "No custom dimensions API",
+      "mod": "adastra"
+    },
+    {
+      "id": "aa_rocket_travel",
+      "pillar": "adastra",
+      "status": "horizon_blocked",
+      "horizon_gap": "Needs dimensions + travel API",
+      "mod": "adastra"
+    },
+    {
+      "id": "tq_teams_basic",
+      "pillar": "teams_quests",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "teams",
+      "note": "Party create/invite"
+    },
+    {
+      "id": "tq_quest_book",
+      "pillar": "teams_quests",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests"
+    },
+    {
+      "id": "tq_quest_board",
+      "pillar": "teams_quests",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests"
+    },
+    {
+      "id": "tq_questfile_json",
+      "pillar": "teams_quests",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests",
+      "note": "expanded TFG chapters: GL/TFC/FL/AA/AE2"
+    },
+    {
+      "id": "tq_tfg_questline_depth",
+      "pillar": "teams_quests",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests",
+      "note": "GL circuits/covers + FL vat/hive/sprinkler quests"
+    },
+    {
+      "id": "tq_team_shared_progress",
+      "pillar": "teams_quests",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "quests"
+    },
+    {
+      "id": "tq_loot_crate",
+      "pillar": "teams_quests",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests"
+    },
+    {
+      "id": "tq_kill_tasks_auto",
+      "pillar": "teams_quests",
+      "status": "horizon_blocked",
+      "horizon_gap": "Living-death hook incomplete; command stub OK",
+      "mod": "quests"
+    },
+    {
+      "id": "tq_quest_graph_ui",
+      "pillar": "teams_quests",
+      "status": "horizon_blocked",
+      "horizon_gap": "Thin client UI hooks for pan-zoom graph",
+      "mod": "quests"
+    },
+    {
+      "id": "cr_kinetics_shaft",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": "Create pin ≠ AE2 pin; code in mods/create-horizon",
+      "mod": "create-horizon",
+      "note": "create-horizon kinetics; awaits AE2 pin"
+    },
+    {
+      "id": "cr_cogwheel_gearbox",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": "Awaits shared Nightly with AE2",
+      "mod": "create-horizon",
+      "note": "create-horizon kinetic runtime; awaits pin"
+    },
+    {
+      "id": "cr_water_wheel",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "create-horizon",
+      "note": "waterwheel.rs; awaits pin"
+    },
+    {
+      "id": "cr_mechanical_press",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "create-horizon",
+      "note": "press_basin/pressing; awaits pin"
+    },
+    {
+      "id": "cr_mixer_basin",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": "Pin + deeper code",
+      "mod": "create-horizon",
+      "note": "mixer.rs; awaits pin"
+    },
+    {
+      "id": "cr_belt_transport",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "create-horizon",
+      "note": "transport/chute/depot paths; awaits pin"
+    },
+    {
+      "id": "cr_depot_funnel",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "create-horizon",
+      "note": "depot.rs; awaits pin"
+    },
+    {
+      "id": "cr_greate_integration",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": "Create pin != AE2/Greglite; co-build parked",
+      "mod": "greate-horizon",
+      "note": "mods/greate-horizon 0.1.0 tier tables+shafts; awaits Create pin"
+    },
+    {
+      "id": "cr_cobblegen",
+      "pillar": "create",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "create-horizon",
+      "note": "crush/mill path + feature-cobblegen.md"
+    },
+    {
+      "id": "cr_ae2_same_native",
+      "pillar": "create",
+      "status": "horizon_blocked",
+      "horizon_gap": "Create Nightly pin ≠ fdc87ae AE2 pin",
+      "mod": "create-horizon"
+    },
+    {
+      "id": "pg_datapack_recipes_core",
+      "pillar": "pack_glue",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "pack",
+      "note": "per-mod + pack/glue recipes"
+    },
+    {
+      "id": "pg_tag_unification",
+      "pillar": "pack_glue",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "pack",
+      "note": "pack/glue c: tags"
+    },
+    {
+      "id": "pg_ore_dict_replacement",
+      "pillar": "pack_glue",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "pack",
+      "note": "pack/glue bridging tags"
+    },
+    {
+      "id": "pg_startup_tooltips",
+      "pillar": "pack_glue",
+      "status": "partial",
+      "horizon_gap": null,
+      "mod": "pack",
+      "note": "Chat tips via hooks"
+    },
+    {
+      "id": "pg_balance_tweaks",
+      "pillar": "pack_glue",
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "pack",
+      "note": "pack/glue balance recipes"
+    },
+    {
+      "id": "pg_kubejs_parity",
+      "pillar": "pack_glue",
+      "status": "horizon_blocked",
+      "horizon_gap": "Forge KubeJS event bus not on Horizon",
+      "mod": "pack"
+    }
+  ],
+  "audit": {
+    "date": "2026-11-19",
+    "method": "evidence probes vs mods/ + pack/glue",
+    "implementable_pct_goal": 100
+  }
+}

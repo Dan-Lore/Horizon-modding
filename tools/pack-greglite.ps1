@@ -21,7 +21,7 @@ Copy-Item (Join-Path $src "README.md"), (Join-Path $src "NOTICE") (Join-Path $st
 $native = @{
     schema  = 1
     id      = "greglite"
-    version = "0.5.0"
+    version = "0.5.5"
     game    = "26.3"
     horizon = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
     mixins  = "5a64af938ec86b00d53d16a408aabc0038fb3e57"

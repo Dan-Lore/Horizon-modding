@@ -3,7 +3,7 @@
 use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::path::{Path, PathBuf};
-use std::sync::Mutex;
+use std::sync::{LazyLock, Mutex};
 
 #[derive(Clone, Debug, Default)]
 pub struct TeamProgress {
@@ -22,10 +22,12 @@ struct State {
     theme: String,
 }
 
-static STATE: Mutex<State> = Mutex::new(State {
-    dir: None,
-    teams: HashMap::new(),
-    theme: String::new(),
+static STATE: LazyLock<Mutex<State>> = LazyLock::new(|| {
+    Mutex::new(State {
+        dir: None,
+        teams: HashMap::new(),
+        theme: String::new(),
+    })
 });
 
 fn progress_path(dir: &Path) -> PathBuf {
@@ -135,7 +137,7 @@ pub fn set_theme(id: &str) {
     save_locked(&state);
 }
 
-fn team_mut(state: &mut State, team: &str) -> &mut TeamProgress {
+fn team_mut<'a>(state: &'a mut State, team: &str) -> &'a mut TeamProgress {
     state.teams.entry(team.to_owned()).or_default()
 }
 

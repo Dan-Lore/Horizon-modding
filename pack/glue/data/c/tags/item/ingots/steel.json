@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "greglite:steel_ingot",
+    "adastra:steel_ingot",
+    "tfc:metal/ingot/steel"
+  ]
+}

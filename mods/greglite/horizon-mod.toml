@@ -1,7 +1,7 @@
 id = "greglite"
 name = "Greglite"
-version = "0.5.0"
-description = "GregTech-inspired EU: voltage and amps, LV craft chain, coke oven, blast furnace."
+version = "0.5.5"
+description = "GregTech-inspired EU: voltage and amps, LV craft chain, multis N5–N8, conveyor/cover stubs."
 authors = ["Horizon-modding workshop"]
 api = "0.2"
 side = "both"

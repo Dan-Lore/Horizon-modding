@@ -50,10 +50,10 @@ Agents have repeatedly claimed Greglite/TFC/AE2 were “in the build” while th
 
 | Instance | Version | Role |
 | --- | --- | --- |
-| `tfg-horizon` | **pinned** `native-fdc87ae-428278da87c5` | Last working save. `instance version tfg-horizon native-fdc87ae-428278da87c5`. Do not native-build it. |
-| `tfg-dev` | `native-fdc87ae-01abd5b2b6a6` | Combined dev build (profile `dev`). Rebuild **only** this instance. |
+| `tfg-horizon` | **pinned** `native-fdc87ae-e0aa83869033` | Last smoked working save. Re-pin after a good `tfg-dev` build; do not native-build this instance. |
+| `tfg-dev` | `native-fdc87ae-e0aa83869033` | Only instance to native-build. After smoke, pin `tfg-horizon` to the new hash and `remove` older `native-fdc87ae-*`. |
 
-`prune-old-versions` stays **off**. `tools/pack-greglite.ps1` with no `-Out` writes into `tfg-horizon` — always pass `-Out`.
+`prune-old-versions` stays **off** (protects Nightly `fdc87ae`). `tools/pack-greglite.ps1` with no `-Out` writes into `tfg-horizon` — always pass `-Out`.
 
 ## Pack pins
 

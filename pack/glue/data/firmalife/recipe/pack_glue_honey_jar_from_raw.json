@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "firmalife:jar"
+    },
+    {
+      "item": "firmalife:raw_honey"
+    }
+  ],
+  "result": {
+    "id": "firmalife:honey_jar",
+    "count": 1
+  }
+}

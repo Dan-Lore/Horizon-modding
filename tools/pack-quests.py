@@ -39,8 +39,8 @@ def main() -> None:
             mixin / "api",
             ignore=shutil.ignore_patterns("target", ".horizon-cache"),
         )
-        # Ship quest tables next to the mixin for pack authors / overrides reference.
-        shutil.copytree(SRC / "tables", mixin / "tables")
+        # Do NOT ship tables/*.json under mixins/ — launcher rejects JSON there.
+        # Questfile is baked into api/src/baked.rs.
         for name in ("README.md", "NOTICE"):
             shutil.copy(SRC / name, mixin / name)
         native = {

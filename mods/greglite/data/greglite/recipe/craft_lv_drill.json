@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PTP",
+    "CMC",
+    " S "
+  ],
+  "key": {
+    "P": {
+      "item": "greglite:iron_plate"
+    },
+    "T": {
+      "item": "greglite:tin_cable_1x"
+    },
+    "C": {
+      "item": "greglite:basic_electronic_circuit"
+    },
+    "M": {
+      "item": "greglite:lv_motor"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "greglite:lv_drill",
+    "count": 1
+  }
+}

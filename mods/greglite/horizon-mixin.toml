@@ -1,7 +1,7 @@
-# Greglite 0.5 — EU net, LV chain, coke oven, blast furnace. Play on tfg-horizon (fdc87ae).
+# Greglite 0.5.5 — EU net, multis N5–N8, circuits, covers, pipes. Rebuild on tfg-dev.
 [mod]
 id = "greglite"
-version = "0.5.0"
+version = "0.5.5"
 
 [compatibility]
 horizon_revision = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"

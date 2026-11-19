@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "firmalife:block/oven"
+    },
+    "lit=true": {
+      "model": "firmalife:block/oven"
+    }
+  }
+}

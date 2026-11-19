@@ -17,21 +17,21 @@ Tip 9f42064 installed as base only — AE2 left_out there.
 role = "pack"
 id = "tfg-horizon"
 label = "TFG Horizon"
-native_version = "native-fdc87ae-428278da87c5"
+native_version = "native-fdc87ae-e0aa83869033"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "Pinned. Do not native-build. JEI + AE2 15.4.18 + Greglite 0.5.0 + Jade/AppleSkin/Continuity + World Map installed."
+notes = "Pinned working save (smoked 2026-11-19). Do not native-build. Greglite 0.5.5 + AE2 15.4.18 + content pack."
 
 [[instances]]
 role = "dev"
 id = "tfg-dev"
 label = "TFG Dev"
-native_version = "native-fdc87ae-01abd5b2b6a6"
+native_version = "native-fdc87ae-e0aa83869033"
 horizon_commit = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
 horizon_base = "nightly-2026-11-08-fdc87ae"
 create = false
-notes = "Rebuild only here. Combined: Batch A + World Map + Greglite 0.5.0 + TFC 0.2.0 + Teams + Quests + Ad Astra."
+notes = "Only rebuild target. After smoke, pin tfg-horizon to the new native and remove older native-fdc87ae-*."
 
 # --- Batch A ---
 
@@ -89,12 +89,12 @@ minecraft_role = "Continuity / CTM"
 [[mods]]
 id = "greglite"
 name = "Greglite"
-version = "0.5.0"
+version = "0.5.1"
 source = "mods/greglite → greglite.hmod"
 batch = "A+electric"
 status = "built"
 on = ["pack"]
-minecraft_role = "GregTech-inspired Steam + LV Electric"
+minecraft_role = "GregTech-inspired Steam + LV Electric + N7 vacuum freezer"
 
 [[mods]]
 id = "worldmap"
@@ -156,6 +156,32 @@ status = "workshop"
 on = []
 minecraft_role = "FTB Quests–inspired quest book"
 why = "Requires teams. Own JSON questfile; no FTB SNBT. Keep on=[] until W6+ smoked on purpose."
+
+# --- Greate (workshop; parked pin with Create) ---
+
+[[mods]]
+id = "greate"
+name = "Greate Horizon"
+version = "0.1.0"
+source = "mods/greate-horizon → greate.hmod"
+batch = "post-mvp"
+status = "workshop"
+on = []
+minecraft_role = "Greate-inspired Create×Greglite tiered shafts"
+why = "Code/data ready; co-build needs Create pin == AE2/Greglite fdc87ae. Keep on=[] until shared Nightly."
+
+# --- Firmalife (workshop; not on the pack native) ---
+
+[[mods]]
+id = "firmalife"
+name = "Firmalife Horizon"
+version = "0.1.2"
+source = "mods/firmalife → firmalife.hmod"
+batch = "post-mvp"
+status = "workshop"
+on = []
+minecraft_role = "Firmalife-inspired food slice (cheese/oven/greenhouse)"
+why = "Sources only. Enable on tfg-dev after /give smoke; pin stays fdc87ae / hooks 411."
 
 # --- Ad Astra (workshop; not on the pack native) ---
 

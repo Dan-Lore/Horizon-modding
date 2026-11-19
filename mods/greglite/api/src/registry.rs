@@ -314,6 +314,16 @@ fn parse_spec(id: &str) -> Option<Spec> {
             (Some("greglite:coke_oven".to_owned()), 0, false)
         } else if rest == "multi_electric_blast_furnace" {
             (Some("greglite:electric_blast_furnace".to_owned()), 32, true)
+        } else if rest == "multi_vacuum_freezer" {
+            (Some("greglite:vacuum_freezer".to_owned()), 32, true)
+        } else if rest == "multi_distillation_tower" {
+            (Some("greglite:distillation_tower".to_owned()), 32, true)
+        } else if rest == "multi_cracker" {
+            (Some("greglite:cracker".to_owned()), 32, true)
+        } else if rest == "multi_large_chemical_reactor" {
+            (Some("greglite:large_chemical_reactor".to_owned()), 128, true)
+        } else if rest == "multi_cleanroom" {
+            (Some("greglite:cleanroom".to_owned()), 32, true)
         } else {
             (Some("greglite:multiblock".to_owned()), 128, true)
         };

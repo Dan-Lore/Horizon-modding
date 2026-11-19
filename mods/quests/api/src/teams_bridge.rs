@@ -2,10 +2,10 @@
 
 use std::fs;
 use std::path::Path;
-use std::sync::Mutex;
+use std::sync::{LazyLock, Mutex};
 
-static MEMBER: Mutex<std::collections::HashMap<u128, String>> =
-    Mutex::new(std::collections::HashMap::new());
+static MEMBER: LazyLock<Mutex<std::collections::HashMap<u128, String>>> =
+    LazyLock::new(|| Mutex::new(std::collections::HashMap::new()));
 
 fn parse_hex_u128(s: &str) -> Option<u128> {
     u128::from_str_radix(s, 16).ok()

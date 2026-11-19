@@ -1,0 +1,19 @@
+{
+  "title": "Firmalife Horizon",
+  "icon": "firmalife:cheese",
+  "items": [
+    "firmalife:cheese_wheel",
+    "firmalife:drying_mat",
+    "firmalife:oven",
+    "firmalife:greenhouse_panel",
+    "firmalife:jar",
+    "firmalife:honey_jar",
+    "firmalife:cheese",
+    "firmalife:dried_fruit",
+    "firmalife:vat",
+    "firmalife:beehive",
+    "firmalife:sprinkler",
+    "firmalife:raw_honey",
+    "firmalife:olive_oil_bottle"
+  ]
+}

@@ -26,12 +26,13 @@ Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern parity overnight.
 
 | Role | Id | Version | Rule |
 | --- | --- | --- | --- |
-| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-428278da87c5` | Do **not** native-build |
-| Dev | `tfg-dev` | `native-fdc87ae-01abd5b2b6a6` | Rebuild **only** here |
+| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-e0aa83869033` | Do **not** native-build |
+| Dev | `tfg-dev` | `native-fdc87ae-e0aa83869033` | Rebuild **only** here (each build replaces this pin) |
 
 - Base: Nightly `fdc87ae` (`nightly-2026-11-08-fdc87ae`), hooks **411**, AE2 **15.4.18**.
 - Create parked (pin clash with AE2). Tip `9f42064`: AE2 left_out — base only.
-- `prune-old-versions` **off**. Manifest: `pack/draft-mods.toml`.
+- After a successful smoke on `tfg-dev`, re-pin `tfg-horizon` to that native and remove older `native-fdc87ae-*`.
+- `prune-old-versions` **off** (keeps Nightly `fdc87ae`). Manifest: `pack/draft-mods.toml`.
 
 ## Always-on rules
 

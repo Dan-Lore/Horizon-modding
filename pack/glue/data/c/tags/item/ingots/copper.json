@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:copper_ingot",
+    "tfc:metal/ingot/copper",
+    "greglite:copper_ingot"
+  ]
+}

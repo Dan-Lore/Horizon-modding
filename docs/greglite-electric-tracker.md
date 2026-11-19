@@ -2,7 +2,7 @@
 
 **Generated from:** `mods/greglite/tracker/catalog.json` + content scan
 **Plans:** W0–W9 closed → [`greglite-electric-plan.md`](greglite-electric-plan.md); **next** → [`greglite-continuation-plan.md`](greglite-continuation-plan.md).  
-**Updated:** 2026-11-15 (coverage); instance lines refreshed 2026-11-19. Behaviour: [`greglite-behavior.md`](greglite-behavior.md). Greglite **0.5.0**.
+**Updated:** 2026-11-15 (coverage); instance lines refreshed 2026-11-19; N7 freezer 2026-11-19. Behaviour: [`greglite-behavior.md`](greglite-behavior.md). Greglite **0.5.1**.
 
 Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
@@ -10,8 +10,8 @@ Legend: `done` | `partial` | `todo` | `deferred` | `content_ok` | `content_gap`
 
 | Role | Id | Version | Notes |
 | --- | --- | --- | --- |
-| pack (pinned) | `tfg-horizon` | `native-fdc87ae-428278da87c5` | Working save. **Do not native-build.** |
-| dev | `tfg-dev` | `native-fdc87ae-01abd5b2b6a6` | Rebuild here for Greglite N-waves + workshop mods. |
+| pack (pinned) | `tfg-horizon` | `native-fdc87ae-e0aa83869033` | Working save. **Do not native-build.** |
+| dev | `tfg-dev` | `native-fdc87ae-e0aa83869033` | Rebuild here for Greglite N-waves + workshop mods. |
 | retired | `create-dev`, `create-nightly-test` | — | Deleted. |
 
 ## Coverage (weighted checklist vs GTM extract)

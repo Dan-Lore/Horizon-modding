@@ -1,0 +1,11 @@
+{
+  "type": "greglite:vacuum_freezer",
+  "ingredient": "greglite:hot_aluminium_ingot",
+  "result": {
+    "id": "greglite:aluminium_ingot",
+    "count": 1
+  },
+  "duration": 120,
+  "eu": 8,
+  "min_voltage": 32
+}

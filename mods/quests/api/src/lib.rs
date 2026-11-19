@@ -83,7 +83,7 @@ impl Hooks for Quests {
             }
             if let Some((item, count)) = logic::roll_table("starter_crate") {
                 let _ = host.take_items("quests:loot_crate", 1);
-                let _ = host.give_items(&item, count);
+                let _ = host.give_items(&item, count as u32);
                 host.tell(
                     player.uuid,
                     Text::literal(format!("Loot crate: {item} x{count}")),

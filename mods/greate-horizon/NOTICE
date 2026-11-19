@@ -1,0 +1,14 @@
+Greate Horizon — Horizon-native workshop bridge (Create × GregTech inspired).
+
+Inspired by Greate (MIT, Electrolyte / GreateBeyondTheHorizon) as used in
+TerraFirmaGreg-Modern. Not affiliated with Greate, Create, or GregTech authors.
+Clean reimplementation of tier tables for Horizon — not a jar port.
+
+Upstream jar license: MIT (mods.toml). Code rewrite OK. Placeholder textures only;
+do not copy Create/Greate PNG without confirming asset terms for redistribution
+in this new package.
+
+Also depends conceptually on Create Horizon + Greglite on one native (currently
+different pins: Create 4e5296d vs AE2/Greglite fdc87ae).
+
+Original Rust/JSON here: MIT unless noted.

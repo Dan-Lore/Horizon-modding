@@ -436,6 +436,9 @@
     "greglite:zpm_sifter",
     "greglite:zpm_thermal_centrifuge",
     "greglite:zpm_transformer",
-    "greglite:zpm_wiremill"
+    "greglite:zpm_wiremill",
+    "greglite:conveyor_module",
+    "greglite:fluid_pipe",
+    "greglite:item_pipe"
   ]
 }

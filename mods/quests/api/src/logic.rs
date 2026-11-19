@@ -69,7 +69,7 @@ pub fn roll_table(table: &str) -> Option<(String, i32)> {
 
 fn give(host: &mut dyn Host, item: &str, count: i32) {
     if count > 0 {
-        let _ = host.give_items(item, count);
+        let _ = host.give_items(item, count as u32);
     }
 }
 
@@ -95,7 +95,7 @@ pub fn grant_reward(
         }
         "xp" => {
             // Hooks 101+: give_experience; fall back message if the host no-ops.
-            let _ = host.give_experience(player, reward.amount);
+            let _ = host.give_experience(player, reward.amount as u32);
             progress::mark_claimed(team, player, quest_id, &reward.id);
             format!("claimed {} XP", reward.amount)
         }
@@ -191,7 +191,7 @@ pub fn tick_item_and_location(host: &mut dyn Host, team: &str, uuid: u128) {
             match task.kind.as_str() {
                 "item" | "inventory" => {
                     if let Some(item) = &task.item {
-                        if host.count_items(item) >= task.count {
+                        if host.count_items(item) >= task.count as u32 {
                             progress::complete_task(team, &task.id);
                             host.tell(
                                 uuid,

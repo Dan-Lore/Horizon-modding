@@ -1,0 +1,15 @@
+{
+  "type": "greglite:electric_blast_furnace",
+  "ingredients": [
+    "greglite:aluminium_dust",
+    "greglite:coke"
+  ],
+  "result": {
+    "id": "greglite:hot_aluminium_ingot",
+    "count": 1
+  },
+  "duration": 240,
+  "eu": 24,
+  "min_voltage": 32,
+  "heat": 1700
+}

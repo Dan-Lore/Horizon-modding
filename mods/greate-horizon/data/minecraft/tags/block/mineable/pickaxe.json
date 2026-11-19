@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "greate:andesteel_shaft",
+    "greate:steel_shaft",
+    "greate:aluminium_shaft",
+    "greate:stainless_shaft"
+  ]
+}

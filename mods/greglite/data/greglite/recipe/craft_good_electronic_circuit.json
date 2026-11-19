@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "WPW",
+    "CBC"
+  ],
+  "key": {
+    "C": {
+      "item": "greglite:basic_electronic_circuit"
+    },
+    "B": {
+      "item": "greglite:phenolic_circuit_board"
+    },
+    "W": {
+      "item": "greglite:silver_wire"
+    },
+    "P": {
+      "item": "greglite:aluminium_plate"
+    }
+  },
+  "result": {
+    "id": "greglite:good_electronic_circuit",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RCR",
+    "PBP",
+    "WWW"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "greglite:tin_cable_1x"
+    },
+    "P": {
+      "item": "greglite:iron_plate"
+    },
+    "B": {
+      "item": "greglite:phenolic_circuit_board"
+    },
+    "W": {
+      "item": "greglite:copper_wire"
+    }
+  },
+  "result": {
+    "id": "greglite:basic_electronic_circuit",
+    "count": 1
+  }
+}

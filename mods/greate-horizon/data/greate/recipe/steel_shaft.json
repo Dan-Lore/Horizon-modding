@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I",
+    "I",
+    "I"
+  ],
+  "key": {
+    "I": {
+      "item": "greglite:steel_ingot"
+    }
+  },
+  "result": {
+    "id": "greate:steel_shaft",
+    "count": 4
+  }
+}

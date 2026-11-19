@@ -12,5 +12,8 @@ Selected textures and GUI panels are derived from GregTech CEu: Modern
 (https://github.com/GregTechCEu/GregTech-Modern), LGPL-3.0.
 See tools/fetch_gtm_textures.py and tools/fetch_gtm_gui.py.
 
+N7 vacuum freezer reuses `ebf_casing` (no separate frost-proof casing yet).
+`hot_steel_ingot` reuses the steel ingot texture path as a stand-in.
+
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.
