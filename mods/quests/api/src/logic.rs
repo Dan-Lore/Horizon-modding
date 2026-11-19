@@ -167,6 +167,107 @@ pub fn claim_all(host: &mut dyn Host, team: &str, player: u128, quest_id: &str) 
         .collect()
 }
 
+/// Credit kill tasks when a mob is killed by a player (`mob_killed` hook).
+pub fn on_mob_killed(host: &mut dyn Host, player: u128, kind: &str) {
+    if let Some(dir) = host.world_dir() {
+        progress::bind(dir.clone());
+        crate::teams_bridge::refresh(&dir);
+    }
+    let team = crate::teams_bridge::team_id(player);
+    credit_kill_tasks(host, player, &team, kind);
+}
+
+/// Credit advancement tasks when vanilla advancement completes.
+pub fn on_advancement_done(host: &mut dyn Host, player: u128, advancement: &str) {
+    if let Some(dir) = host.world_dir() {
+        progress::bind(dir.clone());
+        crate::teams_bridge::refresh(&dir);
+    }
+    let team = crate::teams_bridge::team_id(player);
+    let file = file::load();
+    for quest in file.quests.values() {
+        if !can_progress_tasks(&team, quest) {
+            continue;
+        }
+        for task in &quest.tasks {
+            if task.kind != "adv" && task.kind != "advancement" {
+                continue;
+            }
+            if progress::is_task_done(&team, &task.id) {
+                continue;
+            }
+            let want = task.item.as_deref().unwrap_or("");
+            let ok = want.is_empty()
+                || want == "*"
+                || advancement == want
+                || advancement.ends_with(want)
+                || advancement.contains(want);
+            if ok {
+                progress::complete_task(&team, &task.id);
+                host.tell(
+                    player,
+                    Text::literal(format!("Quest task done: {} ({advancement})", task.title)),
+                );
+            }
+        }
+        refresh_quest(&team, quest);
+    }
+}
+
+fn credit_kill_tasks(host: &mut dyn Host, uuid: u128, team: &str, kind: &str) {
+    let file = file::load();
+    for quest in file.quests.values() {
+        if !can_progress_tasks(team, quest) {
+            continue;
+        }
+        for task in &quest.tasks {
+            if task.kind != "kill" || progress::is_task_done(team, &task.id) {
+                continue;
+            }
+            let want = task.item.as_deref();
+            let ok = match want {
+                None | Some("") | Some("*") => true,
+                Some(id) => kind == id || kind.ends_with(id) || id == "any",
+            };
+            if ok {
+                progress::complete_task(team, &task.id);
+                host.tell(
+                    uuid,
+                    Text::literal(format!("Quest task done: {} ({kind})", task.title)),
+                );
+            }
+        }
+        refresh_quest(team, quest);
+    }
+}
+
+/// Credit kill tasks when a living entity dies to a player attacker (hooks 392).
+pub fn on_living_death(host: &mut dyn Host, kind: &str, damage_type: &str, attacker: u32) {
+    if attacker == 0 && !damage_type.contains("player") {
+        return;
+    }
+    let killer = host.server_players().into_iter().find(|p| {
+        attacker != 0 && p.entity_id == attacker as i32
+    });
+    let Some(killer) = killer.or_else(|| {
+        // SP / edge: player_attack with attacker 0 — credit the acting player if any.
+        if damage_type.contains("player") {
+            host.acting_player()
+        } else {
+            None
+        }
+    }) else {
+        return;
+    };
+    let uuid = killer.uuid;
+    if let Some(dir) = host.world_dir() {
+        progress::bind(dir.clone());
+        crate::teams_bridge::refresh(&dir);
+    }
+    let team = crate::teams_bridge::team_id(uuid);
+    credit_kill_tasks(host, uuid, &team, kind);
+}
+
 pub fn tick_item_and_location(host: &mut dyn Host, team: &str, uuid: u128) {
     let file = file::load();
     let Some(player) = host.acting_player() else {

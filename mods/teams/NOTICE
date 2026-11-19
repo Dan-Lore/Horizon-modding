@@ -7,5 +7,9 @@ Clean reimplementation for Horizon — not a jar port. Do not copy FTB assets/co
 Plan: docs/quests-plan.md
 Tracker: mods/teams/tracker/catalog.json
 
+Art / sounds: workshop-owned roster textures; no FTB Teams ARR assets.
+`sounds.json` (if present) uses vanilla event refs only — silent-by-design
+for FTB UI blips.
+
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.

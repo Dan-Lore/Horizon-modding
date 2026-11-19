@@ -35,8 +35,15 @@ pub fn tick(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spe
         Kind::Cable | Kind::BatteryBuffer | Kind::Hull | Kind::EnergyHatch => {
             tick_eu_node(host, pos, entity, spec)
         }
-        Kind::Diode | Kind::Transformer | Kind::ItemHatch | Kind::Multiblock
-        | Kind::SteamProcessor | Kind::EuProcessor => {}
+        Kind::Diode
+        | Kind::Transformer
+        | Kind::ItemHatch
+        | Kind::Multiblock
+        | Kind::SteamProcessor
+        | Kind::EuProcessor
+        | Kind::ItemPipe
+        | Kind::FluidPipe
+        | Kind::Conveyor => {}
     }
 }
 

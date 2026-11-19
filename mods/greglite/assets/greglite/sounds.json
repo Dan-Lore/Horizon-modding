@@ -1,0 +1,236 @@
+{
+  "arc": {
+    "sounds": [
+      "greglite:arc"
+    ],
+    "subtitle": "gtceu.subtitle.arc"
+  },
+  "assembler": {
+    "sounds": [
+      "greglite:assembler"
+    ],
+    "subtitle": "gtceu.subtitle.assembler"
+  },
+  "bath": {
+    "sounds": [
+      "greglite:bath"
+    ],
+    "subtitle": "gtceu.subtitle.bath"
+  },
+  "boiler": {
+    "sounds": [
+      "greglite:boiler"
+    ],
+    "subtitle": "gtceu.subtitle.boiler"
+  },
+  "centrifuge": {
+    "sounds": [
+      "greglite:centrifuge"
+    ],
+    "subtitle": "gtceu.subtitle.centrifuge"
+  },
+  "chainsaw": {
+    "sounds": [
+      "greglite:chainsaw"
+    ],
+    "subtitle": "gtceu.subtitle.chainsaw"
+  },
+  "chemical": {
+    "sounds": [
+      "greglite:chemical"
+    ],
+    "subtitle": "gtceu.subtitle.chemical"
+  },
+  "combustion": {
+    "sounds": [
+      "greglite:combustion"
+    ],
+    "subtitle": "gtceu.subtitle.combustion"
+  },
+  "compressor": {
+    "sounds": [
+      "greglite:compressor"
+    ],
+    "subtitle": "gtceu.subtitle.compressor"
+  },
+  "computation": {
+    "sounds": [
+      "greglite:computation"
+    ],
+    "subtitle": "gtceu.subtitle.computation"
+  },
+  "cooling": {
+    "sounds": [
+      "greglite:cooling"
+    ],
+    "subtitle": "gtceu.subtitle.cooling"
+  },
+  "cut": {
+    "sounds": [
+      "greglite:cut"
+    ],
+    "subtitle": "gtceu.subtitle.cut"
+  },
+  "drill": {
+    "sounds": [
+      "greglite:drill"
+    ],
+    "subtitle": "gtceu.subtitle.drill"
+  },
+  "electrolyzer": {
+    "sounds": [
+      "greglite:electrolyzer"
+    ],
+    "subtitle": "gtceu.subtitle.electrolyzer"
+  },
+  "file": {
+    "sounds": [
+      "greglite:file"
+    ],
+    "subtitle": "gtceu.subtitle.file"
+  },
+  "fire": {
+    "sounds": [
+      "greglite:fire"
+    ],
+    "subtitle": "gtceu.subtitle.fire"
+  },
+  "forge_hammer": {
+    "sounds": [
+      "greglite:forge_hammer"
+    ],
+    "subtitle": "gtceu.subtitle.forge_hammer"
+  },
+  "furnace": {
+    "sounds": [
+      "greglite:furnace"
+    ],
+    "subtitle": "gtceu.subtitle.furnace"
+  },
+  "jet_engine": {
+    "sounds": [
+      "greglite:jet_engine"
+    ],
+    "subtitle": "gtceu.subtitle.jet_engine"
+  },
+  "macerator": {
+    "sounds": [
+      "greglite:macerator"
+    ],
+    "subtitle": "gtceu.subtitle.macerator"
+  },
+  "metal_pipe": {
+    "sounds": [
+      "greglite:metal_pipe"
+    ],
+    "subtitle": "gtceu.subtitle.metal_pipe"
+  },
+  "miner": {
+    "sounds": [
+      "greglite:miner"
+    ],
+    "subtitle": "gtceu.subtitle.miner"
+  },
+  "mixer": {
+    "sounds": [
+      "greglite:mixer"
+    ],
+    "subtitle": "gtceu.subtitle.mixer"
+  },
+  "mortar": {
+    "sounds": [
+      "greglite:mortar"
+    ],
+    "subtitle": "gtceu.subtitle.mortar"
+  },
+  "motor": {
+    "sounds": [
+      "greglite:motor"
+    ],
+    "subtitle": "gtceu.subtitle.motor"
+  },
+  "plunger": {
+    "sounds": [
+      "greglite:plunger"
+    ],
+    "subtitle": "gtceu.subtitle.plunger"
+  },
+  "portable_scanner": {
+    "sounds": [
+      "greglite:portable_scanner"
+    ],
+    "subtitle": "gtceu.subtitle.portable_scanner"
+  },
+  "portal_closing": {
+    "sounds": [
+      "greglite:portal_closing"
+    ],
+    "subtitle": "gtceu.subtitle.portal_closing"
+  },
+  "portal_opening": {
+    "sounds": [
+      "greglite:portal_opening"
+    ],
+    "subtitle": "gtceu.subtitle.portal_opening"
+  },
+  "replicator": {
+    "sounds": [
+      "greglite:replicator"
+    ],
+    "subtitle": "gtceu.subtitle.replicator"
+  },
+  "saw": {
+    "sounds": [
+      "greglite:saw"
+    ],
+    "subtitle": "gtceu.subtitle.saw"
+  },
+  "science": {
+    "sounds": [
+      "greglite:science"
+    ],
+    "subtitle": "gtceu.subtitle.science"
+  },
+  "screwdriver": {
+    "sounds": [
+      "greglite:screwdriver"
+    ],
+    "subtitle": "gtceu.subtitle.screwdriver"
+  },
+  "soft_hammer": {
+    "sounds": [
+      "greglite:soft_hammer"
+    ],
+    "subtitle": "gtceu.subtitle.soft_hammer"
+  },
+  "spray_can": {
+    "sounds": [
+      "greglite:spray_can"
+    ],
+    "subtitle": "gtceu.subtitle.spray_can"
+  },
+  "sus": {
+    "sounds": [
+      "greglite:sus"
+    ],
+    "subtitle": "gtceu.subtitle.sus"
+  },
+  "turbine": {
+    "sounds": [
+      "greglite:turbine"
+    ],
+    "subtitle": "gtceu.subtitle.turbine"
+  },
+  "wirecutter": {
+    "sounds": [
+      "greglite:wirecutter"
+    ],
+    "subtitle": "gtceu.subtitle.wirecutter"
+  },
+  "wrench": {
+    "sounds": [
+      "greglite:wrench"
+    ],
+    "subtitle": "gtceu.subtitle.wrench"
+  }
+}

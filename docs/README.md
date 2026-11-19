@@ -10,15 +10,19 @@
 | [`mod-sourcing-policy.md`](mod-sourcing-policy.md) | Registry → contribute → own |
 | [`mod-transfer-list.md`](mod-transfer-list.md) | What we adopt / wait / rewrite |
 | [`pipeline-and-horizon-mcp.md`](pipeline-and-horizon-mcp.md) | Launcher + MCP |
-| [`greglite-continuation-plan.md`](greglite-continuation-plan.md) | **Active** Greglite waves N0–N6+ |
-| [`greglite-behavior.md`](greglite-behavior.md) | In-game behaviour checklist for Greglite 0.5.0 |
+| [`tfg-content-coverage.md`](tfg-content-coverage.md) | **Quote this:** resources / recipes / mechanics % vs TFG |
+| [`greglite-continuation-plan.md`](greglite-continuation-plan.md) | Active GregTech (`greglite` id) waves |
+| [`greglite-behavior.md`](greglite-behavior.md) | In-game behaviour checklist |
 | [`greglite-electric-plan.md`](greglite-electric-plan.md) | Historical W0–W9 content checklist (closed) |
-| [`greglite-electric-tracker.md`](greglite-electric-tracker.md) | Generated coverage board |
-| [`tfc-plan.md`](tfc-plan.md) / [`tfc-tracker.md`](tfc-tracker.md) | TFC Horizon |
-| [`adastra-plan.md`](adastra-plan.md) / [`adastra-tracker.md`](adastra-tracker.md) | Ad Astra Horizon |
-| [`quests-plan.md`](quests-plan.md) / [`quests-tracker.md`](quests-tracker.md) | Teams + Quests |
-| [`tfg-feature-coverage.md`](tfg-feature-coverage.md) / [`tfg-feature-catalog.json`](tfg-feature-catalog.json) | Implementable TFG feature % (100% board) |
+| [`greglite-electric-tracker.md`](greglite-electric-tracker.md) | Generated file-coverage board (not Absolute %) |
+| [`tfc-plan.md`](tfc-plan.md) / [`tfc-tracker.md`](tfc-tracker.md) | TerraFirmaCraft rewrite |
+| [`adastra-plan.md`](adastra-plan.md) / [`adastra-tracker.md`](adastra-tracker.md) | Ad Astra rewrite |
+| [`quests-plan.md`](quests-plan.md) / [`quests-tracker.md`](quests-tracker.md) | FTB Quests + Teams |
+| [`tfg-feature-coverage.md`](tfg-feature-coverage.md) / [`tfg-feature-catalog.json`](tfg-feature-catalog.json) | Engine-headroom feature board (not pack Absolute %) |
 | [`tfg-feature-audit.md`](tfg-feature-audit.md) | Evidence audit of catalog statuses |
+| [`horizon-capability-policy.md`](horizon-capability-policy.md) | Internal: don’t leave free Horizon API unused |
+| [`deepen-to-horizon-cap.md`](deepen-to-horizon-cap.md) | Cleared #4 debt notes |
+| [`horizon-pin-roadmap-2026-11-19.md`](horizon-pin-roadmap-2026-11-19.md) | Registry scan, tip vs AE2 pin, audit snapshot |
 | [`mvp-tfg-plan.md`](mvp-tfg-plan.md) | Historical MVP Batch A (done) |
 | [`CONTEXT.md`](CONTEXT.md) | Archival chat dump — prefer AGENTS |
 | `registry-watch/` | Daily registry check state |

@@ -1,7 +1,7 @@
 id = "tfc"
-name = "TFC Horizon"
+name = "TerraFirmaCraft"
 version = "0.2.0"
-description = "TerraFirmaCraft-inspired survival slice: climate, heat, alloys, knapping, and container rot."
+description = "TerraFirmaCraft-inspired survival on Horizon (rewrite). Animals, veins, and full climate maps still blocked on this pin."
 authors = ["Horizon-modding workshop"]
 api = "0.2"
 side = "both"

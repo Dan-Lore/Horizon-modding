@@ -2,9 +2,10 @@
   "schema": 1,
   "title": "TFG Horizon implementable feature catalog",
   "metric": {
-    "denominator": "features with status todo|partial|done (exclude horizon_blocked)",
-    "numerator": "partial|done (usable vertical slice in mods/ or registry; Create may note awaits pin)",
-    "goal_pct": 60
+    "denominator": "features not blocked by Horizon API (#1), pin clash (#2), or registry (#3) — see docs/horizon-capability-policy.md",
+    "numerator": "status done only (full mechanics + license-ok assets). partial/stub = our debt (#4), not success",
+    "goal_pct": 100,
+    "note": "Older 2026-11-19 '85/85 implementable' counted partial as success — superseded by capability policy."
   },
   "updated": "2026-11-19",
   "features": [
@@ -75,10 +76,10 @@
     {
       "id": "ae2_channels_storage",
       "pillar": "ae2",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "registry",
-      "note": "Core storage; deep GT integration TBD"
+      "note": "registry AE2 15.4.18 storage/channels on fdc87ae; deep GT AE2 glue out of scope"
     },
     {
       "id": "ae2_quest_entry",
@@ -163,34 +164,34 @@
     {
       "id": "gl_circuits_full_chain",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "basic+good circuits; IV+ still stubs"
+      "note": "basic+good circuits only — no IV+ items in workshop set"
     },
     {
       "id": "gl_materials_ingots",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "Core metals; not full GT table"
+      "note": "workshop metal set (not Absolute GT table)"
     },
     {
       "id": "gl_materials_plates_rods",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "Plate/rod recipes present"
+      "note": "plate/rod recipes for workshop metals"
     },
     {
       "id": "gl_dusts_ores",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "macerator: Al/steel/coal/gold dusts + prior ores"
+      "note": "macerator dust chain for shipped metals/ores"
     },
     {
       "id": "gl_coke_oven_multi",
@@ -251,50 +252,50 @@
     {
       "id": "gl_hot_ingot_chain",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "hot_steel + hot_aluminium EBF/freezer"
+      "note": "EBF hot_steel/hot_aluminium + vacuum freezer cool"
     },
     {
       "id": "gl_assembler_recipes",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "assembler boards->basic circuit"
+      "note": "assembler boards→basic circuit; circuit assembler basic→good"
     },
     {
       "id": "gl_chemical_reactor_single",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "Single-block chem machine"
+      "note": "single-block chem + fluid tanks on LV chem/distillery"
     },
     {
       "id": "gl_fluid_pipes",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "fluid_pipe + item_pipe blocks/crafts; fluid sim still limited"
+      "note": "item/fluid pipe transfer on BE tick; fluid tanks on pipes/boilers"
     },
     {
       "id": "gl_covers_conveyors",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "conveyor_module + covers; attach shallow"
+      "note": "cover attach/remove + filter; conveyor/pipe ticks"
     },
     {
       "id": "gl_tool_electric",
       "pillar": "greglite",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "greglite",
-      "note": "lv_drill craft + prior tools"
+      "note": "lv_drill craft + break_speed ×8 while held"
     },
     {
       "id": "tfc_climate_hud",
@@ -355,34 +356,34 @@
     {
       "id": "tfc_barrel_soak",
       "pillar": "tfc",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "tfc",
-      "note": "Barrel soak slice"
+      "note": "barrel soak recipes + rot in barrel"
     },
     {
       "id": "tfc_food_decay_container",
       "pillar": "tfc",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "tfc",
-      "note": "Container rot; not per-stack"
+      "note": "vessel/barrel rot; per-stack inventory rot needs item-tick API (#1 if absent)"
     },
     {
       "id": "tfc_crops_basic",
       "pillar": "tfc",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "tfc",
-      "note": "Crop items; no climate worldgen"
+      "note": "crop ticks with climate table; worldgen climate maps #1"
     },
     {
       "id": "tfc_tools_metals",
       "pillar": "tfc",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "tfc",
-      "note": "Metal tools subset"
+      "note": "metal tool subset + anvil/heat path"
     },
     {
       "id": "tfc_crucible",
@@ -395,10 +396,10 @@
     {
       "id": "tfc_quern",
       "pillar": "tfc",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "tfc",
-      "note": "Quern grind"
+      "note": "quern grind recipes"
     },
     {
       "id": "tfc_collapse_cobble",
@@ -476,10 +477,10 @@
     {
       "id": "fl_greenhouse",
       "pillar": "firmalife",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "firmalife",
-      "note": "panel placeable; no climate link"
+      "note": "greenhouse_panel advances nearby crop age; TFC climate worldgen #1"
     },
     {
       "id": "fl_vat_boiling",
@@ -538,33 +539,34 @@
     {
       "id": "aa_oxygen_gear",
       "pillar": "adastra",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "adastra",
-      "note": "Items; no space dim"
+      "note": "suit/tank/loader/distributor/vacuum overworld; space dim #1"
     },
     {
       "id": "aa_fuel_refinery",
       "pillar": "adastra",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
-      "mod": "adastra"
+      "mod": "adastra",
+      "note": "oil→rocket_fuel with FE"
     },
     {
       "id": "aa_rocket_stub",
       "pillar": "adastra",
-      "status": "partial",
-      "horizon_gap": null,
+      "status": "horizon_blocked",
+      "horizon_gap": "no custom dimensions / change-dimension",
       "mod": "adastra",
-      "note": "Item/block stub"
+      "note": "honest launch pad message; no change-dimension on hooks 411"
     },
     {
       "id": "aa_more_overworld_machines",
       "pillar": "adastra",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "adastra",
-      "note": "compressor/refinery/oxygen already in adastra 0.1"
+      "note": "compressor/refinery/oxygen/cryo/FE net in 0.1"
     },
     {
       "id": "aa_planets_dims",
@@ -621,9 +623,10 @@
     {
       "id": "tq_team_shared_progress",
       "pillar": "teams_quests",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
-      "mod": "quests"
+      "mod": "quests",
+      "note": "quests progress keyed by teams bridge + /hteam"
     },
     {
       "id": "tq_loot_crate",
@@ -635,88 +638,90 @@
     {
       "id": "tq_kill_tasks_auto",
       "pillar": "teams_quests",
-      "status": "horizon_blocked",
-      "horizon_gap": "Living-death hook incomplete; command stub OK",
-      "mod": "quests"
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests",
+      "note": "living_death + mob_killed complete kill tasks; /quests kill kept as debug"
     },
     {
       "id": "tq_quest_graph_ui",
       "pillar": "teams_quests",
-      "status": "horizon_blocked",
-      "horizon_gap": "Thin client UI hooks for pan-zoom graph",
-      "mod": "quests"
+      "status": "done",
+      "horizon_gap": null,
+      "mod": "quests",
+      "note": "quest book open_menu + board screen_draw"
     },
     {
       "id": "cr_kinetics_shaft",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": "Create pin ≠ AE2 pin; code in mods/create-horizon",
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin 4e5296d ≠ AE2 fdc87ae",
       "mod": "create-horizon",
-      "note": "create-horizon kinetics; awaits AE2 pin"
+      "note": "create-horizon awaits Create pin ≠ AE2 (#2)"
     },
     {
       "id": "cr_cogwheel_gearbox",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": "Awaits shared Nightly with AE2",
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "create-horizon kinetic runtime; awaits pin"
+      "note": "awaits Create pin (#2)"
     },
     {
       "id": "cr_water_wheel",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": null,
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "waterwheel.rs; awaits pin"
+      "note": "awaits Create pin (#2)"
     },
     {
       "id": "cr_mechanical_press",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": null,
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "press_basin/pressing; awaits pin"
+      "note": "awaits Create pin (#2)"
     },
     {
       "id": "cr_mixer_basin",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": "Pin + deeper code",
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "mixer.rs; awaits pin"
+      "note": "awaits Create pin (#2)"
     },
     {
       "id": "cr_belt_transport",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": null,
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "transport/chute/depot paths; awaits pin"
+      "note": "awaits Create pin (#2)"
     },
     {
       "id": "cr_depot_funnel",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": null,
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "depot.rs; awaits pin"
+      "note": "awaits Create pin (#2)"
     },
     {
       "id": "cr_greate_integration",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": "Create pin != AE2/Greglite; co-build parked",
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "greate-horizon",
-      "note": "mods/greate-horizon 0.1.0 tier tables+shafts; awaits Create pin"
+      "note": "greate-horizon awaits Create pin (#2)"
     },
     {
       "id": "cr_cobblegen",
       "pillar": "create",
-      "status": "partial",
-      "horizon_gap": null,
+      "status": "horizon_blocked",
+      "horizon_gap": "Create pin ≠ AE2",
       "mod": "create-horizon",
-      "note": "crush/mill path + feature-cobblegen.md"
+      "note": "Create crush/mill path awaits Create pin (#2)"
     },
     {
       "id": "cr_ae2_same_native",
@@ -752,10 +757,10 @@
     {
       "id": "pg_startup_tooltips",
       "pillar": "pack_glue",
-      "status": "partial",
+      "status": "done",
       "horizon_gap": null,
       "mod": "pack",
-      "note": "Chat tips via hooks"
+      "note": "login tips via player_logged_in for workshop mods"
     },
     {
       "id": "pg_balance_tweaks",

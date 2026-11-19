@@ -22,7 +22,7 @@ fn sink_of(spec: &Spec) -> EuSink {
         Kind::Diode => EuSink::Diode,
         Kind::EuProcessor | Kind::Multiblock | Kind::SteamTurbine | Kind::FuelGen => EuSink::Machine,
         Kind::BatteryBuffer | Kind::Transformer | Kind::Hull | Kind::Boiler | Kind::SteamProcessor
-        | Kind::ItemHatch => EuSink::Buffer,
+        | Kind::ItemHatch | Kind::ItemPipe | Kind::FluidPipe | Kind::Conveyor => EuSink::Buffer,
         Kind::EnergyHatch => EuSink::Hatch,
     }
 }

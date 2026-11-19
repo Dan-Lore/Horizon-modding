@@ -51,7 +51,7 @@
       "wave": "W6",
       "name": "NASA workbench and rocket stub",
       "status": "done",
-      "smoke": "Craft adastra:rocket_t1 at the workbench recipes. Use the rocket: countdown chat, then launch stub (dimensions blocked)."
+      "smoke": "Craft adastra:rocket_t1 at the workbench recipes. Use rocket on launch pad: honest #1 message (no custom dimensions on hooks 411). No fake countdown."
     },
     {
       "id": "w7_distributor",

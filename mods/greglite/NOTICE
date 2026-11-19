@@ -17,3 +17,5 @@ N7 vacuum freezer reuses `ebf_casing` (no separate frost-proof casing yet).
 
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.
+
+Sounds: vendored from GregTech Modern (LGPL-3.0) via fetch_gtm_sounds.py.

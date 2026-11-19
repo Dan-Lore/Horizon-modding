@@ -128,7 +128,7 @@
       "wave": "W15",
       "name": "Glass, chisel, powderkeg, JEI recipe types",
       "status": "done",
-      "smoke": "Craft tfc:glass_batch from sand + flux and fire it in the pit kiln to minecraft:glass. Right-click a tfc rock with a chisel for the mark line. Right-click tfc:powderkeg for the content-only line. Custom recipe types tfc:firepit, tfc:charcoal_forge, tfc:pit_kiln, tfc:quern, tfc:barrel, tfc:bloomery, tfc:anvil, tfc:sluice, tfc:charcoal_pit, and tfc:blast_furnace are in data/tfc/recipe for JEI once the content snapshot loads. Do not native-build this onto tfg-horizon beside AE2 until that smoke is intentional."
+      "smoke": "Craft tfc:glass_batch from sand + flux and fire it in the pit kiln to minecraft:glass. Right-click a tfc rock with a chisel for the mark line. Right-click tfc:powderkeg — fuse is #1 (Host has no explode/schedule_block_tick on hooks 411). Custom recipe types tfc:firepit, tfc:charcoal_forge, tfc:pit_kiln, tfc:quern, tfc:barrel, tfc:bloomery, tfc:anvil, tfc:sluice, tfc:charcoal_pit, and tfc:blast_furnace are in data/tfc/recipe for JEI once the content snapshot loads."
     },
     {
       "id": "w16_heat",

@@ -18,9 +18,13 @@ Upstream **Terrarium License v1** (mods.toml `license = "Terrarium License"`):
 TFG-Modern shipping `ad_astra-*.jar` redistributes the whole mod under that
 license; it does **not** relicense ARR assets for a separate Horizon rewrite.
 
-Placeholder textures here are solid-color PNGs for workshop smoke. Do not
-copy Ad Astra PNGs/sounds into this tree unless Terrarium grants permission;
+Textures here are **original workshop procedural 16×16 art**
+(`tools/gen_workshop_textures.py`), MIT with this mod — **not** Ad Astra ARR
+PNGs. Do not copy Ad Astra textures/sounds unless Terrarium grants permission;
 if that happens, document a fetch script and attribution here.
+
+Sounds: `assets/adastra/sounds.json` uses **vanilla event refs only** (ARR
+upstream forbids shipping Ad Astra ogg). Silent-by-design for custom blips.
 
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.

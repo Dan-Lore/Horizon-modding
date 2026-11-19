@@ -18,5 +18,13 @@ See tools/fetch_tfc_textures.py. A copy of the EUPL text ships with
 upstream TFC as LICENSE.txt; keep that notice when redistributing these
 assets. Ore block faces are granite + TFC ore overlay composites.
 
+Sounds
+------
+`assets/tfc/sounds.json` references **vanilla** Minecraft sound events only
+(grindstone / anvil / campfire / barrel). No proprietary TFC ogg is vendored
+here; block `properties.sounds` stay valid block ids (`iron_block` / `stone` /
+`oak_planks`). Silent-by-design for custom TFC blips until an EUPL sound pack
+is fetched explicitly.
+
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.

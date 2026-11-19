@@ -1,43 +1,40 @@
 # TFG Horizon — implementable feature coverage
 
-**Metric:** % of features that are *in principle* implementable on Horizon (some pin), with status `done` or `partial`.  
-**Not in denominator:** `horizon_blocked`.  
-**Not in goal:** jar count, ARR asset clones, Forge-only runtimes, KubeJS bus parity.
+**Metric (policy 2026-11-19):** among features where blockers **1–3** do not apply, status must be **`done`** (`partial` = debt).  
+**Not in denominator:** `horizon_blocked` (#1 API / #2 pin clash / #3 registry).  
+**Not in goal:** jar count, ARR asset clones, Forge-only runtimes, Absolute TFG parity.
 
 Machine source: [`tfg-feature-catalog.json`](tfg-feature-catalog.json).  
-Audit: [`tfg-feature-audit.md`](tfg-feature-audit.md).
+Policy: [`horizon-capability-policy.md`](horizon-capability-policy.md).
 
 ## Scoreboard
 
-| When | Implementable | done+partial | % | Notes |
+| When | Implementable | strict `done` | % | Notes |
 | --- | ---: | ---: | ---: | --- |
-| Baseline (catalog fill) | 85 | 58 | 68.2% | Batch A + Greglite N1–N7 + TFC |
-| After phase 1–3 | 85 | 77 | 90.6% | N8, Firmalife, Create map, quests |
-| After continue | 85 | 84 | 98.8% | vat/hive/covers/glue |
-| After deepen | 85 | 84 | 98.8% | circuits, sprinkler ticks |
-| **Audit → 100%** | **85** | **85** | **100%** | `greate-horizon` closes last todo |
+| Old done+partial metric | 85 | 85 (incl. partial) | 100% | counted stubs as success |
+| **2026-11-20 capability audit** | **77** | **77** | **100%** | Create→#2; rocket→#1; deepen + `lv_drill` |
 
-**Goal:** ≥60% — **met**. **Implementable 100%** — **met** (0 todos). Horizon-blocked remain 13.
+Horizon-blocked: **21** (TFC worldgen/animals/powder-adjacent, Ad Astra dims, Create/Greate pin, KubeJS parity).
 
-Re-score:
+Re-score (strict):
 
 ```powershell
-python -c "import json; from pathlib import Path; c=json.loads(Path('docs/tfg-feature-catalog.json').read_text(encoding='utf-8')); f=c['features']; i=[x for x in f if x['status']!='horizon_blocked']; n=[x for x in i if x['status'] in ('done','partial')]; print(f'{len(n)}/{len(i)} = {100*len(n)/len(i):.1f}%')"
+python -c "import json; from pathlib import Path; c=json.loads(Path('docs/tfg-feature-catalog.json').read_text(encoding='utf-8')); f=c['features']; i=[x for x in f if x['status']!='horizon_blocked']; d=[x for x in i if x['status']=='done']; print(f'{len(d)}/{len(i)} = {100*len(d)/len(i):.1f}%'); print('partial', sum(1 for x in i if x['status']=='partial'))"
 ```
 
-## Pillars (implementable)
+## Pillars (implementable = not blocked)
 
 | Pillar | Coverage | Notes |
 | --- | --- | --- |
-| qol_registry | 6/6 | Batch A |
-| ae2 | 4/4 | Registry AE2 |
-| greglite | 26/26 | Through 0.5.5 (N8, circuits, covers, pipes, drill) |
-| tfc | 13/13 | Core 0.2 |
-| firmalife | 8/8 | 0.1.2 ticks |
-| adastra | 7/7 | Overworld |
-| teams_quests | 7/7 | Expanded questline |
-| create | 9/9 | Kinetics + cobblegen note + greate-horizon partial |
-| pack_glue | 5/5 | `pack/glue` |
+| qol_registry | done | Batch A |
+| ae2 | done | Registry AE2 on `fdc87ae` |
+| greglite | done | Through 0.5.5 + drill `break_speed` |
+| tfc | done (core) | Animals/worldgen/per-stack rot blocked |
+| firmalife | done | 0.1.2 ticks + recipes |
+| adastra | done (overworld) | Planets/rocket travel #1 |
+| teams_quests | done | kill/adv/UI + `/hteam` |
+| create | **blocked #2** | pin ≠ AE2 |
+| pack_glue | done | tips / glue; KubeJS parity blocked |
 
 ## Horizon-blocked (excluded)
 

@@ -1,7 +1,7 @@
 id = "teams"
-name = "Horizon Teams"
+name = "FTB Teams"
 version = "0.1.0"
-description = "FTB Teams–inspired parties for Horizon Quests."
+description = "FTB Teams–inspired parties for FTB Quests on Horizon (rewrite). Commands: /hteam."
 authors = ["Horizon-modding workshop"]
 api = "0.2"
 side = "both"

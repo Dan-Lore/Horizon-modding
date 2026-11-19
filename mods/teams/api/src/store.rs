@@ -3,7 +3,7 @@
 use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
-use std::sync::Mutex;
+use std::sync::{LazyLock, Mutex};
 use std::time::{SystemTime, UNIX_EPOCH};
 
 const INVITE_TTL_SECS: u64 = 600;
@@ -39,13 +39,15 @@ struct State {
     dir: Option<PathBuf>,
 }
 
-static STATE: Mutex<State> = Mutex::new(State {
-    teams: HashMap::new(),
-    membership: HashMap::new(),
-    names: HashMap::new(),
-    display: HashMap::new(),
-    invites: Vec::new(),
-    dir: None,
+static STATE: LazyLock<Mutex<State>> = LazyLock::new(|| {
+    Mutex::new(State {
+        teams: HashMap::new(),
+        membership: HashMap::new(),
+        names: HashMap::new(),
+        display: HashMap::new(),
+        invites: Vec::new(),
+        dir: None,
+    })
 });
 
 fn now_unix() -> u64 {
@@ -77,7 +79,7 @@ fn save_locked(state: &State) {
         first = false;
         let members: Vec<String> = team.members.iter().map(|m| format!("\"{m:032x}\"")).collect();
         out.push_str(&format!(
-            "    {{\"id\":\"{}\",\"name\":\"{}\",\"owner\":\"{:032x}\",\"members\":[{}]}",
+            "    {{\"id\":\"{}\",\"name\":\"{}\",\"owner\":\"{:032x}\",\"members\":[{}]}}",
             escape(&team.id),
             escape(&team.name),
             team.owner,
@@ -93,7 +95,7 @@ fn save_locked(state: &State) {
         }
         first = false;
         out.push_str(&format!(
-            "    {{\"team_id\":\"{}\",\"team_name\":\"{}\",\"to\":\"{:032x}\",\"to_name\":\"{}\",\"from\":\"{:032x}\",\"expires\":{}}",
+            "    {{\"team_id\":\"{}\",\"team_name\":\"{}\",\"to\":\"{:032x}\",\"to_name\":\"{}\",\"from\":\"{:032x}\",\"expires\":{}}}",
             escape(&inv.team_id),
             escape(&inv.team_name),
             inv.to_uuid,
@@ -443,19 +445,21 @@ pub fn kick(owner: u128, target_name: &str) -> Result<String, &'static str> {
         .get(&owner)
         .cloned()
         .ok_or("not in a team")?;
-    let team = state.teams.get_mut(&team_id).ok_or("team missing")?;
-    if team.owner != owner {
-        return Err("only the owner can kick");
-    }
-    if target == owner {
-        return Err("cannot kick yourself; /team leave");
-    }
-    if !team.members.contains(&target) {
-        return Err("not a member");
-    }
-    team.members.retain(|m| *m != target);
+    let name = {
+        let team = state.teams.get_mut(&team_id).ok_or("team missing")?;
+        if team.owner != owner {
+            return Err("only the owner can kick");
+        }
+        if target == owner {
+            return Err("cannot kick yourself; /hteam leave");
+        }
+        if !team.members.contains(&target) {
+            return Err("not a member");
+        }
+        team.members.retain(|m| *m != target);
+        team.name.clone()
+    };
     state.membership.remove(&target);
-    let name = team.name.clone();
     save_locked(&state);
     Ok(format!("kicked {target_name} from {name}"))
 }

@@ -1,20 +1,24 @@
-//! Greglite 0.5.1 — EU net, LV craft chain, fluids, coke oven, blast furnace, vacuum freezer.
+//! Greglite 0.5.5 — EU net, multis N5–N8, circuits, covers, pipes, fluids.
+mod covers;
 mod energy;
 mod eu_rules;
 mod fluids;
 mod generator;
 mod multiblock;
 mod net;
+mod pipes;
 mod processor;
 mod recipes;
 mod registry;
 mod screens;
+mod tools;
+mod world_machines;
 
 use horizon_client::mod_api::{
     BlockEntityAcceptsFluidEvent, BlockEntityContainerEvent, BlockEntityEvent,
-    BlockEntityFluidsEvent, BlockEntityTickEvent, BlockEntityTicksEvent, Compound, Flow, Hooks,
-    Host, ModContainer, ModFluidTanks, NativeScreen, PlayerLoggedInEvent, ScreenDrawEvent,
-    ScreenEvent, Text,
+    BlockEntityFluidsEvent, BlockEntityTickEvent, BlockEntityTicksEvent, BreakSpeedEvent, Compound,
+    Flow, Hooks, Host, ModContainer, ModFluidTanks, NativeScreen, PlayerLoggedInEvent,
+    ScreenDrawEvent, ScreenEvent, Text, UseItemOnEvent,
 };
 use registry::Kind;
 
@@ -29,7 +33,7 @@ impl Hooks for Greglite {
         host.tell(
             event.player,
             Text::literal(
-                "Greglite 0.5.1: EU net, LV craft chain, coke oven, blast furnace, vacuum freezer.",
+                "GregTech 0.5.5 (Horizon rewrite, id greglite): EU net, multis, covers, pipes. Not full GTM.",
             ),
         );
     }
@@ -110,7 +114,8 @@ impl Hooks for Greglite {
         }
         match spec.kind {
             Kind::SteamProcessor | Kind::EuProcessor | Kind::Multiblock => {
-                processor::tick(host, event.pos, event.entity, &spec)
+                processor::tick(host, event.pos, event.entity, &spec);
+                pipes::tick_cover_effects(host, event.pos, event.entity, &spec);
             }
             Kind::Diode => net::tick_diode(host, event.pos, event.entity, &spec),
             Kind::Transformer => net::tick_transformer(host, event.pos, event.entity, &spec),
@@ -120,9 +125,20 @@ impl Hooks for Greglite {
             | Kind::Cable
             | Kind::BatteryBuffer
             | Kind::Hull
-            | Kind::EnergyHatch => generator::tick(host, event.pos, event.entity, &spec),
+            | Kind::EnergyHatch => {
+                generator::tick(host, event.pos, event.entity, &spec);
+                pipes::tick_cover_effects(host, event.pos, event.entity, &spec);
+            }
+            Kind::ItemPipe | Kind::Conveyor => {
+                pipes::tick_item_pipe(host, event.pos, event.entity)
+            }
+            Kind::FluidPipe => pipes::tick_fluid_pipe(host, event.pos, event.entity),
             Kind::ItemHatch => {}
         }
+    }
+
+    fn use_item_on(&self, host: &mut dyn Host, event: &mut UseItemOnEvent<'_>) -> Flow {
+        covers::use_item_on(host, event)
     }
 
     fn screen(
@@ -135,6 +151,10 @@ impl Hooks for Greglite {
 
     fn screen_draw(&self, host: &dyn Host, event: &mut ScreenDrawEvent<'_>) {
         screens::draw(host, event);
+    }
+
+    fn break_speed(&self, host: &dyn Host, event: &mut BreakSpeedEvent) {
+        tools::break_speed(host, event);
     }
 }
 
@@ -162,6 +182,12 @@ fn fluids_for(block: &str) -> Option<ModFluidTanks> {
     if block.contains("boiler") {
         return Some(tank_set(&[16_000, 16_000], &[0], &[1]));
     }
+    if block.ends_with("fluid_pipe") {
+        return Some(tank_set(&[8_000], &[0], &[0]));
+    }
+    if block.contains("pump") && !block.contains("cover") {
+        return Some(tank_set(&[16_000], &[0], &[0]));
+    }
     if block.contains("steam_") {
         return Some(tank_set(&[16_000], &[0], &[]));
     }
@@ -183,6 +209,16 @@ fn fluid_allowed(block: &str, tank: usize, fluid: &str) -> bool {
     }
     if block.contains("boiler") {
         return (tank == 0 && fluid == fluids::WATER) || (tank == 1 && fluid == fluids::STEAM);
+    }
+    if block.ends_with("fluid_pipe") {
+        return matches!(
+            fluid,
+            fluids::WATER | fluids::STEAM | fluids::CREOSOTE | fluids::LAVA | fluids::DIESEL
+                | fluids::BIOGAS | fluids::DISTILLED
+        );
+    }
+    if block.contains("pump") && !block.contains("cover") {
+        return fluid == fluids::WATER;
     }
     if block.contains("steam_") {
         return fluid == fluids::STEAM;

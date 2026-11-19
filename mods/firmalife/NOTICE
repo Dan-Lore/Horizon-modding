@@ -3,7 +3,9 @@ Firmalife Horizon — Horizon-native workshop mod (Firmalife-inspired food slice
 Inspired by Firmalife (MIT) as used beside TerraFirmaGreg-Modern.
 Not affiliated with Firmalife or TFC authors. Clean reimplementation for Horizon.
 
-Textures here are solid-color placeholders (MIT workshop). Do not copy ARR
-third-party PNGs. Upstream Firmalife code is MIT — still rewrite against Horizon APIs.
+Textures: vendored from Firmalife (MIT) via `tools/fetch_firmalife_textures.py`
+from the TFG-Modern `Firmalife-*.jar`; attributed; not an official Firmalife build.
+Sounds: `hollow_shell_blow.ogg` + `sounds.json` from the same MIT jar / vanilla event refs.
+Upstream Firmalife **code** is MIT — still rewrite against Horizon APIs (do not ship the jar).
 
 Original Rust and JSON in this folder: MIT unless noted otherwise.

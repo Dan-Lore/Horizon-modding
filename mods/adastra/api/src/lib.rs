@@ -1,4 +1,4 @@
-//! Ad Astra Horizon 0.1.0 — overworld materials, FE machines, oxygen, rocket stub.
+//! Ad Astra Horizon 0.1.0 — overworld materials, FE machines, oxygen; planets #1-blocked.
 //! Custom dimensions stay blocked. See `docs/adastra-plan.md`.
 
 mod energy;
@@ -29,7 +29,7 @@ impl Hooks for AdAstra {
         host.tell(
             event.player,
             Text::literal(
-                "Ad Astra Horizon 0.1.0: materials, FE machines, oxygen, rocket stub. Dimensions blocked.",
+                "Ad Astra 0.1.0 (Horizon rewrite): materials, FE, oxygen. Planet travel blocked (no dimensions).",
             ),
         );
     }
@@ -46,21 +46,8 @@ impl Hooks for AdAstra {
         ];
         let (mut state, refresh) = player_state::tick(uuid);
 
-        // Rocket launch stub countdown.
-        let phase = player_state::launch_phase(uuid);
-        if phase == 80 {
-            host.tell(uuid, Text::literal("Ad Astra: T-4 launch sequence…"));
-        } else if phase == 40 {
-            host.tell(uuid, Text::literal("Ad Astra: engines throttle up…"));
-        } else if phase == 0 {
-            host.tell(
-                uuid,
-                Text::literal(
-                    "Ad Astra: launch stub complete. Dimensions blocked on hooks 411 — no planet hop.",
-                ),
-            );
-            player_state::clear_launch(uuid);
-        }
+        // Planet travel needs custom dimensions (blocker #1). No fake countdown.
+        player_state::clear_launch(uuid);
 
         let vacuum = oxygen::in_vacuum(host, origin);
         let safe = oxygen::in_distributor_bubble(host, origin);
@@ -120,10 +107,11 @@ impl Hooks for AdAstra {
             return;
         }
         if oxygen::is_rocket(&id) {
-            player_state::start_launch(player.uuid);
             host.tell(
                 player.uuid,
-                Text::literal("Ad Astra: launch stub armed (use near a launch pad)."),
+                Text::literal(
+                    "Ad Astra: use the rocket on a launch pad. Planet travel blocked — Horizon has no custom dimensions on this pin (#1).",
+                ),
             );
         }
     }
@@ -134,10 +122,11 @@ impl Hooks for AdAstra {
             let Some(player) = host.acting_player() else {
                 return Flow::Cancel;
             };
-            player_state::start_launch(player.uuid);
             host.tell(
                 player.uuid,
-                Text::literal("Ad Astra: T-5… launch stub started. Dimensions blocked."),
+                Text::literal(
+                    "Ad Astra: stand on a launch pad and use the rocket there. No planet hop until Horizon dimensions exist (#1).",
+                ),
             );
             return Flow::Cancel;
         }
@@ -160,16 +149,17 @@ impl Hooks for AdAstra {
                 return Flow::Continue;
             };
             if oxygen::is_rocket(event.stack.item.as_ref()) {
-                player_state::start_launch(player.uuid);
                 host.tell(
                     player.uuid,
-                    Text::literal("Ad Astra: pad locked. Launch stub countdown…"),
+                    Text::literal(
+                        "Ad Astra: pad ready, but planet travel is Horizon-blocked (no custom dimensions on hooks 411).",
+                    ),
                 );
                 return Flow::Cancel;
             }
             host.tell(
                 player.uuid,
-                Text::literal("Ad Astra: place or use a Tier-1 rocket on the launch pad."),
+                Text::literal("Ad Astra: use a Tier-1 rocket on this pad (travel still #1-blocked)."),
             );
             return Flow::Cancel;
         }

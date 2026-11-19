@@ -1,7 +1,7 @@
 id = "adastra"
-name = "Ad Astra Horizon"
+name = "Ad Astra"
 version = "0.1.0"
-description = "Ad Astra-inspired overworld slice: materials, FE machines, oxygen, rocket stub (no dimensions)."
+description = "Ad Astra–inspired overworld materials, FE, oxygen on Horizon (rewrite). Planet dimensions blocked on hooks 411."
 authors = ["Horizon-modding workshop"]
 api = "0.2"
 side = "both"

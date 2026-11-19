@@ -25,9 +25,9 @@
     },
     {
       "id": "W4",
-      "system": "Tasks v1: checkmark, item, kill stub",
+      "system": "Tasks v1: checkmark, item, kill via living_death",
       "status": "done",
-      "smoke": "/quests check completes checkmark tasks. Item tasks complete when count_items meets target (player_tick). Kill is command stub /quests kill <task_id> until entity-death hooks are wired."
+      "smoke": "/quests check completes checkmark tasks. Item tasks complete when count_items meets target (player_tick). Kill tasks auto-complete on living_death; /quests kill is debug override only."
     },
     {
       "id": "W5",
@@ -75,7 +75,7 @@
       "id": "W12",
       "system": "Tasks v2: location, inventory observe",
       "status": "done",
-      "smoke": "location with item scans for that block within radius (quest board); fixed xyz otherwise. Inventory mirrors item detect. Advancement-like is /quests adv <id> stub."
+      "smoke": "location with item scans for that block within radius (quest board); fixed xyz otherwise. Inventory mirrors item detect. Advancement tasks complete via player_advancement_done; /quests adv is debug override only."
     },
     {
       "id": "W13",

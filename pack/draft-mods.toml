@@ -1,5 +1,6 @@
 # Pack instances (locked 2026-11-15, refreshed 2026-11-19)
-# Active Greglite plan: docs/greglite-continuation-plan.md
+# Content coverage (quote this, not catalog 100%): docs/tfg-content-coverage.md
+# GregTech plan: docs/greglite-continuation-plan.md
 # Closed checklist: docs/greglite-electric-plan.md
 # Tracker: mods/greglite/tracker/catalog.json
 # Transfer list: docs/mod-transfer-list.md
@@ -88,13 +89,13 @@ minecraft_role = "Continuity / CTM"
 
 [[mods]]
 id = "greglite"
-name = "Greglite"
-version = "0.5.1"
+name = "GregTech"
+version = "0.5.5"
 source = "mods/greglite → greglite.hmod"
 batch = "A+electric"
 status = "built"
 on = ["pack"]
-minecraft_role = "GregTech-inspired Steam + LV Electric + N7 vacuum freezer"
+minecraft_role = "GregTech Modern rewrite (id greglite until gtceu migration)"
 
 [[mods]]
 id = "worldmap"
@@ -124,74 +125,74 @@ why = "Pin 4e5296d (local 0.9) / 9c7f9b2 (registry 0.7); cannot join fdc87ae+AE2
 
 [[mods]]
 id = "tfc"
-name = "TFC Horizon"
+name = "TerraFirmaCraft"
 version = "0.2.0"
 source = "mods/tfc → tfc.hmod"
 batch = "post-mvp"
 status = "workshop"
 on = []
-minecraft_role = "TerraFirmaCraft-inspired core slice"
+minecraft_role = "TerraFirmaCraft rewrite (slice; animals/worldgen blocked)"
 why = "Sources only. Do not native-build onto tfg-horizon until a wave is smoked; pin stays fdc87ae for AE2."
 
 # --- Quests / Teams (workshop; not on the pack native until W6+ smoked) ---
 
 [[mods]]
 id = "teams"
-name = "Horizon Teams"
+name = "FTB Teams"
 version = "0.1.0"
 source = "mods/teams → teams.hmod"
 batch = "post-mvp"
 status = "workshop"
 on = []
-minecraft_role = "FTB Teams–inspired parties"
-why = "Required by Horizon Quests. Do not native-build onto tfg-horizon until intentional smoke; pin fdc87ae."
+minecraft_role = "FTB Teams rewrite (/hteam)"
+why = "Required by FTB Quests rewrite. Do not native-build onto tfg-horizon until intentional smoke; pin fdc87ae."
 
 [[mods]]
 id = "quests"
-name = "Horizon Quests"
+name = "FTB Quests"
 version = "0.1.0"
 source = "mods/quests → quests.hmod"
 batch = "post-mvp"
 status = "workshop"
 on = []
-minecraft_role = "FTB Quests–inspired quest book"
+minecraft_role = "FTB Quests rewrite"
 why = "Requires teams. Own JSON questfile; no FTB SNBT. Keep on=[] until W6+ smoked on purpose."
 
 # --- Greate (workshop; parked pin with Create) ---
 
 [[mods]]
 id = "greate"
-name = "Greate Horizon"
+name = "Greate"
 version = "0.1.0"
 source = "mods/greate-horizon → greate.hmod"
 batch = "post-mvp"
 status = "workshop"
 on = []
-minecraft_role = "Greate-inspired Create×Greglite tiered shafts"
-why = "Code/data ready; co-build needs Create pin == AE2/Greglite fdc87ae. Keep on=[] until shared Nightly."
+minecraft_role = "Greate (Create×GregTech); parked #2"
+why = "Code/data ready; co-build needs Create pin == AE2/GregTech fdc87ae. Keep on=[] until shared Nightly."
 
 # --- Firmalife (workshop; not on the pack native) ---
 
 [[mods]]
 id = "firmalife"
-name = "Firmalife Horizon"
+name = "Firmalife"
 version = "0.1.2"
 source = "mods/firmalife → firmalife.hmod"
 batch = "post-mvp"
 status = "workshop"
 on = []
-minecraft_role = "Firmalife-inspired food slice (cheese/oven/greenhouse)"
+minecraft_role = "Firmalife rewrite (cheese/oven/greenhouse)"
 why = "Sources only. Enable on tfg-dev after /give smoke; pin stays fdc87ae / hooks 411."
 
 # --- Ad Astra (workshop; not on the pack native) ---
 
 [[mods]]
 id = "adastra"
-name = "Ad Astra Horizon"
+name = "Ad Astra"
 version = "0.1.0"
 source = "mods/adastra → adastra.hmod"
 batch = "post-mvp"
 status = "workshop"
 on = []
-minecraft_role = "Ad Astra-inspired overworld slice (no dimensions)"
+minecraft_role = "Ad Astra rewrite (overworld; no dimensions)"
 why = "Sources only. Pack agent enables after /give + visible textures; pin stays fdc87ae / hooks 411."

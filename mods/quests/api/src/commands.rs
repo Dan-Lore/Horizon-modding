@@ -49,7 +49,7 @@ pub fn show_book(host: &mut dyn Host) {
     say(
         host,
         uuid,
-        &format!("{accent}Horizon Quests — theme {}§r", progress::theme()),
+        &format!("{accent}FTB Quests — theme {}§r", progress::theme()),
     );
     for ch in &file.chapters {
         say(host, uuid, &format!("{accent}# {}§r [{}]", ch.title, ch.id));
@@ -194,7 +194,13 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
                 return true;
             };
             progress::complete_task(&team, task);
-            say(host, uuid, &format!("stub completed task {task}"));
+            say(
+                host,
+                uuid,
+                &format!(
+                    "debug override completed task {task} (kills via living_death/mob_killed; adv via player_advancement_done)"
+                ),
+            );
             let file = file::load();
             for quest in file.quests.values() {
                 logic::refresh_quest(&team, quest);

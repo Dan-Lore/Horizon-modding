@@ -23,7 +23,7 @@ impl Hooks for Teams {
         host.tell(
             event.player,
             Text::literal(
-                "Horizon Teams 0.1.0: /team create|invite|join|leave|kick|info|invites",
+                "FTB Teams 0.1.0 (Horizon rewrite): /hteam create|invite|join|leave|kick|info|invites",
             ),
         );
     }

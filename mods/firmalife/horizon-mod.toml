@@ -1,7 +1,7 @@
 id = "firmalife"
-name = "Firmalife Horizon"
+name = "Firmalife"
 version = "0.1.2"
-description = "Firmalife-inspired food slice: cheese, drying, oven, greenhouse, vat, beehive, sprinkler (no worldgen)."
+description = "Firmalife-inspired food machines on Horizon (rewrite). No Firmalife worldgen."
 authors = ["Horizon-modding workshop"]
 api = "0.2"
 side = "both"

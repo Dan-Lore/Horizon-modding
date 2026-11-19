@@ -1,15 +1,20 @@
 # Horizon modding — agent context
 
 **Path:** `C:\Dev\Horizon-modding`  
-**Updated:** 2026-11-19
+**Updated:** 2026-11-20
 
 Workshop for **Horizon** (Minecraft JE **26.3** on Rust) native mods (`.hmod` / `.hnmod`).  
 Doc map: [`docs/README.md`](docs/README.md).
 
 ## Goal
 
-Grow Horizon-native mods and a TFG-**inspired** playable draft pack.  
-Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern parity overnight.
+Grow a TFG-shaped Horizon pack. Display names match upstream (**GregTech**, **TerraFirmaCraft**, **Ad Astra**, …).  
+Technical ids may still be `greglite` / `tfc` / … until a namespace migration.
+
+**Player-facing completeness** → [`docs/tfg-content-coverage.md`](docs/tfg-content-coverage.md) (resources / recipes / mechanics vs TFG).  
+Today’s pack blend is on the order of **~10%**, not Absolute parity.
+
+Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern overnight.
 
 **Reference pack (read freely):**  
 `C:\Users\smoln\curseforge\minecraft\Instances\TerraFirmaGreg-Modern`  
@@ -26,8 +31,8 @@ Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern parity overnight.
 
 | Role | Id | Version | Rule |
 | --- | --- | --- | --- |
-| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-e0aa83869033` | Do **not** native-build |
-| Dev | `tfg-dev` | `native-fdc87ae-e0aa83869033` | Rebuild **only** here (each build replaces this pin) |
+| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-8a627f102c73` | Do **not** native-build |
+| Dev | `tfg-dev` | `native-fdc87ae-8a627f102c73` | Rebuild **only** here (each build replaces this pin) |
 
 - Base: Nightly `fdc87ae` (`nightly-2026-11-08-fdc87ae`), hooks **411**, AE2 **15.4.18**.
 - Create parked (pin clash with AE2). Tip `9f42064`: AE2 left_out — base only.
@@ -49,8 +54,9 @@ Registry watch ≤1×/day: `tools/check-registry.ps1`.
 
 | Area | Active doc |
 | --- | --- |
-| Greglite next waves | **`docs/greglite-continuation-plan.md`** (+ `docs/greglite-behavior.md`) |
-| Greglite W0–W9 checklist | `docs/greglite-electric-plan.md` (**closed** / historical) |
+| **Content % (quote this)** | **`docs/tfg-content-coverage.md`** (+ `tools/score-tfg-content.py`) |
+| GregTech next waves | `docs/greglite-continuation-plan.md` (+ `docs/greglite-behavior.md`) |
+| GregTech W0–W9 checklist | `docs/greglite-electric-plan.md` (**closed** / historical) |
 | TFC / Ad Astra / Quests | `docs/tfc-plan.md`, `adastra-plan.md`, `quests-plan.md` (+ trackers) |
 | Transfer list | `docs/mod-transfer-list.md` |
 | MVP Batch A | `docs/mvp-tfg-plan.md` (**done** / historical) |
@@ -68,12 +74,25 @@ One mod per folder. Public modpack = **separate repo** later. This tree is the d
 - Horizon: `user-horizon` (from `~\.cursor\mcp.json` → portable launcher `mcp`)
 - Craft Anything (optional jar study): `user-craft-anything` — **Deep mode** for insides; do **not** use its Rebuild for Horizon ports
 
+## Two different “% complete” numbers
+
+| Metric | Doc | Meaning |
+| --- | --- | --- |
+| **TFG content** | `docs/tfg-content-coverage.md` | Resources + recipes + mechanics vs TFG — **use this with the player** |
+| Engine headroom (#4) | `docs/horizon-capability-policy.md` | Don’t leave free Horizon API unused — **internal**, not pack parity |
+
+Allowed unfinished for content: only **#1** API, **#2** pin clash, **#3** registry — still does **not** make the pack Absolute GT.
+
+## Build helper
+
+`tools/tfg-dev-native-build.ps1` — pack workshop `.hmod` → `native-build` on `tfg-dev` / Nightly `fdc87ae` → content mirror → wipe `mod-content`. Optional `-RepinHorizon -RemoveOldNatives`. AppData Horizon paths are in-scope (see `.cursor/rules/horizon-appdata-ok.mdc`).
+
 ## Suggested next work
 
-1. Greglite **N-waves** on `tfg-dev` per `docs/greglite-continuation-plan.md` (code for N0–N6 is largely in 0.5.0; behaviour checklist still needs Play verification when asked).
-2. Native-build **only** `tfg-dev` on `nightly-2026-11-08-fdc87ae`.
-3. Registry check ≤1×/day — Create/AE2 pin convergence.
-4. New slices only after license check (`docs/asset-license-table.md`).
+1. Grow **GregTech** recipe/material coverage (bath, centrifuge, ores) per `tfg-content-coverage.md`.  
+2. Optional later: migrate id `greglite` → `gtceu` so JEI matches `gtceu:` / stops looking for bare `gregtech:`.  
+3. Stay on **`native-fdc87ae-8a627f102c73`** (or newer after green `tfg-dev` build); tip `dd67b76` watch-only until AE2 is back (#3).  
+4. Registry ≤1×/day.
 
 ## Out of scope unless asked
 

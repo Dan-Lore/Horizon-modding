@@ -1,17 +1,17 @@
-//! `/team` command surface.
+//! `/hteam` command surface (not vanilla `/team`).
 
 use crate::store;
 use horizon_client::mod_api::{Host, NativeCommand, Text};
 
 pub fn usages() -> Vec<NativeCommand> {
     vec![
-        NativeCommand::new("team create <name:word>"),
-        NativeCommand::new("team invite <player:word>"),
-        NativeCommand::new("team join <name:word>"),
-        NativeCommand::new("team leave"),
-        NativeCommand::new("team kick <player:word>"),
-        NativeCommand::new("team info"),
-        NativeCommand::new("team invites"),
+        NativeCommand::new("hteam create <name:word>"),
+        NativeCommand::new("hteam invite <player:word>"),
+        NativeCommand::new("hteam join <name:word>"),
+        NativeCommand::new("hteam leave"),
+        NativeCommand::new("hteam kick <player:word>"),
+        NativeCommand::new("hteam info"),
+        NativeCommand::new("hteam invites"),
     ]
 }
 
@@ -22,7 +22,7 @@ fn say(host: &mut dyn Host, uuid: u128, line: &str) {
 
 pub fn perform(host: &mut dyn Host, command: &str) -> bool {
     let mut words = command.split_whitespace();
-    if words.next() != Some("team") {
+    if words.next() != Some("hteam") {
         return false;
     }
     let Some(player) = host.acting_player() else {
@@ -38,7 +38,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
         Some("create") => {
             let name = words.collect::<Vec<_>>().join(" ");
             if name.is_empty() {
-                say(host, uuid, "/team create <name>");
+                say(host, uuid, "/hteam create <name>");
                 return true;
             }
             match store::create(uuid, &name) {
@@ -52,7 +52,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
         }
         Some("invite") => {
             let Some(who) = words.next() else {
-                say(host, uuid, "/team invite <player>");
+                say(host, uuid, "/hteam invite <player>");
                 return true;
             };
             match store::invite(uuid, who) {
@@ -65,7 +65,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
                     host.tell(
                         inv.to_uuid,
                         Text::literal(format!(
-                            "Horizon Teams: invited to {}. /team join {}",
+                            "Horizon Teams: invited to {}. /hteam join {}",
                             inv.team_name, inv.team_name
                         )),
                     );
@@ -76,7 +76,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
         Some("join") => {
             let name = words.collect::<Vec<_>>().join(" ");
             if name.is_empty() {
-                say(host, uuid, "/team join <name>");
+                say(host, uuid, "/hteam join <name>");
                 return true;
             }
             match store::join(uuid, &name) {
@@ -93,7 +93,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
         },
         Some("kick") => {
             let Some(who) = words.next() else {
-                say(host, uuid, "/team kick <player>");
+                say(host, uuid, "/hteam kick <player>");
                 return true;
             };
             match store::kick(uuid, who) {
@@ -130,7 +130,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
                         host,
                         uuid,
                         &format!(
-                            "invite: {} (expires unix {}) — /team join {}",
+                            "invite: {} (expires unix {}) — /hteam join {}",
                             inv.team_name, inv.expires_unix, inv.team_name
                         ),
                     );
@@ -140,7 +140,7 @@ pub fn perform(host: &mut dyn Host, command: &str) -> bool {
         _ => say(
             host,
             uuid,
-            "/team create|invite|join|leave|kick|info|invites",
+            "/hteam create|invite|join|leave|kick|info|invites",
         ),
     }
     true

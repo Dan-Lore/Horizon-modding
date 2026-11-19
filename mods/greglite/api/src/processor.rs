@@ -6,6 +6,7 @@ use crate::fluids::{self, STEAM};
 use crate::net::transfer_eu_in;
 use crate::recipes::{self, can_output, ingredient_accepts, merge_output, MachineRecipe};
 use crate::registry::{Kind, Spec};
+use crate::world_machines;
 use horizon_client::mod_api::{Host, ModBlockEntity};
 
 const STEAM_TANK: i32 = 16_000;
@@ -115,6 +116,9 @@ pub fn tick(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spe
     }
 
     set_progress(entity, prog, prog_max.max(1));
+    // World-touching machines: miner breaks ores; pump fills water (EU cost inside).
+    world_machines::tick_miner(host, pos, entity, spec);
+    world_machines::tick_pump(host, pos, entity, spec);
     let (gauge, cap) = match spec.kind {
         Kind::SteamProcessor => (fluids::amount(entity, 0, STEAM).max(steam(entity)), STEAM_CAP),
         Kind::EuProcessor | Kind::Multiblock => (eu(entity), spec.gauge_cap()),

@@ -1,0 +1,27 @@
+{
+  "hollow_shell_blow": {
+    "sounds": [
+      "firmalife:hollow_shell_blow"
+    ]
+  },
+  "vat_boil": {
+    "sounds": [
+      "minecraft:block.lava.ambient"
+    ]
+  },
+  "oven_bake": {
+    "sounds": [
+      "minecraft:block.furnace.fire_crackle"
+    ]
+  },
+  "beehive_work": {
+    "sounds": [
+      "minecraft:block.beehive.work"
+    ]
+  },
+  "sprinkler": {
+    "sounds": [
+      "minecraft:block.water.ambient"
+    ]
+  }
+}

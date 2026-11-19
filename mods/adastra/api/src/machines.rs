@@ -132,6 +132,8 @@ fn tick_processor(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntit
         prog = 0;
     }
     set_progress(entity, prog, prog_max.max(1));
+    // Push surplus FE to neighbours so generator → loader/processor chains work from data rates.
+    transfer_fe_out(host, pos, entity, spec);
     sync_data(entity, prog, prog_max.max(1), fe(entity), spec.fe_cap);
     let _ = host.set_block_property(pos, "lit", if working { "true" } else { "false" });
 }

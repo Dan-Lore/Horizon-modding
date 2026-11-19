@@ -1,6 +1,8 @@
-# Greglite
+# GregTech (Horizon rewrite)
 
-GregTech-inspired native mod for Horizon. Version **0.5.5**. Clean rewrite; textures from GregTech-Modern (LGPL-3.0), see [NOTICE](NOTICE).
+Display name **GregTech**. Technical id **`greglite`** until a `gtceu` migration. Version **0.5.5**.  
+Textures from GregTech-Modern (LGPL-3.0), see [NOTICE](NOTICE).  
+**Completeness vs TFG:** [`docs/tfg-content-coverage.md`](../../docs/tfg-content-coverage.md) — not Absolute GTM.
 
 ## Play
 
@@ -35,7 +37,7 @@ Always pass `-Out` (default without `-Out` targets `tfg-horizon`). Next waves: [
 
 ## What 0.5.3 adds
 
-- `conveyor_module` block + `cover_conveyor`, `cover_item_filter`, `cover_pump` items (craftable stubs; attach logic still shallow).
+- `conveyor_module` + `item_pipe` / `fluid_pipe`; covers attach via `use_item_on` (sneak empty-hand remove; filter whitelist item); miner/pump touch the world (`Host::destroy_block` / water absorb).
 
 ## What 0.5.4 adds
 

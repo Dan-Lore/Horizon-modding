@@ -6,7 +6,7 @@ pub fn baked() -> QuestFile {
     let mut quests = HashMap::new();
     quests.insert("welcome".into(), Quest {
         id: "welcome".into(),
-        title: "Welcome to Horizon Quests".into(),
+        title: "Welcome to FTB Quests".into(),
         dependencies: vec![],
         tasks: vec![Task { id: "open_book".into(), kind: "checkmark".into(), title: "Mark that you opened the quest book".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "welcome_apple".into(), kind: "item".into(), item: Some("minecraft:apple".into()), count: 1, amount: 0, command: None, table: None, options: vec![] }],
@@ -41,16 +41,16 @@ pub fn baked() -> QuestFile {
     });
     quests.insert("see_greglite".into(), Quest {
         id: "see_greglite".into(),
-        title: "Meet Greglite".into(),
+        title: "Meet GregTech".into(),
         dependencies: vec!["welcome".into()],
-        tasks: vec![Task { id: "gl_note".into(), kind: "checkmark".into(), title: "Confirm Greglite machines exist".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        tasks: vec![Task { id: "gl_note".into(), kind: "checkmark".into(), title: "Confirm GregTech machines exist".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "gl_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 3, command: None, table: None, options: vec![] }],
     });
     quests.insert("gl_coke".into(), Quest {
         id: "gl_coke".into(),
         title: "Make Coke".into(),
         dependencies: vec!["see_greglite".into()],
-        tasks: vec![Task { id: "coke".into(), kind: "item".into(), title: "Have 1 Greglite coke".into(), item: Some("greglite:coke".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        tasks: vec![Task { id: "coke".into(), kind: "item".into(), title: "Have 1 GregTech coke".into(), item: Some("greglite:coke".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "coke_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 10, command: None, table: None, options: vec![] }],
     });
     quests.insert("gl_hot_steel".into(), Quest {
@@ -69,7 +69,7 @@ pub fn baked() -> QuestFile {
     });
     quests.insert("see_tfc".into(), Quest {
         id: "see_tfc".into(),
-        title: "Meet TFC Horizon".into(),
+        title: "Meet TerraFirmaCraft".into(),
         dependencies: vec!["welcome".into()],
         tasks: vec![Task { id: "tfc_note".into(), kind: "checkmark".into(), title: "Confirm TFC content snapshot".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "tfc_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 3, command: None, table: None, options: vec![] }],
@@ -113,7 +113,7 @@ pub fn baked() -> QuestFile {
         id: "hunt_demo".into(),
         title: "Hunt Demo".into(),
         dependencies: vec!["welcome".into()],
-        tasks: vec![Task { id: "kill_any".into(), kind: "kill".into(), title: "Record a kill (stub)".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        tasks: vec![Task { id: "kill_any".into(), kind: "kill".into(), title: "Defeat any mob".into(), item: None, count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "hunt_bone".into(), kind: "item".into(), item: Some("minecraft:bone".into()), count: 1, amount: 0, command: None, table: None, options: vec![] }],
     });
     quests.insert("gl_circuit".into(), Quest {
@@ -155,8 +155,8 @@ pub fn baked() -> QuestFile {
         Chapter { id: "intro".into(), title: "Getting Started".into(), progression: "linear".into(), quests: vec!["welcome".into(), "gather_sticks".into(), "open_board".into()] },
         Chapter { id: "combat_demo".into(), title: "Combat Demo".into(), progression: "flexible".into(), quests: vec!["hunt_demo".into()] },
         Chapter { id: "ae2_start".into(), title: "Applied Energistics".into(), progression: "flexible".into(), quests: vec!["ae2_book".into(), "ae2_fluix".into()] },
-        Chapter { id: "greglite_start".into(), title: "Greglite".into(), progression: "flexible".into(), quests: vec!["see_greglite".into(), "gl_coke".into(), "gl_hot_steel".into(), "gl_oil_slice".into(), "gl_circuit".into(), "gl_conveyor".into()] },
-        Chapter { id: "tfc_start".into(), title: "TFC Horizon".into(), progression: "flexible".into(), quests: vec!["see_tfc".into(), "tfc_crucible".into()] },
+        Chapter { id: "greglite_start".into(), title: "GregTech".into(), progression: "flexible".into(), quests: vec!["see_greglite".into(), "gl_coke".into(), "gl_hot_steel".into(), "gl_oil_slice".into(), "gl_circuit".into(), "gl_conveyor".into()] },
+        Chapter { id: "tfc_start".into(), title: "TerraFirmaCraft".into(), progression: "flexible".into(), quests: vec!["see_tfc".into(), "tfc_crucible".into()] },
         Chapter { id: "firmalife_start".into(), title: "Firmalife".into(), progression: "flexible".into(), quests: vec!["fl_cheese".into(), "fl_oven".into(), "fl_vat".into(), "fl_hive".into(), "fl_sprinkler".into()] },
         Chapter { id: "adastra_start".into(), title: "Ad Astra".into(), progression: "flexible".into(), quests: vec!["aa_desh".into(), "aa_generator".into()] },
     ];

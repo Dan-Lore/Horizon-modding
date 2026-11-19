@@ -9,5 +9,9 @@ Requires Horizon Teams (`mods/teams/`) for party progress.
 Plan: docs/quests-plan.md
 Tracker: mods/quests/tracker/catalog.json
 
+Art / sounds: workshop-owned procedural textures; `sounds.json` uses vanilla
+event refs where needed. FTB Quests ARR assets are **not** copied
+(silent-by-design for FTB UI blips).
+
 Original Rust and JSON in this folder: MIT unless noted otherwise.
 Minecraft / Mojang assets are not redistributed.

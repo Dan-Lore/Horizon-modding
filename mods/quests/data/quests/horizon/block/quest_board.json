@@ -2,7 +2,7 @@
   "template": "minecraft:furnace",
   "properties": {
     "hardness": 2.0,
-    "sounds": "minecraft:oak_planks"
+    "sounds": "minecraft:wood"
   },
   "item": true
 }

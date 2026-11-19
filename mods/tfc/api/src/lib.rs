@@ -1,5 +1,5 @@
-//! TFC Horizon 0.2.0 — heat, alloys, anvil steps, knapping, and container rot.
-//! Animals stay deferred. Full worldgen stays blocked. See `docs/tfc-plan.md`.
+// TFC Horizon 0.2.0 — heat, alloys, anvil steps, knapping, and container rot.
+// Animals stay deferred. Full worldgen stays blocked. See docs/tfc-plan.md.
 
 mod animals;
 mod anvil;
@@ -39,7 +39,7 @@ impl Hooks for Tfc {
         host.tell(
             event.player,
             Text::literal(
-                "TFC Horizon 0.2.0: heat, crucible, anvil steps, knapping, and container rot. Animals deferred; worldgen blocked.",
+                "TerraFirmaCraft 0.2.0 (Horizon rewrite): heat, crucible, anvil, knapping, rot. Animals/worldgen blocked.",
             ),
         );
     }
@@ -149,7 +149,9 @@ impl Hooks for Tfc {
         if block == "tfc:powderkeg" {
             host.tell(
                 player.uuid,
-                Text::literal("TFC: powderkeg is content-only (no fuse)."),
+                Text::literal(
+                    "TFC: powderkeg fuse blocked (#1) — Host has no explode/schedule_block_tick on hooks 411 (only destroy_block / set_block_property).",
+                ),
             );
             return Flow::Cancel;
         }

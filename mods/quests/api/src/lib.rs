@@ -6,12 +6,14 @@ mod commands;
 mod file;
 mod logic;
 mod progress;
+mod screens;
 mod teams_bridge;
 
 use horizon_client::mod_api::{
     BlockEntityContainerEvent, BlockEntityEvent, BlockEntityTicksEvent, Compound, Flow, Hooks,
-    Host, ModContainer, NativeScreen, PerformCommandEvent, PlayerLoggedInEvent, PlayerTickEvent,
-    RegisterCommandsEvent, ScreenEvent, Text, UseItemEvent, UseItemOnEvent,
+    Host, LivingDeathEvent, MobKilledEvent, ModContainer, NativeScreen, PerformCommandEvent,
+    PlayerAdvancementDoneEvent, PlayerLoggedInEvent, PlayerTickEvent, RegisterCommandsEvent,
+    ScreenDrawEvent, ScreenEvent, Text, UseItemEvent, UseItemOnEvent,
 };
 use std::sync::atomic::{AtomicU32, Ordering};
 
@@ -34,7 +36,7 @@ impl Hooks for Quests {
         host.tell(
             event.player,
             Text::literal(format!(
-                "Horizon Quests 0.1.0: {chapters} chapters, {quests} quests. /quests book — requires Horizon Teams."
+                "FTB Quests 0.1.0 (Horizon rewrite): {chapters} chapters, {quests} quests. /quests book — needs FTB Teams."
             )),
         );
     }
@@ -67,9 +69,27 @@ impl Hooks for Quests {
         logic::tick_item_and_location(host, &team, player.uuid);
     }
 
+    fn living_death(&self, host: &mut dyn Host, event: &mut LivingDeathEvent<'_>) -> Flow {
+        logic::on_living_death(host, event.kind, event.damage_type, event.attacker);
+        Flow::Continue
+    }
+
+    fn mob_killed(&self, host: &mut dyn Host, event: &mut MobKilledEvent<'_>) {
+        logic::on_mob_killed(host, event.player, event.kind);
+    }
+
+    fn player_advancement_done(
+        &self,
+        host: &mut dyn Host,
+        event: &mut PlayerAdvancementDoneEvent<'_>,
+    ) {
+        logic::on_advancement_done(host, event.player, event.advancement);
+    }
+
     fn use_item(&self, host: &mut dyn Host, event: &mut UseItemEvent<'_>) -> Flow {
         let id = event.stack.item.as_ref();
         if id == "quests:quest_book" {
+            screens::open_book_menu(host);
             commands::show_book(host);
             return Flow::Cancel;
         }
@@ -141,5 +161,9 @@ impl Hooks for Quests {
 
     fn screen(&self, _host: &dyn Host, event: &mut ScreenEvent<'_>) -> Option<NativeScreen> {
         board::layout(event)
+    }
+
+    fn screen_draw(&self, host: &dyn Host, event: &mut ScreenDrawEvent<'_>) {
+        screens::draw(host, event);
     }
 }

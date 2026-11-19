@@ -1,7 +1,7 @@
 id = "greate"
-name = "Greate Horizon"
+name = "Greate"
 version = "0.1.0"
-description = "Greate-inspired Create×Greglite bridge: tiered shafts (awaits Create+AE2 same pin)."
+description = "Greate-inspired Create×GregTech bridge on Horizon. Parked until Create and AE2 share one pin (#2)."
 authors = ["Horizon-modding workshop"]
 api = "0.2"
 side = "both"

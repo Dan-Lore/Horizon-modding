@@ -56,6 +56,9 @@ pub fn layout(event: &ScreenEvent<'_>) -> Option<NativeScreen> {
                 Some(base_screen(vec![Some([53.0, 35.0]), Some([116.0, 35.0])]))
             }
         }
+        Kind::ItemPipe | Kind::Conveyor | Kind::FluidPipe => {
+            Some(base_screen(vec![Some([80.0, 35.0])]))
+        }
     }
 }
 
@@ -65,7 +68,14 @@ pub fn draw(host: &dyn Host, event: &mut ScreenDrawEvent<'_>) {
     };
     if matches!(
         spec.kind,
-        Kind::Cable | Kind::Hull | Kind::Diode | Kind::Transformer | Kind::EnergyHatch
+        Kind::Cable
+            | Kind::Hull
+            | Kind::Diode
+            | Kind::Transformer
+            | Kind::EnergyHatch
+            | Kind::ItemPipe
+            | Kind::FluidPipe
+            | Kind::Conveyor
     ) {
         return;
     }

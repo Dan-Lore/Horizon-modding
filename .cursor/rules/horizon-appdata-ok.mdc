@@ -1,0 +1,28 @@
+---
+description: Horizon AppData is in-scope for builds — no permission theater
+alwaysApply: true
+---
+
+# Horizon AppData / launcher — always allowed
+
+The user authorized workshop agents to read and write these paths without asking for confirmation each turn:
+
+- `%AppData%\Roaming\horizon\` (instances, logs, caches)
+- `%AppData%\Roaming\horizon-launcher\` (native builds, versions, build.log, rust/cargo)
+- `C:\Dev\Horizon-modding\launcher\` (portable `horizon-launcher.exe`)
+
+## Do
+
+- Pack → `native-build` on **`tfg-dev`** → content mirror → wipe `mod-content` → `/give` smoke.
+- Prefer one shot: `tools/tfg-dev-native-build.ps1` (`-RepinHorizon -RemoveOldNatives` after green).
+- Clear stale `.build.lock` / stuck non-MCP `horizon-launcher native-build` processes when a build is wedged.
+- Read `native\build.log` freely when diagnosing `left_out` / `other-version`.
+
+## Do not
+
+- Native-build pinned **`tfg-horizon`** “to try something”.
+- Delete Nightly base tags (`nightly-2026-11-08-fdc87ae`), the whole `horizon-launcher` tree, user saves, or unrelated disks.
+- `Remove-Item` of broad roots (`C:\`, user profile, the repo root). Only targeted native tags via `horizon-launcher remove <tag>` after a good pin.
+- Kill the MCP `horizon-launcher.exe … mcp` process unless the user asks.
+
+Permission / Auto-review prompts for these paths are **noise** — proceed.

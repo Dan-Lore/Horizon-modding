@@ -1,5 +1,5 @@
 {
-  "itemGroup.greglite.greglite": "Greglite",
+  "itemGroup.greglite.greglite": "GregTech",
   "block.greglite.steam_solid_boiler_lp": "Steam Solid Boiler Lp",
   "block.greglite.steam_alloy_smelter": "Steam Alloy Smelter",
   "block.greglite.steam_macerator": "Steam Macerator",
@@ -1459,5 +1459,25 @@
   "item.greglite.hot_aluminium_ingot": "Hot Aluminium Ingot",
   "block.greglite.fluid_pipe": "Fluid Pipe",
   "block.greglite.item_pipe": "Item Pipe",
-  "item.greglite.lv_drill": "LV Drill"
+  "item.greglite.lv_drill": "LV Drill",
+  "block.greglite.coke_oven_bricks": "Coke Oven Bricks",
+  "block.greglite.cupronickel_coil_block": "Cupronickel Coil Block",
+  "block.greglite.ebf_casing": "EBF Casing",
+  "block.greglite.energy_hatch": "Energy Hatch",
+  "block.greglite.input_hatch": "Input Hatch",
+  "block.greglite.kanthal_coil_block": "Kanthal Coil Block",
+  "block.greglite.output_hatch": "Output Hatch",
+  "item.greglite.biogas_cell": "Biogas Cell",
+  "item.greglite.coke": "Coke",
+  "item.greglite.ev_battery": "EV Battery",
+  "item.greglite.hv_battery": "HV Battery",
+  "item.greglite.iv_battery": "IV Battery",
+  "item.greglite.luv_battery": "LuV Battery",
+  "item.greglite.lv_motor": "LV Motor",
+  "item.greglite.lv_piston": "LV Piston",
+  "item.greglite.lv_robot_arm": "LV Robot Arm",
+  "item.greglite.mv_battery": "MV Battery",
+  "item.greglite.programmed_circuit_1": "Programmed Circuit",
+  "item.greglite.uv_battery": "UV Battery",
+  "item.greglite.zpm_battery": "ZPM Battery"
 }

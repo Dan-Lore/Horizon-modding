@@ -21,6 +21,9 @@ pub enum Kind {
     Transformer,
     ItemHatch,
     EnergyHatch,
+    ItemPipe,
+    FluidPipe,
+    Conveyor,
 }
 
 #[derive(Clone, Debug)]
@@ -56,6 +59,8 @@ impl Spec {
             }
             Kind::BatteryBuffer => 4,
             Kind::Cable | Kind::Hull | Kind::Diode | Kind::Transformer | Kind::EnergyHatch => 0,
+            Kind::ItemPipe | Kind::Conveyor => 1,
+            Kind::FluidPipe => 1,
             Kind::Multiblock => 2,
             Kind::SteamProcessor | Kind::EuProcessor => self.inputs + self.outputs.max(1),
         }
@@ -64,6 +69,20 @@ impl Spec {
     pub fn container(&self) -> Option<ModContainer> {
         match self.kind {
             Kind::Cable | Kind::Hull | Kind::Diode | Kind::Transformer | Kind::EnergyHatch => None,
+            Kind::FluidPipe => Some(ModContainer {
+                slots: 1,
+                faces: [vec![0], vec![0], vec![0], vec![0], vec![0], vec![0]],
+                inputs: vec![0],
+                outputs: vec![0],
+                menu: Some(self.menu.clone()),
+            }),
+            Kind::ItemPipe | Kind::Conveyor => Some(ModContainer {
+                slots: 1,
+                faces: [vec![0], vec![0], vec![0], vec![0], vec![0], vec![0]],
+                inputs: vec![0],
+                outputs: vec![0],
+                menu: Some(self.menu.clone()),
+            }),
             Kind::Boiler | Kind::FuelGen | Kind::SteamTurbine => Some(ModContainer {
                 slots: 1,
                 faces: [vec![0], vec![0], vec![0], vec![0], vec![0], vec![0]],
@@ -268,6 +287,61 @@ fn parse_spec(id: &str) -> Option<Spec> {
             voltage,
             amps,
             loss,
+        });
+    }
+
+    if rest == "item_pipe" {
+        return Some(Spec {
+            id: id.to_owned(),
+            menu: "greglite:item_pipe".into(),
+            kind: Kind::ItemPipe,
+            recipe_type: None,
+            inputs: 1,
+            output: Some(0),
+            outputs: 1,
+            circuit: None,
+            eu_cap: 0,
+            steam_ok: false,
+            eu_ok: false,
+            voltage: 0,
+            amps: 1,
+            loss: 0,
+        });
+    }
+    if rest == "fluid_pipe" {
+        return Some(Spec {
+            id: id.to_owned(),
+            menu: "greglite:fluid_pipe".into(),
+            kind: Kind::FluidPipe,
+            recipe_type: None,
+            inputs: 0,
+            output: None,
+            outputs: 0,
+            circuit: None,
+            eu_cap: 0,
+            steam_ok: false,
+            eu_ok: false,
+            voltage: 0,
+            amps: 1,
+            loss: 0,
+        });
+    }
+    if rest == "conveyor_module" {
+        return Some(Spec {
+            id: id.to_owned(),
+            menu: "greglite:conveyor_module".into(),
+            kind: Kind::Conveyor,
+            recipe_type: None,
+            inputs: 1,
+            output: Some(0),
+            outputs: 1,
+            circuit: None,
+            eu_cap: 0,
+            steam_ok: false,
+            eu_ok: false,
+            voltage: 0,
+            amps: 1,
+            loss: 0,
         });
     }
 

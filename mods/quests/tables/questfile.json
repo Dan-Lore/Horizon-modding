@@ -59,7 +59,7 @@
     {
       "id": "greglite_start",
       "group": "pack",
-      "title": "Greglite",
+      "title": "GregTech",
       "progression": "flexible",
       "quests": [
         "see_greglite",
@@ -73,7 +73,7 @@
     {
       "id": "tfc_start",
       "group": "pack",
-      "title": "TFC Horizon",
+      "title": "TerraFirmaCraft",
       "progression": "flexible",
       "quests": [
         "see_tfc",
@@ -107,7 +107,7 @@
   "quests": [
     {
       "id": "welcome",
-      "title": "Welcome to Horizon Quests",
+      "title": "Welcome to FTB Quests",
       "subtitle": "Read the book",
       "dependencies": [],
       "tasks": [
@@ -235,7 +235,7 @@
     },
     {
       "id": "see_greglite",
-      "title": "Meet Greglite",
+      "title": "Meet GregTech",
       "dependencies": [
         "welcome"
       ],
@@ -243,7 +243,7 @@
         {
           "id": "gl_note",
           "type": "checkmark",
-          "title": "Confirm Greglite machines exist"
+          "title": "Confirm GregTech machines exist"
         }
       ],
       "rewards": [
@@ -264,7 +264,7 @@
         {
           "id": "coke",
           "type": "item",
-          "title": "Have 1 Greglite coke",
+          "title": "Have 1 GregTech coke",
           "item": "greglite:coke",
           "count": 1
         }
@@ -325,7 +325,7 @@
     },
     {
       "id": "see_tfc",
-      "title": "Meet TFC Horizon",
+      "title": "Meet TerraFirmaCraft",
       "dependencies": [
         "welcome"
       ],
@@ -469,7 +469,7 @@
         {
           "id": "kill_any",
           "type": "kill",
-          "title": "Record a kill (stub)",
+          "title": "Defeat any mob",
           "count": 1
         }
       ],
