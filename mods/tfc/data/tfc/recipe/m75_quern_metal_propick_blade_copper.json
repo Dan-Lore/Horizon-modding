@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_propick_blade_copper",
+  "result": {
+    "id": "tfc:metal_propick_blade_copper",
+    "count": 1
+  },
+  "duration": 100
+}

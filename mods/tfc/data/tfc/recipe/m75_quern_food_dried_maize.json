@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dried_maize",
+  "result": {
+    "id": "tfc:food_dried_maize",
+    "count": 1
+  },
+  "duration": 100
+}

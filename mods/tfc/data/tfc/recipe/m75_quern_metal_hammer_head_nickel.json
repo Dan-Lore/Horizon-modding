@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_hammer_head_nickel",
+  "result": {
+    "id": "tfc:metal_hammer_head_nickel",
+    "count": 1
+  },
+  "duration": 100
+}

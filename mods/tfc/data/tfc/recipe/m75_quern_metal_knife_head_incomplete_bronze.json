@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_knife_head_incomplete_bronze",
+  "result": {
+    "id": "tfc:metal_knife_head_incomplete_bronze",
+    "count": 1
+  },
+  "duration": 100
+}

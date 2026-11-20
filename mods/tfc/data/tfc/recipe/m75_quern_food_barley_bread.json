@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_barley_bread",
+  "result": {
+    "id": "tfc:food_barley_bread",
+    "count": 1
+  },
+  "duration": 100
+}

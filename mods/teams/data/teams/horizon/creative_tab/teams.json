@@ -1,0 +1,16 @@
+{
+  "title": "Horizon Teams",
+  "icon": "teams:team_roster",
+  "items": [
+    "teams:team_roster",
+    "teams:party_invite",
+    "teams:team_badge",
+    "teams:team_flag",
+    "teams:team_chat_key",
+    "teams:ally_token",
+    "teams:enemy_token",
+    "teams:party_warp",
+    "teams:team_home",
+    "teams:team_banner"
+  ]
+}

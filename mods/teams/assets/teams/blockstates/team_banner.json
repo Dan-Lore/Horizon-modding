@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "teams:block/team_banner"
+    }
+  }
+}

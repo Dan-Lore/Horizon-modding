@@ -194,5 +194,18 @@
   "item.tfc.rye_grain": "Rye Grain",
   "item.tfc.onion": "Onion",
   "item.tfc.squash": "Squash",
-  "item.tfc.cooked_squash": "Cooked Squash"
+  "item.tfc.cooked_squash": "Cooked Squash",
+  "item.tfc.dye_yellow": "Dye Yellow",
+  "item.tfc.dye_green": "Dye Green",
+  "item.tfc.dye_black": "Dye Black",
+  "item.tfc.scraped_hide": "Scraped Hide",
+  "item.tfc.prepared_hide": "Prepared Hide",
+  "item.tfc.malt": "Malt",
+  "item.tfc.beer": "Beer",
+  "item.tfc.cider": "Cider",
+  "item.tfc.vinegar": "Vinegar",
+  "item.tfc.vodka": "Vodka",
+  "item.tfc.ore_deposit_copper": "Ore Deposit (Copper)",
+  "item.tfc.ore_deposit_gold": "Ore Deposit (Gold)",
+  "item.tfc.ore_deposit_hematite": "Ore Deposit (Hematite)"
 }

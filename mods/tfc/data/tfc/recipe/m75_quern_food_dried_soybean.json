@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dried_soybean",
+  "result": {
+    "id": "tfc:food_dried_soybean",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:jug",
+  "result": {
+    "id": "tfc:jug",
+    "count": 1
+  },
+  "duration": 100
+}

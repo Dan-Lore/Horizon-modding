@@ -46,7 +46,7 @@ def main() -> None:
         native = {
             "schema": 1,
             "id": "quests",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "game": "26.3",
             "horizon": REV,
             "mixins": MIXINS,

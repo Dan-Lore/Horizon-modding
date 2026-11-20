@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:basalt_smooth",
+  "result": {
+    "id": "tfc:basalt_smooth",
+    "count": 1
+  },
+  "duration": 100
+}

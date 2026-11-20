@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:charcoal_forge",
+  "result": {
+    "id": "tfc:charcoal_forge",
+    "count": 1
+  },
+  "duration": 100
+}

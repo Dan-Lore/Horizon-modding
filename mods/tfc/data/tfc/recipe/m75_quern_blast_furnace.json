@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:blast_furnace",
+  "result": {
+    "id": "tfc:blast_furnace",
+    "count": 1
+  },
+  "duration": 100
+}

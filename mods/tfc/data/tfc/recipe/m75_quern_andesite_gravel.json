@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:andesite_gravel",
+  "result": {
+    "id": "tfc:andesite_gravel",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_fish_hook_high_carbon_blue_steel",
+  "result": {
+    "id": "tfc:metal_fish_hook_high_carbon_blue_steel",
+    "count": 1
+  },
+  "duration": 100
+}

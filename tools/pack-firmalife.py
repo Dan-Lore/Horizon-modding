@@ -47,7 +47,7 @@ def main() -> None:
         native = {
             "schema": 1,
             "id": "firmalife",
-            "version": "0.1.2",
+            "version": "0.1.3",
             "game": "26.3",
             "horizon": REV,
             "mixins": MIXINS,

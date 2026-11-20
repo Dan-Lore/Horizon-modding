@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:chert_raw",
+  "result": {
+    "id": "tfc:chert_raw",
+    "count": 1
+  },
+  "duration": 100
+}

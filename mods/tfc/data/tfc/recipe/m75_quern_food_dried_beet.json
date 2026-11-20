@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dried_beet",
+  "result": {
+    "id": "tfc:food_dried_beet",
+    "count": 1
+  },
+  "duration": 100
+}

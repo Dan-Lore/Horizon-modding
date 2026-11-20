@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "tfc:prepared_hide",
+  "result": {
+    "id": "minecraft:leather",
+    "count": 1
+  },
+  "duration": 240
+}

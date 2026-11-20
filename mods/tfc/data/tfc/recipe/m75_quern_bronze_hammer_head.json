@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bronze_hammer_head",
+  "result": {
+    "id": "tfc:bronze_hammer_head",
+    "count": 1
+  },
+  "duration": 100
+}

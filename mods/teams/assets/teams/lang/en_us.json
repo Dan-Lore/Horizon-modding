@@ -1,3 +1,13 @@
 {
-  "item.teams.team_roster": "Team Roster"
+  "item.teams.team_roster": "Team Roster",
+  "item.teams.party_invite": "Party Invite",
+  "item.teams.team_badge": "Team Badge",
+  "item.teams.team_flag": "Team Flag",
+  "item.teams.team_chat_key": "Team Chat Key",
+  "item.teams.ally_token": "Ally Token",
+  "item.teams.enemy_token": "Enemy Token",
+  "item.teams.party_warp": "Party Warp",
+  "item.teams.team_home": "Team Home",
+  "block.teams.team_banner": "Team Banner",
+  "item.teams.team_banner": "Team Banner"
 }

@@ -29,12 +29,12 @@ ABSOLUTE = {
 
 # Rough mechanics completeness estimates (0–100) until we automate probes.
 MECHANICS_EST = {
-    "gtceu": 48.0,  # EU + multis + dense machine recipes; fluids/higher multis still thin
-    "tfc": 46.0,  # heat/anvil/knapping/rot; animals/veins/climate #1
-    "firmalife": 50.0,  # vat/oven/drying tick; greenhouse weak
-    "adastra": 38.0,  # overworld FE/O2; planets/rockets #1
-    "quests": 45.0,
-    "teams": 55.0,
+    "gtceu": 68.0,  # fluidized bath/washer/chem + honest fluid_in gate; multis still thin
+    "tfc": 54.0,  # typed pan deposits, barrel soak chain; animals/veins/climate #1
+    "firmalife": 55.0,  # vat/oven/drying tick; Absolute surface filled; greenhouse weak
+    "adastra": 42.0,  # overworld FE/O2/NASA; planets/rockets #1
+    "quests": 55.0,  # Absolute FTB surface + craftable book
+    "teams": 60.0,  # Absolute party surface + roster craft
 }
 
 MODS = [

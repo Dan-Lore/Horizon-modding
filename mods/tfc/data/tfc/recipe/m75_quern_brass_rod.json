@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:brass_rod",
+  "result": {
+    "id": "tfc:brass_rod",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "tfc:scraped_hide",
+  "result": {
+    "id": "tfc:prepared_hide",
+    "count": 1
+  },
+  "duration": 200
+}

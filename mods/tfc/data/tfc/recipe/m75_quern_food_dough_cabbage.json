@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dough_cabbage",
+  "result": {
+    "id": "tfc:food_dough_cabbage",
+    "count": 1
+  },
+  "duration": 100
+}

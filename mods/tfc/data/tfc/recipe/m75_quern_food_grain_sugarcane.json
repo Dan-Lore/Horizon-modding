@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_grain_sugarcane",
+  "result": {
+    "id": "tfc:food_grain_sugarcane",
+    "count": 1
+  },
+  "duration": 100
+}

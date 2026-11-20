@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bronze_propick",
+  "result": {
+    "id": "tfc:bronze_propick",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_hammer_head_incomplete_wrought_iron",
+  "result": {
+    "id": "tfc:metal_hammer_head_incomplete_wrought_iron",
+    "count": 1
+  },
+  "duration": 100
+}

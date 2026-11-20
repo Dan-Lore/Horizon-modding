@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:copper_hoe",
+  "result": {
+    "id": "tfc:copper_hoe",
+    "count": 1
+  },
+  "duration": 100
+}

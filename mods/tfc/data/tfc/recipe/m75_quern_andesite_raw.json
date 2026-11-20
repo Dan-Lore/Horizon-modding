@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:andesite_raw",
+  "result": {
+    "id": "tfc:andesite_raw",
+    "count": 1
+  },
+  "duration": 100
+}

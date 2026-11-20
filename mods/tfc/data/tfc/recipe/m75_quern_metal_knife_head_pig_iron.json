@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_knife_head_pig_iron",
+  "result": {
+    "id": "tfc:metal_knife_head_pig_iron",
+    "count": 1
+  },
+  "duration": 100
+}

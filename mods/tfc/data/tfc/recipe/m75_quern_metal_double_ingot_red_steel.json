@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_double_ingot_red_steel",
+  "result": {
+    "id": "tfc:metal_double_ingot_red_steel",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bread",
+  "result": {
+    "id": "tfc:bread",
+    "count": 1
+  },
+  "duration": 100
+}

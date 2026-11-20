@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:dye_black",
+  "result": {
+    "id": "tfc:dye_black",
+    "count": 1
+  },
+  "duration": 100
+}

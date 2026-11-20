@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:brine",
+  "result": {
+    "id": "tfc:brine",
+    "count": 1
+  },
+  "duration": 100
+}

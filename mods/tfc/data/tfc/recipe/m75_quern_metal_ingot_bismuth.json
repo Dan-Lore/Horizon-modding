@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_ingot_bismuth",
+  "result": {
+    "id": "tfc:metal_ingot_bismuth",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "quests:block/loot_crate_opener"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_chisel_blade_wrought_iron",
+  "result": {
+    "id": "tfc:metal_chisel_blade_wrought_iron",
+    "count": 1
+  },
+  "duration": 100
+}

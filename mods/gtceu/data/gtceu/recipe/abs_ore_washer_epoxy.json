@@ -9,5 +9,9 @@
   },
   "duration": 80,
   "eu": 24,
-  "min_voltage": 32
+  "min_voltage": 32,
+  "fluid_in": {
+    "id": "minecraft:water",
+    "amount": 100
+  }
 }

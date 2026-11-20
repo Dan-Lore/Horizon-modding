@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_grain_melon",
+  "result": {
+    "id": "tfc:food_grain_melon",
+    "count": 1
+  },
+  "duration": 100
+}

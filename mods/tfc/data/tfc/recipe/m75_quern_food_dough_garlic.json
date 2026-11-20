@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dough_garlic",
+  "result": {
+    "id": "tfc:food_dough_garlic",
+    "count": 1
+  },
+  "duration": 100
+}

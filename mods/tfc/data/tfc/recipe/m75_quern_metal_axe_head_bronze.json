@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_axe_head_bronze",
+  "result": {
+    "id": "tfc:metal_axe_head_bronze",
+    "count": 1
+  },
+  "duration": 100
+}

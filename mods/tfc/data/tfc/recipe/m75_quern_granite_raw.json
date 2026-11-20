@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:granite_raw",
+  "result": {
+    "id": "tfc:granite_raw",
+    "count": 1
+  },
+  "duration": 100
+}

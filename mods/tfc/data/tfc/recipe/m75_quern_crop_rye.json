@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:crop_rye",
+  "result": {
+    "id": "tfc:crop_rye",
+    "count": 1
+  },
+  "duration": 100
+}

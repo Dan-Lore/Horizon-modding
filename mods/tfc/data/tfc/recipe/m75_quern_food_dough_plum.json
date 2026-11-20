@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dough_plum",
+  "result": {
+    "id": "tfc:food_dough_plum",
+    "count": 1
+  },
+  "duration": 100
+}

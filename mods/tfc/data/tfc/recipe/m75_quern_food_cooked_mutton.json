@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_cooked_mutton",
+  "result": {
+    "id": "tfc:food_cooked_mutton",
+    "count": 1
+  },
+  "duration": 100
+}

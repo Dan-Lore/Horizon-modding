@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredient": {"item": "gtceu:carbon_dust"},
+  "fluid_in": {"id": "gtceu:oxygen", "amount": 250},
+  "fluid_out": {"id": "gtceu:ethylene", "amount": 50},
+  "result": {"id": "gtceu:carbon_dust", "count": 1},
+  "duration": 200, "eu": 32, "min_voltage": 128
+}

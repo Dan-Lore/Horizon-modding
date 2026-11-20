@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {"item": "minecraft:coal"},
+  "fluid_in": {"id": "minecraft:water", "amount": 500},
+  "fluid_out": {"id": "gtceu:steam", "amount": 200},
+  "result": {"id": "gtceu:ash_dust", "count": 1},
+  "duration": 100, "eu": 16, "min_voltage": 32
+}

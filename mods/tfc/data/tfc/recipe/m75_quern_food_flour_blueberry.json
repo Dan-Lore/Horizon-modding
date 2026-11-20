@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_flour_blueberry",
+  "result": {
+    "id": "tfc:food_flour_blueberry",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_mace_head_rose_gold",
+  "result": {
+    "id": "tfc:metal_mace_head_rose_gold",
+    "count": 1
+  },
+  "duration": 100
+}

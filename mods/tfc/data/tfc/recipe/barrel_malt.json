@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "minecraft:wheat",
+  "result": {
+    "id": "tfc:malt",
+    "count": 1
+  },
+  "duration": 160
+}

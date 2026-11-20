@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bismuth_sheet",
+  "result": {
+    "id": "tfc:bismuth_sheet",
+    "count": 1
+  },
+  "duration": 100
+}

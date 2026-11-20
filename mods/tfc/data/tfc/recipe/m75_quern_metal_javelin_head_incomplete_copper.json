@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_javelin_head_incomplete_copper",
+  "result": {
+    "id": "tfc:metal_javelin_head_incomplete_copper",
+    "count": 1
+  },
+  "duration": 100
+}

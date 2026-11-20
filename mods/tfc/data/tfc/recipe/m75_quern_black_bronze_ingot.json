@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:black_bronze_ingot",
+  "result": {
+    "id": "tfc:black_bronze_ingot",
+    "count": 1
+  },
+  "duration": 100
+}

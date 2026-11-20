@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:crop_oat",
+  "result": {
+    "id": "tfc:crop_oat",
+    "count": 1
+  },
+  "duration": 100
+}

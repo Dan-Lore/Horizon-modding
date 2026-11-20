@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dough_pumpkin",
+  "result": {
+    "id": "tfc:food_dough_pumpkin",
+    "count": 1
+  },
+  "duration": 100
+}

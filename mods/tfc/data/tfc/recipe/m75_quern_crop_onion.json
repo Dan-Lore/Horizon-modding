@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:crop_onion",
+  "result": {
+    "id": "tfc:crop_onion",
+    "count": 1
+  },
+  "duration": 100
+}

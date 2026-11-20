@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:cooked_squash",
+  "result": {
+    "id": "tfc:cooked_squash",
+    "count": 1
+  },
+  "duration": 100
+}

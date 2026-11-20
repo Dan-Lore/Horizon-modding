@@ -1,5 +1,26 @@
 {
   "item.quests.quest_book": "Quest Book",
   "item.quests.loot_crate": "Loot Crate",
-  "block.quests.quest_board": "Quest Board"
+  "block.quests.quest_board": "Quest Board",
+  "item.quests.banner": "Banner",
+  "item.quests.custom_icon": "Custom Icon",
+  "item.quests.missing_item": "Missing Item",
+  "item.quests.screen_3": "Screen 3",
+  "item.quests.screen_5": "Screen 5",
+  "item.quests.screen_7": "Screen 7",
+  "item.quests.stage_barrier": "Stage Barrier",
+  "item.quests.task_screen_configurator": "Task Screen Configurator",
+  "item.quests.quest_pin": "Quest Pin",
+  "item.quests.quest_link": "Quest Link",
+  "item.quests.chapter_icon": "Chapter Icon",
+  "item.quests.reward_bag": "Reward Bag",
+  "item.quests.team_quest_share": "Team Quest Share",
+  "block.quests.barrier": "Barrier",
+  "item.quests.barrier": "Barrier",
+  "block.quests.detector": "Detector",
+  "item.quests.detector": "Detector",
+  "block.quests.screen_1": "Screen 1",
+  "item.quests.screen_1": "Screen 1",
+  "block.quests.loot_crate_opener": "Loot Crate Opener",
+  "item.quests.loot_crate_opener": "Loot Crate Opener"
 }

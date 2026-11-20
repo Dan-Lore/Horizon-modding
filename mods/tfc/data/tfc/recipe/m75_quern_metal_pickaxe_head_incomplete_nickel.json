@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_pickaxe_head_incomplete_nickel",
+  "result": {
+    "id": "tfc:metal_pickaxe_head_incomplete_nickel",
+    "count": 1
+  },
+  "duration": 100
+}

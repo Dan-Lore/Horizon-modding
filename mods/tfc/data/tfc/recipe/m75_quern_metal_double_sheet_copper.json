@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_double_sheet_copper",
+  "result": {
+    "id": "tfc:metal_double_sheet_copper",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {"item": "gtceu:raw_rubber_dust"},
+  "fluid_in": {"id": "gtceu:creosote", "amount": 200},
+  "fluid_out": {"id": "gtceu:diesel", "amount": 50},
+  "result": {"id": "gtceu:carbon_dust", "count": 1},
+  "duration": 200, "eu": 48, "min_voltage": 128
+}

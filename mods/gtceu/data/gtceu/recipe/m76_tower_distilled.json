@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:distillation_tower",
+  "ingredient": {"item": "minecraft:kelp"},
+  "fluid_in": {"id": "minecraft:water", "amount": 1000},
+  "fluid_out": {"id": "gtceu:distilled_water", "amount": 750},
+  "result": {"id": "gtceu:ash_dust", "count": 1},
+  "duration": 200, "eu": 48, "min_voltage": 128
+}

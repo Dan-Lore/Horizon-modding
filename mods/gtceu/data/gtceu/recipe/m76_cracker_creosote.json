@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:cracker",
+  "ingredient": {"item": "minecraft:coal"},
+  "fluid_in": {"id": "gtceu:creosote", "amount": 300},
+  "fluid_out": {"id": "gtceu:ethylene", "amount": 100},
+  "result": {"id": "gtceu:carbon_dust", "count": 2},
+  "duration": 250, "eu": 96, "min_voltage": 128
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:knapping",
+  "result": {
+    "id": "tfc:knapping",
+    "count": 1
+  },
+  "duration": 100
+}

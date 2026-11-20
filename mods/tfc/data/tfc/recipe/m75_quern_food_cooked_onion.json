@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_cooked_onion",
+  "result": {
+    "id": "tfc:food_cooked_onion",
+    "count": 1
+  },
+  "duration": 100
+}

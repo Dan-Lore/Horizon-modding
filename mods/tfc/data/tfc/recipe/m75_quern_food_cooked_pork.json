@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_cooked_pork",
+  "result": {
+    "id": "tfc:food_cooked_pork",
+    "count": 1
+  },
+  "duration": 100
+}

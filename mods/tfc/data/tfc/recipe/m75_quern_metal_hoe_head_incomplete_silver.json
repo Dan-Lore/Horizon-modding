@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_hoe_head_incomplete_silver",
+  "result": {
+    "id": "tfc:metal_hoe_head_incomplete_silver",
+    "count": 1
+  },
+  "duration": 100
+}

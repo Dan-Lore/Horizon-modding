@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bronze_shovel",
+  "result": {
+    "id": "tfc:bronze_shovel",
+    "count": 1
+  },
+  "duration": 100
+}

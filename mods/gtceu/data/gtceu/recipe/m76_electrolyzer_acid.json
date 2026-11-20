@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:electrolyzer",
+  "ingredient": {"item": "gtceu:salt_dust"},
+  "fluid_in": {"id": "gtceu:sulfuric_acid", "amount": 100},
+  "fluid_out": {"id": "gtceu:oxygen", "amount": 50},
+  "result": {"id": "gtceu:sodium_dust", "count": 1},
+  "duration": 200, "eu": 64, "min_voltage": 128
+}

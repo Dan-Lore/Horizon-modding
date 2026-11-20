@@ -1,0 +1,8 @@
+{
+  "template": "minecraft:iron_block",
+  "properties": {
+    "hardness": 1.0,
+    "sounds": "minecraft:oak_planks"
+  },
+  "item": true
+}

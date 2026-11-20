@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_ingot_unknown",
+  "result": {
+    "id": "tfc:metal_ingot_unknown",
+    "count": 1
+  },
+  "duration": 100
+}

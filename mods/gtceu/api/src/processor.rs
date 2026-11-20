@@ -11,8 +11,6 @@ use horizon_client::mod_api::{Host, ModBlockEntity};
 
 const STEAM_TANK: i32 = 16_000;
 const FLUID_TANK: i32 = 16_000;
-/// Washer / bath always spend this much water when the recipe omits fluid_in.
-const WASH_WATER_MB: i32 = 100;
 
 pub fn tick(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
     let Some(recipe_type) = spec.recipe_type.as_deref() else {
@@ -175,38 +173,27 @@ fn needs_process_water(recipe_type: &str) -> bool {
     recipe_type.contains("ore_washer") || recipe_type.contains("chemical_bath")
 }
 
-fn effective_fluid_in<'a>(
-    recipe: &'a MachineRecipe,
-    recipe_type: &str,
-) -> Option<(&'a str, i32)> {
-    if let Some((id, amount)) = recipe.fluid_in.as_ref() {
-        return Some((id.as_str(), *amount));
-    }
-    if needs_process_water(recipe_type) {
-        return Some((WATER, WASH_WATER_MB));
-    }
-    None
-}
-
-fn fluid_ready(entity: &ModBlockEntity, recipe: &MachineRecipe, recipe_type: &str) -> bool {
-    let Some((id, amount)) = effective_fluid_in(recipe, recipe_type) else {
+fn fluid_ready(entity: &ModBlockEntity, recipe: &MachineRecipe, _recipe_type: &str) -> bool {
+    // Honest gate: only recipes that declare fluid_in require tank fluid.
+    // Washer/bath abs recipes are fluidized; no invented free water.
+    let Some((id, amount)) = recipe.fluid_in.as_ref() else {
         return true;
     };
-    fluids::amount(entity, 0, id) >= amount
+    fluids::amount(entity, 0, id) >= *amount
 }
 
 fn complete_fluids(
     entity: &mut ModBlockEntity,
     recipe: &MachineRecipe,
-    recipe_type: &str,
+    _recipe_type: &str,
 ) -> bool {
     if let Some((id, amount)) = recipe.fluid_out.as_ref() {
         if !fluids::can_fill(entity, 1, id, *amount, FLUID_TANK) {
             return false;
         }
     }
-    if let Some((id, amount)) = effective_fluid_in(recipe, recipe_type) {
-        if fluids::drain(entity, 0, 2, id, amount) < amount {
+    if let Some((id, amount)) = recipe.fluid_in.as_ref() {
+        if fluids::drain(entity, 0, 2, id, *amount) < *amount {
             return false;
         }
     }

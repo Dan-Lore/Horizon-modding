@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:chert_gravel",
+  "result": {
+    "id": "tfc:chert_gravel",
+    "count": 1
+  },
+  "duration": 100
+}

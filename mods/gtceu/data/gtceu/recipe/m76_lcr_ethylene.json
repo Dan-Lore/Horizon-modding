@@ -1,0 +1,8 @@
+{
+  "type": "gtceu:large_chemical_reactor",
+  "ingredient": {"item": "gtceu:carbon_dust"},
+  "fluid_in": {"id": "gtceu:ethylene", "amount": 200},
+  "fluid_out": {"id": "gtceu:oxygen", "amount": 50},
+  "result": {"id": "gtceu:polyethylene_ingot", "count": 1},
+  "duration": 300, "eu": 128, "min_voltage": 128
+}

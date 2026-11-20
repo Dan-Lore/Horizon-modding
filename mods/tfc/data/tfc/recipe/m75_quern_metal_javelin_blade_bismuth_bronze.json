@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_javelin_blade_bismuth_bronze",
+  "result": {
+    "id": "tfc:metal_javelin_blade_bismuth_bronze",
+    "count": 1
+  },
+  "duration": 100
+}

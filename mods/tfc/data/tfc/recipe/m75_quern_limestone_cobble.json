@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:limestone_cobble",
+  "result": {
+    "id": "tfc:limestone_cobble",
+    "count": 1
+  },
+  "duration": 100
+}

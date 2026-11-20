@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dough_peach",
+  "result": {
+    "id": "tfc:food_dough_peach",
+    "count": 1
+  },
+  "duration": 100
+}

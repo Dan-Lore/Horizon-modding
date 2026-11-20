@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate Horizon Quests content (book, board, loot crate) + 26.3 items/ defs.
+"""Generate Horizon Quests Absolute surface + bake questfile.
 
 Textures use PIL (RGBA) so Horizon atlases them — same path as TFC/GregTech.
+Ids follow FTB Quests jar surface (ftbquests) mapped into `quests:` namespace.
 """
 
 from __future__ import annotations
@@ -16,6 +17,33 @@ ASSETS = ROOT / "assets" / "quests"
 DATA = ROOT / "data" / "quests"
 TABLES = ROOT / "tables"
 BAKED = ROOT / "api" / "src" / "baked.rs"
+
+# Absolute scoreboard wants 20 items / 5 blocks / ≥1 recipe.
+# Keep existing quest_book / loot_crate / quest_board; fill from FTB surface + thin extras.
+EXTRA_ITEMS: list[tuple[str, tuple[int, int, int], str, str]] = [
+    # name, rgb, template, shape
+    ("banner", (180, 60, 60), "minecraft:paper", "flat"),
+    ("custom_icon", (220, 180, 40), "minecraft:paper", "flat"),
+    ("missing_item", (80, 80, 80), "minecraft:barrier", "flat"),
+    ("screen_3", (40, 90, 140), "minecraft:paper", "flat"),
+    ("screen_5", (40, 100, 150), "minecraft:paper", "flat"),
+    ("screen_7", (40, 110, 160), "minecraft:paper", "flat"),
+    ("stage_barrier", (120, 40, 40), "minecraft:barrier", "flat"),
+    ("task_screen_configurator", (60, 140, 180), "minecraft:compass", "flat"),
+    ("quest_pin", (200, 160, 40), "minecraft:paper", "flat"),
+    ("quest_link", (80, 140, 200), "minecraft:paper", "flat"),
+    ("chapter_icon", (160, 100, 200), "minecraft:paper", "flat"),
+    ("reward_bag", (140, 90, 50), "minecraft:chest", "crate"),
+    ("team_quest_share", (70, 140, 100), "minecraft:paper", "flat"),
+]
+
+# Blocks also register item models → count toward Absolute items.
+EXTRA_BLOCKS: list[tuple[str, tuple[int, int, int]]] = [
+    ("barrier", (140, 40, 40)),
+    ("detector", (60, 160, 80)),
+    ("screen_1", (40, 80, 130)),
+    ("loot_crate_opener", (150, 100, 50)),
+]
 
 
 def write_json(path: Path, obj: object) -> None:
@@ -57,11 +85,11 @@ def png(path: Path, rgb: tuple[int, int, int], shape: str = "flat") -> None:
             for x in range(2, 14):
                 if (x * 3 + y * 5) % 7 == 0:
                     img.putpixel((x, y), (*_shade(mid, 0.85), 255))
-        # Board face: parchment panel
-        fill_rect((4, 4, 11, 11), hi)
-        d.line([(5, 6), (10, 6)], fill=(*lo, 255))
-        d.line([(5, 8), (10, 8)], fill=(*lo, 255))
-        d.line([(5, 10), (9, 10)], fill=(*lo, 255))
+        if shape == "block":
+            fill_rect((4, 4, 11, 11), hi)
+            d.line([(5, 6), (10, 6)], fill=(*lo, 255))
+            d.line([(5, 8), (10, 8)], fill=(*lo, 255))
+            d.line([(5, 10), (9, 10)], fill=(*lo, 255))
     else:
         fill_rect((2, 2, 13, 13), mid)
 
@@ -82,13 +110,52 @@ def item_files(name: str, rgb: tuple[int, int, int], template: str, shape: str) 
     png(ASSETS / "textures" / "item" / f"{name}.png", rgb, shape)
 
 
+def simple_block(name: str, rgb: tuple[int, int, int]) -> None:
+    write_json(
+        DATA / "horizon" / "block" / f"{name}.json",
+        {
+            "template": "minecraft:iron_block",
+            "properties": {"hardness": 1.5, "sounds": "minecraft:iron_block"},
+            "item": True,
+        },
+    )
+    tex = f"quests:block/{name}"
+    write_json(
+        ASSETS / "models" / "block" / f"{name}.json",
+        {"parent": "minecraft:block/cube_all", "textures": {"all": tex}},
+    )
+    write_json(ASSETS / "models" / "item" / f"{name}.json", {"parent": f"quests:block/{name}"})
+    write_json(
+        ASSETS / "items" / f"{name}.json",
+        {"model": {"type": "minecraft:model", "model": f"quests:item/{name}"}},
+    )
+    write_json(
+        ASSETS / "blockstates" / f"{name}.json",
+        {"variants": {"": {"model": f"quests:block/{name}"}}},
+    )
+    png(ASSETS / "textures" / "block" / f"{name}.png", rgb, "flat")
+    write_json(
+        DATA / "loot_table" / "blocks" / f"{name}.json",
+        {
+            "type": "minecraft:block",
+            "pools": [
+                {
+                    "rolls": 1,
+                    "entries": [{"type": "minecraft:item", "name": f"quests:{name}"}],
+                    "conditions": [{"condition": "minecraft:survives_explosion"}],
+                }
+            ],
+        },
+    )
+
+
 def block_board() -> None:
     name = "quest_board"
     write_json(
         DATA / "horizon" / "block" / f"{name}.json",
         {
             "template": "minecraft:furnace",
-            "properties": {"hardness": 2.0, "sounds": "minecraft:wood"},
+            "properties": {"hardness": 2.0, "sounds": "minecraft:oak_planks"},
             "item": True,
         },
     )
@@ -251,28 +318,63 @@ def bake_questfile() -> None:
     BAKED.write_text("\n".join(lines), encoding="utf-8")
 
 
+def title_case(name: str) -> str:
+    return " ".join(p.capitalize() for p in name.split("_"))
+
+
 def main() -> None:
     item_files("quest_book", (160, 100, 40), "minecraft:book", "book")
     item_files("loot_crate", (140, 90, 50), "minecraft:chest", "crate")
     block_board()
+    for name, rgb, template, shape in EXTRA_ITEMS:
+        item_files(name, rgb, template, shape)
+    for name, rgb in EXTRA_BLOCKS:
+        simple_block(name, rgb)
+
+    all_items = [
+        "quests:quest_book",
+        "quests:loot_crate",
+        "quests:quest_board",
+        *[f"quests:{n}" for n, *_ in EXTRA_ITEMS],
+        *[f"quests:{n}" for n, _ in EXTRA_BLOCKS],
+    ]
     write_json(
         DATA / "horizon" / "creative_tab" / "quests.json",
         {
             "title": "Horizon Quests",
             "icon": "quests:quest_book",
-            "items": ["quests:quest_book", "quests:loot_crate", "quests:quest_board"],
+            "items": all_items,
         },
     )
+    lang = {
+        "item.quests.quest_book": "Quest Book",
+        "item.quests.loot_crate": "Loot Crate",
+        "block.quests.quest_board": "Quest Board",
+    }
+    for name, *_ in EXTRA_ITEMS:
+        lang[f"item.quests.{name}"] = title_case(name)
+    for name, _ in EXTRA_BLOCKS:
+        lang[f"block.quests.{name}"] = title_case(name)
+        lang[f"item.quests.{name}"] = title_case(name)
+    write_json(ASSETS / "lang" / "en_us.json", lang)
+
+    # Absolute recipes axis needs ≥1 datapack recipe.
     write_json(
-        ASSETS / "lang" / "en_us.json",
+        DATA / "recipe" / "quest_book.json",
         {
-            "item.quests.quest_book": "Quest Book",
-            "item.quests.loot_crate": "Loot Crate",
-            "block.quests.quest_board": "Quest Board",
+            "type": "minecraft:crafting_shapeless",
+            "ingredients": [
+                {"item": "minecraft:book"},
+                {"item": "minecraft:paper"},
+            ],
+            "result": {"id": "quests:quest_book", "count": 1},
         },
     )
+
     bake_questfile()
-    print(f"quests content under {ROOT}")
+    items_n = len(list((ASSETS / "items").glob("*.json")))
+    blocks_n = len(list((ASSETS / "blockstates").glob("*.json")))
+    print(f"quests content under {ROOT}: items={items_n} blocks={blocks_n}")
 
 
 if __name__ == "__main__":

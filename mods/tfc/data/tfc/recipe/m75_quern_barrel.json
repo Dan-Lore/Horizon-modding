@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:barrel",
+  "result": {
+    "id": "tfc:barrel",
+    "count": 1
+  },
+  "duration": 100
+}

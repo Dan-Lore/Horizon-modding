@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_fish_hook_black_bronze",
+  "result": {
+    "id": "tfc:metal_fish_hook_black_bronze",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:chert_cobble",
+  "result": {
+    "id": "tfc:chert_cobble",
+    "count": 1
+  },
+  "duration": 100
+}

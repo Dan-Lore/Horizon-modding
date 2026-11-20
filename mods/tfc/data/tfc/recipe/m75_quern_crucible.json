@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:crucible",
+  "result": {
+    "id": "tfc:crucible",
+    "count": 1
+  },
+  "duration": 100
+}

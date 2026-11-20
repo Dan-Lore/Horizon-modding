@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "tfc:malt",
+  "result": {
+    "id": "tfc:beer",
+    "count": 1
+  },
+  "duration": 200
+}

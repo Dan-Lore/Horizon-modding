@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_cooked_olive",
+  "result": {
+    "id": "tfc:food_cooked_olive",
+    "count": 1
+  },
+  "duration": 100
+}

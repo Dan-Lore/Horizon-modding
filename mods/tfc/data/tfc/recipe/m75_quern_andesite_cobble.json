@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:andesite_cobble",
+  "result": {
+    "id": "tfc:andesite_cobble",
+    "count": 1
+  },
+  "duration": 100
+}

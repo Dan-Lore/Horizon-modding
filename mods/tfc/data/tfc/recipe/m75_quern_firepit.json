@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:firepit",
+  "result": {
+    "id": "tfc:firepit",
+    "count": 1
+  },
+  "duration": 100
+}

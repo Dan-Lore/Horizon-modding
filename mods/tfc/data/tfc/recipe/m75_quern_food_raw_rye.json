@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_raw_rye",
+  "result": {
+    "id": "tfc:food_raw_rye",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "minecraft:yellow_dye",
+  "result": {
+    "id": "tfc:dye_yellow",
+    "count": 1
+  },
+  "duration": 80
+}

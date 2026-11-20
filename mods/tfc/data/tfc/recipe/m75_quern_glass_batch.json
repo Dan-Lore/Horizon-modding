@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:glass_batch",
+  "result": {
+    "id": "tfc:glass_batch",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bronze_hoe",
+  "result": {
+    "id": "tfc:bronze_hoe",
+    "count": 1
+  },
+  "duration": 100
+}

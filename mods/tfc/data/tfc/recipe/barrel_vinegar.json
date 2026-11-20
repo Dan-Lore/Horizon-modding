@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "minecraft:milk_bucket",
+  "result": {
+    "id": "tfc:vinegar",
+    "count": 1
+  },
+  "duration": 160
+}

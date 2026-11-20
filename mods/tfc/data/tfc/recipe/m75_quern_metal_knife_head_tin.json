@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_knife_head_tin",
+  "result": {
+    "id": "tfc:metal_knife_head_tin",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bronze_chisel",
+  "result": {
+    "id": "tfc:bronze_chisel",
+    "count": 1
+  },
+  "duration": 100
+}

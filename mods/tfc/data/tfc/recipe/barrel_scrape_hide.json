@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "tfc:soaked_hide",
+  "result": {
+    "id": "tfc:scraped_hide",
+    "count": 1
+  },
+  "duration": 200
+}

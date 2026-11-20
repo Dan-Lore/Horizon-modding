@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:bronze_knife_blade",
+  "result": {
+    "id": "tfc:bronze_knife_blade",
+    "count": 1
+  },
+  "duration": 100
+}

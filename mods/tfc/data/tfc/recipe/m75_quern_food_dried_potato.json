@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dried_potato",
+  "result": {
+    "id": "tfc:food_dried_potato",
+    "count": 1
+  },
+  "duration": 100
+}

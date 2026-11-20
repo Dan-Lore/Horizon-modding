@@ -59,9 +59,9 @@ Blocked forever on this pin (listed, not in “done”): **Create/Greate (#2)**,
 
 ## Snapshot — refresh via `score-tfg-content.py`
 
-See latest numbers in [`tfg-content-score.json`](tfg-content-score.json). Live score after M75 mechanics push: **milestone M50** (~58% pack blend) — Absolute % still catalog-heavy; mechanics rose (GT fluids/washer-bath water gate, TFC pan→deposit, Ad Astra NASA bench + O₂ drain).
+See latest numbers in [`tfg-content-score.json`](tfg-content-score.json). Live score after M75 close: refresh via `score-tfg-content.py` (target **M75 / ≥70%**).
 
-**M75 mechanics landed (this pin):** washer/bath require water; distillery/LCR `fluid_in`/`fluid_out`; pan gives `tfc:ore_deposit`; NASA workbench assembles `rocket_t1`; oxygen distributor consumes tanks. Create/Greate still **#2**.
+**M75 close landed (this pin):** Quests/Teams Absolute surface + craft recipes; ~2.5k abs chem recipes fluidized (no invent-water); TFC typed pan deposits + barrel densify; Firmalife Absolute ids from jar. Create/Greate still **#2**.
 
 **Launcher note:** portable `launcher/windows-x64` (0.2.0) expects flat `[native]` crates; workshop mixins `.hmod` rebuilds currently use `launcher/_old-launcher/horizon-launcher.exe` (Nov 10 zip) until the tree is migrated.
 

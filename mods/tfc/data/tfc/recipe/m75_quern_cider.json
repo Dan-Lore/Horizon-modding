@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:cider",
+  "result": {
+    "id": "tfc:cider",
+    "count": 1
+  },
+  "duration": 100
+}

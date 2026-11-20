@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dough_beet",
+  "result": {
+    "id": "tfc:food_dough_beet",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:crop_barley",
+  "result": {
+    "id": "tfc:crop_barley",
+    "count": 1
+  },
+  "duration": 100
+}

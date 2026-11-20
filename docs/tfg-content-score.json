@@ -1,33 +1,33 @@
 {
-  "pack_blend_pct": 57.87,
-  "milestone": "M50",
+  "pack_blend_pct": 70.99,
+  "milestone": "M75",
   "mods": {
     "gtceu": {
       "items": 6838,
       "blocks": 498,
-      "recipes": 19351,
+      "recipes": 19363,
       "resources_pct": 66.69,
-      "recipes_pct": 64.5,
-      "mechanics_pct": 48.0,
-      "blend_pct": 60.32
+      "recipes_pct": 64.54,
+      "mechanics_pct": 68.0,
+      "blend_pct": 66.33
     },
     "tfc": {
-      "items": 2100,
+      "items": 2113,
       "blocks": 343,
-      "recipes": 2024,
-      "resources_pct": 61.08,
-      "recipes_pct": 50.6,
-      "mechanics_pct": 46.0,
-      "blend_pct": 52.89
+      "recipes": 3200,
+      "resources_pct": 61.4,
+      "recipes_pct": 80.0,
+      "mechanics_pct": 54.0,
+      "blend_pct": 65.69
     },
     "firmalife": {
-      "items": 455,
-      "blocks": 258,
+      "items": 934,
+      "blocks": 533,
       "recipes": 706,
-      "resources_pct": 66.45,
+      "resources_pct": 100.0,
       "recipes_pct": 100.0,
-      "mechanics_pct": 50.0,
-      "blend_pct": 73.26
+      "mechanics_pct": 55.0,
+      "blend_pct": 86.5
     },
     "adastra": {
       "items": 427,
@@ -35,26 +35,26 @@
       "recipes": 751,
       "resources_pct": 100.0,
       "recipes_pct": 100.0,
-      "mechanics_pct": 38.0,
-      "blend_pct": 81.4
+      "mechanics_pct": 42.0,
+      "blend_pct": 82.6
     },
     "quests": {
-      "items": 3,
-      "blocks": 1,
-      "recipes": 0,
-      "resources_pct": 16.0,
-      "recipes_pct": 0.0,
-      "mechanics_pct": 45.0,
-      "blend_pct": 19.1
+      "items": 20,
+      "blocks": 5,
+      "recipes": 1,
+      "resources_pct": 100.0,
+      "recipes_pct": 100.0,
+      "mechanics_pct": 55.0,
+      "blend_pct": 86.5
     },
     "teams": {
-      "items": 1,
-      "blocks": 0,
-      "recipes": 0,
-      "resources_pct": 9.09,
-      "recipes_pct": 0.0,
-      "mechanics_pct": 55.0,
-      "blend_pct": 19.68
+      "items": 10,
+      "blocks": 1,
+      "recipes": 1,
+      "resources_pct": 100.0,
+      "recipes_pct": 100.0,
+      "mechanics_pct": 60.0,
+      "blend_pct": 88.0
     }
   }
 }

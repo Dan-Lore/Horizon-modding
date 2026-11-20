@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_flour_wheat",
+  "result": {
+    "id": "tfc:food_flour_wheat",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:copper_hammer_head",
+  "result": {
+    "id": "tfc:copper_hammer_head",
+    "count": 1
+  },
+  "duration": 100
+}

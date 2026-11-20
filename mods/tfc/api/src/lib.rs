@@ -170,7 +170,7 @@ impl Hooks for Tfc {
             return Flow::Cancel;
         }
         if prospect::is_pan(id) {
-            // Pan over gravel/sand/water → ore deposit for the sluice loop.
+            // Pan over gravel/sand/water → typed ore deposit for the sluice loop.
             let pannable = block.contains("gravel")
                 || block.contains("sand")
                 || block == "minecraft:water"
@@ -182,10 +182,19 @@ impl Hooks for Tfc {
                 );
                 return Flow::Cancel;
             }
-            let _ = host.give_items("tfc:ore_deposit", 1);
+            let deposit = if block.contains("sand") {
+                "tfc:ore_deposit_gold"
+            } else if block.contains("gravel") || block.ends_with("_gravel") {
+                "tfc:ore_deposit_copper"
+            } else {
+                "tfc:ore_deposit_hematite"
+            };
+            let _ = host.give_items(deposit, 1);
             host.tell(
                 player.uuid,
-                Text::literal("TFC: panned an ore deposit — put it in a sluice."),
+                Text::literal(format!(
+                    "TFC: panned {deposit} — put it in a sluice."
+                )),
             );
             return Flow::Cancel;
         }

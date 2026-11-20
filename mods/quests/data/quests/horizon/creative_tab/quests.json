@@ -4,6 +4,23 @@
   "items": [
     "quests:quest_book",
     "quests:loot_crate",
-    "quests:quest_board"
+    "quests:quest_board",
+    "quests:banner",
+    "quests:custom_icon",
+    "quests:missing_item",
+    "quests:screen_3",
+    "quests:screen_5",
+    "quests:screen_7",
+    "quests:stage_barrier",
+    "quests:task_screen_configurator",
+    "quests:quest_pin",
+    "quests:quest_link",
+    "quests:chapter_icon",
+    "quests:reward_bag",
+    "quests:team_quest_share",
+    "quests:barrier",
+    "quests:detector",
+    "quests:screen_1",
+    "quests:loot_crate_opener"
   ]
 }

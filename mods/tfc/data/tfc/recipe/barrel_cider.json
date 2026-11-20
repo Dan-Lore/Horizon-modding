@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "minecraft:apple",
+  "result": {
+    "id": "tfc:cider",
+    "count": 1
+  },
+  "duration": 180
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_flour_cabbage",
+  "result": {
+    "id": "tfc:food_flour_cabbage",
+    "count": 1
+  },
+  "duration": 100
+}

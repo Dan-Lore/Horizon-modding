@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:anvil",
+  "result": {
+    "id": "tfc:anvil",
+    "count": 1
+  },
+  "duration": 100
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:food_dried_barley",
+  "result": {
+    "id": "tfc:food_dried_barley",
+    "count": 1
+  },
+  "duration": 100
+}

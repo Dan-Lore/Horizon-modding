@@ -1,0 +1,9 @@
+{
+  "type": "tfc:quern",
+  "ingredient": "tfc:metal_knife_head_sterling_silver",
+  "result": {
+    "id": "tfc:metal_knife_head_sterling_silver",
+    "count": 1
+  },
+  "duration": 100
+}
