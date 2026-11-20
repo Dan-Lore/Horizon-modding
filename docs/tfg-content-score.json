@@ -1,15 +1,15 @@
 {
-  "pack_blend_pct": 70.99,
+  "pack_blend_pct": 71.94,
   "milestone": "M75",
   "mods": {
     "gtceu": {
       "items": 6838,
       "blocks": 498,
-      "recipes": 19363,
+      "recipes": 19365,
       "resources_pct": 66.69,
-      "recipes_pct": 64.54,
-      "mechanics_pct": 68.0,
-      "blend_pct": 66.33
+      "recipes_pct": 64.55,
+      "mechanics_pct": 72.0,
+      "blend_pct": 67.53
     },
     "tfc": {
       "items": 2113,
@@ -17,8 +17,8 @@
       "recipes": 3200,
       "resources_pct": 61.4,
       "recipes_pct": 80.0,
-      "mechanics_pct": 54.0,
-      "blend_pct": 65.69
+      "mechanics_pct": 56.0,
+      "blend_pct": 66.29
     },
     "firmalife": {
       "items": 934,
@@ -26,8 +26,8 @@
       "recipes": 706,
       "resources_pct": 100.0,
       "recipes_pct": 100.0,
-      "mechanics_pct": 55.0,
-      "blend_pct": 86.5
+      "mechanics_pct": 58.0,
+      "blend_pct": 87.4
     },
     "adastra": {
       "items": 427,
@@ -35,8 +35,8 @@
       "recipes": 751,
       "resources_pct": 100.0,
       "recipes_pct": 100.0,
-      "mechanics_pct": 42.0,
-      "blend_pct": 82.6
+      "mechanics_pct": 44.0,
+      "blend_pct": 83.2
     },
     "quests": {
       "items": 20,
@@ -44,8 +44,8 @@
       "recipes": 1,
       "resources_pct": 100.0,
       "recipes_pct": 100.0,
-      "mechanics_pct": 55.0,
-      "blend_pct": 86.5
+      "mechanics_pct": 58.0,
+      "blend_pct": 87.4
     },
     "teams": {
       "items": 10,

@@ -1,8 +1,8 @@
-//! Firmalife Horizon 0.1.2 — food slice with vat / hive / drying / sprinkler.
+//! Firmalife Horizon 0.1.4 — food slice + AE2-facing ModContainer for vat/oven/drying.
 
 use horizon_client::mod_api::{
-    BlockEntityTickEvent, BlockEntityTicksEvent, Hooks, Host, ItemStack, PlayerLoggedInEvent, Tag,
-    Text,
+    BlockEntityContainerEvent, BlockEntityEvent, BlockEntityTickEvent, BlockEntityTicksEvent,
+    Compound, Hooks, Host, ItemStack, ModContainer, PlayerLoggedInEvent, Tag, Text,
 };
 
 pub fn hooks() -> Box<dyn Hooks> {
@@ -81,26 +81,70 @@ fn vat_input(item: &str) -> Option<&'static str> {
     }
 }
 
+fn is_machine(block: &str) -> bool {
+    block.starts_with("firmalife:")
+        && (block.ends_with("oven")
+            || block.ends_with("vat")
+            || block.ends_with("beehive")
+            || block.ends_with("drying_mat")
+            || block.ends_with("sprinkler")
+            || block.ends_with("cheese_wheel")
+            || block.ends_with("greenhouse_panel"))
+}
+
+/// Slot 0 = input, slot 1 = output — AE2 Up=insert, Down=extract, sides=both.
+fn machine_container(block: &str) -> Option<ModContainer> {
+    if !is_machine(block) {
+        return None;
+    }
+    // Sprinkler / greenhouse / cheese have little inventory — still expose 2 slots for buses.
+    let inputs = vec![0usize];
+    let outputs = vec![1usize];
+    let both = vec![0usize, 1usize];
+    Some(ModContainer {
+        slots: 2,
+        faces: [
+            outputs.clone(),
+            inputs.clone(),
+            both.clone(),
+            both.clone(),
+            both.clone(),
+            both,
+        ],
+        inputs,
+        outputs,
+        menu: None,
+    })
+}
+
 impl Hooks for Firmalife {
     fn player_logged_in(&self, host: &mut dyn Host, event: &mut PlayerLoggedInEvent<'_>) {
         host.tell(
             event.player,
             Text::literal(
-                "Firmalife 0.1.2 (Horizon rewrite): vat, beehive, drying, sprinkler, oven, greenhouse.",
+                "Firmalife 0.1.4 (Horizon rewrite): vat/oven/drying; AE2 buses see ModContainer.",
             ),
         );
     }
 
+    fn block_entity(
+        &self,
+        _host: &mut dyn Host,
+        event: &mut BlockEntityEvent<'_>,
+    ) -> Option<(String, Compound)> {
+        is_machine(event.block).then(|| (event.block.to_owned(), Compound::new()))
+    }
+
+    fn block_entity_container(
+        &self,
+        _host: &dyn Host,
+        event: &mut BlockEntityContainerEvent<'_>,
+    ) -> Option<ModContainer> {
+        machine_container(event.block)
+    }
+
     fn block_entity_ticks(&self, _host: &dyn Host, event: &mut BlockEntityTicksEvent<'_>) {
-        let id: &str = event.block.as_ref();
-        if id.ends_with("oven")
-            || id.ends_with("vat")
-            || id.ends_with("beehive")
-            || id.ends_with("drying_mat")
-            || id.ends_with("sprinkler")
-            || id.ends_with("cheese_wheel")
-            || id.ends_with("greenhouse_panel")
-        {
+        if is_machine(event.block) {
             event.ticks = true;
         }
     }

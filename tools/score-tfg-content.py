@@ -29,11 +29,11 @@ ABSOLUTE = {
 
 # Rough mechanics completeness estimates (0–100) until we automate probes.
 MECHANICS_EST = {
-    "gtceu": 68.0,  # fluidized bath/washer/chem + honest fluid_in gate; multis still thin
-    "tfc": 54.0,  # typed pan deposits, barrel soak chain; animals/veins/climate #1
-    "firmalife": 55.0,  # vat/oven/drying tick; Absolute surface filled; greenhouse weak
-    "adastra": 42.0,  # overworld FE/O2/NASA; planets/rockets #1
-    "quests": 55.0,  # Absolute FTB surface + craftable book
+    "gtceu": 72.0,  # AE2 face ModContainer + fluidized chem; multis still thin
+    "tfc": 56.0,  # AE2 bus faces + typed pan/barrel; animals/veins/climate #1
+    "firmalife": 58.0,  # ModContainer for AE2 buses; vat/oven/drying; greenhouse weak
+    "adastra": 44.0,  # AE2 bus faces + overworld FE/O2/NASA; planets #1
+    "quests": 58.0,  # AE2→GT interface quests + Absolute surface
     "teams": 60.0,  # Absolute party surface + roster craft
 }
 

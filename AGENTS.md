@@ -31,8 +31,8 @@ Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern overnight.
 
 | Role | Id | Version | Rule |
 | --- | --- | --- | --- |
-| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-da621a0683c9` | Do **not** native-build |
-| Dev | `tfg-dev` | `native-fdc87ae-da621a0683c9` | Rebuild **only** here (each build replaces this pin) |
+| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-19d680588c6f` | Do **not** native-build |
+| Dev | `tfg-dev` | `native-fdc87ae-19d680588c6f` | Rebuild **only** here (each build replaces this pin) |
 
 - Base: Nightly `fdc87ae` (`nightly-2026-11-08-fdc87ae`), hooks **411**, AE2 **15.4.18**.
 - Create parked (pin clash with AE2). Tip `9f42064`: AE2 left_out — base only.
@@ -91,7 +91,7 @@ Allowed unfinished for content: only **#1** API, **#2** pin clash, **#3** regist
 
 1. Grow **GregTech** recipe/material coverage (bath, centrifuge, ores) per `tfg-content-coverage.md`.  
 2. Optional later: migrate id `gtceu` → `gtceu` so JEI matches `gtceu:` / stops looking for bare `gregtech:`.  
-3. Stay on **`native-fdc87ae-da621a0683c9`** (or newer after green `tfg-dev` build); tip `dd67b76` watch-only until AE2 is back (#3).  
+3. Stay on **`native-fdc87ae-19d680588c6f`** (or newer after green `tfg-dev` build); tip `dd67b76` watch-only until AE2 is back (#3).  
 4. Registry ≤1×/day.
 
 ## Out of scope unless asked

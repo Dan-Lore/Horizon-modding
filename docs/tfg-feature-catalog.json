@@ -79,7 +79,7 @@
       "status": "done",
       "horizon_gap": null,
       "mod": "registry",
-      "note": "registry AE2 15.4.18 storage/channels on fdc87ae; deep GT AE2 glue out of scope"
+      "note": "registry AE2 15.4.18 storage/channels on fdc87ae; workshop facing ModContainer glue (gtceu/tfc/adastra/firmalife) for Interface/buses/PP"
     },
     {
       "id": "ae2_quest_entry",

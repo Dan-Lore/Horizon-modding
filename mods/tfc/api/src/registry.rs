@@ -65,9 +65,20 @@ impl Spec {
             Some(out) => vec![out],
             None => all.clone(),
         };
+        // AE2 bus contract: Down=extract, Up=insert, sides=both.
+        let mut both = inputs.clone();
+        both.extend(outputs.iter().copied());
+        let faces = [
+            outputs.clone(),
+            inputs.clone(),
+            both.clone(),
+            both.clone(),
+            both.clone(),
+            both,
+        ];
         Some(ModContainer {
             slots,
-            faces: std::array::from_fn(|_| all.clone()),
+            faces,
             inputs,
             outputs,
             menu: Some(block.to_owned()),

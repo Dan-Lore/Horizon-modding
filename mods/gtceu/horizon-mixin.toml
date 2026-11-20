@@ -1,7 +1,7 @@
 # GregTech 0.5.5 — EU net, multis N5–N8, circuits, covers, pipes. Rebuild on tfg-dev.
 [mod]
 id = "gtceu"
-version = "0.5.6"
+version = "0.5.7"
 
 [compatibility]
 horizon_revision = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"

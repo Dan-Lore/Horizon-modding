@@ -43,7 +43,7 @@ def main() -> None:
         native = {
             "schema": 1,
             "id": "adastra",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "game": "26.3",
             "horizon": REV,
             "mixins": MIXINS,

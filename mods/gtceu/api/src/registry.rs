@@ -123,29 +123,45 @@ impl Spec {
                     menu: Some(self.menu.clone()),
                 })
             }
-            Kind::Multiblock => Some(ModContainer {
-                slots: 2,
-                faces: [vec![1], vec![0], vec![0], vec![0], vec![0], vec![0]],
-                inputs: vec![0],
-                outputs: vec![1],
-                menu: Some(self.menu.clone()),
-            }),
+            Kind::Multiblock => {
+                // Controller fallback slots; real I/O is ItemHatch. Same AE2 face contract.
+                let inputs = vec![0usize];
+                let outputs = vec![1usize];
+                let both = vec![0usize, 1usize];
+                Some(ModContainer {
+                    slots: 2,
+                    faces: [
+                        outputs.clone(),
+                        inputs.clone(),
+                        both.clone(),
+                        both.clone(),
+                        both.clone(),
+                        both,
+                    ],
+                    inputs,
+                    outputs,
+                    menu: Some(self.menu.clone()),
+                })
+            }
             Kind::SteamProcessor | Kind::EuProcessor => {
+                // AE2 Interface / bus contract (Direction: Down Up North South West East):
+                // Up = insert only; Down = extract only; sides = both (ME Interface any wall).
+                // Circuit slot stays menu-only (not in faces).
                 let slots = self.slots();
-                let mut faces = [Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new(), Vec::new()];
-                for i in 0..self.inputs {
-                    faces[1].push(i);
-                    faces[2].push(i);
-                    faces[4].push(i);
-                    faces[5].push(i);
-                }
+                let inputs: Vec<usize> = (0..self.inputs).collect();
                 let outputs: Vec<usize> = (0..self.outputs)
                     .filter_map(|i| self.output.map(|first| first + i))
                     .collect();
-                for out in &outputs {
-                    faces[0].push(*out);
-                }
-                let inputs: Vec<usize> = (0..self.inputs).collect();
+                let mut both = inputs.clone();
+                both.extend(outputs.iter().copied());
+                let faces = [
+                    outputs.clone(), // Down — Import Bus / hopper pull
+                    inputs.clone(),  // Up — Export Bus / hopper push
+                    both.clone(),    // North
+                    both.clone(),    // South
+                    both.clone(),    // West
+                    both,            // East
+                ];
                 Some(ModContainer {
                     slots,
                     faces,

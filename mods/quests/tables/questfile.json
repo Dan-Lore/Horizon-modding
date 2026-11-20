@@ -53,7 +53,9 @@
       "progression": "flexible",
       "quests": [
         "ae2_book",
-        "ae2_fluix"
+        "ae2_fluix",
+        "ae2_interface",
+        "ae2_gt_hatch"
       ]
     },
     {
@@ -230,6 +232,65 @@
           "id": "fluix_xp",
           "type": "xp",
           "amount": 8
+        }
+      ]
+    },
+    {
+      "id": "ae2_interface",
+      "title": "ME Interface Bridge",
+      "dependencies": [
+        "ae2_fluix"
+      ],
+      "tasks": [
+        {
+          "id": "have_interface",
+          "type": "item",
+          "title": "Have 1 ME Interface",
+          "item": "ae2:interface",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "iface_xp",
+          "type": "xp",
+          "amount": 12
+        }
+      ]
+    },
+    {
+      "id": "ae2_gt_hatch",
+      "title": "Feed GregTech From ME",
+      "dependencies": [
+        "ae2_interface",
+        "see_gtceu"
+      ],
+      "tasks": [
+        {
+          "id": "have_macerator",
+          "type": "item",
+          "title": "Have 1 LV Macerator (Interface on top/side)",
+          "item": "gtceu:lv_macerator",
+          "count": 1
+        },
+        {
+          "id": "have_input_hatch",
+          "type": "item",
+          "title": "Have 1 input hatch for Pattern Provider",
+          "item": "gtceu:input_hatch",
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "glue_xp",
+          "type": "xp",
+          "amount": 20
+        },
+        {
+          "id": "glue_tip",
+          "type": "command",
+          "command": "say AE2→GT: Interface/Export on top or side; Import under; PP on input_hatch"
         }
       ]
     },

@@ -48,6 +48,18 @@ Always pass `-Out` (default without `-Out` targets `tfg-horizon`). Next waves: [
 
 - `fluid_pipe` / `item_pipe` blocks + crafts; `lv_drill` (circuit + motor).
 
+## AE2 Interface / bus side contract (hooks 411)
+
+Stock AE2 15.4.18 on this pin talks to GregTech through Horizon `ModContainer` / `ModFluidTanks` — no custom AE2 API in this crate.
+
+| Face | Items | Fluids |
+| --- | --- | --- |
+| **Up** | insert (inputs) | fill (input tanks) |
+| **Down** | extract (outputs) | drain (output tanks) |
+| **N/S/W/E** | insert + extract | fill + drain |
+
+Smoke: Export Bus / ME Interface on top or a side of `lv_macerator` / `hv_chemical_bath`; Import Bus under the machine; Pattern Provider against an `input_hatch` or the same side contract on a singleblock. Bath/washer still idle without water in tank 0.
+
 ## Build pin
 
 `tools/pack-gtceu.ps1` records Horizon `fdc87ae`, mixins `5a64af93`, and hooks **411** so native-builds on this pin stay beside AE2 15.4.18. The launcher still rewrites the crate revision to the game it compiles.

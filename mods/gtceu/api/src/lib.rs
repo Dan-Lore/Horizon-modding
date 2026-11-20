@@ -159,19 +159,27 @@ impl Hooks for GregTech {
 }
 
 fn tank_set(capacities: &[i32], inputs: &[usize], outputs: &[usize]) -> ModFluidTanks {
-    let all: Vec<usize> = (0..capacities.len()).collect();
+    // Same AE2 face contract as items: Down=drain, Up=fill, sides=both.
+    let in_v = inputs.to_vec();
+    let out_v = outputs.to_vec();
+    let mut both = in_v.clone();
+    for &t in &out_v {
+        if !both.contains(&t) {
+            both.push(t);
+        }
+    }
     ModFluidTanks {
         tanks: capacities.to_vec(),
         faces: [
-            all.clone(),
-            all.clone(),
-            all.clone(),
-            all.clone(),
-            all.clone(),
-            all,
+            out_v.clone(), // Down
+            in_v.clone(),  // Up
+            both.clone(),  // North
+            both.clone(),  // South
+            both.clone(),  // West
+            both,          // East
         ],
-        inputs: inputs.to_vec(),
-        outputs: outputs.to_vec(),
+        inputs: in_v,
+        outputs: out_v,
     }
 }
 

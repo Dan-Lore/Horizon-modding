@@ -39,6 +39,20 @@ pub fn baked() -> QuestFile {
         tasks: vec![Task { id: "fluix".into(), kind: "item".into(), title: "Have 1 fluix crystal".into(), item: Some("ae2:fluix_crystal".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
         rewards: vec![Reward { id: "fluix_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 8, command: None, table: None, options: vec![] }],
     });
+    quests.insert("ae2_interface".into(), Quest {
+        id: "ae2_interface".into(),
+        title: "ME Interface Bridge".into(),
+        dependencies: vec!["ae2_fluix".into()],
+        tasks: vec![Task { id: "have_interface".into(), kind: "item".into(), title: "Have 1 ME Interface".into(), item: Some("ae2:interface".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        rewards: vec![Reward { id: "iface_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 12, command: None, table: None, options: vec![] }],
+    });
+    quests.insert("ae2_gt_hatch".into(), Quest {
+        id: "ae2_gt_hatch".into(),
+        title: "Feed GregTech From ME".into(),
+        dependencies: vec!["ae2_interface".into(), "see_gtceu".into()],
+        tasks: vec![Task { id: "have_macerator".into(), kind: "item".into(), title: "Have 1 LV Macerator (Interface on top/side)".into(), item: Some("gtceu:lv_macerator".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }, Task { id: "have_input_hatch".into(), kind: "item".into(), title: "Have 1 input hatch for Pattern Provider".into(), item: Some("gtceu:input_hatch".into()), count: 1, x: 0, y: 64, z: 0, radius: 8 }],
+        rewards: vec![Reward { id: "glue_xp".into(), kind: "xp".into(), item: None, count: 1, amount: 20, command: None, table: None, options: vec![] }, Reward { id: "glue_tip".into(), kind: "command".into(), item: None, count: 1, amount: 0, command: Some("say AE2→GT: Interface/Export on top or side; Import under; PP on input_hatch".into()), table: None, options: vec![] }],
+    });
     quests.insert("see_gtceu".into(), Quest {
         id: "see_gtceu".into(),
         title: "Meet GregTech".into(),
@@ -154,7 +168,7 @@ pub fn baked() -> QuestFile {
     let chapters = vec![
         Chapter { id: "intro".into(), title: "Getting Started".into(), progression: "linear".into(), quests: vec!["welcome".into(), "gather_sticks".into(), "open_board".into()] },
         Chapter { id: "combat_demo".into(), title: "Combat Demo".into(), progression: "flexible".into(), quests: vec!["hunt_demo".into()] },
-        Chapter { id: "ae2_start".into(), title: "Applied Energistics".into(), progression: "flexible".into(), quests: vec!["ae2_book".into(), "ae2_fluix".into()] },
+        Chapter { id: "ae2_start".into(), title: "Applied Energistics".into(), progression: "flexible".into(), quests: vec!["ae2_book".into(), "ae2_fluix".into(), "ae2_interface".into(), "ae2_gt_hatch".into()] },
         Chapter { id: "gtceu_start".into(), title: "GregTech".into(), progression: "flexible".into(), quests: vec!["see_gtceu".into(), "gl_coke".into(), "gl_hot_steel".into(), "gl_oil_slice".into(), "gl_circuit".into(), "gl_conveyor".into()] },
         Chapter { id: "tfc_start".into(), title: "TerraFirmaCraft".into(), progression: "flexible".into(), quests: vec!["see_tfc".into(), "tfc_crucible".into()] },
         Chapter { id: "firmalife_start".into(), title: "Firmalife".into(), progression: "flexible".into(), quests: vec!["fl_cheese".into(), "fl_oven".into(), "fl_vat".into(), "fl_hive".into(), "fl_sprinkler".into()] },
