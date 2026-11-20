@@ -1,9 +1,0 @@
-{
-  "type": "tfc:barrel",
-  "ingredient": "minecraft:leather",
-  "result": {
-    "id": "tfc:soaked_hide",
-    "count": 1
-  },
-  "duration": 180
-}

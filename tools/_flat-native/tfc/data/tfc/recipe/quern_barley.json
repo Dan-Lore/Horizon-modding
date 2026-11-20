@@ -1,9 +1,0 @@
-{
-  "type": "tfc:quern",
-  "result": {
-    "id": "tfc:flour",
-    "count": 1
-  },
-  "duration": 120,
-  "ingredient": "tfc:barley_grain"
-}

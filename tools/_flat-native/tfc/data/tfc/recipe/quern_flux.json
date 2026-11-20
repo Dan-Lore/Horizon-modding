@@ -1,9 +1,0 @@
-{
-  "type": "tfc:quern",
-  "result": {
-    "id": "tfc:flux",
-    "count": 1
-  },
-  "duration": 100,
-  "ingredient": "tfc:limestone_gravel"
-}

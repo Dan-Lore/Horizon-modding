@@ -1,9 +1,0 @@
-{
-  "type": "tfc:barrel",
-  "ingredient": "minecraft:red_dye",
-  "result": {
-    "id": "tfc:dye_red",
-    "count": 1
-  },
-  "duration": 80
-}

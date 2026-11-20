@@ -1,8 +1,0 @@
-{
-  "invite": {
-    "sounds": ["minecraft:entity.experience_orb.pickup"]
-  },
-  "join": {
-    "sounds": ["minecraft:entity.player.levelup"]
-  }
-}

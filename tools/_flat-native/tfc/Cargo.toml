@@ -1,7 +1,0 @@
-[package]
-name = "mod-tfc"
-version = "0.2.1"
-edition = "2024"
-
-[dependencies]
-horizon-client = "0.1.0"

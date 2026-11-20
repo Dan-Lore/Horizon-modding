@@ -1,8 +1,0 @@
-{
-  "template": "minecraft:furnace",
-  "properties": {
-    "hardness": 1.2,
-    "sounds": "minecraft:stone"
-  },
-  "item": true
-}

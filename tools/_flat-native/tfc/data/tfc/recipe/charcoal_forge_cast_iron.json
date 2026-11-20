@@ -1,9 +1,0 @@
-{
-  "type": "tfc:charcoal_forge",
-  "ingredient": "tfc:nugget_hematite",
-  "result": {
-    "id": "tfc:cast_iron_ingot",
-    "count": 1
-  },
-  "duration": 200
-}

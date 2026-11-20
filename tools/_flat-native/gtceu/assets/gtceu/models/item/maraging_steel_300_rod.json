@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gtceu:item/maraging_steel_300_rod"
-  }
-}

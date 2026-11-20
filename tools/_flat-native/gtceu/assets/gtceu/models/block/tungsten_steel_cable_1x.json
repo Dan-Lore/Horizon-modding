@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "gtceu:block/tungsten_steel_cable_1x_side"
-  }
-}

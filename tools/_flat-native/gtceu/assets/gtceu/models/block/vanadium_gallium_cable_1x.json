@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "gtceu:block/vanadium_gallium_cable_1x_side"
-  }
-}

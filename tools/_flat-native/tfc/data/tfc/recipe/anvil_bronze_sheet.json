@@ -1,9 +1,0 @@
-{
-  "type": "tfc:anvil",
-  "result": {
-    "id": "tfc:bronze_sheet",
-    "count": 1
-  },
-  "duration": 200,
-  "ingredient": "tfc:bronze_ingot"
-}

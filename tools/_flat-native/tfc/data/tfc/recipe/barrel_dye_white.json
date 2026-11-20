@@ -1,9 +1,0 @@
-{
-  "type": "tfc:barrel",
-  "ingredient": "minecraft:white_dye",
-  "result": {
-    "id": "tfc:dye_white",
-    "count": 1
-  },
-  "duration": 80
-}

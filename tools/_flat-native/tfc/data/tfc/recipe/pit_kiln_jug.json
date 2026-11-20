@@ -1,9 +1,0 @@
-{
-  "type": "tfc:pit_kiln",
-  "result": {
-    "id": "tfc:jug",
-    "count": 1
-  },
-  "duration": 240,
-  "ingredient": "tfc:unfired_jug"
-}

@@ -1,8 +1,0 @@
-{
-  "template": "minecraft:furnace",
-  "properties": {
-    "hardness": 0.5,
-    "sounds": "minecraft:oak_planks"
-  },
-  "item": true
-}

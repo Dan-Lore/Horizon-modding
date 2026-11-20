@@ -1,9 +1,0 @@
-{
-  "type": "tfc:barrel",
-  "result": {
-    "id": "tfc:tannin",
-    "count": 1
-  },
-  "duration": 200,
-  "ingredient": "minecraft:oak_log"
-}

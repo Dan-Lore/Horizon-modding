@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gtceu:item/hydrochloric_acid_dust"
-  }
-}

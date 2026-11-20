@@ -1,9 +1,0 @@
-{
-  "type": "tfc:sluice",
-  "ingredient": "tfc:ore_deposit",
-  "result": {
-    "id": "tfc:nugget_native_gold",
-    "count": 1
-  },
-  "duration": 200
-}

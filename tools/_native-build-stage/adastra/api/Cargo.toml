@@ -1,9 +1,0 @@
-[package]
-name = "mod-adastra"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-# The launcher rewrites this to the Horizon source it builds the game from.
-# Pinned to the tfg-horizon native (AE2 15.4.18). Do not move this to a newer rev.
-horizon-client = { git = "https://github.com/horizon-rust/horizon", rev = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca" }

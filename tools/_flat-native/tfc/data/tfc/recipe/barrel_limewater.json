@@ -1,9 +1,0 @@
-{
-  "type": "tfc:barrel",
-  "ingredient": "minecraft:water_bucket",
-  "result": {
-    "id": "tfc:limewater",
-    "count": 1
-  },
-  "duration": 160
-}
