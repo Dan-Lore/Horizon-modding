@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "gtceu:block/steam_solid_boiler_lp_top",
+    "front": "gtceu:block/steam_solid_boiler_lp_front",
+    "side": "gtceu:block/steam_solid_boiler_lp_side",
+    "bottom": "gtceu:block/steam_solid_boiler_lp_bottom",
+    "particle": "gtceu:block/steam_solid_boiler_lp_side"
+  }
+}

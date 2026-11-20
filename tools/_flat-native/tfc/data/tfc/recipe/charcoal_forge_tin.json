@@ -1,0 +1,10 @@
+{
+  "type": "tfc:charcoal_forge",
+  "result": {
+    "id": "tfc:tin_ingot",
+    "count": 1
+  },
+  "duration": 140,
+  "heat": "melt",
+  "ingredient": "tfc:nugget_cassiterite"
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/ore_malachite",
+    "front": "tfc:block/ore_malachite",
+    "side": "tfc:block/ore_malachite",
+    "bottom": "tfc:block/ore_malachite",
+    "particle": "tfc:block/ore_malachite"
+  }
+}

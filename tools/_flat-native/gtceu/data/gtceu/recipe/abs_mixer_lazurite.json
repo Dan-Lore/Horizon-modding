@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:lazurite_dust",
+    "gtceu:lazurite_plate"
+  ],
+  "result": {
+    "id": "gtceu:lazurite_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

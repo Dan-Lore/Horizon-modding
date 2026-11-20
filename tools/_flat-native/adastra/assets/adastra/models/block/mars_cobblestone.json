@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "adastra:block/mars_cobblestone",
+    "front": "adastra:block/mars_cobblestone",
+    "side": "adastra:block/mars_cobblestone",
+    "bottom": "adastra:block/mars_cobblestone",
+    "particle": "adastra:block/mars_cobblestone"
+  }
+}

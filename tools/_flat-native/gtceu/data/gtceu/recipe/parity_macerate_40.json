@@ -1,0 +1,11 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": "gtceu:electrum_plate",
+  "result": {
+    "id": "gtceu:electrum_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "steam": 1
+}

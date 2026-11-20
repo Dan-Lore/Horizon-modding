@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:certus_quartz_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:certus_quartz_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:certus_quartz_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

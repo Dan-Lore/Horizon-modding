@@ -1,0 +1,14 @@
+{
+  "machine_hum": {
+    "sounds": ["minecraft:block.beacon.ambient"]
+  },
+  "oxygen_hiss": {
+    "sounds": ["minecraft:block.bubble_column.upwards_ambient"]
+  },
+  "pad_click": {
+    "sounds": ["minecraft:block.metal.place"]
+  },
+  "refinery": {
+    "sounds": ["minecraft:block.lava.ambient"]
+  }
+}

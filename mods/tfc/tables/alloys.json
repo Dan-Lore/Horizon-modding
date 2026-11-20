@@ -19,6 +19,14 @@
       "minor": "zinc",
       "min": 0.88,
       "max": 0.92
+    },
+    {
+      "id": "black_bronze",
+      "output": "tfc:black_bronze_ingot",
+      "major": "copper",
+      "minor": "bismuth",
+      "min": 0.88,
+      "max": 0.92
     }
   ]
 }

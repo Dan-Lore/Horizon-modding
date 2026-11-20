@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:lepidolite_dust",
+    "gtceu:lepidolite_plate"
+  ],
+  "result": {
+    "id": "gtceu:lepidolite_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

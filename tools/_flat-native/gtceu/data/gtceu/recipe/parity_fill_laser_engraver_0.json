@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:laser_engraver",
+  "duration": 80,
+  "eu": 2,
+  "ingredients": [
+    "gtceu:iron_dust",
+    "minecraft:redstone"
+  ],
+  "result": {
+    "id": "gtceu:iron_ingot",
+    "count": 1
+  }
+}

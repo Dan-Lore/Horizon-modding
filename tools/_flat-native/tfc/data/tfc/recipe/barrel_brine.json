@@ -1,0 +1,9 @@
+{
+  "type": "tfc:barrel",
+  "ingredient": "minecraft:sugar",
+  "result": {
+    "id": "tfc:brine",
+    "count": 1
+  },
+  "duration": 120
+}

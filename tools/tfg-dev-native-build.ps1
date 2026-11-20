@@ -18,7 +18,12 @@ param(
 
 $ErrorActionPreference = "Stop"
 $Root = Split-Path $PSScriptRoot -Parent
-$Exe = Join-Path $Root "launcher\windows-x64\horizon-launcher.exe"
+# Prefer the Nov-10 portable zip launcher for mixins/.hmod workshop packs.
+# windows-x64 0.2.0 expects flat [native] crates (horizon-mod-api) and rejects mixins packs.
+$Exe = Join-Path $Root "launcher\_old-launcher\horizon-launcher.exe"
+if (-not (Test-Path $Exe)) {
+    $Exe = Join-Path $Root "launcher\windows-x64\horizon-launcher.exe"
+}
 if (-not (Test-Path $Exe)) {
     throw "missing launcher: $Exe"
 }
@@ -79,6 +84,7 @@ for hmod in (inst / 'horizon-native-mods').glob('*.hmod'):
 "@
 
 Write-Host "== native-build tfg-dev on $Nightly =="
+# Old launcher still accepts --ignore-pins for AE2 + workshop mixins packs.
 & $Exe native-build --instance tfg-dev --version $Nightly --trust-native-code --ignore-pins
 if ($LASTEXITCODE -ne 0) {
     Write-Host "native-build failed exit=$LASTEXITCODE — see %AppData%\Roaming\horizon-launcher\native\build.log"

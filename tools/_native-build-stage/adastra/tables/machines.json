@@ -1,0 +1,92 @@
+[
+  {
+    "id": "coal_generator",
+    "kind": "generator",
+    "fuel": true,
+    "inputs": 1,
+    "recipe": null,
+    "eu_cap": 16000,
+    "rate": 40
+  },
+  {
+    "id": "solar_panel",
+    "kind": "solar",
+    "fuel": false,
+    "inputs": 0,
+    "recipe": null,
+    "eu_cap": 8000,
+    "rate": 8
+  },
+  {
+    "id": "compressor",
+    "kind": "processor",
+    "fuel": false,
+    "inputs": 1,
+    "recipe": "compressor",
+    "eu_cap": 16000,
+    "rate": 32
+  },
+  {
+    "id": "oxygen_loader",
+    "kind": "loader",
+    "fuel": false,
+    "inputs": 1,
+    "recipe": "oxygen_loader",
+    "eu_cap": 16000,
+    "rate": 16
+  },
+  {
+    "id": "fuel_refinery",
+    "kind": "processor",
+    "fuel": false,
+    "inputs": 1,
+    "recipe": "fuel_refinery",
+    "eu_cap": 16000,
+    "rate": 24
+  },
+  {
+    "id": "nasa_workbench",
+    "kind": "storage",
+    "fuel": false,
+    "inputs": 9,
+    "recipe": null,
+    "eu_cap": 0,
+    "rate": 0
+  },
+  {
+    "id": "oxygen_distributor",
+    "kind": "distributor",
+    "fuel": false,
+    "inputs": 1,
+    "recipe": null,
+    "eu_cap": 16000,
+    "rate": 8
+  },
+  {
+    "id": "cryo_freezer",
+    "kind": "processor",
+    "fuel": false,
+    "inputs": 1,
+    "recipe": "cryo_freezer",
+    "eu_cap": 16000,
+    "rate": 16
+  },
+  {
+    "id": "vacuum_marker",
+    "kind": "vacuum",
+    "fuel": false,
+    "inputs": 0,
+    "recipe": null,
+    "eu_cap": 0,
+    "rate": 0
+  },
+  {
+    "id": "launch_pad",
+    "kind": "marker",
+    "fuel": false,
+    "inputs": 0,
+    "recipe": null,
+    "eu_cap": 0,
+    "rate": 0
+  }
+]

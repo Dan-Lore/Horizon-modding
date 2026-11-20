@@ -149,7 +149,15 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             one("tfc:rye_grain", "tfc:flour", 120),
             one("tfc:limestone_gravel", "tfc:flux", 100),
         ],
-        "tfc:barrel" => vec![one("minecraft:oak_log", "tfc:tannin", 200)],
+        "tfc:barrel" => vec![
+            one("minecraft:oak_log", "tfc:tannin", 200),
+            one("minecraft:water_bucket", "tfc:limewater", 160),
+            one("minecraft:sugar", "tfc:brine", 120),
+            one("minecraft:red_dye", "tfc:dye_red", 80),
+            one("minecraft:blue_dye", "tfc:dye_blue", 80),
+            one("minecraft:white_dye", "tfc:dye_white", 80),
+            one("minecraft:leather", "tfc:soaked_hide", 180),
+        ],
         "tfc:pit_kiln" => vec![
             one("tfc:unfired_vessel", "tfc:vessel", 240),
             one("tfc:unfired_jug", "tfc:jug", 240),
@@ -161,7 +169,11 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             duration: 320,
             heat: HeatNeed::None,
         }],
-        "tfc:sluice" => vec![one("tfc:ore_deposit", "tfc:nugget_native_copper", 160)],
+        "tfc:sluice" => vec![
+            one("tfc:ore_deposit", "tfc:nugget_native_copper", 160),
+            one("tfc:ore_deposit", "tfc:nugget_native_gold", 200),
+            one("tfc:ore_deposit", "tfc:nugget_hematite", 180),
+        ],
         "tfc:charcoal_pit" => vec![one("minecraft:oak_log", "minecraft:charcoal", 240)],
         _ => Vec::new(),
     }

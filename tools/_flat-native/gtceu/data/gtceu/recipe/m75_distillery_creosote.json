@@ -1,0 +1,21 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {
+    "item": "gtceu:coke"
+  },
+  "fluid_in": {
+    "id": "minecraft:water",
+    "amount": 250
+  },
+  "fluid_out": {
+    "id": "gtceu:creosote",
+    "amount": 250
+  },
+  "result": {
+    "id": "gtceu:coke",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 12,
+  "min_voltage": 32
+}

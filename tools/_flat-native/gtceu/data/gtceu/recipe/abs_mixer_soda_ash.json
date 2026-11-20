@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:soda_ash_dust",
+    "gtceu:soda_ash_plate"
+  ],
+  "result": {
+    "id": "gtceu:soda_ash_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

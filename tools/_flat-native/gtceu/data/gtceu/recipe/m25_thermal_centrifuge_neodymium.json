@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:neodymium_dust"
+  },
+  "result": {
+    "id": "gtceu:neodymium_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

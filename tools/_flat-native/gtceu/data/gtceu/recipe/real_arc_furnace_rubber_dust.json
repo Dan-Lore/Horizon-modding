@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:arc_furnace",
+  "result": {
+    "id": "gtceu:rubber_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "ingredient": "gtceu:rubber_dust"
+}

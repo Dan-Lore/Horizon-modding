@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "gtceu:block/luv_casing_top",
+    "bottom": "gtceu:block/luv_casing_bottom",
+    "side": "gtceu:block/luv_casing_side",
+    "front": "gtceu:block/luv_extruder_front_on",
+    "particle": "gtceu:block/luv_casing_side"
+  }
+}

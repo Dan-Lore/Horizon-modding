@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:tungsten_dust"
+  },
+  "result": {
+    "id": "gtceu:tungsten_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {
+    "item": "gtceu:deepslate_dust"
+  },
+  "result": {
+    "id": "gtceu:deepslate_plate",
+    "count": 1
+  },
+  "duration": 140,
+  "eu": 48,
+  "min_voltage": 32
+}

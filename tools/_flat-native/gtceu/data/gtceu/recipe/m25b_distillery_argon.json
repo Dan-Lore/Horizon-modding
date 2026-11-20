@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {
+    "item": "gtceu:argon_dust"
+  },
+  "result": {
+    "id": "gtceu:argon_plate",
+    "count": 1
+  },
+  "duration": 140,
+  "eu": 48
+}

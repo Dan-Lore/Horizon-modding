@@ -1,0 +1,11 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": "gtceu:manganese_plate",
+  "result": {
+    "id": "gtceu:manganese_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "steam": 1
+}

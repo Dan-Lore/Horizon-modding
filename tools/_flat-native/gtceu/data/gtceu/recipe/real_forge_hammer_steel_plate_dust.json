@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:forge_hammer",
+  "result": {
+    "id": "gtceu:steel_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "gtceu:steel_plate"
+}

@@ -1,6 +1,6 @@
 id = "adastra"
 name = "Ad Astra"
-version = "0.1.0"
+version = "0.1.1"
 description = "Ad Astra–inspired overworld materials, FE, oxygen on Horizon (rewrite). Planet dimensions blocked on hooks 411."
 authors = ["Horizon-modding workshop"]
 api = "0.2"

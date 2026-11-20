@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/marble_raw",
+    "front": "tfc:block/marble_raw",
+    "side": "tfc:block/marble_raw",
+    "bottom": "tfc:block/marble_raw",
+    "particle": "tfc:block/marble_raw"
+  }
+}

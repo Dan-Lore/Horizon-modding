@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:livermorium_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:livermorium_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:livermorium_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

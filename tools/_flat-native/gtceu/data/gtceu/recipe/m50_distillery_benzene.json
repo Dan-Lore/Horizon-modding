@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {
+    "item": "gtceu:benzene_dust"
+  },
+  "result": {
+    "id": "gtceu:benzene_plate",
+    "count": 1
+  },
+  "duration": 140,
+  "eu": 48
+}

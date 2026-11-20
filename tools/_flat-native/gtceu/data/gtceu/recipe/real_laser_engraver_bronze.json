@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:laser_engraver",
+  "result": {
+    "id": "gtceu:bronze_foil",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48,
+  "ingredient": "gtceu:bronze_plate"
+}

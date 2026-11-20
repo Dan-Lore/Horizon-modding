@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:rock_salt_dust",
+    "gtceu:rock_salt_plate"
+  ],
+  "result": {
+    "id": "gtceu:rock_salt_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "result": {
+    "id": "minecraft:gold_ingot",
+    "count": 1
+  },
+  "duration": 120,
+  "eu": 32,
+  "ingredients": [
+    "gtceu:gold_dust",
+    "minecraft:redstone"
+  ]
+}

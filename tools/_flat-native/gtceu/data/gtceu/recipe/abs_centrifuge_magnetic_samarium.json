@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:magnetic_samarium_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:magnetic_samarium_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:magnetic_samarium_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

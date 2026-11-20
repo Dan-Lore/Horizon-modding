@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:nitrochlorobenzene_dust",
+    "gtceu:nitrochlorobenzene_plate"
+  ],
+  "result": {
+    "id": "gtceu:nitrochlorobenzene_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

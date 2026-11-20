@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:extractor",
+  "result": {
+    "id": "gtceu:bronze_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": "gtceu:bronze_plate"
+}

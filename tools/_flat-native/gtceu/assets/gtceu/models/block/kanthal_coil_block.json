@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "gtceu:block/kanthal_coil_block",
+    "bottom": "gtceu:block/kanthal_coil_block",
+    "side": "gtceu:block/kanthal_coil_block",
+    "front": "gtceu:block/kanthal_coil_block",
+    "particle": "gtceu:block/kanthal_coil_block"
+  }
+}

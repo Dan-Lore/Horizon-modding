@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:raw_growth_medium_dust",
+    "gtceu:raw_growth_medium_plate"
+  ],
+  "result": {
+    "id": "gtceu:raw_growth_medium_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:sulfur_plate",
+    "gtceu:sulfur_dust"
+  ],
+  "result": {
+    "id": "gtceu:sulfur_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

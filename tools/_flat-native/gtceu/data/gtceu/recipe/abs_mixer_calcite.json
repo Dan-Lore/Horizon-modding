@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:calcite_dust",
+    "gtceu:calcite_plate"
+  ],
+  "result": {
+    "id": "gtceu:calcite_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

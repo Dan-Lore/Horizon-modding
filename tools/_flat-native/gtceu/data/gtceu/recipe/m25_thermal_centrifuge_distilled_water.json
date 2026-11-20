@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:distilled_water_dust"
+  },
+  "result": {
+    "id": "gtceu:distilled_water_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

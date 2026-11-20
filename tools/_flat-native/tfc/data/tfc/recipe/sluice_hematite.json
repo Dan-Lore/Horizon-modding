@@ -1,0 +1,9 @@
+{
+  "type": "tfc:sluice",
+  "ingredient": "tfc:ore_deposit",
+  "result": {
+    "id": "tfc:nugget_hematite",
+    "count": 1
+  },
+  "duration": 180
+}

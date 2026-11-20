@@ -1,0 +1,10 @@
+{
+  "type": "tfc:charcoal_forge",
+  "result": {
+    "id": "tfc:bronze_hammer_head",
+    "count": 1
+  },
+  "duration": 200,
+  "heat": "melt",
+  "ingredient": "tfc:bronze_ingot"
+}

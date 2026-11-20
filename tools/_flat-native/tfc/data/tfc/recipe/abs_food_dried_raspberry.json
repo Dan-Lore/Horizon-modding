@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "id": "tfc:food_dried_raspberry",
+    "count": 1
+  }
+}

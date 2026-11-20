@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/barrel",
+    "front": "tfc:block/barrel",
+    "side": "tfc:block/barrel",
+    "bottom": "tfc:block/barrel",
+    "particle": "tfc:block/barrel"
+  }
+}

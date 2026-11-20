@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:electrum_dust",
+    "gtceu:electrum_plate"
+  ],
+  "result": {
+    "id": "gtceu:electrum_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

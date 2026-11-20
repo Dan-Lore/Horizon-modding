@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "gtceu:block/energy_hatch",
+    "bottom": "gtceu:block/energy_hatch",
+    "side": "gtceu:block/energy_hatch",
+    "front": "gtceu:block/energy_hatch_on",
+    "particle": "gtceu:block/energy_hatch"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:nitrous_oxide_dust",
+    "gtceu:nitrous_oxide_plate"
+  ],
+  "result": {
+    "id": "gtceu:nitrous_oxide_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

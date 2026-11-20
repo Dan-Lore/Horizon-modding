@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:forge_hammer",
+  "ingredient": {
+    "item": "gtceu:maraging_steel_300_ingot"
+  },
+  "result": {
+    "id": "gtceu:maraging_steel_300_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

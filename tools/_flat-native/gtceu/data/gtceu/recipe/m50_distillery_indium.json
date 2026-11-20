@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:distillery",
+  "ingredient": {
+    "item": "gtceu:indium_dust"
+  },
+  "result": {
+    "id": "gtceu:indium_plate",
+    "count": 1
+  },
+  "duration": 140,
+  "eu": 48
+}

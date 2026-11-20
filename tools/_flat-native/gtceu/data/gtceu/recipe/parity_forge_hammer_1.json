@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:forge_hammer",
+  "result": {
+    "id": "minecraft:sand",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 2,
+  "ingredient": "minecraft:gravel"
+}

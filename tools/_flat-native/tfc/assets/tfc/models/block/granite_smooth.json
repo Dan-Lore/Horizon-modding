@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/granite_smooth",
+    "front": "tfc:block/granite_smooth",
+    "side": "tfc:block/granite_smooth",
+    "bottom": "tfc:block/granite_smooth",
+    "particle": "tfc:block/granite_smooth"
+  }
+}

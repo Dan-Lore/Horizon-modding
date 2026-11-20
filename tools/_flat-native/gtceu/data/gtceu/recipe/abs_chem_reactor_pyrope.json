@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:pyrope_dust",
+    "gtceu:pyrope_plate"
+  ],
+  "result": {
+    "id": "gtceu:pyrope_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

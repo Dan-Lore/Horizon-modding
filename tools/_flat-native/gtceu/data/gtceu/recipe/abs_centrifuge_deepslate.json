@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:deepslate_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:deepslate_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:deepslate_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

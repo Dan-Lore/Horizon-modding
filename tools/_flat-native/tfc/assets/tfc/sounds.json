@@ -1,0 +1,17 @@
+{
+  "quern_grind": {
+    "sounds": ["minecraft:block.grindstone.use"]
+  },
+  "bellows": {
+    "sounds": ["minecraft:block.wool.place"]
+  },
+  "anvil_hit": {
+    "sounds": ["minecraft:block.anvil.hit"]
+  },
+  "firepit": {
+    "sounds": ["minecraft:block.campfire.crackle"]
+  },
+  "barrel_open": {
+    "sounds": ["minecraft:block.barrel.open"]
+  }
+}

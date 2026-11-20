@@ -153,10 +153,30 @@ fn tick_distributor(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEnt
     if has_tank && fe(entity) >= rate {
         set_fe(entity, fe(entity) - rate, spec.fe_cap);
         working = true;
-        // Mark distributor as active for player_tick vacuum checks via NBT.
-        entity.nbt.insert("Active".into(), horizon_client::mod_api::Tag::Int(1));
+        // Consume O₂ tank charge over time (full tank lasts ~100 active ticks).
+        let drain = match entity.nbt.get(&"O2Drain".into()) {
+            Some(horizon_client::mod_api::Tag::Int(v)) => *v + 1,
+            _ => 1,
+        };
+        if drain >= 100 {
+            if let Some(stack) = entity.items.get_mut(0).and_then(|s| s.as_mut()) {
+                stack.item = "adastra:oxygen_tank_empty".into();
+            }
+            entity
+                .nbt
+                .insert("O2Drain".into(), horizon_client::mod_api::Tag::Int(0));
+        } else {
+            entity
+                .nbt
+                .insert("O2Drain".into(), horizon_client::mod_api::Tag::Int(drain));
+        }
+        entity
+            .nbt
+            .insert("Active".into(), horizon_client::mod_api::Tag::Int(1));
     } else {
-        entity.nbt.insert("Active".into(), horizon_client::mod_api::Tag::Int(0));
+        entity
+            .nbt
+            .insert("Active".into(), horizon_client::mod_api::Tag::Int(0));
     }
     sync_data(
         entity,

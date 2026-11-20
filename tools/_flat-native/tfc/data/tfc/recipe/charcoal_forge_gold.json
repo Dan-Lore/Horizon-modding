@@ -1,0 +1,10 @@
+{
+  "type": "tfc:charcoal_forge",
+  "result": {
+    "id": "minecraft:gold_ingot",
+    "count": 1
+  },
+  "duration": 180,
+  "heat": "melt",
+  "ingredient": "tfc:nugget_native_gold"
+}

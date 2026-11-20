@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:butadiene_dust",
+    "gtceu:butadiene_plate"
+  ],
+  "result": {
+    "id": "gtceu:butadiene_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

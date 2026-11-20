@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:maraging_steel_300_dust",
+    "gtceu:maraging_steel_300_plate"
+  ],
+  "result": {
+    "id": "gtceu:maraging_steel_300_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

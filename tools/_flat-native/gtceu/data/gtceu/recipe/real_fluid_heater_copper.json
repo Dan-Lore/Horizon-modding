@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:fluid_heater",
+  "result": {
+    "id": "gtceu:copper_dust",
+    "count": 1
+  },
+  "duration": 60,
+  "eu": 24,
+  "ingredient": "gtceu:copper_dust"
+}

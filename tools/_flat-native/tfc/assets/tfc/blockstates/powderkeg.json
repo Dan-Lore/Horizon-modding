@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,lit=false": {
+      "model": "tfc:block/powderkeg"
+    },
+    "facing=north,lit=true": {
+      "model": "tfc:block/powderkeg"
+    },
+    "facing=south,lit=false": {
+      "model": "tfc:block/powderkeg",
+      "y": 180
+    },
+    "facing=south,lit=true": {
+      "model": "tfc:block/powderkeg",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "tfc:block/powderkeg",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "tfc:block/powderkeg",
+      "y": 270
+    },
+    "facing=east,lit=false": {
+      "model": "tfc:block/powderkeg",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "tfc:block/powderkeg",
+      "y": 90
+    }
+  }
+}

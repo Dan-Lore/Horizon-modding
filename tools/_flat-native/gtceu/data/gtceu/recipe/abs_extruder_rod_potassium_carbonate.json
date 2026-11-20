@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:extruder",
+  "ingredient": {
+    "item": "gtceu:potassium_carbonate_ingot"
+  },
+  "result": {
+    "id": "gtceu:potassium_carbonate_rod",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

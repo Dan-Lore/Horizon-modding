@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:cutter",
+  "result": {
+    "id": "gtceu:cupronickel_screw",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "gtceu:cupronickel_plate"
+}

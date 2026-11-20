@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:diesel_plate",
+    "gtceu:diesel_dust"
+  ],
+  "result": {
+    "id": "gtceu:diesel_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

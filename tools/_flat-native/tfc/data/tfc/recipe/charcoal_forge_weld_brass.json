@@ -1,0 +1,13 @@
+{
+  "type": "tfc:charcoal_forge",
+  "result": {
+    "id": "tfc:brass_double_ingot",
+    "count": 1
+  },
+  "duration": 160,
+  "heat": "weld",
+  "ingredients": [
+    "tfc:brass_ingot",
+    "tfc:brass_ingot"
+  ]
+}

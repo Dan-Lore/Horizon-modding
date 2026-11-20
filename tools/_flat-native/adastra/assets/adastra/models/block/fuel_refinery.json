@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "adastra:block/fuel_refinery",
+    "front": "adastra:block/fuel_refinery",
+    "side": "adastra:block/fuel_refinery",
+    "bottom": "adastra:block/fuel_refinery",
+    "particle": "adastra:block/fuel_refinery"
+  }
+}

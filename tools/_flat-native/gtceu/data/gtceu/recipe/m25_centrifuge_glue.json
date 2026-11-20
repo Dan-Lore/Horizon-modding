@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:glue_dust"
+  },
+  "result": {
+    "id": "gtceu:glue_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

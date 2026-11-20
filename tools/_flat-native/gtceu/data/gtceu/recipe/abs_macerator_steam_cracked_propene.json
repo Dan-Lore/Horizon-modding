@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:macerator",
+  "ingredient": {
+    "item": "gtceu:steam_cracked_propene_ingot"
+  },
+  "result": {
+    "id": "gtceu:steam_cracked_propene_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

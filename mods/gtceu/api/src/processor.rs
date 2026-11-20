@@ -2,7 +2,7 @@
 
 use crate::energy::{eu, progress, set_eu, set_packet_voltage, set_progress, set_steam, steam, sync_data, STEAM_CAP};
 use crate::eu_rules;
-use crate::fluids::{self, STEAM};
+use crate::fluids::{self, WATER, STEAM};
 use crate::net::transfer_eu_in;
 use crate::recipes::{self, can_output, ingredient_accepts, merge_output, MachineRecipe};
 use crate::registry::{Kind, Spec};
@@ -10,6 +10,9 @@ use crate::world_machines;
 use horizon_client::mod_api::{Host, ModBlockEntity};
 
 const STEAM_TANK: i32 = 16_000;
+const FLUID_TANK: i32 = 16_000;
+/// Washer / bath always spend this much water when the recipe omits fluid_in.
+const WASH_WATER_MB: i32 = 100;
 
 pub fn tick(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spec: &Spec) {
     let Some(recipe_type) = spec.recipe_type.as_deref() else {
@@ -27,6 +30,24 @@ pub fn tick(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spe
         }
         Kind::EuProcessor | Kind::Multiblock => transfer_eu_in(host, pos, entity, spec),
         _ => {}
+    }
+
+    // Chem / wash machines: pull water from neighbours / source blocks / buckets.
+    if needs_process_water(recipe_type) {
+        fluids::pull_from_neighbours(host, pos, entity, 0, 2, WATER, FLUID_TANK, 500);
+        fluids::absorb_water_block(host, pos, entity, 0, 2, FLUID_TANK, 250);
+        let _ = fluids::take_bucket(
+            entity,
+            0,
+            "minecraft:water_bucket",
+            0,
+            2,
+            WATER,
+            FLUID_TANK,
+        );
+    } else if recipe_type.contains("distillery") || recipe_type.contains("chemical_reactor") {
+        fluids::pull_from_neighbours(host, pos, entity, 0, 2, WATER, FLUID_TANK, 500);
+        fluids::absorb_water_block(host, pos, entity, 0, 2, FLUID_TANK, 250);
     }
 
     let recipes = recipes::load(host, recipe_type);
@@ -81,12 +102,12 @@ pub fn tick(host: &mut dyn Host, pos: [i32; 3], entity: &mut ModBlockEntity, spe
             }
             _ => false,
         };
-        let fluids_ok = fluid_ready(entity, recipe);
+        let fluids_ok = fluid_ready(entity, recipe, recipe_type);
         if paid && fluids_ok {
             prog += 1;
             working = true;
             if prog >= duration {
-                if complete_fluids(entity, recipe) {
+                if complete_fluids(entity, recipe, recipe_type) {
                     consume_inputs(entity, item_inputs(spec));
                     let roll = pos[0]
                         .wrapping_mul(31)
@@ -150,26 +171,47 @@ fn circuit_ok(entity: &ModBlockEntity, spec: &Spec, recipe: &MachineRecipe) -> b
     }
 }
 
-fn fluid_ready(entity: &ModBlockEntity, recipe: &MachineRecipe) -> bool {
-    let Some((id, amount)) = recipe.fluid_in.as_ref() else {
-        return true;
-    };
-    fluids::amount(entity, 0, id) >= *amount
+fn needs_process_water(recipe_type: &str) -> bool {
+    recipe_type.contains("ore_washer") || recipe_type.contains("chemical_bath")
 }
 
-fn complete_fluids(entity: &mut ModBlockEntity, recipe: &MachineRecipe) -> bool {
-    if let Some((id, amount)) = recipe.fluid_out.as_ref() {
-        if !fluids::can_fill(entity, 1, id, *amount, STEAM_TANK) {
-            return false;
-        }
-    }
+fn effective_fluid_in<'a>(
+    recipe: &'a MachineRecipe,
+    recipe_type: &str,
+) -> Option<(&'a str, i32)> {
     if let Some((id, amount)) = recipe.fluid_in.as_ref() {
-        if fluids::drain(entity, 0, 2, id, *amount) < *amount {
+        return Some((id.as_str(), *amount));
+    }
+    if needs_process_water(recipe_type) {
+        return Some((WATER, WASH_WATER_MB));
+    }
+    None
+}
+
+fn fluid_ready(entity: &ModBlockEntity, recipe: &MachineRecipe, recipe_type: &str) -> bool {
+    let Some((id, amount)) = effective_fluid_in(recipe, recipe_type) else {
+        return true;
+    };
+    fluids::amount(entity, 0, id) >= amount
+}
+
+fn complete_fluids(
+    entity: &mut ModBlockEntity,
+    recipe: &MachineRecipe,
+    recipe_type: &str,
+) -> bool {
+    if let Some((id, amount)) = recipe.fluid_out.as_ref() {
+        if !fluids::can_fill(entity, 1, id, *amount, FLUID_TANK) {
+            return false;
+        }
+    }
+    if let Some((id, amount)) = effective_fluid_in(recipe, recipe_type) {
+        if fluids::drain(entity, 0, 2, id, amount) < amount {
             return false;
         }
     }
     if let Some((id, amount)) = recipe.fluid_out.as_ref() {
-        let left = fluids::fill(entity, 1, 2, id, *amount, STEAM_TANK);
+        let left = fluids::fill(entity, 1, 2, id, *amount, FLUID_TANK);
         if left > 0 {
             return false;
         }

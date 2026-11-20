@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:tungsten_steel_plate",
+    "gtceu:tungsten_steel_dust"
+  ],
+  "result": {
+    "id": "gtceu:tungsten_steel_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

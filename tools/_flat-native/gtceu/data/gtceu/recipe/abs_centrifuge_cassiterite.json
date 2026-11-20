@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:cassiterite_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:cassiterite_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:cassiterite_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

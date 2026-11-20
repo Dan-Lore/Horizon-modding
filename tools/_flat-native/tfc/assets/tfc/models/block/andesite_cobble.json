@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/andesite_cobble",
+    "front": "tfc:block/andesite_cobble",
+    "side": "tfc:block/andesite_cobble",
+    "bottom": "tfc:block/andesite_cobble",
+    "particle": "tfc:block/andesite_cobble"
+  }
+}

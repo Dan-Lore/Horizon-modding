@@ -1,0 +1,114 @@
+[
+  {
+    "id": "tfc:firepit",
+    "fuel": true,
+    "inputs": 1,
+    "output": 2,
+    "storage": false,
+    "recipe_type": "tfc:firepit"
+  },
+  {
+    "id": "tfc:charcoal_forge",
+    "fuel": true,
+    "inputs": 2,
+    "output": 3,
+    "storage": false,
+    "recipe_type": "tfc:charcoal_forge"
+  },
+  {
+    "id": "tfc:crucible",
+    "fuel": true,
+    "inputs": 2,
+    "output": 3,
+    "storage": false,
+    "recipe_type": "tfc:crucible"
+  },
+  {
+    "id": "tfc:bloomery",
+    "fuel": true,
+    "inputs": 1,
+    "output": 2,
+    "storage": false,
+    "recipe_type": "tfc:bloomery"
+  },
+  {
+    "id": "tfc:anvil",
+    "fuel": false,
+    "inputs": 1,
+    "output": 1,
+    "storage": false,
+    "recipe_type": "tfc:anvil"
+  },
+  {
+    "id": "tfc:knapping",
+    "fuel": false,
+    "inputs": 25,
+    "output": 25,
+    "storage": false,
+    "recipe_type": null
+  },
+  {
+    "id": "tfc:quern",
+    "fuel": false,
+    "inputs": 1,
+    "output": 1,
+    "storage": false,
+    "recipe_type": "tfc:quern"
+  },
+  {
+    "id": "tfc:barrel",
+    "fuel": false,
+    "inputs": 1,
+    "output": 1,
+    "storage": false,
+    "recipe_type": "tfc:barrel"
+  },
+  {
+    "id": "tfc:pit_kiln",
+    "fuel": false,
+    "inputs": 1,
+    "output": 1,
+    "storage": false,
+    "recipe_type": "tfc:pit_kiln"
+  },
+  {
+    "id": "tfc:blast_furnace",
+    "fuel": true,
+    "inputs": 2,
+    "output": 3,
+    "storage": false,
+    "recipe_type": "tfc:blast_furnace"
+  },
+  {
+    "id": "tfc:sluice",
+    "fuel": false,
+    "inputs": 1,
+    "output": 1,
+    "storage": false,
+    "recipe_type": "tfc:sluice"
+  },
+  {
+    "id": "tfc:charcoal_pit",
+    "fuel": false,
+    "inputs": 1,
+    "output": 1,
+    "storage": false,
+    "recipe_type": "tfc:charcoal_pit"
+  },
+  {
+    "id": "tfc:log_pile",
+    "fuel": false,
+    "inputs": 9,
+    "output": null,
+    "storage": true,
+    "recipe_type": null
+  },
+  {
+    "id": "tfc:small_vessel",
+    "fuel": false,
+    "inputs": 4,
+    "output": null,
+    "storage": true,
+    "recipe_type": null
+  }
+]

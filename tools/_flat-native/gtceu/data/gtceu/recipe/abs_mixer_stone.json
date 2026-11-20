@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:stone_dust",
+    "gtceu:stone_plate"
+  ],
+  "result": {
+    "id": "gtceu:stone_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

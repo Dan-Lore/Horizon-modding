@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredient": {
+    "item": "gtceu:caesium_dust"
+  },
+  "result": {
+    "id": "gtceu:caesium_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

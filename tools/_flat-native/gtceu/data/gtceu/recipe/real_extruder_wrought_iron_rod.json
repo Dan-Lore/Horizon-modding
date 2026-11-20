@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:extruder",
+  "result": {
+    "id": "gtceu:wrought_iron_rod",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "gtceu:wrought_iron_ingot"
+}

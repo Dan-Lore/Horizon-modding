@@ -1,4 +1,4 @@
-# Pack mods/gtceu into a combined .hmod (POSIX zip paths).
+﻿# Pack mods/gtceu into a combined .hmod (POSIX zip paths).
 # Default: pack instance tfg-horizon on Nightly fdc87ae.
 param(
     [switch]$Working,
@@ -21,11 +21,10 @@ Copy-Item (Join-Path $src "README.md"), (Join-Path $src "NOTICE") (Join-Path $st
 $native = @{
     schema  = 1
     id      = "gtceu"
-    version = "0.5.5"
+    version = "0.5.6"
     game    = "26.3"
     horizon = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
     mixins  = "5a64af938ec86b00d53d16a408aabc0038fb3e57"
-    hooks   = 411
 } | ConvertTo-Json -Compress
 $nativePath = Join-Path $stage "horizon-native.json"
 [System.IO.File]::WriteAllText($nativePath, $native)
@@ -43,3 +42,4 @@ with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
             z.write(path, path.relative_to(stage).as_posix())
 print(out, out.stat().st_size)
 "@
+

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "adastra:steel_plate"
+    },
+    {
+      "item": "adastra:steel_plate"
+    },
+    {
+      "item": "adastra:desh_plate"
+    },
+    {
+      "item": "adastra:rocket_fuel"
+    },
+    {
+      "item": "adastra:rocket_fuel"
+    },
+    {
+      "item": "adastra:ostrum_ingot"
+    }
+  ],
+  "result": {
+    "id": "adastra:rocket_t1",
+    "count": 1
+  }
+}

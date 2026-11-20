@@ -152,6 +152,18 @@ fn tick_hatch_machine(
     let Some(output_pos) = shell.output_hatch else {
         return;
     };
+    // Multiblock fluid chem: pull water into controller tank 0.
+    crate::fluids::pull_from_neighbours(
+        host,
+        pos,
+        entity,
+        0,
+        2,
+        crate::fluids::WATER,
+        16_000,
+        500,
+    );
+
     let recipes = recipes::load(host, recipe_type);
     let mut working = false;
     let (mut prog, _) = crate::energy::progress(entity);
@@ -162,13 +174,21 @@ fn tick_hatch_machine(
     });
     let inputs = snapshot_in.unwrap_or_default();
     if let Some(recipe) = recipes.iter().find(|recipe| {
+        let fluid_only = recipe.inputs.is_empty() && recipe.fluid_in.is_some();
+        let items_ok = fluid_only
+            || (recipe.inputs.len() <= 2
+                && recipe.inputs.iter().enumerate().all(|(i, ing)| {
+                    inputs.get(i).and_then(|s| s.as_ref()).is_some_and(|stack| {
+                        stack.count > 0 && recipes::ingredient_accepts(ing, stack.item.as_ref())
+                    })
+                }));
+        let fluids_ok = match recipe.fluid_in.as_ref() {
+            None => true,
+            Some((id, amount)) => crate::fluids::amount(entity, 0, id) >= *amount,
+        };
         (!use_heat || (recipe.heat > 0 && recipe.heat <= shell.heat))
-            && recipe.inputs.len() <= 2
-            && recipe.inputs.iter().enumerate().all(|(i, ing)| {
-                inputs.get(i).and_then(|s| s.as_ref()).is_some_and(|stack| {
-                    stack.count > 0 && recipes::ingredient_accepts(ing, stack.item.as_ref())
-                })
-            })
+            && items_ok
+            && fluids_ok
             && eu_rules::overclock(recipe.min_voltage, spec.voltage.max(32), 1, 1).is_some()
     }) {
         let (duration, eu_cost) = eu_rules::overclock(
@@ -185,9 +205,14 @@ fn tick_hatch_machine(
             prog += 1;
             working = true;
             if prog >= duration {
-                let mut placed = false;
-                let output = recipe.outputs.first().map(|o| o.stack.clone());
-                if let Some(output) = output {
+                let mut fluids_ok = true;
+                if let Some((id, amount)) = recipe.fluid_out.as_ref() {
+                    if !crate::fluids::can_fill(entity, 1, id, *amount, 16_000) {
+                        fluids_ok = false;
+                    }
+                }
+                let mut placed = recipe.outputs.is_empty();
+                if let Some(output) = recipe.outputs.first().map(|o| o.stack.clone()) {
                     let _ = host.change_mod_block_entity(output_pos, &mut |hatch| {
                         if hatch.items.is_empty() {
                             hatch.items.push(None);
@@ -198,17 +223,35 @@ fn tick_hatch_machine(
                         }
                     });
                 }
-                if placed {
-                    let _ = host.change_mod_block_entity(input_pos, &mut |hatch| {
-                        for i in 0..recipe.inputs.len() {
-                            if let Some(stack) = hatch.items.get_mut(i).and_then(|s| s.as_mut()) {
-                                stack.count = stack.count.saturating_sub(1);
-                                if stack.count == 0 {
-                                    hatch.items[i] = None;
-                                }
+                if fluids_ok && placed {
+                    if let Some((id, amount)) = recipe.fluid_in.as_ref() {
+                        if crate::fluids::drain(entity, 0, 2, id, *amount) < *amount {
+                            fluids_ok = false;
+                        }
+                    }
+                    if fluids_ok {
+                        if let Some((id, amount)) = recipe.fluid_out.as_ref() {
+                            let left = crate::fluids::fill(entity, 1, 2, id, *amount, 16_000);
+                            if left > 0 {
+                                fluids_ok = false;
                             }
                         }
-                    });
+                    }
+                }
+                if fluids_ok && placed {
+                    if !recipe.inputs.is_empty() {
+                        let _ = host.change_mod_block_entity(input_pos, &mut |hatch| {
+                            for i in 0..recipe.inputs.len() {
+                                if let Some(stack) = hatch.items.get_mut(i).and_then(|s| s.as_mut())
+                                {
+                                    stack.count = stack.count.saturating_sub(1);
+                                    if stack.count == 0 {
+                                        hatch.items[i] = None;
+                                    }
+                                }
+                            }
+                        });
+                    }
                     prog = 0;
                 } else {
                     prog = duration - 1;

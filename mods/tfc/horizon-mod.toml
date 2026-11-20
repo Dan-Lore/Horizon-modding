@@ -1,6 +1,6 @@
 id = "tfc"
 name = "TerraFirmaCraft"
-version = "0.2.0"
+version = "0.2.1"
 description = "TerraFirmaCraft-inspired survival on Horizon (rewrite). Animals, veins, and full climate maps still blocked on this pin."
 authors = ["Horizon-modding workshop"]
 api = "0.2"

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:butyraldehyde_dust",
+    "gtceu:butyraldehyde_plate"
+  ],
+  "result": {
+    "id": "gtceu:butyraldehyde_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

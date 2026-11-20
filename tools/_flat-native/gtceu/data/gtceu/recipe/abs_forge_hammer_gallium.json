@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:forge_hammer",
+  "ingredient": {
+    "item": "gtceu:gallium_ingot"
+  },
+  "result": {
+    "id": "gtceu:gallium_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

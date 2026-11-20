@@ -194,11 +194,21 @@ fn fluids_for(block: &str) -> Option<ModFluidTanks> {
     if block.ends_with("_combustion") || block.ends_with("_gas_turbine") {
         return Some(tank_set(&[16_000], &[0], &[]));
     }
-    if block.ends_with("_distillery") || block.ends_with("_chemical_reactor") {
+    if block.ends_with("_distillery")
+        || block.ends_with("_chemical_reactor")
+        || block.ends_with("_ore_washer")
+        || block.ends_with("_chemical_bath")
+        || block.ends_with("_electrolyzer")
+    {
         return Some(tank_set(&[16_000, 16_000], &[0], &[1]));
     }
-    if block.ends_with("multi_coke_oven") {
-        return Some(tank_set(&[16_000], &[], &[0]));
+    if block.contains("multi_distillation")
+        || block.contains("multi_cracker")
+        || block.contains("multi_large_chemical")
+        || block.ends_with("multi_coke_oven")
+    {
+        // Controller tanks for multiblock fluid chem (item hatches stay separate).
+        return Some(tank_set(&[16_000, 16_000], &[0], &[1]));
     }
     None
 }
@@ -211,11 +221,7 @@ fn fluid_allowed(block: &str, tank: usize, fluid: &str) -> bool {
         return (tank == 0 && fluid == fluids::WATER) || (tank == 1 && fluid == fluids::STEAM);
     }
     if block.ends_with("fluid_pipe") {
-        return matches!(
-            fluid,
-            fluids::WATER | fluids::STEAM | fluids::CREOSOTE | fluids::LAVA | fluids::DIESEL
-                | fluids::BIOGAS | fluids::DISTILLED
-        );
+        return fluids::is_chem_fluid(fluid);
     }
     if block.contains("pump") && !block.contains("cover") {
         return fluid == fluids::WATER;
@@ -230,11 +236,34 @@ fn fluid_allowed(block: &str, tank: usize, fluid: &str) -> bool {
         return fluid == fluids::BIOGAS;
     }
     if block.ends_with("_distillery") {
-        return (tank == 0 && fluid == fluids::WATER)
-            || (tank == 1 && fluid == fluids::DISTILLED);
+        return (tank == 0 && (fluid == fluids::WATER || fluid == fluids::CREOSOTE))
+            || (tank == 1 && (fluid == fluids::DISTILLED || fluid == fluids::DIESEL));
     }
-    if block.ends_with("_chemical_reactor") {
-        return (tank == 0 && fluid == fluids::WATER) || (tank == 1 && fluid == fluids::CREOSOTE);
+    if block.ends_with("_chemical_reactor")
+        || block.ends_with("_ore_washer")
+        || block.ends_with("_chemical_bath")
+        || block.ends_with("_electrolyzer")
+    {
+        return (tank == 0
+            && matches!(
+                fluid,
+                fluids::WATER | fluids::SULFURIC_ACID | fluids::DISTILLED | fluids::ETHYLENE
+            ))
+            || (tank == 1
+                && matches!(
+                    fluid,
+                    fluids::CREOSOTE
+                        | fluids::DISTILLED
+                        | fluids::OXYGEN
+                        | fluids::ETHYLENE
+                        | fluids::SULFURIC_ACID
+                ));
+    }
+    if block.contains("multi_distillation")
+        || block.contains("multi_cracker")
+        || block.contains("multi_large_chemical")
+    {
+        return fluids::is_chem_fluid(fluid);
     }
     if block.ends_with("multi_coke_oven") {
         return fluid == fluids::CREOSOTE;

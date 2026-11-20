@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:berkelium_dust",
+    "gtceu:berkelium_plate"
+  ],
+  "result": {
+    "id": "gtceu:berkelium_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:forge_hammer",
+  "ingredient": {
+    "item": "gtceu:grossular_ingot"
+  },
+  "result": {
+    "id": "gtceu:grossular_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 16,
+  "min_voltage": 32
+}

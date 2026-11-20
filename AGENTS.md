@@ -31,8 +31,8 @@ Not: run Forge jars, or claim 1:1 TerraFirmaGreg-Modern overnight.
 
 | Role | Id | Version | Rule |
 | --- | --- | --- | --- |
-| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-f6c782b85878` | Do **not** native-build |
-| Dev | `tfg-dev` | `native-fdc87ae-f6c782b85878` | Rebuild **only** here (each build replaces this pin) |
+| Working save | `tfg-horizon` | **pinned** `native-fdc87ae-a4a060a87701` | Do **not** native-build |
+| Dev | `tfg-dev` | `native-fdc87ae-a4a060a87701` | Rebuild **only** here (each build replaces this pin) |
 
 - Base: Nightly `fdc87ae` (`nightly-2026-11-08-fdc87ae`), hooks **411**, AE2 **15.4.18**.
 - Create parked (pin clash with AE2). Tip `9f42064`: AE2 left_out — base only.

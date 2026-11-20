@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:electric_furnace",
+  "result": {
+    "id": "gtceu:electrum_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 32,
+  "ingredient": "gtceu:electrum_dust"
+}

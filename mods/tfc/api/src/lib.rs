@@ -170,9 +170,22 @@ impl Hooks for Tfc {
             return Flow::Cancel;
         }
         if prospect::is_pan(id) {
+            // Pan over gravel/sand/water → ore deposit for the sluice loop.
+            let pannable = block.contains("gravel")
+                || block.contains("sand")
+                || block == "minecraft:water"
+                || block.ends_with("_gravel");
+            if !pannable {
+                host.tell(
+                    player.uuid,
+                    Text::literal("TFC: use the pan on gravel, sand, or water."),
+                );
+                return Flow::Cancel;
+            }
+            let _ = host.give_items("tfc:ore_deposit", 1);
             host.tell(
                 player.uuid,
-                Text::literal("TFC: craft gravel with the pan into an ore deposit, then run it through a sluice."),
+                Text::literal("TFC: panned an ore deposit — put it in a sluice."),
             );
             return Flow::Cancel;
         }

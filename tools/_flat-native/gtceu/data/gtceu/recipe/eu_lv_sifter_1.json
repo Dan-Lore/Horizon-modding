@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:sifter",
+  "result": {
+    "id": "gtceu:copper_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 28,
+  "ingredient": "gtceu:copper_plate"
+}

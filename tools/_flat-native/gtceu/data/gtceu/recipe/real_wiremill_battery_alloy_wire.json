@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:wiremill",
+  "result": {
+    "id": "gtceu:battery_alloy_wire",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 24,
+  "ingredient": "gtceu:battery_alloy_ingot"
+}

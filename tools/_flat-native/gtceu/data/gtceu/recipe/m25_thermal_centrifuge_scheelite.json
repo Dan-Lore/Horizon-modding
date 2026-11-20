@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:thermal_centrifuge",
+  "ingredient": {
+    "item": "gtceu:scheelite_dust"
+  },
+  "result": {
+    "id": "gtceu:scheelite_dust",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 48
+}

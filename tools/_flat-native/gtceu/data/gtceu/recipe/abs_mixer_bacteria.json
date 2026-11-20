@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:bacteria_dust",
+    "gtceu:bacteria_plate"
+  ],
+  "result": {
+    "id": "gtceu:bacteria_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

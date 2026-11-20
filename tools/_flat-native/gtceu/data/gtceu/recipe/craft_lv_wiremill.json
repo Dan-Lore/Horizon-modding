@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PCP",
+    "PHP",
+    "PCP"
+  ],
+  "key": {
+    "P": {
+      "item": "gtceu:iron_plate"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "H": {
+      "item": "gtceu:lv_machine_hull"
+    }
+  },
+  "result": {
+    "id": "gtceu:lv_wiremill",
+    "count": 1
+  }
+}

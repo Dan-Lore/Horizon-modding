@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/shale_raw",
+    "front": "tfc:block/shale_raw",
+    "side": "tfc:block/shale_raw",
+    "bottom": "tfc:block/shale_raw",
+    "particle": "tfc:block/shale_raw"
+  }
+}

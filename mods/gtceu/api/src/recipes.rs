@@ -258,21 +258,48 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             0,
             16,
         )],
-        // N8 oil / chem shells — item proxies until real fluids land.
-        "gtceu:distillation_tower" => vec![one_in(
-            "gtceu:oil_cell",
-            "gtceu:naphtha_cell",
-            200,
-            0,
-            16,
-        )],
-        "gtceu:cracker" => vec![one_in(
-            "gtceu:naphtha_cell",
-            "gtceu:ethylene_dust",
-            160,
-            0,
-            16,
-        )],
+        "gtceu:distillation_tower" => vec![
+            MachineRecipe {
+                inputs: vec![],
+                outputs: vec![],
+                circuit: None,
+                duration: 100,
+                steam: 0,
+                eu: 16,
+                min_voltage: 32,
+                heat: 0,
+                fluid_in: Some(("minecraft:water".into(), 1000)),
+                fluid_out: Some(("gtceu:distilled_water".into(), 1000)),
+            },
+            one_in("gtceu:oil_cell", "gtceu:naphtha_cell", 200, 0, 16),
+        ],
+        "gtceu:distillery" => vec![MachineRecipe {
+            inputs: vec![],
+            outputs: vec![],
+            circuit: None,
+            duration: 80,
+            steam: 0,
+            eu: 8,
+            min_voltage: 32,
+            heat: 0,
+            fluid_in: Some(("minecraft:water".into(), 500)),
+            fluid_out: Some(("gtceu:distilled_water".into(), 500)),
+        }],
+        "gtceu:cracker" => vec![MachineRecipe {
+            inputs: vec![item_ing("gtceu:naphtha_cell")],
+            outputs: vec![RecipeOutput {
+                stack: stack("gtceu:ethylene_dust", 1),
+                chance: 100,
+            }],
+            circuit: None,
+            duration: 160,
+            steam: 0,
+            eu: 16,
+            min_voltage: 32,
+            heat: 0,
+            fluid_in: Some(("minecraft:water".into(), 250)),
+            fluid_out: Some(("gtceu:ethylene".into(), 250)),
+        }],
         "gtceu:large_chemical_reactor" => vec![MachineRecipe {
             inputs: vec![
                 item_ing("gtceu:ethylene_dust"),
@@ -288,7 +315,37 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             eu: 32,
             min_voltage: 128,
             heat: 0,
-            fluid_in: None,
+            fluid_in: Some(("gtceu:ethylene".into(), 250)),
+            fluid_out: Some(("gtceu:oxygen".into(), 100)),
+        }],
+        "gtceu:chemical_bath" => vec![MachineRecipe {
+            inputs: vec![item_ing("gtceu:copper_dust")],
+            outputs: vec![RecipeOutput {
+                stack: stack("gtceu:copper_plate", 1),
+                chance: 100,
+            }],
+            circuit: None,
+            duration: 100,
+            steam: 0,
+            eu: 8,
+            min_voltage: 32,
+            heat: 0,
+            fluid_in: Some(("minecraft:water".into(), 200)),
+            fluid_out: None,
+        }],
+        "gtceu:ore_washer" => vec![MachineRecipe {
+            inputs: vec![item_ing("gtceu:iron_dust")],
+            outputs: vec![RecipeOutput {
+                stack: stack("gtceu:iron_dust", 1),
+                chance: 100,
+            }],
+            circuit: None,
+            duration: 80,
+            steam: 0,
+            eu: 4,
+            min_voltage: 32,
+            heat: 0,
+            fluid_in: Some(("minecraft:water".into(), 100)),
             fluid_out: None,
         }],
         "gtceu:cleanroom" => vec![one_in(
@@ -333,13 +390,8 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
                 fluid_out: None,
             },
         ],
-        _ => {
-            // Generic fallback so every recipe type still processes something.
-            vec![
-                one_in("minecraft:cobblestone", "minecraft:gravel", 80, 0, 2),
-                one_in("minecraft:gravel", "minecraft:sand", 80, 0, 2),
-            ]
-        }
+        // No cobblestone→gravel trap: idle when a type has zero authored recipes.
+        _ => Vec::new(),
     }
 }
 

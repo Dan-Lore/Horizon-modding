@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:red_alloy_dust",
+    "gtceu:red_alloy_plate"
+  ],
+  "result": {
+    "id": "gtceu:red_alloy_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

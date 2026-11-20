@@ -100,6 +100,16 @@ fn fallback(kind: &str) -> Vec<MachineRecipe> {
             one("minecraft:ice", "adastra:ice_shard", 100, 16),
             one("minecraft:blue_ice", "adastra:ice_shard", 60, 12),
         ],
+        "adastra:nasa_workbench" => vec![MachineRecipe {
+            inputs: vec![
+                item_ing("adastra:steel_ingot"),
+                item_ing("adastra:rocket_fin"),
+                item_ing("adastra:rocket_nose_cone"),
+            ],
+            output: stack("adastra:rocket_t1", 1),
+            duration: 200,
+            fe: 48,
+        }],
         _ => Vec::new(),
     }
 }

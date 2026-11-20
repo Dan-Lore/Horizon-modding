@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:electric_furnace",
+  "ingredient": "minecraft:raw_gold",
+  "result": {
+    "id": "minecraft:gold_ingot",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

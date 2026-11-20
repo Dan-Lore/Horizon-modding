@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electrolyzer",
+  "ingredient": {
+    "item": "gtceu:orange_dye_dust"
+  },
+  "result": {
+    "id": "gtceu:orange_dye_dust",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

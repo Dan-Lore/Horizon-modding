@@ -1,0 +1,17 @@
+{
+  "type": "gtceu:ore_washer",
+  "ingredient": {
+    "item": "gtceu:copper_dust"
+  },
+  "fluid_in": {
+    "id": "minecraft:water",
+    "amount": 100
+  },
+  "result": {
+    "id": "gtceu:copper_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 4,
+  "min_voltage": 32
+}

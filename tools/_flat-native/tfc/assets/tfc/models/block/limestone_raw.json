@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/limestone_raw",
+    "front": "tfc:block/limestone_raw",
+    "side": "tfc:block/limestone_raw",
+    "bottom": "tfc:block/limestone_raw",
+    "particle": "tfc:block/limestone_raw"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:impure_enriched_naquadah_solution_dust",
+    "gtceu:impure_enriched_naquadah_solution_plate"
+  ],
+  "result": {
+    "id": "gtceu:impure_enriched_naquadah_solution_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

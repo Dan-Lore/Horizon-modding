@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electrolyzer",
+  "ingredient": {
+    "item": "gtceu:prussian_blue_dust"
+  },
+  "result": {
+    "id": "gtceu:prussian_blue_dust",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

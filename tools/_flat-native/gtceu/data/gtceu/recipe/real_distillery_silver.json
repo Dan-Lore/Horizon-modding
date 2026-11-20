@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:distillery",
+  "result": {
+    "id": "gtceu:silver_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "ingredient": "gtceu:silver_dust"
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/charcoal_pit",
+    "front": "tfc:block/charcoal_pit",
+    "side": "tfc:block/charcoal_pit",
+    "bottom": "tfc:block/charcoal_pit",
+    "particle": "tfc:block/charcoal_pit"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/crop_rye",
+    "front": "tfc:block/crop_rye",
+    "side": "tfc:block/crop_rye",
+    "bottom": "tfc:block/crop_rye",
+    "particle": "tfc:block/crop_rye"
+  }
+}

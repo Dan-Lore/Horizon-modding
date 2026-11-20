@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/basalt_gravel",
+    "front": "tfc:block/basalt_gravel",
+    "side": "tfc:block/basalt_gravel",
+    "bottom": "tfc:block/basalt_gravel",
+    "particle": "tfc:block/basalt_gravel"
+  }
+}

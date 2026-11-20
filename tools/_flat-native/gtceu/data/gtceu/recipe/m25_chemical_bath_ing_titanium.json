@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:titanium_plate",
+    "gtceu:titanium_dust"
+  ],
+  "result": {
+    "id": "gtceu:titanium_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

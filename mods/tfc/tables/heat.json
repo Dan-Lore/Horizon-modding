@@ -42,6 +42,14 @@
     "steel": {
       "melt": 1540,
       "weld": 1200
+    },
+    "black_bronze": {
+      "melt": 990,
+      "weld": 590
+    },
+    "cast_iron": {
+      "melt": 1500,
+      "weld": 1050
     }
   },
   "items": {
@@ -89,6 +97,10 @@
     "tfc:steel_ingot": "steel",
     "tfc:steel_double_ingot": "steel",
     "tfc:steel_sheet": "steel",
-    "tfc:steel_rod": "steel"
+    "tfc:steel_rod": "steel",
+    "tfc:black_bronze_ingot": "black_bronze",
+    "tfc:black_bronze_double_ingot": "black_bronze",
+    "tfc:cast_iron_ingot": "cast_iron",
+    "tfc:cast_iron_double_ingot": "cast_iron"
   }
 }

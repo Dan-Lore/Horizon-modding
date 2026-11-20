@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "tfc:block/firepit",
+    "front": "tfc:block/firepit",
+    "side": "tfc:block/firepit",
+    "bottom": "tfc:block/firepit",
+    "particle": "tfc:block/firepit"
+  }
+}

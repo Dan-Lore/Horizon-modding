@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:polytetrafluoroethylene_dust",
+    "gtceu:polytetrafluoroethylene_plate"
+  ],
+  "result": {
+    "id": "gtceu:polytetrafluoroethylene_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

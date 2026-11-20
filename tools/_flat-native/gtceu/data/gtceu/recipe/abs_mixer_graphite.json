@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:graphite_dust",
+    "gtceu:graphite_plate"
+  ],
+  "result": {
+    "id": "gtceu:graphite_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

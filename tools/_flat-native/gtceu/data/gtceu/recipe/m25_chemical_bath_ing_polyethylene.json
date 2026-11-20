@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:polyethylene_plate",
+    "gtceu:polyethylene_dust"
+  ],
+  "result": {
+    "id": "gtceu:polyethylene_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

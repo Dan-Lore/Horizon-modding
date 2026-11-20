@@ -11,6 +11,26 @@ pub const DIESEL: &str = "gtceu:diesel";
 pub const BIOGAS: &str = "gtceu:biogas";
 pub const DISTILLED: &str = "gtceu:distilled_water";
 pub const CREOSOTE: &str = "gtceu:creosote";
+pub const SULFURIC_ACID: &str = "gtceu:sulfuric_acid";
+pub const ETHYLENE: &str = "gtceu:ethylene";
+pub const OXYGEN: &str = "gtceu:oxygen";
+
+/// Fluids allowed in chem / wash / pipe path (keep short for Horizon pin).
+pub fn is_chem_fluid(fluid: &str) -> bool {
+    matches!(
+        fluid,
+        WATER
+            | STEAM
+            | LAVA
+            | DIESEL
+            | BIOGAS
+            | DISTILLED
+            | CREOSOTE
+            | SULFURIC_ACID
+            | ETHYLENE
+            | OXYGEN
+    )
+}
 
 const OFFSETS: [[i32; 3]; 6] = [
     [1, 0, 0],

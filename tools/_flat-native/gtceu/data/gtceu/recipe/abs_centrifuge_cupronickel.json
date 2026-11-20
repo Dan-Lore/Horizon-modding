@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:cupronickel_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:cupronickel_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:cupronickel_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

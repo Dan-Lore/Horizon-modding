@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:circuit_assembler",
+  "result": {
+    "id": "gtceu:gold_cable_1x",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "ingredients": [
+    "gtceu:gold_wire",
+    "gtceu:rubber"
+  ]
+}

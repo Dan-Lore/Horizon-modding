@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:coal_dust"
+  },
+  "result": {
+    "id": "gtceu:coal_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

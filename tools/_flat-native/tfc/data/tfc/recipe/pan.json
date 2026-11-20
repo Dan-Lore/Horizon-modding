@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc:copper_sheet"
+    }
+  ],
+  "result": {
+    "id": "tfc:pan",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:phosphate_dust"
+  },
+  "result": {
+    "id": "gtceu:phosphate_nugget",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 32,
+  "min_voltage": 32
+}

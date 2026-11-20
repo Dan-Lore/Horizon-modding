@@ -1,0 +1,9 @@
+{
+  "type": "tfc:anvil",
+  "result": {
+    "id": "tfc:wrought_iron_knife_blade",
+    "count": 1
+  },
+  "duration": 200,
+  "ingredient": "tfc:wrought_iron_ingot"
+}

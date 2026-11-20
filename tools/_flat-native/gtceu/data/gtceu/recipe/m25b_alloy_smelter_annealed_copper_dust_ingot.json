@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:alloy_smelter",
+  "ingredient": {
+    "item": "gtceu:annealed_copper_dust"
+  },
+  "result": {
+    "id": "gtceu:annealed_copper_ingot",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 48,
+  "min_voltage": 32
+}

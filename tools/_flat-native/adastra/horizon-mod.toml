@@ -1,0 +1,13 @@
+id = "adastra"
+name = "Ad Astra"
+version = "0.1.1"
+description = "Ad Astra–inspired overworld materials, FE, oxygen on Horizon (rewrite). Planet dimensions blocked on hooks 411."
+authors = ["Horizon-modding workshop"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+horizon = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca"
+mixins = "5a64af938ec86b00d53d16a408aabc0038fb3e57"

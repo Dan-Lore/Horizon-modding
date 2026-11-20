@@ -1,6 +1,6 @@
 id = "gtceu"
 name = "GregTech"
-version = "0.5.5"
+version = "0.5.6"
 description = "GregTech Modern rewrite on Horizon (Absolute port). Technical id gtceu."
 authors = ["Horizon-modding workshop"]
 api = "0.2"

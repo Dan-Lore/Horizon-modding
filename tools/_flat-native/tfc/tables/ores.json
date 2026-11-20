@@ -1,0 +1,58 @@
+[
+  {
+    "block": "tfc:ore_native_copper",
+    "name": "native copper",
+    "metal": "copper",
+    "path": "forge",
+    "nugget": "tfc:nugget_native_copper"
+  },
+  {
+    "block": "tfc:ore_native_gold",
+    "name": "native gold",
+    "metal": "gold",
+    "path": "forge",
+    "nugget": "tfc:nugget_native_gold"
+  },
+  {
+    "block": "tfc:ore_native_silver",
+    "name": "native silver",
+    "metal": "silver",
+    "path": "forge",
+    "nugget": "tfc:nugget_native_silver"
+  },
+  {
+    "block": "tfc:ore_cassiterite",
+    "name": "cassiterite",
+    "metal": "tin",
+    "path": "forge",
+    "nugget": "tfc:nugget_cassiterite"
+  },
+  {
+    "block": "tfc:ore_hematite",
+    "name": "hematite",
+    "metal": "iron",
+    "path": "bloomery",
+    "nugget": "tfc:nugget_hematite"
+  },
+  {
+    "block": "tfc:ore_bismuthinite",
+    "name": "bismuthinite",
+    "metal": "bismuth",
+    "path": "forge",
+    "nugget": "tfc:nugget_bismuthinite"
+  },
+  {
+    "block": "tfc:ore_sphalerite",
+    "name": "sphalerite",
+    "metal": "zinc",
+    "path": "forge",
+    "nugget": "tfc:nugget_sphalerite"
+  },
+  {
+    "block": "tfc:ore_malachite",
+    "name": "malachite",
+    "metal": "copper",
+    "path": "forge",
+    "nugget": "tfc:nugget_malachite"
+  }
+]

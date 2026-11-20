@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:platinum_sludge_residue_dust",
+    "gtceu:platinum_sludge_residue_plate"
+  ],
+  "result": {
+    "id": "gtceu:platinum_sludge_residue_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

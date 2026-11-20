@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:electrolyzer",
+  "ingredient": {
+    "item": "gtceu:ender_air_dust"
+  },
+  "result": {
+    "id": "gtceu:ender_air_dust",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}

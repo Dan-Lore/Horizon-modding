@@ -59,9 +59,13 @@ Blocked forever on this pin (listed, not in “done”): **Create/Greate (#2)**,
 
 ## Snapshot — refresh via `score-tfg-content.py`
 
-See latest numbers in [`tfg-content-score.json`](tfg-content-score.json). After Wave 0 (`greglite` → `gtceu`) + M25/M50 expanders the live score is **milestone M50** (~55% pack blend).  
+See latest numbers in [`tfg-content-score.json`](tfg-content-score.json). Live score after M75 mechanics push: **milestone M50** (~58% pack blend) — Absolute % still catalog-heavy; mechanics rose (GT fluids/washer-bath water gate, TFC pan→deposit, Ad Astra NASA bench + O₂ drain).
 
-**Asset honesty:** Ad Astra / Firmalife Absolute *resource* % counts ids (jar surface) with **placeholder** textures where upstream non-code is ARR — not a license claim on Terrarium/Firmalife art. GregTech material forms similarly use tint/placeholder PNGs until fetch/bake covers each id.
+**M75 mechanics landed (this pin):** washer/bath require water; distillery/LCR `fluid_in`/`fluid_out`; pan gives `tfc:ore_deposit`; NASA workbench assembles `rocket_t1`; oxygen distributor consumes tanks. Create/Greate still **#2**.
+
+**Launcher note:** portable `launcher/windows-x64` (0.2.0) expects flat `[native]` crates; workshop mixins `.hmod` rebuilds currently use `launcher/_old-launcher/horizon-launcher.exe` (Nov 10 zip) until the tree is migrated.
+
+**Asset honesty:** Ad Astra / Firmalife Absolute *resource* % counts ids (jar surface) with **placeholder** textures where upstream non-code is ARR — not a license claim on Terrarium/Firmalife art.
 
 ### Pack blend weights
 

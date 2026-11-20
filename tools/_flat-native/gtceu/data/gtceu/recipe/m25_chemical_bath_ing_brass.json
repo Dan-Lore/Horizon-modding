@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:brass_plate",
+    "gtceu:brass_dust"
+  ],
+  "result": {
+    "id": "gtceu:brass_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:mixer",
+  "ingredients": [
+    "gtceu:hydro_cracked_propane_dust",
+    "gtceu:hydro_cracked_propane_plate"
+  ],
+  "result": {
+    "id": "gtceu:hydro_cracked_propane_dust",
+    "count": 2
+  },
+  "duration": 100,
+  "eu": 32,
+  "min_voltage": 32
+}

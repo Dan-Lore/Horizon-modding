@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:chemical_bath",
+  "ingredients": [
+    "gtceu:cassiterite_plate",
+    "gtceu:cassiterite_dust"
+  ],
+  "result": {
+    "id": "gtceu:cassiterite_dust",
+    "count": 2
+  },
+  "duration": 120,
+  "eu": 48
+}

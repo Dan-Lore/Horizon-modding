@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:hydro_cracked_butane_plate"
+  },
+  "result": {
+    "id": "gtceu:hydro_cracked_butane_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

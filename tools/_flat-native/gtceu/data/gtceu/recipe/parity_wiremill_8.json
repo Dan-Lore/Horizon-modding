@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:wiremill",
+  "ingredient": "gtceu:bronze_ingot",
+  "result": {
+    "id": "gtceu:bronze_wire",
+    "count": 2
+  },
+  "duration": 60,
+  "eu": 2
+}

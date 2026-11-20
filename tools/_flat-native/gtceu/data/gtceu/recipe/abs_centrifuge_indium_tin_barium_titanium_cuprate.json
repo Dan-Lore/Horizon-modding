@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:indium_tin_barium_titanium_cuprate_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:indium_tin_barium_titanium_cuprate_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:indium_tin_barium_titanium_cuprate_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

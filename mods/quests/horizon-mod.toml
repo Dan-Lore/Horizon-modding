@@ -1,6 +1,6 @@
 id = "quests"
 name = "FTB Quests"
-version = "0.1.0"
+version = "0.1.1"
 description = "FTB Quests–inspired quest book for Horizon packs (rewrite). Not the FTB jar."
 authors = ["Horizon-modding workshop"]
 api = "0.2"

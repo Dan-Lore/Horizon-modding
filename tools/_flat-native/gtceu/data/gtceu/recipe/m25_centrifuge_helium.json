@@ -1,0 +1,12 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:helium_dust"
+  },
+  "result": {
+    "id": "gtceu:helium_nugget",
+    "count": 9
+  },
+  "duration": 80,
+  "eu": 32
+}

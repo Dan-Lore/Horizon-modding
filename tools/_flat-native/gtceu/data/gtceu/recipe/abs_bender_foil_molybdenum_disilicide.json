@@ -1,0 +1,13 @@
+{
+  "type": "gtceu:bender",
+  "ingredient": {
+    "item": "gtceu:molybdenum_disilicide_plate"
+  },
+  "result": {
+    "id": "gtceu:molybdenum_disilicide_foil",
+    "count": 4
+  },
+  "duration": 60,
+  "eu": 24,
+  "min_voltage": 32
+}

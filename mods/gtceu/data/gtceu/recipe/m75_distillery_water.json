@@ -1,0 +1,15 @@
+{
+  "type": "gtceu:distillery",
+  "ingredients": [],
+  "fluid_in": {
+    "id": "minecraft:water",
+    "amount": 500
+  },
+  "fluid_out": {
+    "id": "gtceu:distilled_water",
+    "amount": 500
+  },
+  "duration": 80,
+  "eu": 8,
+  "min_voltage": 32
+}

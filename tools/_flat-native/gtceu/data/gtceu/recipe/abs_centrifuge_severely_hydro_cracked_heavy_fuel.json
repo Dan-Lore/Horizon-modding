@@ -1,0 +1,19 @@
+{
+  "type": "gtceu:centrifuge",
+  "ingredient": {
+    "item": "gtceu:severely_hydro_cracked_heavy_fuel_dust"
+  },
+  "results": [
+    {
+      "id": "gtceu:severely_hydro_cracked_heavy_fuel_dust",
+      "count": 1
+    },
+    {
+      "id": "gtceu:severely_hydro_cracked_heavy_fuel_nugget",
+      "count": 1
+    }
+  ],
+  "duration": 120,
+  "eu": 48,
+  "min_voltage": 32
+}

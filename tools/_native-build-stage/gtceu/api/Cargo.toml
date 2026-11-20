@@ -1,0 +1,8 @@
+[package]
+name = "mod-gtceu"
+version = "0.5.5"
+edition = "2024"
+
+[dependencies]
+# The launcher rewrites this to the Horizon source it builds the game from.
+horizon-client = { git = "https://github.com/horizon-rust/horizon", rev = "fdc87aecdbd116bf1e08adcd062fcbaea8c2e2ca" }

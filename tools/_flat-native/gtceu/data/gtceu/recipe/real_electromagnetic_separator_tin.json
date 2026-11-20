@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:electromagnetic_separator",
+  "result": {
+    "id": "gtceu:tin_dust",
+    "count": 1
+  },
+  "duration": 80,
+  "eu": 24,
+  "ingredient": "gtceu:tin_dust"
+}

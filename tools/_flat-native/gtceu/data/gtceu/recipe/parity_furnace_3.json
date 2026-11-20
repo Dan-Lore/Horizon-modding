@@ -1,0 +1,10 @@
+{
+  "type": "gtceu:electric_furnace",
+  "ingredient": "minecraft:cobblestone",
+  "result": {
+    "id": "minecraft:stone",
+    "count": 1
+  },
+  "duration": 100,
+  "eu": 2
+}

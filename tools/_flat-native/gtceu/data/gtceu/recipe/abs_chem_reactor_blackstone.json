@@ -1,0 +1,14 @@
+{
+  "type": "gtceu:chemical_reactor",
+  "ingredients": [
+    "gtceu:blackstone_dust",
+    "gtceu:blackstone_plate"
+  ],
+  "result": {
+    "id": "gtceu:blackstone_plate",
+    "count": 1
+  },
+  "duration": 160,
+  "eu": 64,
+  "min_voltage": 32
+}
