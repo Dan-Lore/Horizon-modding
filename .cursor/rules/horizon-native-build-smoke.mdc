@@ -42,6 +42,7 @@ Agents have repeatedly claimed Greglite/TFC/AE2 were “in the build” while th
 5. Full quit client → Play again
 6. Read latest.log "content from N mod(s)" + horizon-mod-ids.json
 7. /give one item per own mod — only then tell the user it works
+8. Full quit client again before git commit / push (see horizon-quit-before-commit.mdc)
 ```
 
 `Expand-Archive` does **not** open `.hmod` — use .NET `ZipFile` or Python `zipfile`.

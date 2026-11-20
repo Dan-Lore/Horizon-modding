@@ -1,0 +1,16 @@
+---
+description: Quit Horizon client after smoke and before commit/push
+alwaysApply: true
+---
+
+# Quit game after smoke / before ship
+
+After in-game smoke (`/give`, Interface checks, content-from logs) and **before** `git commit` or `git push`:
+
+1. Quit the Horizon client fully (`game_quit` / player closes the window).
+2. Confirm no `horizon-client.exe` (and no stray non-MCP `horizon-ctl` for an old native).
+3. Only then commit and push.
+
+Do **not** leave a Play session running across commit/push. Stale `horizon-ctl` on an old native blocks `remove` and can wedge the next `native-build`.
+
+MCP `horizon-launcher.exe … mcp` processes stay up — quit the **game**, not the MCP launcher.
